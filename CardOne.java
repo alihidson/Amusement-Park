@@ -29,20 +29,20 @@ public class CardOne extends JPanel {
             public void mouseClicked(MouseEvent e) {
                 JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(CardOne.this);
 
-                if (frame.getTitle().equals("Game Page")) {
+                if (frame.getTitle().equals("Store")) {
                     if (isCenterCard) {
                         if (clickCount < 2) {
                             frame.dispose();
-                            JFrame newFrame = new Store();
-                            newFrame.setVisible(true);
+                            JFrame gamePage = new GamePage();
+                            gamePage.setVisible(true);
                             clickCount++;
                         }
                     }
                 }
                 else {
                     if(isCenterCard) {
-                        JFrame mainFrame = new GamePage();
-                        mainFrame.setVisible(true);
+                        JFrame storeFrame = new Store();
+                        storeFrame.setVisible(true);
                     }
                 }
             }

@@ -1,5 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class GamePage extends JFrame {
     public Image backgroundImage;
@@ -25,13 +27,13 @@ public class GamePage extends JFrame {
         BackgroundPanel backgroundPanel = new BackgroundPanel();
         backgroundPanel.setBounds(0, 0, 1280, 740);
 
-        CardPanelOne cardPanel = new CardPanelOne();
+        CardPanelOne cardPanelOne = new CardPanelOne();
 
-        cardPanel.setBounds(50, 50, 900, 400);
-        cardPanel.setOpaque(false);
+        cardPanelOne.setBounds(50, 50, 900, 400);
+        cardPanelOne.setOpaque(false);
 
         layeredPane.add(backgroundPanel, Integer.valueOf(1));
-        layeredPane.add(cardPanel, Integer.valueOf(2));
+        layeredPane.add(cardPanelOne, Integer.valueOf(2));
 
 
 
@@ -71,6 +73,36 @@ public class GamePage extends JFrame {
         };
         rectangle2.setBounds(1000, 200, 100, 50);
         layeredPane.add(rectangle2, Integer.valueOf(3));
+
+
+
+        JPanel rectangle3 = new JPanel() {
+            @Override
+            protected void paintComponent(Graphics g) {
+                super.paintComponent(g);
+                g.setColor(Color.YELLOW);
+                g.fillRect(0, 0, getWidth(), getHeight());
+                g.setColor(Color.BLUE);
+                Font font = new Font("Arial", Font.PLAIN, 12);
+                g.setFont(font);
+                FontMetrics metrics = g.getFontMetrics(font);
+                int x = (getWidth() - metrics.stringWidth("Store")) / 2;
+                int y = ((getHeight() - metrics.getHeight()) / 2) + metrics.getAscent();
+                g.drawString("Store", x, y);
+            }
+        };
+        rectangle3.setBounds(1000, 400, 100, 50);
+        rectangle3.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                dispose();
+                Store store = new Store();
+                store.setVisible(true);
+            }
+        });
+        layeredPane.add(rectangle3, Integer.valueOf(3));
+
 
 
         setContentPane(layeredPane);
@@ -144,8 +176,43 @@ public class GamePage extends JFrame {
         layeredPane.add(rectangle2, Integer.valueOf(3));
 
 
+
+
+
+        JPanel rectangle3 = new JPanel() {
+            @Override
+            protected void paintComponent(Graphics g) {
+                super.paintComponent(g);
+                g.setColor(Color.YELLOW);
+                g.fillRect(0, 0, getWidth(), getHeight());
+                g.setColor(Color.BLUE);
+                Font font = new Font("Arial", Font.PLAIN, 12);
+                g.setFont(font);
+                FontMetrics metrics = g.getFontMetrics(font);
+                int x = (getWidth() - metrics.stringWidth("Store")) / 2;
+                int y = ((getHeight() - metrics.getHeight()) / 2) + metrics.getAscent();
+                g.drawString("Store", x, y);
+            }
+        };
+        rectangle3.setBounds(1000, 400, 100, 50);
+        rectangle3.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                dispose();
+                Store store = new Store();
+                store.setVisible(true);
+            }
+        });
+        layeredPane.add(rectangle3, Integer.valueOf(3));
+
+
+
         setContentPane(layeredPane);
     }
+
+
+
 
 
     private class BackgroundPanel extends JPanel {
@@ -161,3 +228,34 @@ public class GamePage extends JFrame {
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+//private JPanel createRectangle(String text, int x, int y) {
+//    JPanel rectangle = new JPanel() {
+//        @Override
+//        protected void paintComponent(Graphics g) {
+//            super.paintComponent(g);
+//            g.setColor(Color.pink);
+//            g.fillRect(0, 0, getWidth(), getHeight());
+//            g.setColor(Color.BLUE);
+//            Font font = new Font("Arial", Font.PLAIN, 12);
+//            g.setFont(font);
+//            FontMetrics metrics = g.getFontMetrics(font);
+//            int xText = (getWidth() - metrics.stringWidth(text)) / 2;
+//            int yText = ((getHeight() - metrics.getHeight()) / 2) + metrics.getAscent();
+//            g.drawString(text, xText, yText);
+//        }
+//    };
+//    rectangle.setBounds(x, y, 100, 50);
+//    return rectangle;
+//}
