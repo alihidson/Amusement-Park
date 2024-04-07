@@ -74,7 +74,7 @@ public class FirstPage extends JPanel {
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-        Image backgroundImage = new ImageIcon("/Users/ali/Main/Documents/Source/Amusement-Park/src/swing_image/wood.jpg").getImage();
+        Image backgroundImage = new ImageIcon("/Users/ali/Main/Documents/Source/Amusement-Park/src/image/wood.jpg").getImage();
         g.drawImage(backgroundImage, 0, 0, getWidth(), getHeight(), this);
     }
 }

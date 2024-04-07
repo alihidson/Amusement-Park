@@ -6,12 +6,19 @@ import java.awt.event.MouseEvent;
 public class CardOne extends JPanel {
     private ImageIcon icon1;
     private ImageIcon icon2;
+    private ImageIcon icon3;
+    private ImageIcon icon4;
     private boolean isCenterCard;
     private static int clickCount = 0;
 
-    public CardOne(String icon1Path, String icon2Path) {
+    private String text;
+    public CardOne(String icon1Path, String icon2Path, String icon3Path, String icon4Path, String text) {
         icon1 = new ImageIcon(icon1Path);
         icon2 = new ImageIcon(icon2Path);
+        icon3 = new ImageIcon(icon3Path);
+        icon4 = new ImageIcon(icon4Path);
+
+        this.text = text;
 
 
         if(icon1Path.contains("/Users/ali/Main/Documents/Source/Amusement-Park/src/swing_image/icons8-coin-58.png") && icon2Path.contains("/Users/ali/Main/Documents/Source/Amusement-Park/src/swing_image/icons8-roller-coaster-64.png")) {
@@ -21,7 +28,7 @@ public class CardOne extends JPanel {
             isCenterCard = false;
         }
 
-        setPreferredSize(new Dimension(100, 140));
+        setPreferredSize(new Dimension(80, 120));
         setOpaque(false);
 
         addMouseListener(new MouseAdapter() {
@@ -59,15 +66,20 @@ public class CardOne extends JPanel {
         }
         else {
 
-            g.setColor(Color.green);
+            g.setColor(new Color(244,189,247));
             g.fillRect(0, 0, getWidth(), getHeight());
 
-            g.setColor(Color.BLACK);
+            g.setColor(Color.red);
             g.drawRect(0, 0, getWidth() - 1, getHeight() - 1);
 
+            g.setColor(Color.BLACK);
+            g.drawString(text, 10, 20);
+
             if (!isCenterCard || (isCenterCard && clickCount < 2)) {
-                g.drawImage(icon1.getImage(), 10, 10, 30, 30, this);
-                g.drawImage(icon2.getImage(), 40, 60, 60, 50, this);
+                g.drawImage(icon1.getImage(), (getWidth() - 40) / 2, (getHeight() - 40) / 2, 40, 40, this);
+                g.drawImage(icon2.getImage(), 55, 5, 20, 20, this);
+                g.drawImage(icon3.getImage(), 5, 95, 20, 20, this);
+                g.drawImage(icon4.getImage(), 30, 95, 20, 20, this);
             }
         }
     }

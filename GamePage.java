@@ -19,7 +19,7 @@ public class GamePage extends JFrame {
         setLocationRelativeTo(null);
 
 
-        backgroundImage = new ImageIcon("/Users/ali/Main/Documents/Source/Amusement-Park/src/swing_image/wood.jpg").getImage();
+        backgroundImage = new ImageIcon("/Users/ali/Main/Documents/Source/Amusement-Park/src/image/wood.jpg").getImage();
 
         JLayeredPane layeredPane = new JLayeredPane();
         layeredPane.setPreferredSize(new Dimension(700, 500));
@@ -27,13 +27,13 @@ public class GamePage extends JFrame {
         BackgroundPanel backgroundPanel = new BackgroundPanel();
         backgroundPanel.setBounds(0, 0, 1280, 740);
 
-        CardPanelOne cardPanelOne = new CardPanelOne();
+        //CardPanelOne cardPanelOne = new CardPanelOne();
 
-        cardPanelOne.setBounds(50, 50, 900, 400);
-        cardPanelOne.setOpaque(false);
+        //cardPanelOne.setBounds(50, 50, 900, 400);
+        //cardPanelOne.setOpaque(false);
 
         layeredPane.add(backgroundPanel, Integer.valueOf(1));
-        layeredPane.add(cardPanelOne, Integer.valueOf(2));
+        //layeredPane.add(cardPanelOne, Integer.valueOf(2));
 
 
 
@@ -120,7 +120,7 @@ public class GamePage extends JFrame {
         setLocationRelativeTo(null);
 
 
-        backgroundImage = new ImageIcon("/Users/ali/Main/Documents/Source/Amusement-Park/src/swing_image/wood.jpg").getImage();
+        backgroundImage = new ImageIcon("/Users/ali/Main/Documents/Source/Amusement-Park/src/image/wood.jpg").getImage();
 
         JLayeredPane layeredPane = new JLayeredPane();
         layeredPane.setPreferredSize(new Dimension(700, 500));
@@ -128,13 +128,13 @@ public class GamePage extends JFrame {
         BackgroundPanel backgroundPanel = new BackgroundPanel();
         backgroundPanel.setBounds(0, 0, 1280, 740);
 
-        CardPanelOne cardPanel = new CardPanelOne();
+        //CardPanelOne cardPanel = new CardPanelOne();
 
-        cardPanel.setBounds(50, 50, 900, 400);
-        cardPanel.setOpaque(false);
+        //cardPanel.setBounds(50, 50, 900, 400);
+        //cardPanel.setOpaque(false);
 
         layeredPane.add(backgroundPanel, Integer.valueOf(1));
-        layeredPane.add(cardPanel, Integer.valueOf(2));
+        //layeredPane.add(cardPanel, Integer.valueOf(2));
 
 
 
