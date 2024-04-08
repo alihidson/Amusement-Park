@@ -5,6 +5,7 @@ public class Main {
         JFrame frame = new JFrame();
         frame.setSize(1280, 740);
         frame.setTitle("Amusement-Park");
+        frame.setResizable(false);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 

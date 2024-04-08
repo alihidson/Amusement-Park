@@ -16,6 +16,7 @@ public class GamePage extends JFrame {
         setTitle("Game Page");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(1280, 740);
+        setResizable(false);
         setLocationRelativeTo(null);
 
 
@@ -52,7 +53,7 @@ public class GamePage extends JFrame {
                 g.drawString(userName1, x, y);
             }
         };
-        rectangle1.setBounds(1000, 100, 100, 50);
+        rectangle1.setBounds(600, 50, 100, 50);
         layeredPane.add(rectangle1, Integer.valueOf(3));
 
 
@@ -71,7 +72,7 @@ public class GamePage extends JFrame {
                 g.drawString(userName2, x, y);
             }
         };
-        rectangle2.setBounds(1000, 200, 100, 50);
+        rectangle2.setBounds(600, 600, 100, 50);
         layeredPane.add(rectangle2, Integer.valueOf(3));
 
 
@@ -80,7 +81,7 @@ public class GamePage extends JFrame {
             @Override
             protected void paintComponent(Graphics g) {
                 super.paintComponent(g);
-                g.setColor(Color.YELLOW);
+                g.setColor(Color.green);
                 g.fillRect(0, 0, getWidth(), getHeight());
                 g.setColor(Color.BLUE);
                 Font font = new Font("Arial", Font.PLAIN, 12);
@@ -91,7 +92,7 @@ public class GamePage extends JFrame {
                 g.drawString("Store", x, y);
             }
         };
-        rectangle3.setBounds(1000, 400, 100, 50);
+        rectangle3.setBounds(600, 300, 100, 50);
         rectangle3.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {

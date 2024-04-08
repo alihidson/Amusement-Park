@@ -17,6 +17,7 @@ public class FirstPage extends JPanel {
                 super.paintComponent(g);
                 g.setColor(Color.YELLOW);
                 g.fillRect(0, 0, getWidth(), getHeight());
+
                 g.setColor(Color.BLUE);
                 Font font = new Font("Arial", Font.PLAIN, 12);
                 g.setFont(font);
@@ -57,7 +58,7 @@ public class FirstPage extends JPanel {
             @Override
             public void mouseClicked(MouseEvent e) {
                 JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(FirstPage.this);
-                frame.dispose();
+                //frame.dispose();
 
                 JFrame namePageFrame = new NamePage();
                 namePageFrame.setVisible(true);
@@ -74,7 +75,7 @@ public class FirstPage extends JPanel {
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-        Image backgroundImage = new ImageIcon("/Users/ali/Main/Documents/Source/Amusement-Park/src/image/wood.jpg").getImage();
+        Image backgroundImage = new ImageIcon("/Users/ali/Main/Documents/Source/Amusement-Park/src/image/Amusement-Park.jpg").getImage();
         g.drawImage(backgroundImage, 0, 0, getWidth(), getHeight(), this);
     }
 }
