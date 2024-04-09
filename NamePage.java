@@ -4,8 +4,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class NamePage extends JFrame {
-    private String userName1;
-    private String userName2;
+    private static String userName1;
+    private static String userName2;
 
     public NamePage() {
         setTitle("Please enter your name: ");

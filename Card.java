@@ -3,16 +3,21 @@ import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-public class CardOne extends JPanel {
+public class Card extends JPanel {
     private ImageIcon icon1;
     private ImageIcon icon2;
     private ImageIcon icon3;
     private ImageIcon icon4;
-    private boolean isCenterCard;
-    private static int clickCount = 0;
-
+    private boolean card11, card12, card13, card14, card15;
+    private boolean card21, card22, card23, card24, card25;
+    private boolean card31, card32, card33, card34, card35;
+    private static int clickCount11 = 3, clickCount12 = 3, clickCount13 = 3, clickCount14 = 3, clickCount15 = 3;
+    private static int clickCount21 = 3, clickCount22 = 3, clickCount23 = 3, clickCount24 = 3, clickCount25 = 3;
+    private static int clickCount31 = 3, clickCount32 = 3, clickCount33 = 3, clickCount34 = 3, clickCount35 = 3;
     private String text;
-    public CardOne(String icon1Path, String icon2Path, String icon3Path, String icon4Path, String text) {
+
+
+    public Card(String icon1Path, String icon2Path, String icon3Path, String icon4Path, String text) {
         icon1 = new ImageIcon(icon1Path);
         icon2 = new ImageIcon(icon2Path);
         icon3 = new ImageIcon(icon3Path);
@@ -21,12 +26,7 @@ public class CardOne extends JPanel {
         this.text = text;
 
 
-        if(icon1Path.contains("/Users/ali/Main/Documents/Source/Amusement-Park/src/swing_image/icons8-coin-58.png") && icon2Path.contains("/Users/ali/Main/Documents/Source/Amusement-Park/src/swing_image/icons8-roller-coaster-64.png")) {
-            isCenterCard = true;
-        }
-        else {
-            isCenterCard = false;
-        }
+        card11 = icon1Path.contains("/Users/ali/Main/Documents/Source/Amusement-Park/src/image/swingset.png"); // card11 being true
 
         setPreferredSize(new Dimension(80, 120));
         setOpaque(false);
@@ -34,22 +34,16 @@ public class CardOne extends JPanel {
         addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(CardOne.this);
+                JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(Card.this);
 
                 if (frame.getTitle().equals("Store")) {
-                    if (isCenterCard) {
-                        if (clickCount < 2) {
+                    if (card11) {
+                        if (clickCount11 > 0) {
+                            clickCount11--;
                             frame.dispose();
                             JFrame gamePage = new GamePage();
                             gamePage.setVisible(true);
-                            clickCount++;
                         }
-                    }
-                }
-                else {
-                    if(isCenterCard) {
-                        JFrame storeFrame = new Store();
-                        storeFrame.setVisible(true);
                     }
                 }
             }
@@ -60,7 +54,7 @@ public class CardOne extends JPanel {
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
 
-        if (isCenterCard && clickCount >= 2) {
+        if (card11 && clickCount11 <= 0) {
             g.setColor(Color.red);
             g.fillRect(0, 0, getWidth(), getHeight());
         }
@@ -75,7 +69,7 @@ public class CardOne extends JPanel {
             g.setColor(Color.BLACK);
             g.drawString(text, 10, 20);
 
-            if (!isCenterCard || (isCenterCard && clickCount < 2)) {
+            if (!card11 || (clickCount11 > 0)) {
                 g.drawImage(icon1.getImage(), (getWidth() - 40) / 2, (getHeight() - 40) / 2, 40, 40, this);
                 g.drawImage(icon2.getImage(), 55, 5, 20, 20, this);
                 g.drawImage(icon3.getImage(), 5, 95, 20, 20, this);
