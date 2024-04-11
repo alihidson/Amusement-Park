@@ -13,7 +13,7 @@ public class GamePage extends JFrame {
         this.userName1 = userName1;
         this.userName2 = userName2;
 
-        setTitle("Game Page");
+        setTitle("Game Play");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(1280, 740);
         setResizable(false);
@@ -108,7 +108,7 @@ public class GamePage extends JFrame {
 
     public GamePage() {
 
-        setTitle("Game Page");
+        setTitle("Game Play");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(1280, 740);
         setLocationRelativeTo(null);

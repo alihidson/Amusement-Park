@@ -8,10 +8,8 @@ public class Main {
         frame.setResizable(false);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-
         FirstPage firstPage = new FirstPage();
         frame.add(firstPage);
-
         frame.setVisible(true);
     }
 }

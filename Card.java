@@ -8,6 +8,7 @@ public class Card extends JPanel {
     private ImageIcon icon2;
     private ImageIcon icon3;
     private ImageIcon icon4;
+    private ImageIcon icon5;
     private boolean card11, card12, card13, card14, card15;
     private boolean card21, card22, card23, card24, card25;
     private boolean card31, card32, card33, card34, card35;
@@ -17,16 +18,17 @@ public class Card extends JPanel {
     private String text;
 
 
-    public Card(String icon1Path, String icon2Path, String icon3Path, String icon4Path, String text) {
+    public Card(String icon1Path, String icon2Path, String icon3Path, String icon4Path, String icon5Path, String text) {
         icon1 = new ImageIcon(icon1Path);
         icon2 = new ImageIcon(icon2Path);
         icon3 = new ImageIcon(icon3Path);
         icon4 = new ImageIcon(icon4Path);
+        icon5 = new ImageIcon(icon5Path);
 
         this.text = text;
 
 
-        card11 = icon1Path.contains("/Users/ali/Main/Documents/Source/Amusement-Park/src/image/swingset.png"); // card11 being true
+        card11 = icon1Path.contains("/Users/ali/Main/Documents/Source/Amusement-Park/src/image/little-swingset.png"); // card11 being true
 
         setPreferredSize(new Dimension(80, 120));
         setOpaque(false);
@@ -74,6 +76,7 @@ public class Card extends JPanel {
                 g.drawImage(icon2.getImage(), 55, 5, 20, 20, this);
                 g.drawImage(icon3.getImage(), 5, 95, 20, 20, this);
                 g.drawImage(icon4.getImage(), 30, 95, 20, 20, this);
+                g.drawImage(icon5.getImage(), 55, 95, 20, 20, this);
             }
         }
     }
