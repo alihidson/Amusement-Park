@@ -15,7 +15,7 @@ public class GamePage extends JFrame {
 
         setTitle("Game Play");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(1280, 740);
+        setSize(1280, 750);
         setResizable(false);
         setLocationRelativeTo(null);
 
@@ -110,7 +110,8 @@ public class GamePage extends JFrame {
 
         setTitle("Game Play");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(1280, 740);
+        setSize(1280, 750);
+        setResizable(false);
         setLocationRelativeTo(null);
 
 

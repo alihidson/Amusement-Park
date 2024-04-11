@@ -12,9 +12,9 @@ public class Card extends JPanel {
     private boolean card11, card12, card13, card14, card15;
     private boolean card21, card22, card23, card24, card25;
     private boolean card31, card32, card33, card34, card35;
-    private static int clickCount11 = 3, clickCount12 = 3, clickCount13 = 3, clickCount14 = 3, clickCount15 = 3;
-    private static int clickCount21 = 3, clickCount22 = 3, clickCount23 = 3, clickCount24 = 3, clickCount25 = 3;
-    private static int clickCount31 = 3, clickCount32 = 3, clickCount33 = 3, clickCount34 = 3, clickCount35 = 3;
+    public static int clickCount11 = 3, clickCount12 = 3, clickCount13 = 3, clickCount14 = 3, clickCount15 = 3;
+    public static int clickCount21 = 3, clickCount22 = 3, clickCount23 = 3, clickCount24 = 3, clickCount25 = 3;
+    public static int clickCount31 = 3, clickCount32 = 3, clickCount33 = 3, clickCount34 = 3, clickCount35 = 3;
     private String text;
 
 
@@ -77,6 +77,7 @@ public class Card extends JPanel {
                 g.drawImage(icon3.getImage(), 5, 95, 20, 20, this);
                 g.drawImage(icon4.getImage(), 30, 95, 20, 20, this);
                 g.drawImage(icon5.getImage(), 55, 95, 20, 20, this);
+//                g.drawString("1", 55, 5);
             }
         }
     }

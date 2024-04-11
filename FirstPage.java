@@ -30,25 +30,22 @@ public class FirstPage extends JPanel {
         rectangle1.setBounds(600, 100, 100, 50);
 
 
-
-
-
-//        JPanel rectangle2 = new JPanel() {
-//            @Override
-//            protected void paintComponent(Graphics g) {
-//                super.paintComponent(g);
-//                g.setColor(Color.green);
-//                g.fillRect(0, 0, getWidth(), getHeight());
-//                g.setColor(Color.BLUE);
-//                Font font = new Font("Arial", Font.PLAIN, 12);
-//                g.setFont(font);
-//                FontMetrics metrics = g.getFontMetrics(font);
-//                int x = (getWidth() - metrics.stringWidth("ID")) / 2;
-//                int y = ((getHeight() - metrics.getHeight()) / 2) + metrics.getAscent();
-//                g.drawString("ID", x, y);
-//            }
-//        };
-//        rectangle2.setBounds(600, 100, 100, 50);
+        JPanel rectangle2 = new JPanel() {
+            @Override
+            protected void paintComponent(Graphics g) {
+                super.paintComponent(g);
+                g.setColor(Color.green);
+                g.fillRect(0, 0, getWidth(), getHeight());
+                g.setColor(Color.BLUE);
+                Font font = new Font("Arial", Font.PLAIN, 12);
+                g.setFont(font);
+                FontMetrics metrics = g.getFontMetrics(font);
+                int x = (getWidth() - metrics.stringWidth("ID")) / 2;
+                int y = ((getHeight() - metrics.getHeight()) / 2) + metrics.getAscent();
+                g.drawString("ID", x, y);
+            }
+        };
+        rectangle2.setBounds(600, 155, 100, 50);
 
 
 
@@ -57,19 +54,24 @@ public class FirstPage extends JPanel {
         rectangle1.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(FirstPage.this);
+                //JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(FirstPage.this);
                 //frame.dispose();
 
                 JFrame namePageFrame = new NamePage();
                 namePageFrame.setVisible(true);
             }
         });
+        rectangle2.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
 
-
+                JOptionPane.showMessageDialog(null, "My ID is 'alihidson' on all platforms","ID", JOptionPane.QUESTION_MESSAGE);
+            }
+        });
 
 
         add(rectangle1);
-//      add(rectangle2);
+        add(rectangle2);
     }
 
     @Override
@@ -79,4 +81,3 @@ public class FirstPage extends JPanel {
         g.drawImage(backgroundImage, 0, 0, getWidth(), getHeight(), this);
     }
 }
-
