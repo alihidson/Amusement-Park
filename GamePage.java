@@ -46,7 +46,7 @@ public class GamePage extends JFrame {
                 g.drawString(userName1, x, y);
             }
         };
-        rectangle1.setBounds(600, 50, 100, 50);
+        rectangle1.setBounds(50, 25, 100, 50);
         layeredPane.add(rectangle1, Integer.valueOf(3));
 
 
@@ -65,7 +65,7 @@ public class GamePage extends JFrame {
                 g.drawString(userName2, x, y);
             }
         };
-        rectangle2.setBounds(600, 600, 100, 50);
+        rectangle2.setBounds(50, 625, 100, 50);
         layeredPane.add(rectangle2, Integer.valueOf(3));
 
 
@@ -141,7 +141,7 @@ public class GamePage extends JFrame {
                 g.drawString(userName1, x, y);
             }
         };
-        rectangle1.setBounds(600, 50, 100, 50);
+        rectangle1.setBounds(50, 25, 100, 50);
         layeredPane.add(rectangle1, Integer.valueOf(3));
 
 
@@ -160,7 +160,7 @@ public class GamePage extends JFrame {
                 g.drawString(userName2, x, y);
             }
         };
-        rectangle2.setBounds(600, 600, 100, 50);
+        rectangle2.setBounds(50, 625, 100, 50);
         layeredPane.add(rectangle2, Integer.valueOf(3));
 
 
