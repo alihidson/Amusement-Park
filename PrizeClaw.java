@@ -4,11 +4,9 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 public class PrizeClaw extends JPanel {
-    private ImageIcon icon1;
-    private ImageIcon icon2;
-    private ImageIcon icon3;
-    private ImageIcon icon4;
-    private boolean PC1, PC2, PC3;
+    private final ImageIcon icon1, icon2, icon3;
+    private final ImageIcon icon4;
+    private final boolean PC1, PC2, PC3;
     private static int clickCount1 = 1, clickCount2 = 1, clickCount3 = 1;
     private String text;
 
@@ -21,7 +19,10 @@ public class PrizeClaw extends JPanel {
         this.text = text;
 
 
-       // PC1 = icon1Path.contains("/Users/ali/Main/Documents/Source/Amusement-Park/src/image/swingset.png"); // card11 being true
+        PC1 = icon1Path.contains("/Users/ali/Main/Documents/Source/Amusement-Park/src/image/prize-claw-1.png"); // card being true
+        PC2 = icon1Path.contains("/Users/ali/Main/Documents/Source/Amusement-Park/src/image/prize-claw-2.png");
+        PC3 = icon1Path.contains("/Users/ali/Main/Documents/Source/Amusement-Park/src/image/prize-claw-3.png");
+
 
         setPreferredSize(new Dimension(80, 120));
         setOpaque(false);
@@ -40,6 +41,23 @@ public class PrizeClaw extends JPanel {
                             gamePage.setVisible(true);
                         }
                     }
+                    else if (PC2) {
+                        if (clickCount2 > 0) {
+                            clickCount2--;
+                            frame.dispose();
+                            JFrame gamePage = new GamePage();
+                            gamePage.setVisible(true);
+                        }
+                    }
+                    else if (PC3) {
+                        if (clickCount3 > 0) {
+                            clickCount3--;
+                            frame.dispose();
+                            JFrame gamePage = new GamePage();
+                            gamePage.setVisible(true);
+                        }
+                    }
+
                 }
             }
         });
@@ -49,8 +67,8 @@ public class PrizeClaw extends JPanel {
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
 
-        if (PC1 && clickCount1 <= 0) {
-            g.setColor(Color.red);
+        if ((PC1 && clickCount1 <= 0) || (PC2 && clickCount2 <= 0) || (PC3 && clickCount3 <= 0)) {
+            g.setColor(Color.blue);
             g.fillRect(0, 0, getWidth(), getHeight());
         }
         else {
@@ -64,7 +82,7 @@ public class PrizeClaw extends JPanel {
             g.setColor(Color.BLACK);
             g.drawString(text, 10, 20);
 
-            if (!PC1 || (clickCount1 > 0)) {
+            if ((!PC1 || clickCount1 > 0) || (!PC2 || clickCount2 > 0) || (!PC3 || clickCount3 > 0)) {
                 g.drawImage(icon1.getImage(), (getWidth() - 60) / 2, 20, 60, 60, this);
                 g.drawImage(icon2.getImage(), 5, 95, 20, 20, this);
                 g.drawImage(icon3.getImage(), 30, 95, 20, 20, this);

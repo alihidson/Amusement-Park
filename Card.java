@@ -4,14 +4,10 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 public class Card extends JPanel {
-    private ImageIcon icon1;
-    private ImageIcon icon2;
-    private ImageIcon icon3;
-    private ImageIcon icon4;
-    private ImageIcon icon5;
-    private boolean card11, card12, card13, card14, card15;
-    private boolean card21, card22, card23, card24, card25;
-    private boolean card31, card32, card33, card34, card35;
+    private final ImageIcon icon1, icon2, icon3, icon4, icon5;
+    private final boolean card11, card12, card13, card14, card15;
+    private final boolean card21, card22, card23, card24, card25;
+    private final boolean card31, card32, card33, card34, card35;
     public static int clickCount11 = 3, clickCount12 = 3, clickCount13 = 3, clickCount14 = 3, clickCount15 = 3;
     public static int clickCount21 = 3, clickCount22 = 3, clickCount23 = 3, clickCount24 = 3, clickCount25 = 3;
     public static int clickCount31 = 3, clickCount32 = 3, clickCount33 = 3, clickCount34 = 3, clickCount35 = 3;

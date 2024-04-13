@@ -4,7 +4,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 public class Coin extends JPanel {
-    private ImageIcon icon;
+    private final ImageIcon icon;
     public int n;
 
     public String NRedC;
@@ -21,7 +21,7 @@ public class Coin extends JPanel {
     public static int numberBlackCoin = 4;
     public static int numberGoldCoin = 5;
 
-    private boolean redSlot, greenSlot, blueSlot, whiteSlot, blackSlot;
+    private final boolean redSlot, greenSlot, blueSlot, whiteSlot, blackSlot;
 
 
 
