@@ -21,6 +21,8 @@ public class Coin extends JPanel {
     public static int numberBlackCoin = 4;
     public static int numberGoldCoin = 5;
 
+    private boolean redSlot, greenSlot, blueSlot, whiteSlot, blackSlot;
+
 
 
 
@@ -29,7 +31,15 @@ public class Coin extends JPanel {
         this.n = n;
 
 
-        setPreferredSize(new Dimension(80, 120));
+        redSlot = icon1Path.contains("/Users/ali/Main/Documents/Source/Amusement-Park/src/image/slot-machine-red.png");
+        greenSlot = icon1Path.contains("/Users/ali/Main/Documents/Source/Amusement-Park/src/image/slot-machine-green.png");
+        blueSlot = icon1Path.contains("/Users/ali/Main/Documents/Source/Amusement-Park/src/image/slot-machine-blue.png");
+        whiteSlot = icon1Path.contains("/Users/ali/Main/Documents/Source/Amusement-Park/src/image/slot-machine-white.png");
+        blackSlot = icon1Path.contains("/Users/ali/Main/Documents/Source/Amusement-Park/src/image/slot-machine-black.png");
+
+
+
+        setPreferredSize(new Dimension(80, 80));
         setOpaque(false);
 
         addMouseListener(new MouseAdapter() {
@@ -37,16 +47,49 @@ public class Coin extends JPanel {
             public void mouseClicked(MouseEvent e) {
                 JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(Coin.this);
 
-//                if (frame.getTitle().equals("Store")) {
-//                    if (card11) {
-//                        if (clickCount11 > 0) {
-//                            clickCount11--;
-//                            frame.dispose();
-//                            JFrame gamePage = new GamePage();
-//                            gamePage.setVisible(true);
-//                        }
-//                    }
-//                }
+                    if (redSlot) {
+                        if (numberRedCoin > 0) {
+                            numberRedCoin--;
+                            User.numberCoin1++;
+
+                            frame.dispose();
+                            JFrame storeAgain = new Store();
+                            storeAgain.setVisible(true);
+                        }
+                    }
+                    else if (greenSlot) {
+                        if (numberGreenCoin > 0) {
+                        numberGreenCoin--;
+                        frame.dispose();
+                        JFrame storeAgain = new Store();
+                        storeAgain.setVisible(true);
+                    }
+                }
+                    else if (blueSlot) {
+                        if (numberBlueCoin > 0) {
+                            numberBlueCoin--;
+                            frame.dispose();
+                            JFrame storeAgain = new Store();
+                            storeAgain.setVisible(true);
+                        }
+                    }
+                    else if (whiteSlot) {
+                        if (numberWhiteCoin > 0) {
+                            numberWhiteCoin--;
+                            frame.dispose();
+                            JFrame storeAgain = new Store();
+                            storeAgain.setVisible(true);
+                        }
+                    }
+                    else if (blackSlot) {
+                        if (numberBlackCoin > 0) {
+                            numberBlackCoin--;
+                            frame.dispose();
+                            JFrame storeAgain = new Store();
+                            storeAgain.setVisible(true);
+                        }
+                    }
+
             }
         });
 

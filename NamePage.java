@@ -4,8 +4,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class NamePage extends JFrame {
-    private static String userName1;
-    private static String userName2;
 
     public NamePage() {
         setTitle("Please enter your name: ");
@@ -42,10 +40,10 @@ public class NamePage extends JFrame {
         submitButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                userName1 = nameField1.getText();
-                userName2 = nameField2.getText();
+                User.Name1 = nameField1.getText();
+                User.Name2 = nameField2.getText();
                 dispose();
-                JFrame gamePage = new GamePage(userName1, userName2);
+                JFrame gamePage = new GamePage();
                 gamePage.setVisible(true);
             }
         });
