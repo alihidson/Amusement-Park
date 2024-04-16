@@ -1,5 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
@@ -57,121 +59,106 @@ public class Card extends JPanel {
                     if (card11) {
                         if (clickCount11 > 0) {
                             clickCount11--;
-                            frame.dispose();
-                            JFrame gamePage = new GamePage();
-                            gamePage.setVisible(true);
+
+                            showBox(frame);
                         }
                     }
                     else if(card12) {
                         if (clickCount12 > 0) {
                             clickCount12--;
-                            frame.dispose();
-                            JFrame gamePage = new GamePage();
-                            gamePage.setVisible(true);
+
+                            showBox(frame);
                         }
                     }
                     else if(card13) {
                         if (clickCount13 > 0) {
                             clickCount13--;
-                            frame.dispose();
-                            JFrame gamePage = new GamePage();
-                            gamePage.setVisible(true);
+
+                            showBox(frame);
                         }
                     }
                     else if(card14) {
                         if (clickCount14 > 0) {
                             clickCount14--;
-                            frame.dispose();
-                            JFrame gamePage = new GamePage();
-                            gamePage.setVisible(true);
+
+                            showBox(frame);
                         }
                     }
                     else if(card15) {
                         if (clickCount15 > 0) {
                             clickCount15--;
-                            frame.dispose();
-                            JFrame gamePage = new GamePage();
-                            gamePage.setVisible(true);
+
+                            showBox(frame);
                         }
                     }
                     else if(card21) {
                         if (clickCount21 > 0) {
                             clickCount21--;
-                            frame.dispose();
-                            JFrame gamePage = new GamePage();
-                            gamePage.setVisible(true);
+
+                            showBox(frame);
                         }
                     }
                     else if(card22) {
                         if (clickCount22 > 0) {
                             clickCount22--;
-                            frame.dispose();
-                            JFrame gamePage = new GamePage();
-                            gamePage.setVisible(true);
+
+                            showBox(frame);
                         }
                     }
                     else if(card23) {
                         if (clickCount23 > 0) {
                             clickCount23--;
-                            frame.dispose();
-                            JFrame gamePage = new GamePage();
-                            gamePage.setVisible(true);
+
+                            showBox(frame);
                         }
                     }
                     else if(card24) {
                         if (clickCount24 > 0) {
                             clickCount24--;
-                            frame.dispose();
-                            JFrame gamePage = new GamePage();
-                            gamePage.setVisible(true);
+
+                            showBox(frame);
                         }
                     }
                     else if(card25) {
                         if (clickCount25 > 0) {
                             clickCount25--;
-                            frame.dispose();
-                            JFrame gamePage = new GamePage();
-                            gamePage.setVisible(true);
+
+                            showBox(frame);
                         }
                     }
                     else if(card31) {
                         if (clickCount31 > 0) {
                             clickCount31--;
-                            frame.dispose();
-                            JFrame gamePage = new GamePage();
-                            gamePage.setVisible(true);
+
+                            showBox(frame);
                         }
                     }
                     else if(card32) {
                         if (clickCount32 > 0) {
                             clickCount32--;
-                            frame.dispose();
-                            JFrame gamePage = new GamePage();
-                            gamePage.setVisible(true);
+
+                            showBox(frame);
                         }
                     }
                     else if(card33) {
                         if (clickCount33 > 0) {
                             clickCount33--;
-                            frame.dispose();
-                            JFrame gamePage = new GamePage();
-                            gamePage.setVisible(true);
+
+                            showBox(frame);
                         }
                     }
                     else if(card34) {
                         if (clickCount34 > 0) {
                             clickCount34--;
-                            frame.dispose();
-                            JFrame gamePage = new GamePage();
-                            gamePage.setVisible(true);
+
+                            showBox(frame);
                         }
                     }
                     else if(card35) {
                         if (clickCount35 > 0) {
                             clickCount35--;
-                            frame.dispose();
-                            JFrame gamePage = new GamePage();
-                            gamePage.setVisible(true);
+
+                            showBox(frame);
                         }
                     }
 
@@ -215,6 +202,32 @@ public class Card extends JPanel {
                 g.drawImage(icon5.getImage(), 55, 95, 20, 20, this);
             }
         }
+    }
+
+    private void showBox(JFrame parentFrame) {
+        JDialog dialog = new JDialog(parentFrame, "Menu", true); // Parent frame, title, and modal
+        dialog.setLayout(new BorderLayout());
+
+        JPanel panel = new JPanel();
+        panel.add(new JLabel("Which one?"));
+
+        JButton pickUpButton = new JButton("Pick up");
+        pickUpButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dialog.dispose(); // Close the dialog when the button is clicked
+                JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(Card.this);
+                frame.dispose();
+                JFrame gamePage = new GamePage();
+                gamePage.setVisible(true);
+            }
+        });
+        panel.add(pickUpButton);
+
+        dialog.add(panel, BorderLayout.CENTER);
+        dialog.setSize(150, 200);
+        dialog.setLocationRelativeTo(parentFrame); // Center the dialog on the parent frame
+        dialog.setVisible(true); // Show the dialog
     }
 
 }
