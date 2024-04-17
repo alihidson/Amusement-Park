@@ -7,6 +7,9 @@ public class Coin extends JPanel {
     private final ImageIcon icon;
     public int n;
 
+    public int CanGetCoin1 = 3;
+    public int CanGetCoin2 = 3;
+
     public String NRedC;
     public String NGreenC;
     public String NBlueC;
@@ -19,7 +22,6 @@ public class Coin extends JPanel {
     public static int numberBlueCoin = 4;
     public static int numberWhiteCoin = 4;
     public static int numberBlackCoin = 4;
-    public static int numberGoldCoin = 5;
 
     private final boolean redSlot, greenSlot, blueSlot, whiteSlot, blackSlot;
 
@@ -50,7 +52,7 @@ public class Coin extends JPanel {
                     if (redSlot) {
                         if (numberRedCoin > 0) {
                             numberRedCoin--;
-                            User.numberCoin1++;
+                            User.numberRedCoin1++;
 
                             frame.dispose();
                             JFrame storeAgain = new Store();
@@ -116,7 +118,7 @@ public class Coin extends JPanel {
                 break;
 
             case 12:
-                NGoldC = String.valueOf(numberGoldCoin);
+                NGoldC = String.valueOf(User.allGoldCoin);
                 break;
         }
     }

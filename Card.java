@@ -231,7 +231,7 @@ public class Card extends JPanel {
         });
         buttonPanel.add(pickUpButton); // Add "Pick up" button to buttonPanel
 
-        JButton dropButton = new JButton("Drop");
+        JButton dropButton = new JButton("Reserve");
         dropButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
