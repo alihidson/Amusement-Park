@@ -13,7 +13,7 @@ public class Card extends JPanel {
     public static int clickCount11 = 3, clickCount12 = 3, clickCount13 = 3, clickCount14 = 3, clickCount15 = 3;
     public static int clickCount21 = 3, clickCount22 = 3, clickCount23 = 3, clickCount24 = 3, clickCount25 = 3;
     public static int clickCount31 = 3, clickCount32 = 3, clickCount33 = 3, clickCount34 = 3, clickCount35 = 3;
-    private String text;
+    private final String text;
 
 
     public Card(String icon1Path, String icon2Path, String icon3Path, String icon4Path, String icon5Path, String text) {
@@ -209,7 +209,14 @@ public class Card extends JPanel {
         dialog.setLayout(new BorderLayout());
 
         JPanel panel = new JPanel();
-        panel.add(new JLabel("Which one?"));
+        panel.setBackground(Color.pink); // Set background color
+        panel.setLayout(new GridLayout(3, 1)); // Set GridLayout for three components
+
+        JLabel label = new JLabel("Which one?");
+        label.setHorizontalAlignment(JLabel.CENTER); // Center align the label
+        panel.add(label);
+
+        JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER)); // Panel for buttons
 
         JButton pickUpButton = new JButton("Pick up");
         pickUpButton.addActionListener(new ActionListener() {
@@ -222,12 +229,25 @@ public class Card extends JPanel {
                 gamePage.setVisible(true);
             }
         });
-        panel.add(pickUpButton);
+        buttonPanel.add(pickUpButton); // Add "Pick up" button to buttonPanel
+
+        JButton dropButton = new JButton("Drop");
+        dropButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Action for "Drop" button
+            }
+        });
+        buttonPanel.add(dropButton); // Add "Drop" button to buttonPanel
+
+        panel.add(buttonPanel); // Add buttonPanel to the main panel
 
         dialog.add(panel, BorderLayout.CENTER);
-        dialog.setSize(150, 200);
+        dialog.setSize(200, 150); // Increase dialog size
         dialog.setLocationRelativeTo(parentFrame); // Center the dialog on the parent frame
         dialog.setVisible(true); // Show the dialog
     }
+
+
 
 }
