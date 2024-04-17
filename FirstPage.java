@@ -5,11 +5,10 @@ import java.awt.event.MouseEvent;
 
 public class FirstPage extends JPanel {
 
+    private NamePage namePage; // first value is null
+
     public FirstPage() {
-
         setLayout(null);
-
-
 
         JPanel rectangle1 = new JPanel() {
             @Override
@@ -28,6 +27,7 @@ public class FirstPage extends JPanel {
             }
         };
         rectangle1.setBounds(600, 100, 100, 50);
+
 
 
         JPanel rectangle2 = new JPanel() {
@@ -49,18 +49,18 @@ public class FirstPage extends JPanel {
 
 
 
-
-
         rectangle1.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                //JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(FirstPage.this);
-                //frame.dispose();
-
-                JFrame namePageFrame = new NamePage();
-                namePageFrame.setVisible(true);
+                if (namePage == null) {
+                    namePage = new NamePage(FirstPage.this);
+                }
+                namePage.setVisible(true);
             }
         });
+
+
+
         rectangle2.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -68,6 +68,7 @@ public class FirstPage extends JPanel {
                 JOptionPane.showMessageDialog(null, "My ID is 'alihidson' on all platforms","ID", JOptionPane.QUESTION_MESSAGE);
             }
         });
+
 
 
         add(rectangle1);
@@ -79,5 +80,14 @@ public class FirstPage extends JPanel {
         super.paintComponent(g);
         Image backgroundImage = new ImageIcon("/Users/ali/Main/Documents/Source/Amusement-Park/src/image/Amusement-Park.jpg").getImage();
         g.drawImage(backgroundImage, 0, 0, getWidth(), getHeight(), this);
+    }
+
+    public void closePages() {
+        if (namePage != null) {
+            namePage.dispose(); // Close NamePage
+            namePage = null; // Reset reference
+        }
+        JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(this);
+        frame.dispose(); // Close FirstPage
     }
 }

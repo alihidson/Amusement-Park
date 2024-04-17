@@ -65,7 +65,7 @@ public class CardPanelThree extends JPanel {
                     "/Users/ali/Main/Documents/Source/Amusement-Park/src/image/red-coin.png",
                     "/Users/ali/Main/Documents/Source/Amusement-Park/src/image/blue-coin-3.png",
                     "/Users/ali/Main/Documents/Source/Amusement-Park/src/image/red-coin-3.png",
-                    "/Users/ali/Main/Documents/Source/Amusement-Park/src/image/green-coin-3.png","4");
+                    "/Users/ali/Main/Documents/Source/Amusement-Park/src/image/green-coin-3.png","5");
 
             numberCard35 = Card.clickCount35;
             add(card35);

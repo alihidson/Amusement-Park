@@ -191,9 +191,9 @@ public class Card extends JPanel {
             g.setColor(Color.BLACK);
             g.drawString(text, 10, 20);
 
-            if ((!card11 || clickCount11 > 0) || (!card12 || clickCount12 > 0) || (!card13 || clickCount13 > 0) || (!card14 || clickCount14 > 0) || (!card15 || clickCount15 > 0)
-             || (!card21 || clickCount21 > 0) || (!card22 || clickCount22 > 0) || (!card23 || clickCount23 > 0) || (!card24 || clickCount24 > 0) || (!card25 || clickCount25 > 0)
-             || (!card31 || clickCount31 > 0) || (!card32 || clickCount32 > 0) || (!card33 || clickCount33 > 0) || (!card34 || clickCount34 > 0) || (!card35 || clickCount35 > 0)){
+            if ((clickCount11 > 0) || (clickCount12 > 0) || (clickCount13 > 0) || (clickCount14 > 0) || (clickCount15 > 0)
+             || (clickCount21 > 0) || (clickCount22 > 0) || (clickCount23 > 0) || (clickCount24 > 0) || (clickCount25 > 0)
+             || (clickCount31 > 0) || (clickCount32 > 0) || (clickCount33 > 0) || (clickCount34 > 0) || (clickCount35 > 0)){
 
                 g.drawImage(icon1.getImage(), (getWidth() - 40) / 2, (getHeight() - 40) / 2, 40, 40, this);
                 g.drawImage(icon2.getImage(), 55, 5, 20, 20, this);
