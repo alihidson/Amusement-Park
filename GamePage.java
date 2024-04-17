@@ -5,9 +5,7 @@ import java.awt.event.MouseEvent;
 
 public class GamePage extends JFrame {
     public Image backgroundImage;
-    private ScoreboardPanel scoreboardPanel;
 
-    private Image scoreboardBackgroundImage;
 
 
     public GamePage() {
@@ -29,9 +27,9 @@ public class GamePage extends JFrame {
         layeredPane.add(backgroundPanel, Integer.valueOf(1));
 
 
-        scoreboardPanel = new ScoreboardPanel();
-        scoreboardPanel.setBounds(1000, 0, 280, 720);
-        layeredPane.add(scoreboardPanel, Integer.valueOf(2)); // Add scoreboard panel to be on top
+        ScoreBoardPanel scoreBoard = new ScoreBoardPanel();
+        scoreBoard.setBounds(1000, 0, 280, 724);
+        layeredPane.add(scoreBoard, Integer.valueOf(2)); // Add scoreboard panel to be on top
 
 
         JPanel rectangle1 = new JPanel() {
@@ -110,51 +108,10 @@ public class GamePage extends JFrame {
             setOpaque(false);
             setLayout(new BorderLayout());
         }
-
         @Override
         protected void paintComponent(Graphics g) {
             super.paintComponent(g);
             g.drawImage(backgroundImage, 0, 0, getWidth(), getHeight(), this);
-        }
-    }
-
-
-
-
-    private class ScoreboardPanel extends JPanel {
-
-        public ScoreboardPanel() {
-            scoreboardBackgroundImage = new ImageIcon("/Users/ali/Main/Documents/Source/Amusement-Park/src/image/woodScore.jpg").getImage();
-            setOpaque(false);
-            setPreferredSize(new Dimension(350, 200));
-            // Add a border around the panel
-            setBorder(BorderFactory.createLineBorder(new Color(158, 72, 177), 4)); // Adjust color and thickness as needed
-        }
-
-        @Override
-        protected void paintComponent(Graphics g) {
-            super.paintComponent(g);
-            // Draw background image
-            g.drawImage(scoreboardBackgroundImage, 0, 0, getWidth(), getHeight(), this);
-            // Draw text
-            g.setColor(Color.BLACK);
-            Font font = new Font("Arial", Font.PLAIN, 12);
-            g.setFont(font);
-            g.drawString("Player 1 Score: " + calculatePlayerScore(1), 20, 20);
-            g.drawString("Player 2 Score: " + calculatePlayerScore(2), 20, 40);
-        }
-
-        private int calculatePlayerScore(int playerNumber) {
-            int score = 0;
-            if (playerNumber == 1) {
-                score += User.numberRedCoin1 + User.numberGreenCoin1 + User.numberBlueCoin1 +
-                        User.numberWhiteCoin1 + User.numberBlackCoin1 + User.numberGoldCoin1;
-            }
-            else if (playerNumber == 2) {
-                score += User.numberRedCoin2 + User.numberGreenCoin2 + User.numberBlueCoin2 +
-                        User.numberWhiteCoin2 + User.numberBlackCoin2 + User.numberGoldCoin2;
-            }
-            return score;
         }
     }
 
