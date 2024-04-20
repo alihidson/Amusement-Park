@@ -26,6 +26,14 @@ public class Store extends JFrame {
 
 
 
+        ScoreBoardPanel scoreBoard = new ScoreBoardPanel();
+        scoreBoard.setBounds(1000, 0, 280, 362);
+        layeredPane.add(scoreBoard, Integer.valueOf(2)); // Add scoreboard panel to be on top
+
+
+
+
+
 
         PrizeClawPanel prizeClaw1 = new PrizeClawPanel(1);
         prizeClaw1.setBounds(585, 50, 100, 150);

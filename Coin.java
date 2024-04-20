@@ -7,8 +7,16 @@ public class Coin extends JPanel {
     private final ImageIcon icon;
     public int n;
 
-    public int CanGetCoin1 = 3;
-    public int CanGetCoin2 = 3;
+    public static int countGetCoin = 3;
+
+
+
+    public static int numberRedCoin = 4;
+    public static int numberGreenCoin = 4;
+    public static int numberBlueCoin = 4;
+    public static int numberWhiteCoin = 4;
+    public static int numberBlackCoin = 4;
+
 
     public String NRedC;
     public String NGreenC;
@@ -16,12 +24,6 @@ public class Coin extends JPanel {
     public String NWhiteC;
     public String NBlackC;
     public String NGoldC;
-
-    public static int numberRedCoin = 4;
-    public static int numberGreenCoin = 4;
-    public static int numberBlueCoin = 4;
-    public static int numberWhiteCoin = 4;
-    public static int numberBlackCoin = 4;
 
     private final boolean redSlot, greenSlot, blueSlot, whiteSlot, blackSlot;
 
@@ -50,50 +52,476 @@ public class Coin extends JPanel {
                 JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(Coin.this);
 
                     if (redSlot) {
-                        if (numberRedCoin > 0) {
-                            numberRedCoin--;
-                            User.numberRedCoin1++;
+                        if(User.sw1 == 1) {
+                            if (countGetCoin > 0 && numberRedCoin == 4 && User.numberUserGetRedCoin == 0
+                                    && User.numberUserGetGreenCoin == 0 && User.numberUserGetBlueCoin == 0
+                                    && User.numberUserGetWhiteCoin == 0 && User.numberUserGetBlackCoin == 0) {
+                                numberRedCoin--;
+                                User.numberRedCoin1++;
+                                User.numberUserGetRedCoin++;
+                                countGetCoin--;
 
-                            frame.dispose();
-                            JFrame storeAgain = new Store();
-                            storeAgain.setVisible(true);
+
+                                frame.dispose();
+                                JFrame storeAgain = new Store();
+                                storeAgain.setVisible(true);
+                            }
+                            else if (countGetCoin > 0 && numberRedCoin == 3 && User.numberUserGetRedCoin == 1
+                                    && User.numberUserGetGreenCoin == 0 && User.numberUserGetBlueCoin == 0
+                                    && User.numberUserGetWhiteCoin == 0 && User.numberUserGetBlackCoin == 0) {
+                                numberRedCoin--;
+                                User.numberRedCoin1++;
+                                User.numberUserGetRedCoin++;
+                                countGetCoin = 0;
+
+
+
+                                frame.dispose();
+                                JFrame storeAgain = new Store();
+                                storeAgain.setVisible(true);
+                            }
+                            else if(countGetCoin > 0 && numberRedCoin <= 4 && numberRedCoin > 0 && User.numberUserGetRedCoin == 0 &&
+                                    (User.numberUserGetGreenCoin == 0 || User.numberUserGetGreenCoin == 1 || User.numberUserGetGreenCoin == 2 ||
+                                            User.numberUserGetBlueCoin == 0 || User.numberUserGetBlueCoin == 1 || User.numberUserGetBlueCoin == 2 ||
+                                            User.numberUserGetWhiteCoin == 0 || User.numberUserGetWhiteCoin == 1 || User.numberUserGetWhiteCoin == 2 ||
+                                            User.numberUserGetBlackCoin == 0 || User.numberUserGetBlackCoin == 1 || User.numberUserGetBlackCoin == 2)) {
+                                numberRedCoin--;
+                                User.numberRedCoin1++;
+                                User.numberUserGetRedCoin++;
+                                countGetCoin--;
+
+
+
+                                frame.dispose();
+                                JFrame storeAgain = new Store();
+                                storeAgain.setVisible(true);
+                            }
+                        }
+                        else if(User.sw2 == 1) {
+                            if (countGetCoin > 0 && numberRedCoin == 4 && User.numberUserGetRedCoin == 0
+                                    && User.numberUserGetGreenCoin == 0 && User.numberUserGetBlueCoin == 0
+                                    && User.numberUserGetWhiteCoin == 0 && User.numberUserGetBlackCoin == 0) {
+                                numberRedCoin--;
+                                User.numberRedCoin2++;
+                                User.numberUserGetRedCoin++;
+                                countGetCoin--;
+
+
+                                frame.dispose();
+                                JFrame storeAgain = new Store();
+                                storeAgain.setVisible(true);
+                            }
+                            else if (countGetCoin > 0 && numberRedCoin == 3 && User.numberUserGetRedCoin == 1
+                                    && User.numberUserGetGreenCoin == 0 && User.numberUserGetBlueCoin == 0
+                                    && User.numberUserGetWhiteCoin == 0 && User.numberUserGetBlackCoin == 0) {
+                                numberRedCoin--;
+                                User.numberRedCoin2++;
+                                User.numberUserGetRedCoin++;
+                                countGetCoin = 0;
+
+
+
+                                frame.dispose();
+                                JFrame storeAgain = new Store();
+                                storeAgain.setVisible(true);
+                            }
+                            else if(countGetCoin > 0 && numberRedCoin <= 4 && numberRedCoin > 0 && User.numberUserGetRedCoin == 0 &&
+                                    (User.numberUserGetGreenCoin == 0 || User.numberUserGetGreenCoin == 1 || User.numberUserGetGreenCoin == 2 ||
+                                            User.numberUserGetBlueCoin == 0 || User.numberUserGetBlueCoin == 1 || User.numberUserGetBlueCoin == 2 ||
+                                            User.numberUserGetWhiteCoin == 0 || User.numberUserGetWhiteCoin == 1 || User.numberUserGetWhiteCoin == 2 ||
+                                            User.numberUserGetBlackCoin == 0 || User.numberUserGetBlackCoin == 1 || User.numberUserGetBlackCoin == 2)) {
+                                numberRedCoin--;
+                                User.numberRedCoin2++;
+                                User.numberUserGetRedCoin++;
+                                countGetCoin--;
+
+
+
+                                frame.dispose();
+                                JFrame storeAgain = new Store();
+                                storeAgain.setVisible(true);
+                            }
                         }
                     }
+
+
+
+
                     else if (greenSlot) {
-                        if (numberGreenCoin > 0) {
-                        numberGreenCoin--;
-                        frame.dispose();
-                        JFrame storeAgain = new Store();
-                        storeAgain.setVisible(true);
+                        if (User.sw1 == 1) {
+                            if (countGetCoin > 0 && numberGreenCoin == 4 && User.numberUserGetGreenCoin == 0
+                                    && User.numberUserGetRedCoin == 0 && User.numberUserGetBlueCoin == 0
+                                    && User.numberUserGetWhiteCoin == 0 && User.numberUserGetBlackCoin == 0) {
+                                numberGreenCoin--;
+                                User.numberGreenCoin1++;
+                                User.numberUserGetGreenCoin++;
+                                countGetCoin--;
+
+
+                                frame.dispose();
+                                JFrame storeAgain = new Store();
+                                storeAgain.setVisible(true);
+                            } else if (countGetCoin > 0 && numberGreenCoin == 3 && User.numberUserGetGreenCoin == 1
+                                    && User.numberUserGetRedCoin == 0 && User.numberUserGetBlueCoin == 0
+                                    && User.numberUserGetWhiteCoin == 0 && User.numberUserGetBlackCoin == 0) {
+                                numberGreenCoin--;
+                                User.numberGreenCoin1++;
+                                User.numberUserGetGreenCoin++;
+                                countGetCoin = 0;
+
+
+                                frame.dispose();
+                                JFrame storeAgain = new Store();
+                                storeAgain.setVisible(true);
+                            } else if (countGetCoin > 0 && numberGreenCoin <= 4 && numberGreenCoin > 0 && User.numberUserGetGreenCoin == 0 &&
+                                    (User.numberUserGetRedCoin == 0 || User.numberUserGetRedCoin == 1 || User.numberUserGetRedCoin == 2 ||
+                                            User.numberUserGetBlueCoin == 0 || User.numberUserGetBlueCoin == 1 || User.numberUserGetBlueCoin == 2 ||
+                                            User.numberUserGetWhiteCoin == 0 || User.numberUserGetWhiteCoin == 1 || User.numberUserGetWhiteCoin == 2 ||
+                                            User.numberUserGetBlackCoin == 0 || User.numberUserGetBlackCoin == 1 || User.numberUserGetBlackCoin == 2)) {
+                                numberGreenCoin--;
+                                User.numberGreenCoin1++;
+                                User.numberUserGetGreenCoin++;
+                                countGetCoin--;
+
+
+                                frame.dispose();
+                                JFrame storeAgain = new Store();
+                                storeAgain.setVisible(true);
+                            }
+                        } else if (User.sw2 == 1) {
+                            if (countGetCoin > 0 && numberGreenCoin == 4 && User.numberUserGetGreenCoin == 0
+                                    && User.numberUserGetRedCoin == 0 && User.numberUserGetBlueCoin == 0
+                                    && User.numberUserGetWhiteCoin == 0 && User.numberUserGetBlackCoin == 0) {
+                                numberGreenCoin--;
+                                User.numberGreenCoin2++;
+                                User.numberUserGetGreenCoin++;
+                                countGetCoin--;
+
+
+                                frame.dispose();
+                                JFrame storeAgain = new Store();
+                                storeAgain.setVisible(true);
+                            } else if (countGetCoin > 0 && numberGreenCoin == 3 && User.numberUserGetGreenCoin == 1
+                                    && User.numberUserGetRedCoin == 0 && User.numberUserGetBlueCoin == 0
+                                    && User.numberUserGetWhiteCoin == 0 && User.numberUserGetBlackCoin == 0) {
+                                numberGreenCoin--;
+                                User.numberGreenCoin2++;
+                                User.numberUserGetGreenCoin++;
+                                countGetCoin = 0;
+
+
+                                frame.dispose();
+                                JFrame storeAgain = new Store();
+                                storeAgain.setVisible(true);
+                            } else if (countGetCoin > 0 && numberGreenCoin <= 4 && numberGreenCoin > 0 && User.numberUserGetGreenCoin == 0 &&
+                                    (User.numberUserGetRedCoin == 0 || User.numberUserGetRedCoin == 1 || User.numberUserGetRedCoin == 2 ||
+                                            User.numberUserGetBlueCoin == 0 || User.numberUserGetBlueCoin == 1 || User.numberUserGetBlueCoin == 2 ||
+                                            User.numberUserGetWhiteCoin == 0 || User.numberUserGetWhiteCoin == 1 || User.numberUserGetWhiteCoin == 2 ||
+                                            User.numberUserGetBlackCoin == 0 || User.numberUserGetBlackCoin == 1 || User.numberUserGetBlackCoin == 2)) {
+                                numberGreenCoin--;
+                                User.numberGreenCoin2++;
+                                User.numberUserGetGreenCoin++;
+                                countGetCoin--;
+
+
+                                frame.dispose();
+                                JFrame storeAgain = new Store();
+                                storeAgain.setVisible(true);
+                            }
+                        }
                     }
-                }
+
+
+
+
                     else if (blueSlot) {
-                        if (numberBlueCoin > 0) {
-                            numberBlueCoin--;
-                            frame.dispose();
-                            JFrame storeAgain = new Store();
-                            storeAgain.setVisible(true);
+                        if(User.sw1 == 1) {
+                            if (countGetCoin > 0 && numberBlueCoin == 4 && User.numberUserGetBlueCoin == 0
+                                    && User.numberUserGetRedCoin == 0 && User.numberUserGetGreenCoin == 0
+                                    && User.numberUserGetWhiteCoin == 0 && User.numberUserGetBlackCoin == 0) {
+                                numberBlueCoin--;
+                                User.numberBlueCoin1++;
+                                User.numberUserGetBlueCoin++;
+                                countGetCoin--;
+
+
+                                frame.dispose();
+                                JFrame storeAgain = new Store();
+                                storeAgain.setVisible(true);
+                            }
+                            else if (countGetCoin > 0 && numberBlueCoin == 3 && User.numberUserGetBlueCoin == 1
+                                    && User.numberUserGetRedCoin == 0 && User.numberUserGetGreenCoin == 0
+                                    && User.numberUserGetWhiteCoin == 0 && User.numberUserGetBlackCoin == 0) {
+                                numberBlueCoin--;
+                                User.numberBlueCoin1++;
+                                User.numberUserGetBlueCoin++;
+                                countGetCoin = 0;
+
+
+
+                                frame.dispose();
+                                JFrame storeAgain = new Store();
+                                storeAgain.setVisible(true);
+                            }
+                            else if(countGetCoin > 0 && numberBlueCoin <= 4 && numberBlueCoin > 0 && User.numberUserGetBlueCoin == 0 &&
+                                    (User.numberUserGetRedCoin == 0 || User.numberUserGetRedCoin == 1 || User.numberUserGetRedCoin == 2 ||
+                                            User.numberUserGetGreenCoin == 0 || User.numberUserGetGreenCoin == 1 || User.numberUserGetGreenCoin == 2 ||
+                                            User.numberUserGetWhiteCoin == 0 || User.numberUserGetWhiteCoin == 1 || User.numberUserGetWhiteCoin == 2 ||
+                                            User.numberUserGetBlackCoin == 0 || User.numberUserGetBlackCoin == 1 || User.numberUserGetBlackCoin == 2)) {
+                                numberBlueCoin--;
+                                User.numberBlueCoin1++;
+                                User.numberUserGetBlueCoin++;
+                                countGetCoin--;
+
+
+
+                                frame.dispose();
+                                JFrame storeAgain = new Store();
+                                storeAgain.setVisible(true);
+                            }
+                        }
+                        else if(User.sw2 == 1) {
+                            if (countGetCoin > 0 && numberBlueCoin == 4 && User.numberUserGetBlueCoin == 0
+                                    && User.numberUserGetRedCoin == 0 && User.numberUserGetGreenCoin == 0
+                                    && User.numberUserGetWhiteCoin == 0 && User.numberUserGetBlackCoin == 0) {
+                                numberBlueCoin--;
+                                User.numberBlueCoin2++;
+                                User.numberUserGetBlueCoin++;
+                                countGetCoin--;
+
+
+                                frame.dispose();
+                                JFrame storeAgain = new Store();
+                                storeAgain.setVisible(true);
+                            }
+                            else if (countGetCoin > 0 && numberBlueCoin == 3 && User.numberUserGetBlueCoin == 1
+                                    && User.numberUserGetRedCoin == 0 && User.numberUserGetGreenCoin == 0
+                                    && User.numberUserGetWhiteCoin == 0 && User.numberUserGetBlackCoin == 0) {
+                                numberBlueCoin--;
+                                User.numberBlueCoin2++;
+                                User.numberUserGetBlueCoin++;
+                                countGetCoin = 0;
+
+
+
+                                frame.dispose();
+                                JFrame storeAgain = new Store();
+                                storeAgain.setVisible(true);
+                            }
+                            else if(countGetCoin > 0 && numberBlueCoin <= 4 && numberBlueCoin > 0 && User.numberUserGetBlueCoin == 0 &&
+                                    (User.numberUserGetRedCoin == 0 || User.numberUserGetRedCoin == 1 || User.numberUserGetRedCoin == 2 ||
+                                            User.numberUserGetGreenCoin == 0 || User.numberUserGetGreenCoin == 1 || User.numberUserGetGreenCoin == 2 ||
+                                            User.numberUserGetWhiteCoin == 0 || User.numberUserGetWhiteCoin == 1 || User.numberUserGetWhiteCoin == 2 ||
+                                            User.numberUserGetBlackCoin == 0 || User.numberUserGetBlackCoin == 1 || User.numberUserGetBlackCoin == 2)) {
+                                numberBlueCoin--;
+                                User.numberBlueCoin2++;
+                                User.numberUserGetBlueCoin++;
+                                countGetCoin--;
+
+
+
+                                frame.dispose();
+                                JFrame storeAgain = new Store();
+                                storeAgain.setVisible(true);
+                            }
                         }
                     }
+
+
+
+
                     else if (whiteSlot) {
-                        if (numberWhiteCoin > 0) {
-                            numberWhiteCoin--;
-                            frame.dispose();
-                            JFrame storeAgain = new Store();
-                            storeAgain.setVisible(true);
+                        if(User.sw1 == 1) {
+                            if (countGetCoin > 0 && numberWhiteCoin == 4 && User.numberUserGetWhiteCoin == 0
+                                    && User.numberUserGetRedCoin == 0 && User.numberUserGetGreenCoin == 0
+                                    && User.numberUserGetBlueCoin == 0 && User.numberUserGetBlackCoin == 0) {
+                                numberWhiteCoin--;
+                                User.numberWhiteCoin1++;
+                                User.numberUserGetWhiteCoin++;
+                                countGetCoin--;
+
+
+                                frame.dispose();
+                                JFrame storeAgain = new Store();
+                                storeAgain.setVisible(true);
+                            }
+                            else if (countGetCoin > 0 && numberWhiteCoin == 3 && User.numberUserGetWhiteCoin == 1
+                                    && User.numberUserGetRedCoin == 0 && User.numberUserGetGreenCoin == 0
+                                    && User.numberUserGetBlueCoin == 0 && User.numberUserGetBlackCoin == 0) {
+                                numberWhiteCoin--;
+                                User.numberWhiteCoin1++;
+                                User.numberUserGetWhiteCoin++;
+                                countGetCoin = 0;
+
+
+
+                                frame.dispose();
+                                JFrame storeAgain = new Store();
+                                storeAgain.setVisible(true);
+                            }
+                            else if(countGetCoin > 0 && numberWhiteCoin <= 4 && numberWhiteCoin > 0 && User.numberUserGetWhiteCoin == 0 &&
+                                    (User.numberUserGetRedCoin == 0 || User.numberUserGetRedCoin == 1 || User.numberUserGetRedCoin == 2 ||
+                                            User.numberUserGetGreenCoin == 0 || User.numberUserGetGreenCoin == 1 || User.numberUserGetGreenCoin == 2 ||
+                                            User.numberUserGetBlueCoin == 0 || User.numberUserGetBlueCoin == 1 || User.numberUserGetBlueCoin == 2 ||
+                                            User.numberUserGetBlackCoin == 0 || User.numberUserGetBlackCoin == 1 || User.numberUserGetBlackCoin == 2)) {
+                                numberWhiteCoin--;
+                                User.numberWhiteCoin1++;
+                                User.numberUserGetWhiteCoin++;
+                                countGetCoin--;
+
+
+
+                                frame.dispose();
+                                JFrame storeAgain = new Store();
+                                storeAgain.setVisible(true);
+                            }
+                        }
+                        else if(User.sw2 == 1) {
+                            if (countGetCoin > 0 && numberWhiteCoin == 4 && User.numberUserGetWhiteCoin == 0
+                                    && User.numberUserGetRedCoin == 0 && User.numberUserGetGreenCoin == 0
+                                    && User.numberUserGetBlueCoin == 0 && User.numberUserGetBlackCoin == 0) {
+                                numberWhiteCoin--;
+                                User.numberWhiteCoin2++;
+                                User.numberUserGetWhiteCoin++;
+                                countGetCoin--;
+
+
+                                frame.dispose();
+                                JFrame storeAgain = new Store();
+                                storeAgain.setVisible(true);
+                            }
+                            else if (countGetCoin > 0 && numberWhiteCoin == 3 && User.numberUserGetWhiteCoin == 1
+                                    && User.numberUserGetRedCoin == 0 && User.numberUserGetGreenCoin == 0
+                                    && User.numberUserGetBlueCoin == 0 && User.numberUserGetBlackCoin == 0) {
+                                numberWhiteCoin--;
+                                User.numberWhiteCoin2++;
+                                User.numberUserGetWhiteCoin++;
+                                countGetCoin = 0;
+
+
+
+                                frame.dispose();
+                                JFrame storeAgain = new Store();
+                                storeAgain.setVisible(true);
+                            }
+                            else if(countGetCoin > 0 && numberWhiteCoin <= 4 && numberWhiteCoin > 0 && User.numberUserGetWhiteCoin == 0 &&
+                                    (User.numberUserGetRedCoin == 0 || User.numberUserGetRedCoin == 1 || User.numberUserGetRedCoin == 2 ||
+                                            User.numberUserGetGreenCoin == 0 || User.numberUserGetGreenCoin == 1 || User.numberUserGetGreenCoin == 2 ||
+                                            User.numberUserGetBlueCoin == 0 || User.numberUserGetBlueCoin == 1 || User.numberUserGetBlueCoin == 2 ||
+                                            User.numberUserGetBlackCoin == 0 || User.numberUserGetBlackCoin == 1 || User.numberUserGetBlackCoin == 2)) {
+                                numberWhiteCoin--;
+                                User.numberWhiteCoin2++;
+                                User.numberUserGetWhiteCoin++;
+                                countGetCoin--;
+
+
+
+                                frame.dispose();
+                                JFrame storeAgain = new Store();
+                                storeAgain.setVisible(true);
+                            }
                         }
                     }
+
+
+
                     else if (blackSlot) {
-                        if (numberBlackCoin > 0) {
-                            numberBlackCoin--;
-                            frame.dispose();
-                            JFrame storeAgain = new Store();
-                            storeAgain.setVisible(true);
+                        if(User.sw1 == 1) {
+                            if (countGetCoin > 0 && numberBlackCoin == 4 && User.numberUserGetBlackCoin == 0
+                                    && User.numberUserGetRedCoin == 0 && User.numberUserGetGreenCoin == 0
+                                    && User.numberUserGetBlueCoin == 0 && User.numberUserGetWhiteCoin == 0) {
+                                numberBlackCoin--;
+                                User.numberBlackCoin1++;
+                                User.numberUserGetBlackCoin++;
+                                countGetCoin--;
+
+
+                                frame.dispose();
+                                JFrame storeAgain = new Store();
+                                storeAgain.setVisible(true);
+                            }
+                            else if (countGetCoin > 0 && numberBlackCoin == 3 && User.numberUserGetBlackCoin == 1
+                                    && User.numberUserGetRedCoin == 0 && User.numberUserGetGreenCoin == 0
+                                    && User.numberUserGetBlueCoin == 0 && User.numberUserGetWhiteCoin == 0) {
+                                numberBlackCoin--;
+                                User.numberBlackCoin1++;
+                                User.numberUserGetBlackCoin++;
+                                countGetCoin = 0;
+
+
+
+                                frame.dispose();
+                                JFrame storeAgain = new Store();
+                                storeAgain.setVisible(true);
+                            }
+                            else if(countGetCoin > 0 && numberBlackCoin <= 4 && numberBlackCoin > 0 && User.numberUserGetBlackCoin == 0 &&
+                                    (User.numberUserGetRedCoin == 0 || User.numberUserGetRedCoin == 1 || User.numberUserGetRedCoin == 2 ||
+                                            User.numberUserGetGreenCoin == 0 || User.numberUserGetGreenCoin == 1 || User.numberUserGetGreenCoin == 2 ||
+                                            User.numberUserGetBlueCoin == 0 || User.numberUserGetBlueCoin == 1 || User.numberUserGetBlueCoin == 2 ||
+                                            User.numberUserGetWhiteCoin == 0 || User.numberUserGetWhiteCoin == 1 || User.numberUserGetWhiteCoin == 2)) {
+                                numberBlackCoin--;
+                                User.numberBlackCoin1++;
+                                User.numberUserGetBlackCoin++;
+                                countGetCoin--;
+
+
+
+                                frame.dispose();
+                                JFrame storeAgain = new Store();
+                                storeAgain.setVisible(true);
+                            }
+                        }
+                        else if(User.sw2 == 1) {
+                            if (countGetCoin > 0 && numberBlackCoin == 4 && User.numberUserGetBlackCoin == 0
+                                    && User.numberUserGetRedCoin == 0 && User.numberUserGetGreenCoin == 0
+                                    && User.numberUserGetBlueCoin == 0 && User.numberUserGetWhiteCoin == 0) {
+                                numberBlackCoin--;
+                                User.numberBlackCoin2++;
+                                User.numberUserGetBlackCoin++;
+                                countGetCoin--;
+
+
+                                frame.dispose();
+                                JFrame storeAgain = new Store();
+                                storeAgain.setVisible(true);
+                            }
+                            else if (countGetCoin > 0 && numberBlackCoin == 3 && User.numberUserGetBlackCoin == 1
+                                    && User.numberUserGetRedCoin == 0 && User.numberUserGetGreenCoin == 0
+                                    && User.numberUserGetBlueCoin == 0 && User.numberUserGetWhiteCoin == 0) {
+                                numberBlackCoin--;
+                                User.numberBlackCoin2++;
+                                User.numberUserGetBlackCoin++;
+                                countGetCoin = 0;
+
+
+
+                                frame.dispose();
+                                JFrame storeAgain = new Store();
+                                storeAgain.setVisible(true);
+                            }
+                            else if(countGetCoin > 0 && numberBlackCoin <= 4 && numberBlackCoin > 0 && User.numberUserGetBlackCoin == 0 &&
+                                    (User.numberUserGetRedCoin == 0 || User.numberUserGetRedCoin == 1 || User.numberUserGetRedCoin == 2 ||
+                                            User.numberUserGetGreenCoin == 0 || User.numberUserGetGreenCoin == 1 || User.numberUserGetGreenCoin == 2 ||
+                                            User.numberUserGetBlueCoin == 0 || User.numberUserGetBlueCoin == 1 || User.numberUserGetBlueCoin == 2 ||
+                                            User.numberUserGetWhiteCoin == 0 || User.numberUserGetWhiteCoin == 1 || User.numberUserGetWhiteCoin == 2)) {
+                                numberBlackCoin--;
+                                User.numberBlackCoin2++;
+                                User.numberUserGetBlackCoin++;
+                                countGetCoin--;
+
+
+
+                                frame.dispose();
+                                JFrame storeAgain = new Store();
+                                storeAgain.setVisible(true);
+                            }
                         }
                     }
 
             }
         });
+
+
 
         switch (n) {
 
