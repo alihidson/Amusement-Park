@@ -37,7 +37,6 @@ public class NamePage extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 User.Name1 = nameField1.getText();
                 User.Name2 = nameField2.getText();
-                User.turn = User.Name1;
                 firstPage.closePages(); // Close both FirstPage and NamePage
                 JFrame gamePage = new GamePage();
                 gamePage.setVisible(true);

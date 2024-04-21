@@ -58,9 +58,8 @@ public class Card extends JPanel {
                 if (frame.getTitle().equals("Store")) {
                     if (card11) {
                         if (clickCount11 > 0) {
-                            clickCount11--;
 
-                            showBox(frame);
+                                showBox(frame);
                         }
                     }
                     else if(card12) {
@@ -172,17 +171,41 @@ public class Card extends JPanel {
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
+        JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(Card.this);
 
-        if ((card11 && clickCount11 <= 0) || (card12 && clickCount12 <= 0) || (card13 && clickCount13 <= 0) || (card14 && clickCount14 <= 0) || (card15 && clickCount15 <= 0)
-         || (card21 && clickCount21 <= 0) || (card22 && clickCount22 <= 0) || (card23 && clickCount23 <= 0) || (card24 && clickCount24 <= 0) || (card25 && clickCount25 <= 0)
-         || (card31 && clickCount31 <= 0) || (card32 && clickCount32 <= 0) || (card33 && clickCount33 <= 0) || (card34 && clickCount34 <= 0) || (card35 && clickCount35 <= 0)){
+        if (frame.getTitle().equals("Store")) {
 
-            g.setColor(Color.red);
-            g.fillRect(0, 0, getWidth(), getHeight());
+            if ((card11 && clickCount11 <= 0) || (card12 && clickCount12 <= 0) || (card13 && clickCount13 <= 0) || (card14 && clickCount14 <= 0) || (card15 && clickCount15 <= 0)
+                    || (card21 && clickCount21 <= 0) || (card22 && clickCount22 <= 0) || (card23 && clickCount23 <= 0) || (card24 && clickCount24 <= 0) || (card25 && clickCount25 <= 0)
+                    || (card31 && clickCount31 <= 0) || (card32 && clickCount32 <= 0) || (card33 && clickCount33 <= 0) || (card34 && clickCount34 <= 0) || (card35 && clickCount35 <= 0)) {
+
+                g.setColor(Color.red);
+                g.fillRect(0, 0, getWidth(), getHeight());
+            } else {
+
+                g.setColor(new Color(244, 189, 247));
+                g.fillRect(0, 0, getWidth(), getHeight());
+
+                g.setColor(Color.red);
+                g.drawRect(0, 0, getWidth() - 1, getHeight() - 1);
+
+                g.setColor(Color.BLACK);
+                g.drawString(text, 10, 20);
+
+                if ((clickCount11 > 0) || (clickCount12 > 0) || (clickCount13 > 0) || (clickCount14 > 0) || (clickCount15 > 0)
+                        || (clickCount21 > 0) || (clickCount22 > 0) || (clickCount23 > 0) || (clickCount24 > 0) || (clickCount25 > 0)
+                        || (clickCount31 > 0) || (clickCount32 > 0) || (clickCount33 > 0) || (clickCount34 > 0) || (clickCount35 > 0)) {
+
+                    g.drawImage(icon1.getImage(), (getWidth() - 40) / 2, (getHeight() - 40) / 2, 40, 40, this);
+                    g.drawImage(icon2.getImage(), 55, 5, 20, 20, this);
+                    g.drawImage(icon3.getImage(), 5, 95, 20, 20, this);
+                    g.drawImage(icon4.getImage(), 30, 95, 20, 20, this);
+                    g.drawImage(icon5.getImage(), 55, 95, 20, 20, this);
+                }
+            }
         }
         else {
-
-            g.setColor(new Color(244,189,247));
+            g.setColor(new Color(244, 189, 247));
             g.fillRect(0, 0, getWidth(), getHeight());
 
             g.setColor(Color.red);
@@ -192,8 +215,8 @@ public class Card extends JPanel {
             g.drawString(text, 10, 20);
 
             if ((clickCount11 > 0) || (clickCount12 > 0) || (clickCount13 > 0) || (clickCount14 > 0) || (clickCount15 > 0)
-             || (clickCount21 > 0) || (clickCount22 > 0) || (clickCount23 > 0) || (clickCount24 > 0) || (clickCount25 > 0)
-             || (clickCount31 > 0) || (clickCount32 > 0) || (clickCount33 > 0) || (clickCount34 > 0) || (clickCount35 > 0)){
+                    || (clickCount21 > 0) || (clickCount22 > 0) || (clickCount23 > 0) || (clickCount24 > 0) || (clickCount25 > 0)
+                    || (clickCount31 > 0) || (clickCount32 > 0) || (clickCount33 > 0) || (clickCount34 > 0) || (clickCount35 > 0)) {
 
                 g.drawImage(icon1.getImage(), (getWidth() - 40) / 2, (getHeight() - 40) / 2, 40, 40, this);
                 g.drawImage(icon2.getImage(), 55, 5, 20, 20, this);
@@ -224,6 +247,16 @@ public class Card extends JPanel {
             public void actionPerformed(ActionEvent e) {
                 dialog.dispose(); // Close the dialog when the button is clicked
                 JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(Card.this);
+
+                if(User.sw1 == 1 && card11) {
+                    User.cardPanel11_1++;
+                    clickCount11--;
+                }
+                else if(User.sw2 == 1 && card11) {
+                    User.cardPanel11_2++;
+                    clickCount11--;
+                }
+
                 frame.dispose();
                 JFrame gamePage = new GamePage();
                 gamePage.setVisible(true);

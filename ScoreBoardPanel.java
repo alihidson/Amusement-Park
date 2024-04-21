@@ -19,7 +19,7 @@ public class ScoreBoardPanel extends JPanel {
         // Draw background image
         g.drawImage(scoreboardBackgroundImage, 0, 0, getWidth(), getHeight(), this);
         // Draw text
-        g.setColor(new Color(198, 230, 38));
+        g.setColor(new Color(0,255,247));
         Font font = new Font("Arial", Font.PLAIN, 18);
         g.setFont(font);
 
@@ -38,6 +38,9 @@ public class ScoreBoardPanel extends JPanel {
         g2d.setStroke(new BasicStroke(3)); // Increase the thickness of the line to 3 pixels
         g2d.drawLine(0, 135, getWidth(), 135);
 
+        Graphics2D g3d = (Graphics2D) g;
+        g3d.setStroke(new BasicStroke(3)); // Increase the thickness of the line to 3 pixels
+        g3d.drawLine(0, 315, getWidth(), 315);
 
     }
 

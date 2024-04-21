@@ -35,26 +35,58 @@ public class PrizeClaw extends JPanel {
                 if (frame.getTitle().equals("Store")) {
                     if (PC1) {
                         if (clickCount1 > 0) {
-                            clickCount1--;
-                            frame.dispose();
-                            JFrame gamePage = new GamePage();
-                            gamePage.setVisible(true);
+                            if (User.sw1 == 1) {
+                                clickCount1--;
+                                User.prizeClaw1_1 = true;
+
+                                frame.dispose();
+                                JFrame gamePage = new GamePage();
+                                gamePage.setVisible(true);
+                            } else if (User.sw2 == 1) {
+                                clickCount1--;
+                                User.prizeClaw1_2 = true;
+
+                                frame.dispose();
+                                JFrame gamePage = new GamePage();
+                                gamePage.setVisible(true);
+                            }
+
                         }
-                    }
-                    else if (PC2) {
+                    } else if (PC2) {
                         if (clickCount2 > 0) {
-                            clickCount2--;
-                            frame.dispose();
-                            JFrame gamePage = new GamePage();
-                            gamePage.setVisible(true);
+                            if (User.sw1 == 1) {
+                                clickCount2--;
+                                User.prizeClaw2_1 = true;
+
+                                frame.dispose();
+                                JFrame gamePage = new GamePage();
+                                gamePage.setVisible(true);
+                            } else if (User.sw2 == 1) {
+                                clickCount2--;
+                                User.prizeClaw2_2 = true;
+
+                                frame.dispose();
+                                JFrame gamePage = new GamePage();
+                                gamePage.setVisible(true);
+                            }
                         }
-                    }
-                    else if (PC3) {
+                    } else if (PC3) {
                         if (clickCount3 > 0) {
-                            clickCount3--;
-                            frame.dispose();
-                            JFrame gamePage = new GamePage();
-                            gamePage.setVisible(true);
+                            if (User.sw1 == 1) {
+                                clickCount3--;
+                                User.prizeClaw3_1 = true;
+
+                                frame.dispose();
+                                JFrame gamePage = new GamePage();
+                                gamePage.setVisible(true);
+                            } else if (User.sw2 == 1) {
+                                clickCount3--;
+                                User.prizeClaw3_2 = true;
+
+                                frame.dispose();
+                                JFrame gamePage = new GamePage();
+                                gamePage.setVisible(true);
+                            }
                         }
                     }
 
@@ -63,17 +95,38 @@ public class PrizeClaw extends JPanel {
         });
     }
 
+
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
+        Frame frame = (JFrame) SwingUtilities.getWindowAncestor(PrizeClaw.this);
 
-        if ((PC1 && clickCount1 <= 0) || (PC2 && clickCount2 <= 0) || (PC3 && clickCount3 <= 0)) {
-            g.setColor(Color.blue);
-            g.fillRect(0, 0, getWidth(), getHeight());
+        if (frame.getTitle().equals("Store")) {
+
+            if ((PC1 && clickCount1 <= 0) || (PC2 && clickCount2 <= 0) || (PC3 && clickCount3 <= 0)) {
+                g.setColor(Color.blue);
+                g.fillRect(0, 0, getWidth(), getHeight());
+            } else {
+
+                g.setColor(new Color(255, 210, 168));
+                g.fillRect(0, 0, getWidth(), getHeight());
+
+                g.setColor(Color.red);
+                g.drawRect(0, 0, getWidth() - 1, getHeight() - 1);
+
+                g.setColor(Color.BLACK);
+                g.drawString(text, 10, 20);
+
+                if ((!PC1 || clickCount1 > 0) || (!PC2 || clickCount2 > 0) || (!PC3 || clickCount3 > 0)) {
+                    g.drawImage(icon1.getImage(), (getWidth() - 60) / 2, 20, 60, 60, this);
+                    g.drawImage(icon2.getImage(), 5, 95, 20, 20, this);
+                    g.drawImage(icon3.getImage(), 30, 95, 20, 20, this);
+                    g.drawImage(icon4.getImage(), 55, 95, 20, 20, this);
+                }
+            }
         }
         else {
-
-            g.setColor(new Color(255,210,168));
+            g.setColor(new Color(255, 210, 168));
             g.fillRect(0, 0, getWidth(), getHeight());
 
             g.setColor(Color.red);
@@ -89,6 +142,6 @@ public class PrizeClaw extends JPanel {
                 g.drawImage(icon4.getImage(), 55, 95, 20, 20, this);
             }
         }
-    }
 
+    }
 }
