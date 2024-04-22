@@ -11,6 +11,18 @@ public class ScoreBoardPanel extends JPanel {
         setPreferredSize(new Dimension(350, 200));
         // Add a border around the panel
         setBorder(BorderFactory.createLineBorder(new Color(158, 72, 177), 4)); // Adjust color and thickness as needed
+
+
+
+        CoinPanel redCoin1 = new CoinPanel(14);
+        redCoin1.setBounds(100, 375, 100, 100);
+        redCoin1.setOpaque(false);
+        add(redCoin1);
+
+        CoinPanel redCoin2 = new CoinPanel(16);
+        redCoin2.setBounds(200, 375, 100, 100);
+        redCoin2.setOpaque(false);
+        add(redCoin2);
     }
 
     @Override

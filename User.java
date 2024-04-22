@@ -1,6 +1,7 @@
 public class User {
 
 
+    public static String Name1, Name2;
     public static int Score1 = 0, Score2 = 0;
     public static int sw1 = 0;
     public static int sw2 = 1;
@@ -32,6 +33,7 @@ public class User {
     public static int numberBlueCoin1 = 0, numberBlueCoin2 = 0;
     public static int numberWhiteCoin1 = 0, numberWhiteCoin2 = 0;
     public static int numberBlackCoin1 = 0, numberBlackCoin2 = 0;
+    public static int numberGoldCoin1 = 0, numberGoldCoin2 = 0;
 
 
     public static int numberUserGetRedCoin = 0;
@@ -39,16 +41,6 @@ public class User {
     public static int numberUserGetBlueCoin = 0;
     public static int numberUserGetWhiteCoin = 0;
     public static int numberUserGetBlackCoin = 0;
-
-
-
-
-    public static String Name1, Name2;
-
-    public static int allGoldCoin = 5;
-    public static int numberGoldCoin1 = 0;
-    public static int numberGoldCoin2 = 0;
-
 
 
 }

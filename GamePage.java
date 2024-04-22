@@ -380,18 +380,6 @@ public class GamePage extends JFrame {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
         setContentPane(layeredPane);
     }
 

@@ -16,14 +16,8 @@ public class Coin extends JPanel {
     public static int numberBlueCoin = 4;
     public static int numberWhiteCoin = 4;
     public static int numberBlackCoin = 4;
+    public static int allNumberGoldCoin = 5;
 
-
-    public String NRedC;
-    public String NGreenC;
-    public String NBlueC;
-    public String NWhiteC;
-    public String NBlackC;
-    public String NGoldC;
 
     private final boolean redSlot, greenSlot, blueSlot, whiteSlot, blackSlot;
 
@@ -522,33 +516,6 @@ public class Coin extends JPanel {
         });
 
 
-
-        switch (n) {
-
-            case 2:
-                NRedC = String.valueOf(numberRedCoin);
-                break;
-
-            case 4:
-                NGreenC = String.valueOf(numberGreenCoin);
-                break;
-
-            case 6:
-                NBlueC = String.valueOf(numberBlueCoin);
-                break;
-
-            case 8:
-                NWhiteC = String.valueOf(numberWhiteCoin);
-                break;
-
-            case 10:
-                NBlackC = String.valueOf(numberBlackCoin);
-                break;
-
-            case 12:
-                NGoldC = String.valueOf(User.allGoldCoin);
-                break;
-        }
     }
 
     @Override
@@ -562,53 +529,166 @@ public class Coin extends JPanel {
         if (n % 2 != 0) {
             g.drawImage(icon.getImage(), 0, 0, 80, 80, this);
         }
-        else if(n == 2){
 
-            g.setColor(Color.black);
-            g.fillOval(0,0,40,40);
-            g.drawImage(icon.getImage(), 0, 0, 40, 40, this);
-            g.drawString(NRedC, 15, 25);
+            switch (n) {
 
-        }
-        else if(n == 4){
 
-            g.setColor(Color.black);
-            g.fillOval(0,0,40,40);
-            g.drawImage(icon.getImage(), 0, 0, 40, 40, this);
-            g.drawString(NGreenC, 15, 25);
+                case 2:
+                    String NumberRedCoin = String.valueOf(numberRedCoin);
+                    g.setColor(Color.black);
+                    g.fillOval(0, 0, 40, 40);
+                    g.drawImage(icon.getImage(), 0, 0, 40, 40, this);
+                    g.drawString(NumberRedCoin, 15, 25);
+                    break;
 
-        }
-        else if(n == 6){
 
-            g.setColor(Color.black);
-            g.fillOval(0,0,40,40);
-            g.drawImage(icon.getImage(), 0, 0, 40, 40, this);
-            g.drawString(NBlueC, 15, 25);
+                case 4:
+                    String NumberGreenCoin = String.valueOf(numberGreenCoin);
+                    g.setColor(Color.black);
+                    g.fillOval(0, 0, 40, 40);
+                    g.drawImage(icon.getImage(), 0, 0, 40, 40, this);
+                    g.drawString(NumberGreenCoin, 15, 25);
+                    break;
 
-        }
-        else if(n == 8){
 
-            g.setColor(Color.black);
-            g.fillOval(0,0,40,40);
-            g.drawImage(icon.getImage(), 0, 0, 40, 40, this);
-            g.drawString(NWhiteC, 15, 25);
+                case 6:
+                    String NumberBlueCoin = String.valueOf(numberBlueCoin);
+                    g.setColor(Color.black);
+                    g.fillOval(0, 0, 40, 40);
+                    g.drawImage(icon.getImage(), 0, 0, 40, 40, this);
+                    g.drawString(NumberBlueCoin, 15, 25);
+                    break;
 
-        }
-        else if(n == 10){
 
-            g.setColor(Color.black);
-            g.fillOval(0,0,40,40);
-            g.drawImage(icon.getImage(), 0, 0, 40, 40, this);
-            g.drawString(NBlackC, 15, 25);
+                case 8:
+                    String NumberWhiteCoin = String.valueOf(numberWhiteCoin);
+                    g.setColor(Color.black);
+                    g.fillOval(0, 0, 40, 40);
+                    g.drawImage(icon.getImage(), 0, 0, 40, 40, this);
+                    g.drawString(NumberWhiteCoin, 15, 25);
+                    break;
 
-        }
-        else if(n == 12){
 
-            g.setColor(Color.black);
-            g.fillOval(0,0,40,40);
-            g.drawImage(icon.getImage(), 0, 0, 40, 40, this);
-            g.drawString(NGoldC, 15, 25);
+                case 10:
+                    String NumberBlackCoin = String.valueOf(numberBlackCoin);
+                    g.setColor(Color.black);
+                    g.fillOval(0, 0, 40, 40);
+                    g.drawImage(icon.getImage(), 0, 0, 40, 40, this);
+                    g.drawString(NumberBlackCoin, 15, 25);
+                    break;
 
-        }
+                case 12:
+                    String NumberGoldCoin = String.valueOf(allNumberGoldCoin);
+                    g.setColor(Color.black);
+                    g.fillOval(0, 0, 40, 40);
+                    g.drawImage(icon.getImage(), 0, 0, 40, 40, this);
+                    g.drawString(NumberGoldCoin, 15, 25);
+                    break;
+
+
+
+
+
+
+                case 14:
+                    String numberRedCoin1 = String.valueOf(User.numberRedCoin1);
+                    g.setColor(Color.black);
+                    g.fillOval(0, 0, 40, 40);
+                    g.drawImage(icon.getImage(), 0, 0, 40, 40, this);
+                    g.drawString(numberRedCoin1, 15, 25);
+                    break;
+
+                case 16:
+                    String numberRedCoin2 = String.valueOf(User.numberRedCoin2);
+                    g.setColor(Color.black);
+                    g.fillOval(0, 0, 40, 40);
+                    g.drawImage(icon.getImage(), 0, 0, 40, 40, this);
+                    g.drawString(numberRedCoin2, 15, 25);
+                    break;
+
+
+                case 18:
+                    String numberGreenCoin1 = String.valueOf(User.numberGreenCoin1);
+                    g.setColor(Color.black);
+                    g.fillOval(0, 0, 40, 40);
+                    g.drawImage(icon.getImage(), 0, 0, 40, 40, this);
+                    g.drawString(numberGreenCoin1, 15, 25);
+                    break;
+
+
+                case 20:
+                    String numberGreenCoin2 = String.valueOf(User.numberGreenCoin2);
+                    g.setColor(Color.black);
+                    g.fillOval(0, 0, 40, 40);
+                    g.drawImage(icon.getImage(), 0, 0, 40, 40, this);
+                    g.drawString(numberGreenCoin2, 15, 25);
+                    break;
+
+
+                case 22:
+                    String numberBlueCoin1 = String.valueOf(User.numberBlueCoin1);
+                    g.setColor(Color.black);
+                    g.fillOval(0, 0, 40, 40);
+                    g.drawImage(icon.getImage(), 0, 0, 40, 40, this);
+                    g.drawString(numberBlueCoin1, 15, 25);
+                    break;
+
+                case 24:
+                    String numberBlueCoin2 = String.valueOf(User.numberBlueCoin2);
+                    g.setColor(Color.black);
+                    g.fillOval(0, 0, 40, 40);
+                    g.drawImage(icon.getImage(), 0, 0, 40, 40, this);
+                    g.drawString(numberBlueCoin2, 15, 25);
+                    break;
+
+                case 26:
+                    String numberWhiteCoin1 = String.valueOf(User.numberWhiteCoin1);
+                    g.setColor(Color.black);
+                    g.fillOval(0, 0, 40, 40);
+                    g.drawImage(icon.getImage(), 0, 0, 40, 40, this);
+                    g.drawString(numberWhiteCoin1, 15, 25);
+                    break;
+
+                case 28:
+                    String numberWhiteCoin2 = String.valueOf(User.numberWhiteCoin2);
+                    g.setColor(Color.black);
+                    g.fillOval(0, 0, 40, 40);
+                    g.drawImage(icon.getImage(), 0, 0, 40, 40, this);
+                    g.drawString(numberWhiteCoin2, 15, 25);
+                    break;
+
+                case 30:
+                    String numberBlackCoin1 = String.valueOf(User.numberBlackCoin1);
+                    g.setColor(Color.black);
+                    g.fillOval(0, 0, 40, 40);
+                    g.drawImage(icon.getImage(), 0, 0, 40, 40, this);
+                    g.drawString(numberBlackCoin1, 15, 25);
+                    break;
+
+                case 32:
+                    String numberBlackCoin2 = String.valueOf(User.numberBlackCoin2);
+                    g.setColor(Color.black);
+                    g.fillOval(0, 0, 40, 40);
+                    g.drawImage(icon.getImage(), 0, 0, 40, 40, this);
+                    g.drawString(numberBlackCoin2, 15, 25);
+                    break;
+
+                case 34:
+                    String numberGoldCoin1 = String.valueOf(User.numberGoldCoin1);
+                    g.setColor(Color.black);
+                    g.fillOval(0, 0, 40, 40);
+                    g.drawImage(icon.getImage(), 0, 0, 40, 40, this);
+                    g.drawString(numberGoldCoin1, 15, 25);
+                    break;
+
+                case 36:
+                    String numberGoldCoin2 = String.valueOf(User.numberGoldCoin2);
+                    g.setColor(Color.black);
+                    g.fillOval(0, 0, 40, 40);
+                    g.drawImage(icon.getImage(), 0, 0, 40, 40, this);
+                    g.drawString(numberGoldCoin2, 15, 25);
+                    break;
+            }
+
     }
 }
