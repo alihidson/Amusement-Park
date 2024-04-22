@@ -24,36 +24,43 @@ public class ScoreBoardPanel extends JPanel {
         g.setFont(font);
 
         g.drawString(User.Name1 + " :", 20, 20);
-        g.drawString(User.Name2 + " :", 20, 156);
+        g.drawString(User.Name2 + " :", 20, 206);
 
-        g.drawString("Score: " + calculatePlayerScore(1), 20, 50);
-        g.drawString("Score: " + calculatePlayerScore(2), 20, 186);
-
-
-        g.drawString("Turn: " + User.turn, 20, 340);
+        g.drawString("Score: " + User.Score1, 20, 50);
+        g.drawString("Score: " + User.Score2, 20, 236);
 
 
-        g.setColor(new Color(255, 0, 255));
+        if(User.sw1 == 1) {
+            g.setColor(Color.green);
+            g.drawString("Turn: " + User.turn, 20, 415);
+        }
+        else if(User.sw2 == 1) {
+            g.setColor(new Color(255,0,145));
+            g.drawString("Turn: " + User.turn, 20, 415);
+        }
+
+
+        g.setColor(new Color(179, 0, 18));
         Graphics2D g2d = (Graphics2D) g;
         g2d.setStroke(new BasicStroke(3)); // Increase the thickness of the line to 3 pixels
-        g2d.drawLine(0, 135, getWidth(), 135);
+        g2d.drawLine(0, 185, getWidth(), 185);
 
         Graphics2D g3d = (Graphics2D) g;
         g3d.setStroke(new BasicStroke(3)); // Increase the thickness of the line to 3 pixels
-        g3d.drawLine(0, 315, getWidth(), 315);
+        g3d.drawLine(0, 390, getWidth(), 390);
 
     }
 
-    private int calculatePlayerScore(int playerNumber) {
-        int score = 0;
-        if(playerNumber == 1) {
-            score += User.numberRedCoin1 + User.numberGreenCoin1 + User.numberBlueCoin1 +
-                    User.numberWhiteCoin1 + User.numberBlackCoin1 + User.numberGoldCoin1;
-        }
-        else if(playerNumber == 2) {
-            score += User.numberRedCoin2 + User.numberGreenCoin2 + User.numberBlueCoin2 +
-                    User.numberWhiteCoin2 + User.numberBlackCoin2 + User.numberGoldCoin2;
-        }
-        return score;
-    }
+//    private int calculatePlayerScore(int playerNumber) {
+//        int score = 0;
+//        if(playerNumber == 1) {
+//            score += User.numberRedCoin1 + User.numberGreenCoin1 + User.numberBlueCoin1 +
+//                    User.numberWhiteCoin1 + User.numberBlackCoin1 + User.numberGoldCoin1;
+//        }
+//        else if(playerNumber == 2) {
+//            score += User.numberRedCoin2 + User.numberGreenCoin2 + User.numberBlueCoin2 +
+//                    User.numberWhiteCoin2 + User.numberBlackCoin2 + User.numberGoldCoin2;
+//        }
+//        return score;
+//    }
 }

@@ -2,6 +2,9 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.io.File;
+import java.io.IOException;
+//import javax.sound.sampled.*;
 
 public class FirstPage extends JPanel {
 
@@ -26,7 +29,7 @@ public class FirstPage extends JPanel {
                 g.drawString("Start", x, y);
             }
         };
-        rectangle1.setBounds(600, 100, 100, 50);
+        rectangle1.setBounds(600, 150, 100, 50);
 
 
 
@@ -45,9 +48,9 @@ public class FirstPage extends JPanel {
                 g.drawString("ID", x, y);
             }
         };
-        rectangle2.setBounds(600, 155, 100, 50);
+        rectangle2.setBounds(600, 205, 100, 50);
 
-
+//        playMusic("/Users/ali/Main/Documents/Source/Amusement-Park/src/Music/Start-Game.mp3");
 
         rectangle1.addMouseListener(new MouseAdapter() {
             @Override
@@ -59,17 +62,12 @@ public class FirstPage extends JPanel {
             }
         });
 
-
-
         rectangle2.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-
                 JOptionPane.showMessageDialog(null, "My ID is 'alihidson' on all platforms","ID", JOptionPane.QUESTION_MESSAGE);
             }
         });
-
-
 
         add(rectangle1);
         add(rectangle2);
@@ -80,6 +78,19 @@ public class FirstPage extends JPanel {
         super.paintComponent(g);
         Image backgroundImage = new ImageIcon("/Users/ali/Main/Documents/Source/Amusement-Park/src/image/Amusement-Park.jpg").getImage();
         g.drawImage(backgroundImage, 0, 0, getWidth(), getHeight(), this);
+
+        // Adding text to the page
+        try {
+            Font font = Font.createFont(Font.TRUETYPE_FONT, new File("/Users/ali/Main/Documents/Source/Amusement-Park/src/Font/Sectar.otf")).deriveFont(Font.BOLD, 44);
+            g.setFont(font);
+        } catch (IOException | FontFormatException e) {
+            e.printStackTrace();
+        }
+        g.setColor(Color.red);
+        String text = "Amusement Park";
+        int x = 460; // X coordinate
+        int y = 100; // Y coordinate
+        g.drawString(text, x, y);
     }
 
     public void closePages() {
@@ -90,4 +101,15 @@ public class FirstPage extends JPanel {
         JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(this);
         frame.dispose(); // Close FirstPage
     }
+//    public void playMusic(String filePath) {
+//        try {
+//            File audioFile = new File(filePath);
+//            AudioInputStream audioStream = AudioSystem.getAudioInputStream(audioFile);
+//            Clip clip = AudioSystem.getClip();
+//            clip.open(audioStream);
+//            clip.start();
+//        } catch (LineUnavailableException | UnsupportedAudioFileException | IOException e) {
+//            e.printStackTrace();
+//        }
+//    }
 }

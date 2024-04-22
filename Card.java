@@ -59,103 +59,89 @@ public class Card extends JPanel {
                     if (card11) {
                         if (clickCount11 > 0) {
 
-                                showBox(frame);
+                            showBox(frame);
                         }
                     }
                     else if(card12) {
                         if (clickCount12 > 0) {
-                            clickCount12--;
 
                             showBox(frame);
                         }
                     }
                     else if(card13) {
                         if (clickCount13 > 0) {
-                            clickCount13--;
 
                             showBox(frame);
                         }
                     }
                     else if(card14) {
                         if (clickCount14 > 0) {
-                            clickCount14--;
 
                             showBox(frame);
                         }
                     }
                     else if(card15) {
                         if (clickCount15 > 0) {
-                            clickCount15--;
 
                             showBox(frame);
                         }
                     }
                     else if(card21) {
                         if (clickCount21 > 0) {
-                            clickCount21--;
 
                             showBox(frame);
                         }
                     }
                     else if(card22) {
                         if (clickCount22 > 0) {
-                            clickCount22--;
 
                             showBox(frame);
                         }
                     }
                     else if(card23) {
                         if (clickCount23 > 0) {
-                            clickCount23--;
 
                             showBox(frame);
                         }
                     }
                     else if(card24) {
                         if (clickCount24 > 0) {
-                            clickCount24--;
 
                             showBox(frame);
                         }
                     }
                     else if(card25) {
                         if (clickCount25 > 0) {
-                            clickCount25--;
 
                             showBox(frame);
                         }
                     }
                     else if(card31) {
                         if (clickCount31 > 0) {
-                            clickCount31--;
 
                             showBox(frame);
                         }
                     }
                     else if(card32) {
                         if (clickCount32 > 0) {
-                            clickCount32--;
 
                             showBox(frame);
                         }
                     }
                     else if(card33) {
                         if (clickCount33 > 0) {
-                            clickCount33--;
 
                             showBox(frame);
                         }
                     }
                     else if(card34) {
                         if (clickCount34 > 0) {
-                            clickCount34--;
 
                             showBox(frame);
                         }
                     }
                     else if(card35) {
                         if (clickCount35 > 0) {
-                            clickCount35--;
 
                             showBox(frame);
                         }
@@ -248,6 +234,10 @@ public class Card extends JPanel {
                 dialog.dispose(); // Close the dialog when the button is clicked
                 JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(Card.this);
 
+
+
+
+
                 if(User.sw1 == 1 && card11) {
                     User.cardPanel11_1++;
                     clickCount11--;
@@ -256,6 +246,169 @@ public class Card extends JPanel {
                     User.cardPanel11_2++;
                     clickCount11--;
                 }
+
+                if(User.sw1 == 1 && card12) {
+                    User.cardPanel12_1++;
+                    clickCount12--;
+                }
+                else if(User.sw2 == 1 && card12) {
+                    User.cardPanel12_2++;
+                    clickCount12--;
+                }
+
+                if(User.sw1 == 1 && card13) {
+                    User.cardPanel13_1++;
+                    clickCount13--;
+                    User.Score1++;
+                }
+                else if(User.sw2 == 1 && card13) {
+                    User.cardPanel13_2++;
+                    clickCount13--;
+                    User.Score2++;
+                }
+
+                if(User.sw1 == 1 && card14) {
+                    User.cardPanel14_1++;
+                    clickCount14--;
+                    User.Score1++;
+                }
+                else if(User.sw2 == 1 && card14) {
+                    User.cardPanel14_2++;
+                    clickCount14--;
+                    User.Score2++;
+                }
+                if(User.sw1 == 1 && card15) {
+                    User.cardPanel15_1++;
+                    clickCount15--;
+                    User.Score1++;
+                }
+                else if(User.sw2 == 1 && card15) {
+                    User.cardPanel15_2++;
+                    clickCount15--;
+                    User.Score2++;
+                }
+
+
+
+
+
+
+                if(User.sw1 == 1 && card21) {
+                    User.cardPanel21_1++;
+                    clickCount21--;
+                    User.Score1 += 2;
+                }
+                else if(User.sw2 == 1 && card21) {
+                    User.cardPanel21_2++;
+                    clickCount21--;
+                    User.Score2 += 2;
+                }
+
+                if(User.sw1 == 1 && card22) {
+                    User.cardPanel22_1++;
+                    clickCount22--;
+                    User.Score1 += 2;
+                }
+                else if(User.sw2 == 1 && card22) {
+                    User.cardPanel22_2++;
+                    clickCount22--;
+                    User.Score2 += 2;
+                }
+
+                if(User.sw1 == 1 && card23) {
+                    User.cardPanel23_1++;
+                    clickCount23--;
+                    User.Score1 += 3;
+                }
+                else if(User.sw2 == 1 && card23) {
+                    User.cardPanel23_2++;
+                    clickCount23--;
+                    User.Score2 += 3;
+                }
+
+                if(User.sw1 == 1 && card24) {
+                    User.cardPanel24_1++;
+                    clickCount24--;
+                    User.Score1 += 3;
+                }
+                else if(User.sw2 == 1 && card24) {
+                    User.cardPanel24_2++;
+                    clickCount24--;
+                    User.Score2 += 3;
+                }
+                if(User.sw1 == 1 && card25) {
+                    User.cardPanel25_1++;
+                    clickCount25--;
+                    User.Score1 += 4;
+                }
+                else if(User.sw2 == 1 && card25) {
+                    User.cardPanel25_2++;
+                    clickCount25--;
+                    User.Score2 += 4;
+                }
+
+
+
+
+
+
+                if(User.sw1 == 1 && card31) {
+                    User.cardPanel31_1++;
+                    clickCount31--;
+                    User.Score1 += 3;
+                }
+                else if(User.sw2 == 1 && card31) {
+                    User.cardPanel31_2++;
+                    clickCount31--;
+                    User.Score2 += 3;
+                }
+
+                if(User.sw1 == 1 && card32) {
+                    User.cardPanel32_1++;
+                    clickCount32--;
+                    User.Score1 += 3;
+                }
+                else if(User.sw2 == 1 && card32) {
+                    User.cardPanel32_2++;
+                    clickCount32--;
+                    User.Score2 += 3;
+                }
+
+                if(User.sw1 == 1 && card33) {
+                    User.cardPanel33_1++;
+                    clickCount33--;
+                    User.Score1 += 4;
+                }
+                else if(User.sw2 == 1 && card33) {
+                    User.cardPanel33_2++;
+                    clickCount33--;
+                    User.Score2 += 4;
+                }
+
+                if(User.sw1 == 1 && card34) {
+                    User.cardPanel34_1++;
+                    clickCount34--;
+                    User.Score1 += 4;
+                }
+                else if(User.sw2 == 1 && card34) {
+                    User.cardPanel34_2++;
+                    clickCount34--;
+                    User.Score2 += 4;
+                }
+                if(User.sw1 == 1 && card35) {
+                    User.cardPanel35_1++;
+                    clickCount35--;
+                    User.Score1 += 5;
+                }
+                else if(User.sw2 == 1 && card35) {
+                    User.cardPanel35_2++;
+                    clickCount35--;
+                    User.Score2 += 5;
+                }
+
+
+
+
 
                 frame.dispose();
                 JFrame gamePage = new GamePage();
