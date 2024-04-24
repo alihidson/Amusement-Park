@@ -690,6 +690,96 @@ public class Coin extends JPanel {
                     g.drawImage(icon.getImage(), 0, 0, 40, 40, this);
                     g.drawString(numberGoldCoin2, 15, 25);
                     break;
+
+
+
+
+
+
+
+                case 38:
+                    String numberSpecialRedCoin1 = String.valueOf(User.numberSpecialRedCoin1);
+                    g.setColor(Color.black);
+                    g.fillOval(0, 0, 30, 30);
+                    g.drawImage(icon.getImage(), 0, 0, 30, 30, this);
+                    g.drawString(numberSpecialRedCoin1, 10, 21);
+                    break;
+
+                case 40:
+                    String numberSpecialRedCoin2 = String.valueOf(User.numberSpecialRedCoin2);
+                    g.setColor(Color.black);
+                    g.fillOval(0, 0, 30, 30);
+                    g.drawImage(icon.getImage(), 0, 0, 30, 30, this);
+                    g.drawString(numberSpecialRedCoin2, 10, 21);
+                    break;
+
+
+                case 42:
+                    String numberSpecialGreenCoin1 = String.valueOf(User.numberSpecialGreenCoin1);
+                    g.setColor(Color.black);
+                    g.fillOval(0, 0, 30, 30);
+                    g.drawImage(icon.getImage(), 0, 0, 30, 30, this);
+                    g.drawString(numberSpecialGreenCoin1, 10, 21);
+                    break;
+
+                case 44:
+                    String numberSpecialGreenCoin2 = String.valueOf(User.numberSpecialGreenCoin2);
+                    g.setColor(Color.black);
+                    g.fillOval(0, 0, 30, 30);
+                    g.drawImage(icon.getImage(), 0, 0, 30, 30, this);
+                    g.drawString(numberSpecialGreenCoin2, 10, 21);
+                    break;
+
+
+                case 46:
+                    String numberSpecialBlueCoin1 = String.valueOf(User.numberSpecialBlueCoin1);
+                    g.setColor(Color.black);
+                    g.fillOval(0, 0, 30, 30);
+                    g.drawImage(icon.getImage(), 0, 0, 30, 30, this);
+                    g.drawString(numberSpecialBlueCoin1, 10, 21);
+                    break;
+
+                case 48:
+                    String numberSpecialBlueCoin2 = String.valueOf(User.numberSpecialBlueCoin2);
+                    g.setColor(Color.black);
+                    g.fillOval(0, 0, 30, 30);
+                    g.drawImage(icon.getImage(), 0, 0, 30, 30, this);
+                    g.drawString(numberSpecialBlueCoin2, 10, 21);
+                    break;
+
+
+                case 50:
+                    String numberSpecialWhiteCoin1 = String.valueOf(User.numberSpecialWhiteCoin1);
+                    g.setColor(Color.black);
+                    g.fillOval(0, 0, 30, 30);
+                    g.drawImage(icon.getImage(), 0, 0, 30, 30, this);
+                    g.drawString(numberSpecialWhiteCoin1, 10, 21);
+                    break;
+
+                case 52:
+                    String numberSpecialWhiteCoin2 = String.valueOf(User.numberSpecialWhiteCoin2);
+                    g.setColor(Color.black);
+                    g.fillOval(0, 0, 30, 30);
+                    g.drawImage(icon.getImage(), 0, 0, 30, 30, this);
+                    g.drawString(numberSpecialWhiteCoin2, 10, 21);
+                    break;
+
+
+                case 54:
+                    String numberSpecialBlackCoin1 = String.valueOf(User.numberSpecialBlackCoin1);
+                    g.setColor(Color.black);
+                    g.fillOval(0, 0, 30, 30);
+                    g.drawImage(icon.getImage(), 0, 0, 30, 30, this);
+                    g.drawString(numberSpecialBlackCoin1, 10, 21);
+                    break;
+
+                case 56:
+                    String numberSpecialBlackCoin2 = String.valueOf(User.numberSpecialBlackCoin2);
+                    g.setColor(Color.black);
+                    g.fillOval(0, 0, 30, 30);
+                    g.drawImage(icon.getImage(), 0, 0, 30, 30, this);
+                    g.drawString(numberSpecialBlackCoin2, 10, 21);
+                    break;
             }
 
     }

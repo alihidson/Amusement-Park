@@ -36,6 +36,17 @@ public class User {
     public static int numberGoldCoin1 = 0, numberGoldCoin2 = 0;
 
 
+
+    public static int numberSpecialRedCoin1 = 0, numberSpecialRedCoin2 = 0;
+    public static int numberSpecialGreenCoin1 = 0, numberSpecialGreenCoin2 = 0;
+    public static int numberSpecialBlueCoin1 = 0, numberSpecialBlueCoin2 = 0;
+    public static int numberSpecialWhiteCoin1 = 0, numberSpecialWhiteCoin2 = 0;
+    public static int numberSpecialBlackCoin1 = 0, numberSpecialBlackCoin2 = 0;
+
+
+
+
+
     public static int numberUserGetRedCoin = 0;
     public static int numberUserGetGreenCoin = 0;
     public static int numberUserGetBlueCoin = 0;
