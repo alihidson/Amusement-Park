@@ -36,60 +36,457 @@ public class PrizeClaw extends JPanel {
                     if (PC1) {
                         if (clickCount1 > 0) {
                             if (User.sw1 == 1) {
-                                clickCount1--;
-                                User.prizeClaw1_1 = true;
+                                if ((User.numberSpecialRedCoin1 + User.numberGoldCoin1) >= 3
+                                        && User.numberSpecialGreenCoin1 >= 3 && User.numberSpecialBlueCoin1 >= 2) {
+                                    clickCount1--;
+                                    User.prizeClaw1_1 = true;
 
-                                frame.dispose();
-                                JFrame gamePage = new GamePage();
-                                gamePage.setVisible(true);
-                            } else if (User.sw2 == 1) {
-                                clickCount1--;
-                                User.prizeClaw1_2 = true;
 
-                                frame.dispose();
-                                JFrame gamePage = new GamePage();
-                                gamePage.setVisible(true);
-                            }
-
-                        }
-                    } else if (PC2) {
-                        if (clickCount2 > 0) {
-                            if (User.sw1 == 1) {
-                                clickCount2--;
-                                User.prizeClaw2_1 = true;
-
-                                frame.dispose();
-                                JFrame gamePage = new GamePage();
-                                gamePage.setVisible(true);
-                            } else if (User.sw2 == 1) {
-                                clickCount2--;
-                                User.prizeClaw2_2 = true;
+                                    if(User.numberSpecialRedCoin1 == 2) {
+                                    User.numberGoldCoin1--;
+                                    Coin.numberGoldCoin++;
+                                }
+                                else if(User.numberSpecialRedCoin1 == 1) {
+                                    User.numberGoldCoin1 -= 2;
+                                    Coin.numberGoldCoin += 2;
+                                }
+                                else if(User.numberSpecialRedCoin1 == 0) {
+                                    User.numberGoldCoin1 -= 3;
+                                    Coin.numberGoldCoin += 3;
+                                }
 
                                 frame.dispose();
                                 JFrame gamePage = new GamePage();
                                 gamePage.setVisible(true);
                             }
+                                else if (User.numberSpecialRedCoin1  >= 3
+                                        && (User.numberSpecialGreenCoin1 + User.numberGoldCoin1) >= 3 && User.numberSpecialBlueCoin1 >= 2) {
+                                    clickCount1--;
+                                    User.prizeClaw1_1 = true;
+
+                                    if(User.numberSpecialGreenCoin1 == 2) {
+                                        User.numberGoldCoin1--;
+                                        Coin.numberGoldCoin++;
+                                    }
+                                    else if(User.numberSpecialGreenCoin1 == 1) {
+                                        User.numberGoldCoin1 -= 2;
+                                        Coin.numberGoldCoin += 2;
+                                    }
+                                    else if(User.numberSpecialGreenCoin1 == 0) {
+                                        User.numberGoldCoin1 -= 3;
+                                        Coin.numberGoldCoin += 3;
+                                    }
+
+                                    frame.dispose();
+                                    JFrame gamePage = new GamePage();
+                                    gamePage.setVisible(true);
+                                }
+                                else if (User.numberSpecialRedCoin1  >= 3 && User.numberSpecialGreenCoin1 >= 3
+                                        && (User.numberSpecialBlueCoin1 + User.numberGoldCoin1) >= 2) {
+                                    clickCount1--;
+                                    User.prizeClaw1_1 = true;
+
+                                    if(User.numberSpecialBlueCoin1 == 1) {
+                                        User.numberGoldCoin1--;
+                                        Coin.numberGoldCoin++;
+                                    }
+                                    else if(User.numberSpecialBlueCoin1 == 0) {
+                                        User.numberGoldCoin1 -= 2;
+                                        Coin.numberGoldCoin += 2;
+                                    }
+
+                                    frame.dispose();
+                                    JFrame gamePage = new GamePage();
+                                    gamePage.setVisible(true);
+                                }
                         }
-                    } else if (PC3) {
-                        if (clickCount3 > 0) {
-                            if (User.sw1 == 1) {
-                                clickCount3--;
-                                User.prizeClaw3_1 = true;
+                            else if (User.sw2 == 1) {
+                                if ((User.numberSpecialRedCoin2 + User.numberGoldCoin2) >= 3
+                                        && User.numberSpecialGreenCoin2 >= 3 && User.numberSpecialBlueCoin2 >= 2) {
+                                    clickCount1--;
+                                    User.prizeClaw1_2 = true;
 
-                                frame.dispose();
-                                JFrame gamePage = new GamePage();
-                                gamePage.setVisible(true);
-                            } else if (User.sw2 == 1) {
-                                clickCount3--;
-                                User.prizeClaw3_2 = true;
 
-                                frame.dispose();
-                                JFrame gamePage = new GamePage();
-                                gamePage.setVisible(true);
+                                    if(User.numberSpecialRedCoin2 == 2) {
+                                        User.numberGoldCoin2--;
+                                        Coin.numberGoldCoin++;
+                                    }
+                                    else if(User.numberSpecialRedCoin2 == 1) {
+                                        User.numberGoldCoin2 -= 2;
+                                        Coin.numberGoldCoin += 2;
+                                    }
+                                    else if(User.numberSpecialRedCoin2 == 0) {
+                                        User.numberGoldCoin2 -= 3;
+                                        Coin.numberGoldCoin += 3;
+                                    }
+
+                                    frame.dispose();
+                                    JFrame gamePage = new GamePage();
+                                    gamePage.setVisible(true);
+                                }
+                                else if (User.numberSpecialRedCoin2  >= 3
+                                        && (User.numberSpecialGreenCoin2 + User.numberGoldCoin2) >= 3 && User.numberSpecialBlueCoin2 >= 2) {
+                                    clickCount1--;
+                                    User.prizeClaw1_2 = true;
+
+                                    if(User.numberSpecialGreenCoin2 == 2) {
+                                        User.numberGoldCoin2--;
+                                        Coin.numberGoldCoin++;
+                                    }
+                                    else if(User.numberSpecialGreenCoin2 == 1) {
+                                        User.numberGoldCoin2 -= 2;
+                                        Coin.numberGoldCoin += 2;
+                                    }
+                                    else if(User.numberSpecialGreenCoin2 == 0) {
+                                        User.numberGoldCoin2 -= 3;
+                                        Coin.numberGoldCoin += 3;
+                                    }
+
+                                    frame.dispose();
+                                    JFrame gamePage = new GamePage();
+                                    gamePage.setVisible(true);
+                                }
+                                else if (User.numberSpecialRedCoin2  >= 3 && User.numberSpecialGreenCoin2 >= 3
+                                        && (User.numberSpecialBlueCoin2 + User.numberGoldCoin2) >= 2) {
+                                    clickCount1--;
+                                    User.prizeClaw1_2 = true;
+
+                                    if(User.numberSpecialBlueCoin2 == 1) {
+                                        User.numberGoldCoin2--;
+                                        Coin.numberGoldCoin++;
+                                    }
+                                    else if(User.numberSpecialBlueCoin2 == 0) {
+                                        User.numberGoldCoin2 -= 2;
+                                        Coin.numberGoldCoin += 2;
+                                    }
+
+                                    frame.dispose();
+                                    JFrame gamePage = new GamePage();
+                                    gamePage.setVisible(true);
+                                }
                             }
                         }
                     }
+                    else if (PC2) {
+                        if (clickCount2 > 0) {
+                            if (User.sw1 == 1) {
+                                if ((User.numberSpecialRedCoin1 + User.numberGoldCoin1) >= 4
+                                        && User.numberSpecialBlackCoin1 >= 3 && User.numberSpecialGreenCoin1 >= 3) {
+                                    clickCount2--;
+                                    User.prizeClaw2_1 = true;
 
+
+                                    if(User.numberSpecialRedCoin1 == 3) {
+                                        User.numberGoldCoin1--;
+                                        Coin.numberGoldCoin++;
+                                    }
+                                    else if(User.numberSpecialRedCoin1 == 2) {
+                                        User.numberGoldCoin1 -= 2;
+                                        Coin.numberGoldCoin += 2;
+                                    }
+                                    else if(User.numberSpecialRedCoin1 == 1) {
+                                        User.numberGoldCoin1 -= 3;
+                                        Coin.numberGoldCoin += 3;
+                                    }
+                                    else if(User.numberSpecialRedCoin1 == 0) {
+                                        User.numberGoldCoin1 -= 4;
+                                        Coin.numberGoldCoin += 4;
+                                    }
+
+                                    frame.dispose();
+                                    JFrame gamePage = new GamePage();
+                                    gamePage.setVisible(true);
+                                }
+                                else if (User.numberSpecialRedCoin1 >= 4
+                                        && (User.numberSpecialBlackCoin1 + User.numberGoldCoin1) >= 3 && User.numberSpecialGreenCoin1 >= 3) {
+                                    clickCount2--;
+                                    User.prizeClaw2_1 = true;
+
+                                    if(User.numberSpecialBlackCoin1 == 2) {
+                                        User.numberGoldCoin1--;
+                                        Coin.numberGoldCoin++;
+                                    }
+                                    else if(User.numberSpecialBlackCoin1 == 1) {
+                                        User.numberGoldCoin1 -= 2;
+                                        Coin.numberGoldCoin += 2;
+                                    }
+                                    else if(User.numberSpecialBlackCoin1 == 0) {
+                                        User.numberGoldCoin1 -= 3;
+                                        Coin.numberGoldCoin += 3;
+                                    }
+
+                                    frame.dispose();
+                                    JFrame gamePage = new GamePage();
+                                    gamePage.setVisible(true);
+                                }
+                                else if (User.numberSpecialRedCoin1 >= 4
+                                        && User.numberSpecialBlackCoin1 >= 3 && (User.numberSpecialGreenCoin1 + User.numberGoldCoin1) >= 3) {
+                                    clickCount2--;
+                                    User.prizeClaw2_1 = true;
+
+
+                                    if(User.numberSpecialGreenCoin1 == 2) {
+                                        User.numberGoldCoin1--;
+                                        Coin.numberGoldCoin++;
+                                    }
+                                    else if(User.numberSpecialGreenCoin1 == 1) {
+                                        User.numberGoldCoin1 -= 2;
+                                        Coin.numberGoldCoin += 2;
+                                    }
+                                    else if(User.numberSpecialGreenCoin1 == 0) {
+                                        User.numberGoldCoin1 -= 3;
+                                        Coin.numberGoldCoin += 3;
+                                    }
+
+                                    frame.dispose();
+                                    JFrame gamePage = new GamePage();
+                                    gamePage.setVisible(true);
+                                }
+                            }
+                            else if (User.sw2 == 1) {
+                                if ((User.numberSpecialRedCoin2 + User.numberGoldCoin2) >= 4
+                                        && User.numberSpecialBlackCoin2 >= 3 && User.numberSpecialGreenCoin2 >= 3) {
+                                    clickCount2--;
+                                    User.prizeClaw2_2 = true;
+
+
+                                    if(User.numberSpecialRedCoin2 == 3) {
+                                        User.numberGoldCoin2--;
+                                        Coin.numberGoldCoin++;
+                                    }
+                                    else if(User.numberSpecialRedCoin2 == 2) {
+                                        User.numberGoldCoin2 -= 2;
+                                        Coin.numberGoldCoin += 2;
+                                    }
+                                    else if(User.numberSpecialRedCoin2 == 1) {
+                                        User.numberGoldCoin2 -= 3;
+                                        Coin.numberGoldCoin += 3;
+                                    }
+                                    else if(User.numberSpecialRedCoin2 == 0) {
+                                        User.numberGoldCoin2 -= 4;
+                                        Coin.numberGoldCoin += 4;
+                                    }
+
+                                    frame.dispose();
+                                    JFrame gamePage = new GamePage();
+                                    gamePage.setVisible(true);
+                                }
+                                else if (User.numberSpecialRedCoin2 >= 4
+                                        && (User.numberSpecialBlackCoin2 + User.numberGoldCoin2) >= 3 && User.numberSpecialGreenCoin2 >= 3) {
+                                    clickCount2--;
+                                    User.prizeClaw2_2 = true;
+
+                                    if(User.numberSpecialBlackCoin2 == 2) {
+                                        User.numberGoldCoin2--;
+                                        Coin.numberGoldCoin++;
+                                    }
+                                    else if(User.numberSpecialBlackCoin2 == 1) {
+                                        User.numberGoldCoin2 -= 2;
+                                        Coin.numberGoldCoin += 2;
+                                    }
+                                    else if(User.numberSpecialBlackCoin2 == 0) {
+                                        User.numberGoldCoin2 -= 3;
+                                        Coin.numberGoldCoin += 3;
+                                    }
+
+                                    frame.dispose();
+                                    JFrame gamePage = new GamePage();
+                                    gamePage.setVisible(true);
+                                }
+                                else if (User.numberSpecialRedCoin2 >= 4
+                                        && User.numberSpecialBlackCoin2 >= 3 && (User.numberSpecialGreenCoin2 + User.numberGoldCoin2) >= 3) {
+                                    clickCount2--;
+                                    User.prizeClaw2_2 = true;
+
+
+                                    if(User.numberSpecialGreenCoin2 == 2) {
+                                        User.numberGoldCoin2--;
+                                        Coin.numberGoldCoin++;
+                                    }
+                                    else if(User.numberSpecialGreenCoin2 == 1) {
+                                        User.numberGoldCoin2 -= 2;
+                                        Coin.numberGoldCoin += 2;
+                                    }
+                                    else if(User.numberSpecialGreenCoin2 == 0) {
+                                        User.numberGoldCoin2 -= 3;
+                                        Coin.numberGoldCoin += 3;
+                                    }
+
+                                    frame.dispose();
+                                    JFrame gamePage = new GamePage();
+                                    gamePage.setVisible(true);
+                                }
+                            }
+                        }
+                    }
+                    else if (PC3) {
+                        if (clickCount3 > 0) {
+                            if (User.sw1 == 1) {
+                                if ((User.numberSpecialBlueCoin1 + User.numberGoldCoin1) >= 4
+                                        && User.numberSpecialWhiteCoin1 >= 4 && User.numberSpecialRedCoin1 >= 4) {
+                                    clickCount3--;
+                                    User.prizeClaw3_1 = true;
+
+
+                                    if(User.numberSpecialBlueCoin1 == 3) {
+                                        User.numberGoldCoin1--;
+                                        Coin.numberGoldCoin++;
+                                    }
+                                    else if(User.numberSpecialBlueCoin1 == 2) {
+                                        User.numberGoldCoin1 -= 2;
+                                        Coin.numberGoldCoin += 2;
+                                    }
+                                    else if(User.numberSpecialBlueCoin1 == 1) {
+                                        User.numberGoldCoin1 -= 3;
+                                        Coin.numberGoldCoin += 3;
+                                    }
+                                    else if(User.numberSpecialBlueCoin1 == 0) {
+                                        User.numberGoldCoin1 -= 4;
+                                        Coin.numberGoldCoin += 4;
+                                    }
+
+                                    frame.dispose();
+                                    JFrame gamePage = new GamePage();
+                                    gamePage.setVisible(true);
+                                }
+                                else if (User.numberSpecialBlueCoin1 >= 4
+                                        && (User.numberSpecialWhiteCoin1 + User.numberGoldCoin1) >= 4 && User.numberSpecialRedCoin1 >= 4) {
+                                    clickCount3--;
+                                    User.prizeClaw3_1 = true;
+
+                                    if(User.numberSpecialWhiteCoin1 == 3) {
+                                        User.numberGoldCoin1--;
+                                        Coin.numberGoldCoin++;
+                                    }
+                                    else if(User.numberSpecialWhiteCoin1 == 2) {
+                                        User.numberGoldCoin1 -= 2;
+                                        Coin.numberGoldCoin += 2;
+                                    }
+                                    else if(User.numberSpecialWhiteCoin1 == 1) {
+                                        User.numberGoldCoin1 -= 3;
+                                        Coin.numberGoldCoin += 3;
+                                    }
+                                    else if(User.numberSpecialWhiteCoin1 == 0) {
+                                        User.numberGoldCoin1 -= 4;
+                                        Coin.numberGoldCoin += 4;
+                                    }
+
+                                    frame.dispose();
+                                    JFrame gamePage = new GamePage();
+                                    gamePage.setVisible(true);
+                                }
+                                else if (User.numberSpecialBlueCoin1 >= 4
+                                        && User.numberSpecialWhiteCoin1 >= 4 && (User.numberSpecialRedCoin1 + User.numberGoldCoin1) >= 4) {
+                                    clickCount3--;
+                                    User.prizeClaw3_1 = true;
+
+
+                                    if(User.numberSpecialRedCoin1 == 3) {
+                                        User.numberGoldCoin1--;
+                                        Coin.numberGoldCoin++;
+                                    }
+                                    else if(User.numberSpecialRedCoin1 == 2) {
+                                        User.numberGoldCoin1 -= 2;
+                                        Coin.numberGoldCoin += 2;
+                                    }
+                                    else if(User.numberSpecialRedCoin1 == 1) {
+                                        User.numberGoldCoin1 -= 3;
+                                        Coin.numberGoldCoin += 3;
+                                    }
+                                    else if(User.numberSpecialRedCoin1 == 0) {
+                                        User.numberGoldCoin1 -= 4;
+                                        Coin.numberGoldCoin += 4;
+                                    }
+
+                                    frame.dispose();
+                                    JFrame gamePage = new GamePage();
+                                    gamePage.setVisible(true);
+                                }
+                            }
+                            else if (User.sw2 == 1) {
+                                if ((User.numberSpecialBlueCoin2 + User.numberGoldCoin2) >= 4
+                                        && User.numberSpecialWhiteCoin2 >= 4 && User.numberSpecialRedCoin2 >= 4) {
+                                    clickCount3--;
+                                    User.prizeClaw3_2 = true;
+
+
+                                    if(User.numberSpecialBlueCoin2 == 3) {
+                                        User.numberGoldCoin2--;
+                                        Coin.numberGoldCoin++;
+                                    }
+                                    else if(User.numberSpecialBlueCoin2 == 2) {
+                                        User.numberGoldCoin2 -= 2;
+                                        Coin.numberGoldCoin += 2;
+                                    }
+                                    else if(User.numberSpecialBlueCoin2 == 1) {
+                                        User.numberGoldCoin2 -= 3;
+                                        Coin.numberGoldCoin += 3;
+                                    }
+                                    else if(User.numberSpecialBlueCoin2 == 0) {
+                                        User.numberGoldCoin2 -= 4;
+                                        Coin.numberGoldCoin += 4;
+                                    }
+
+                                    frame.dispose();
+                                    JFrame gamePage = new GamePage();
+                                    gamePage.setVisible(true);
+                                }
+                                else if (User.numberSpecialBlueCoin2 >= 4
+                                        && (User.numberSpecialWhiteCoin2 + User.numberGoldCoin2) >= 4 && User.numberSpecialRedCoin2 >= 4) {
+                                    clickCount3--;
+                                    User.prizeClaw3_2 = true;
+
+                                    if(User.numberSpecialWhiteCoin2 == 3) {
+                                        User.numberGoldCoin2--;
+                                        Coin.numberGoldCoin++;
+                                    }
+                                    else if(User.numberSpecialWhiteCoin2 == 2) {
+                                        User.numberGoldCoin2 -= 2;
+                                        Coin.numberGoldCoin += 2;
+                                    }
+                                    else if(User.numberSpecialWhiteCoin2 == 1) {
+                                        User.numberGoldCoin2 -= 3;
+                                        Coin.numberGoldCoin += 3;
+                                    }
+                                    else if(User.numberSpecialWhiteCoin2 == 0) {
+                                        User.numberGoldCoin2 -= 4;
+                                        Coin.numberGoldCoin += 4;
+                                    }
+
+                                    frame.dispose();
+                                    JFrame gamePage = new GamePage();
+                                    gamePage.setVisible(true);
+                                }
+                                else if (User.numberSpecialBlueCoin2 >= 4
+                                        && User.numberSpecialWhiteCoin2 >= 4 && (User.numberSpecialRedCoin2 + User.numberGoldCoin2) >= 4) {
+                                    clickCount3--;
+                                    User.prizeClaw3_2 = true;
+
+
+                                    if(User.numberSpecialRedCoin2 == 3) {
+                                        User.numberGoldCoin2--;
+                                        Coin.numberGoldCoin++;
+                                    }
+                                    else if(User.numberSpecialRedCoin2 == 2) {
+                                        User.numberGoldCoin2 -= 2;
+                                        Coin.numberGoldCoin += 2;
+                                    }
+                                    else if(User.numberSpecialRedCoin2 == 1) {
+                                        User.numberGoldCoin2 -= 3;
+                                        Coin.numberGoldCoin += 3;
+                                    }
+                                    else if(User.numberSpecialRedCoin2 == 0) {
+                                        User.numberGoldCoin2 -= 4;
+                                        Coin.numberGoldCoin += 4;
+                                    }
+
+                                    frame.dispose();
+                                    JFrame gamePage = new GamePage();
+                                    gamePage.setVisible(true);
+                                }
+                            }
+                        }
+                    }
                 }
             }
         });
@@ -142,6 +539,5 @@ public class PrizeClaw extends JPanel {
                 g.drawImage(icon4.getImage(), 55, 95, 20, 20, this);
             }
         }
-
     }
 }

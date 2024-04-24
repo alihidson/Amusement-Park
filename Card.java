@@ -14,6 +14,7 @@ public class Card extends JPanel {
     public static int clickCount21 = 3, clickCount22 = 3, clickCount23 = 3, clickCount24 = 3, clickCount25 = 3;
     public static int clickCount31 = 3, clickCount32 = 3, clickCount33 = 3, clickCount34 = 3, clickCount35 = 3;
     private final String text;
+    public int sw = 1; // switch for when user can give a card then dispose store page
 
 
     public Card(String icon1Path, String icon2Path, String icon3Path, String icon4Path, String icon5Path, String text) {
@@ -146,9 +147,6 @@ public class Card extends JPanel {
                             showBox(frame);
                         }
                     }
-
-
-
                 }
             }
         });
@@ -235,16 +233,41 @@ public class Card extends JPanel {
                 JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(Card.this);
 
 
-
-
-
-                if(User.sw1 == 1 && card11) {
+                if(User.sw1 == 1 && card11 && (User.numberGreenCoin1 + User.numberSpecialGreenCoin1) >= 2 && (User.numberRedCoin1 + User.numberSpecialRedCoin1) >= 2) {
                     User.cardPanel11_1++;
                     clickCount11--;
+
+                    if(User.numberGreenCoin1 >= 2)
+                        User.numberGreenCoin1 -= 2;
+                    else if(User.numberGreenCoin1 == 1)
+                        User.numberGreenCoin1 -= 1;
+
+                    if(User.numberRedCoin1 >= 2)
+                        User.numberRedCoin1 -= 2;
+                    else if(User.numberRedCoin1 == 1)
+                        User.numberRedCoin1 -= 1;
+
+                    User.numberSpecialGreenCoin1++;
+                    sw = 0;
+
                 }
-                else if(User.sw2 == 1 && card11) {
+                else if(User.sw2 == 1 && card11 && (User.numberGreenCoin2 + User.numberSpecialGreenCoin2) >= 2 && (User.numberRedCoin2 + User.numberSpecialRedCoin2) >= 2) {
                     User.cardPanel11_2++;
                     clickCount11--;
+
+                    if(User.numberGreenCoin2 >= 2)
+                        User.numberGreenCoin2 -= 2;
+                    else if(User.numberGreenCoin2 == 1)
+                        User.numberGreenCoin2 -= 1;
+
+                    if(User.numberRedCoin2 >= 2)
+                        User.numberRedCoin2 -= 2;
+                    else if(User.numberRedCoin2 == 1)
+                        User.numberRedCoin2 -= 1;
+
+                    User.numberSpecialGreenCoin2++;
+                    sw = 0;
+
                 }
 
                 if(User.sw1 == 1 && card12) {
@@ -410,9 +433,11 @@ public class Card extends JPanel {
 
 
 
-                frame.dispose();
-                JFrame gamePage = new GamePage();
-                gamePage.setVisible(true);
+                //if(sw == 0) {
+                    frame.dispose();
+                    JFrame gamePage = new GamePage();
+                    gamePage.setVisible(true);
+                //}
             }
         });
         buttonPanel.add(pickUpButton); // Add "Pick up" button to buttonPanel

@@ -16,7 +16,7 @@ public class Coin extends JPanel {
     public static int numberBlueCoin = 4;
     public static int numberWhiteCoin = 4;
     public static int numberBlackCoin = 4;
-    public static int allNumberGoldCoin = 5;
+    public static int numberGoldCoin = 5;
 
 
     private final boolean redSlot, greenSlot, blueSlot, whiteSlot, blackSlot;
@@ -69,7 +69,6 @@ public class Coin extends JPanel {
                                 countGetCoin = 0;
 
 
-
                                 frame.dispose();
                                 JFrame storeAgain = new Store();
                                 storeAgain.setVisible(true);
@@ -83,7 +82,6 @@ public class Coin extends JPanel {
                                 User.numberRedCoin1++;
                                 User.numberUserGetRedCoin++;
                                 countGetCoin--;
-
 
 
                                 frame.dispose();
@@ -114,7 +112,6 @@ public class Coin extends JPanel {
                                 countGetCoin = 0;
 
 
-
                                 frame.dispose();
                                 JFrame storeAgain = new Store();
                                 storeAgain.setVisible(true);
@@ -130,15 +127,12 @@ public class Coin extends JPanel {
                                 countGetCoin--;
 
 
-
                                 frame.dispose();
                                 JFrame storeAgain = new Store();
                                 storeAgain.setVisible(true);
                             }
                         }
                     }
-
-
 
 
                     else if (greenSlot) {
@@ -226,8 +220,6 @@ public class Coin extends JPanel {
                     }
 
 
-
-
                     else if (blueSlot) {
                         if(User.sw1 == 1) {
                             if (countGetCoin > 0 && numberBlueCoin == 4 && User.numberUserGetBlueCoin == 0
@@ -252,7 +244,6 @@ public class Coin extends JPanel {
                                 countGetCoin = 0;
 
 
-
                                 frame.dispose();
                                 JFrame storeAgain = new Store();
                                 storeAgain.setVisible(true);
@@ -266,7 +257,6 @@ public class Coin extends JPanel {
                                 User.numberBlueCoin1++;
                                 User.numberUserGetBlueCoin++;
                                 countGetCoin--;
-
 
 
                                 frame.dispose();
@@ -297,7 +287,6 @@ public class Coin extends JPanel {
                                 countGetCoin = 0;
 
 
-
                                 frame.dispose();
                                 JFrame storeAgain = new Store();
                                 storeAgain.setVisible(true);
@@ -313,15 +302,12 @@ public class Coin extends JPanel {
                                 countGetCoin--;
 
 
-
                                 frame.dispose();
                                 JFrame storeAgain = new Store();
                                 storeAgain.setVisible(true);
                             }
                         }
                     }
-
-
 
 
                     else if (whiteSlot) {
@@ -348,7 +334,6 @@ public class Coin extends JPanel {
                                 countGetCoin = 0;
 
 
-
                                 frame.dispose();
                                 JFrame storeAgain = new Store();
                                 storeAgain.setVisible(true);
@@ -362,7 +347,6 @@ public class Coin extends JPanel {
                                 User.numberWhiteCoin1++;
                                 User.numberUserGetWhiteCoin++;
                                 countGetCoin--;
-
 
 
                                 frame.dispose();
@@ -393,7 +377,6 @@ public class Coin extends JPanel {
                                 countGetCoin = 0;
 
 
-
                                 frame.dispose();
                                 JFrame storeAgain = new Store();
                                 storeAgain.setVisible(true);
@@ -409,14 +392,12 @@ public class Coin extends JPanel {
                                 countGetCoin--;
 
 
-
                                 frame.dispose();
                                 JFrame storeAgain = new Store();
                                 storeAgain.setVisible(true);
                             }
                         }
                     }
-
 
 
                     else if (blackSlot) {
@@ -443,7 +424,6 @@ public class Coin extends JPanel {
                                 countGetCoin = 0;
 
 
-
                                 frame.dispose();
                                 JFrame storeAgain = new Store();
                                 storeAgain.setVisible(true);
@@ -457,7 +437,6 @@ public class Coin extends JPanel {
                                 User.numberBlackCoin1++;
                                 User.numberUserGetBlackCoin++;
                                 countGetCoin--;
-
 
 
                                 frame.dispose();
@@ -488,7 +467,6 @@ public class Coin extends JPanel {
                                 countGetCoin = 0;
 
 
-
                                 frame.dispose();
                                 JFrame storeAgain = new Store();
                                 storeAgain.setVisible(true);
@@ -502,7 +480,6 @@ public class Coin extends JPanel {
                                 User.numberBlackCoin2++;
                                 User.numberUserGetBlackCoin++;
                                 countGetCoin--;
-
 
 
                                 frame.dispose();
@@ -578,7 +555,7 @@ public class Coin extends JPanel {
                     break;
 
                 case 12:
-                    String NumberGoldCoin = String.valueOf(allNumberGoldCoin);
+                    String NumberGoldCoin = String.valueOf(numberGoldCoin);
                     g.setColor(Color.black);
                     g.fillOval(0, 0, 40, 40);
                     g.drawImage(icon.getImage(), 0, 0, 40, 40, this);
@@ -690,9 +667,6 @@ public class Coin extends JPanel {
                     g.drawImage(icon.getImage(), 0, 0, 40, 40, this);
                     g.drawString(numberGoldCoin2, 15, 25);
                     break;
-
-
-
 
 
 

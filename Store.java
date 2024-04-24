@@ -1,5 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class Store extends JFrame {
     public Image backgroundImage;;
@@ -215,6 +217,36 @@ public class Store extends JFrame {
         goldCoin.setBounds(125, 575, 100, 100);
         goldCoin.setOpaque(false);
         layeredPane.add(goldCoin, Integer.valueOf(2));
+
+
+
+
+        JPanel rectangleBack = new JPanel() {
+            @Override
+            protected void paintComponent(Graphics g) {
+                super.paintComponent(g);
+                g.setColor(new Color(103, 23, 201));
+                g.fillRect(0, 0, getWidth(), getHeight());
+                g.setColor(Color.white);
+                Font font = new Font("Arial", Font.PLAIN, 18);
+                g.setFont(font);
+                FontMetrics metrics = g.getFontMetrics(font);
+                int x = (getWidth() - metrics.stringWidth("Back")) / 2;
+                int y = ((getHeight() - metrics.getHeight()) / 2) + metrics.getAscent();
+                g.drawString("Back", x, y);
+            }
+        };
+        rectangleBack.setBounds(1020, 500, 150, 100);
+            rectangleBack.addMouseListener(new MouseAdapter() {
+                @Override
+                public void mouseClicked(MouseEvent e) {
+                    super.mouseClicked(e);
+                    dispose();
+                    GamePage gamePage = new GamePage();
+                    gamePage.setVisible(true);
+                }
+            });
+        layeredPane.add(rectangleBack, Integer.valueOf(3));
 
 
 

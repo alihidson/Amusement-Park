@@ -21,6 +21,10 @@ public class GamePage extends JFrame {
             User.turn = User.Name1;
         }
 
+//        if(User.Score1 == 15 || User.Score2 == 15) {
+//
+//        }
+
         setTitle("Game Play");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(1280, 750);
