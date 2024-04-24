@@ -37,11 +37,11 @@ public class CoinPanel extends JPanel {
                 add(new Coin("/Users/ali/Main/Documents/Source/Amusement-Park/src/image/white-coin.png", n));
                 break;
 
-            case 9, 30, 32:
+            case 9:
                 add(new Coin("/Users/ali/Main/Documents/Source/Amusement-Park/src/image/slot-machine-black.png", n));
                 break;
 
-            case 10:
+            case 10, 30, 32:
                 add(new Coin("/Users/ali/Main/Documents/Source/Amusement-Park/src/image/black-coin.png", n));
                 break;
 

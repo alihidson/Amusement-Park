@@ -12,17 +12,68 @@ public class ScoreBoardPanel extends JPanel {
         // Add a border around the panel
         setBorder(BorderFactory.createLineBorder(new Color(158, 72, 177), 4)); // Adjust color and thickness as needed
 
+        setLayout(null);
 
 
         CoinPanel redCoin1 = new CoinPanel(14);
-        redCoin1.setBounds(100, 375, 100, 100);
+        redCoin1.setBounds(15, 100, 100, 100); // Change the position here
         redCoin1.setOpaque(false);
         add(redCoin1);
-
         CoinPanel redCoin2 = new CoinPanel(16);
-        redCoin2.setBounds(200, 375, 100, 100);
+        redCoin2.setBounds(15, 285, 100, 100); // Change the position here
         redCoin2.setOpaque(false);
         add(redCoin2);
+
+
+        CoinPanel greenCoin1 = new CoinPanel(18);
+        greenCoin1.setBounds(70, 100, 100, 100);
+        greenCoin1.setOpaque(false);
+        add(greenCoin1);
+        CoinPanel greenCoin2 = new CoinPanel(20);
+        greenCoin2.setBounds(70, 285, 100, 100);
+        greenCoin2.setOpaque(false);
+        add(greenCoin2);
+
+
+        CoinPanel blueCoin1 = new CoinPanel(22);
+        blueCoin1.setBounds(125, 100, 100, 100);
+        blueCoin1.setOpaque(false);
+        add(blueCoin1);
+        CoinPanel blueCoin2 = new CoinPanel(24);
+        blueCoin2.setBounds(125, 285, 100, 100);
+        blueCoin2.setOpaque(false);
+        add(blueCoin2);
+
+
+        CoinPanel whiteCoin1 = new CoinPanel(26);
+        whiteCoin1.setBounds(180, 100, 100, 100);
+        whiteCoin1.setOpaque(false);
+        add(whiteCoin1);
+        CoinPanel whiteCoin2 = new CoinPanel(28);
+        whiteCoin2.setBounds(180, 285, 100, 100);
+        whiteCoin2.setOpaque(false);
+        add(whiteCoin2);
+
+
+        CoinPanel blackCoin1 = new CoinPanel(30);
+        blackCoin1.setBounds(235, 100, 100, 100);
+        blackCoin1.setOpaque(false);
+        add(blackCoin1);
+        CoinPanel blackCoin2 = new CoinPanel(32);
+        blackCoin2.setBounds(235, 285, 100, 100);
+        blackCoin2.setOpaque(false);
+        add(blackCoin2);
+
+
+        CoinPanel goldCoin1 = new CoinPanel(34);
+        goldCoin1.setBounds(290, 100, 100, 100);
+        goldCoin1.setOpaque(false);
+        add(goldCoin1);
+        CoinPanel goldCoin2 = new CoinPanel(36);
+        goldCoin2.setBounds(290, 285, 100, 100);
+        goldCoin2.setOpaque(false);
+        add(goldCoin2);
+
     }
 
     @Override
@@ -44,11 +95,11 @@ public class ScoreBoardPanel extends JPanel {
 
         if(User.sw1 == 1) {
             g.setColor(Color.green);
-            g.drawString("Turn: " + User.turn, 20, 415);
+            g.drawString("Turn: " + User.turn, 20, 405);
         }
         else if(User.sw2 == 1) {
             g.setColor(new Color(255,0,145));
-            g.drawString("Turn: " + User.turn, 20, 415);
+            g.drawString("Turn: " + User.turn, 20, 405);
         }
 
 
@@ -59,20 +110,7 @@ public class ScoreBoardPanel extends JPanel {
 
         Graphics2D g3d = (Graphics2D) g;
         g3d.setStroke(new BasicStroke(3)); // Increase the thickness of the line to 3 pixels
-        g3d.drawLine(0, 390, getWidth(), 390);
+        g3d.drawLine(0, 370, getWidth(), 370);
 
     }
-
-//    private int calculatePlayerScore(int playerNumber) {
-//        int score = 0;
-//        if(playerNumber == 1) {
-//            score += User.numberRedCoin1 + User.numberGreenCoin1 + User.numberBlueCoin1 +
-//                    User.numberWhiteCoin1 + User.numberBlackCoin1 + User.numberGoldCoin1;
-//        }
-//        else if(playerNumber == 2) {
-//            score += User.numberRedCoin2 + User.numberGreenCoin2 + User.numberBlueCoin2 +
-//                    User.numberWhiteCoin2 + User.numberBlackCoin2 + User.numberGoldCoin2;
-//        }
-//        return score;
-//    }
 }

@@ -615,7 +615,6 @@ public class Coin extends JPanel {
                     g.drawString(numberGreenCoin1, 15, 25);
                     break;
 
-
                 case 20:
                     String numberGreenCoin2 = String.valueOf(User.numberGreenCoin2);
                     g.setColor(Color.black);
@@ -641,6 +640,7 @@ public class Coin extends JPanel {
                     g.drawString(numberBlueCoin2, 15, 25);
                     break;
 
+
                 case 26:
                     String numberWhiteCoin1 = String.valueOf(User.numberWhiteCoin1);
                     g.setColor(Color.black);
@@ -657,6 +657,7 @@ public class Coin extends JPanel {
                     g.drawString(numberWhiteCoin2, 15, 25);
                     break;
 
+
                 case 30:
                     String numberBlackCoin1 = String.valueOf(User.numberBlackCoin1);
                     g.setColor(Color.black);
@@ -672,6 +673,7 @@ public class Coin extends JPanel {
                     g.drawImage(icon.getImage(), 0, 0, 40, 40, this);
                     g.drawString(numberBlackCoin2, 15, 25);
                     break;
+
 
                 case 34:
                     String numberGoldCoin1 = String.valueOf(User.numberGoldCoin1);
