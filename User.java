@@ -6,6 +6,9 @@ public class User {
     public static int sw1 = 0;
     public static int sw2 = 1;
     public static String turn;
+    public static int numberOfCard1 = 0;
+    public static int numberOfCard2 = 0;
+    public static String winPlayer;
 
 
     public static boolean prizeClaw1_1, prizeClaw1_2, prizeClaw2_1, prizeClaw2_2, prizeClaw3_1, prizeClaw3_2;

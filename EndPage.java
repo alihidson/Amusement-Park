@@ -7,8 +7,6 @@ import java.io.IOException;
 
 public class EndPage extends JPanel {
 
-    private NamePage namePage;
-
     public EndPage() {
         setLayout(null);
 

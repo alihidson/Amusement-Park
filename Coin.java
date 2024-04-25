@@ -1,5 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
@@ -44,6 +46,16 @@ public class Coin extends JPanel {
             @Override
             public void mouseClicked(MouseEvent e) {
                 JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(Coin.this);
+
+
+                if(User.sw1 == 1 && User.numberRedCoin1 + User.numberGreenCoin1 + User.numberBlueCoin1 + User.numberWhiteCoin1 + User.numberBlackCoin1 > 10) {
+
+                    showBox(frame);
+                }
+                else if(User.sw2 == 1 && User.numberRedCoin2 + User.numberGreenCoin2 + User.numberBlueCoin2 + User.numberWhiteCoin2 + User.numberBlackCoin2 > 10) {
+
+                    showBox(frame);
+                }
 
                     if (redSlot) {
                         if(User.sw1 == 1) {
@@ -489,7 +501,20 @@ public class Coin extends JPanel {
                         }
                     }
 
+
+                if(User.sw1 == 1 && User.numberRedCoin1 + User.numberGreenCoin1 + User.numberBlueCoin1 + User.numberWhiteCoin1 + User.numberBlackCoin1 > 10) {
+
+                    showBox(frame);
+                }
+                else if(User.sw2 == 1 && User.numberRedCoin2 + User.numberGreenCoin2 + User.numberBlueCoin2 + User.numberWhiteCoin2 + User.numberBlackCoin2 > 10) {
+
+                    showBox(frame);
+                }
+
+
+
             }
+
         });
 
 
@@ -756,5 +781,127 @@ public class Coin extends JPanel {
                     break;
             }
 
+    }
+
+    private void showBox(JFrame parentFrame) {
+        JDialog dialog = new JDialog(parentFrame, "Return Coin", true); // Parent frame, title, and modal
+        dialog.setLayout(new BorderLayout());
+
+        JPanel panel = new JPanel();
+        panel.setBackground(Color.green); // Set background color
+        panel.setLayout(new GridLayout(2, 1)); // Set GridLayout for three components
+
+        JLabel label = new JLabel("which coins you want to return to game?");
+        label.setHorizontalAlignment(JLabel.CENTER); // Center align the label
+        panel.add(label);
+
+        JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER)); // Panel for buttons
+
+        JButton giveRedCoin = new JButton("Red");
+        giveRedCoin.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dialog.dispose(); // Close the dialog when the button is clicked
+                JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(Coin.this);
+
+                if(User.sw1 == 1 && User.numberRedCoin1 > 0) {
+                    User.numberRedCoin1--;
+                    numberRedCoin++;
+                }
+                else if(User.sw2 == 1 && User.numberRedCoin2 > 0) {
+                    User.numberRedCoin2--;
+                    numberRedCoin++;
+                }
+
+            }
+        });
+        buttonPanel.add(giveRedCoin); // Add "Pick up" button to buttonPanel
+
+        JButton giveGreenCoin = new JButton("Green");
+        giveGreenCoin.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dialog.dispose(); // Close the dialog when the button is clicked
+                JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(Coin.this);
+
+                if(User.sw1 == 1 && User.numberGreenCoin1 > 0) {
+                    User.numberGreenCoin1--;
+                    numberGreenCoin++;
+                }
+                else if(User.sw2 == 1 && User.numberGreenCoin2 > 0) {
+                    User.numberGreenCoin2--;
+                    numberGreenCoin++;
+                }
+
+            }
+        });
+        buttonPanel.add(giveGreenCoin); // Add "Pick up" button to buttonPanel
+
+        JButton giveBlueCoin = new JButton("Blue");
+        giveBlueCoin.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dialog.dispose(); // Close the dialog when the button is clicked
+                JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(Coin.this);
+
+                if(User.sw1 == 1 && User.numberBlueCoin1 > 0) {
+                    User.numberBlueCoin1--;
+                    numberBlueCoin++;
+                }
+                else if(User.sw2 == 1 && User.numberBlueCoin2 > 0) {
+                    User.numberBlueCoin2--;
+                    numberBlueCoin++;
+                }
+
+            }
+        });
+        buttonPanel.add(giveBlueCoin); // Add "Pick up" button to buttonPanel
+
+        JButton giveWhiteCoin = new JButton("White");
+        giveWhiteCoin.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dialog.dispose(); // Close the dialog when the button is clicked
+                JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(Coin.this);
+
+                if(User.sw1 == 1 && User.numberWhiteCoin1 > 0) {
+                    User.numberWhiteCoin1--;
+                    numberWhiteCoin++;
+                }
+                else if(User.sw2 == 1 && User.numberWhiteCoin2 > 0) {
+                    User.numberWhiteCoin2--;
+                    numberWhiteCoin++;
+                }
+
+            }
+        });
+        buttonPanel.add(giveWhiteCoin); // Add "Pick up" button to buttonPanel
+
+        JButton giveBlackCoin = new JButton("Black");
+        giveBlackCoin.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dialog.dispose(); // Close the dialog when the button is clicked
+                JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(Coin.this);
+
+                if(User.sw1 == 1 && User.numberBlackCoin1 > 0) {
+                    User.numberBlackCoin1--;
+                    numberBlackCoin++;
+                }
+                else if(User.sw2 == 1 && User.numberBlackCoin2 > 0) {
+                    User.numberBlackCoin2--;
+                    numberBlackCoin++;
+                }
+
+            }
+        });
+        buttonPanel.add(giveBlackCoin);
+
+        panel.add(buttonPanel);
+
+        dialog.add(panel, BorderLayout.CENTER);
+        dialog.setSize(450, 120);
+        dialog.setLocationRelativeTo(parentFrame);
+        dialog.setVisible(true);
     }
 }
