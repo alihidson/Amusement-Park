@@ -236,7 +236,7 @@ public class Store extends JFrame {
                 g.drawString("Back", x, y);
             }
         };
-        rectangleBack.setBounds(1020, 500, 150, 100);
+        rectangleBack.setBounds(1035, 475, 120, 80);
             rectangleBack.addMouseListener(new MouseAdapter() {
                 @Override
                 public void mouseClicked(MouseEvent e) {
@@ -247,6 +247,34 @@ public class Store extends JFrame {
                 }
             });
         layeredPane.add(rectangleBack, Integer.valueOf(3));
+
+
+        JPanel rectangleReserve = new JPanel() {
+            @Override
+            protected void paintComponent(Graphics g) {
+                super.paintComponent(g);
+                g.setColor(new Color(190, 3, 197));
+                g.fillRect(0, 0, getWidth(), getHeight());
+                g.setColor(Color.white);
+                Font font = new Font("Arial", Font.PLAIN, 18);
+                g.setFont(font);
+                FontMetrics metrics = g.getFontMetrics(font);
+                int x = (getWidth() - metrics.stringWidth("Reserve")) / 2;
+                int y = ((getHeight() - metrics.getHeight()) / 2) + metrics.getAscent();
+                g.drawString("Reserve", x, y);
+            }
+        };
+        rectangleReserve.setBounds(1035, 560, 120, 80);
+        rectangleReserve.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                dispose();
+                Reserve reserve = new Reserve();
+                reserve.setVisible(true);
+            }
+        });
+        layeredPane.add(rectangleReserve, Integer.valueOf(3));
 
 
 

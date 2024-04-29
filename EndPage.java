@@ -51,7 +51,7 @@ public class EndPage extends JPanel {
         rectangle2.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                JOptionPane.showMessageDialog(null, "My ID is 'alihidson' on all platforms","ID", JOptionPane.QUESTION_MESSAGE);
+                System.exit(0);
             }
         });
 
@@ -67,13 +67,13 @@ public class EndPage extends JPanel {
 
         // Adding text to the page
         try {
-            Font font = Font.createFont(Font.TRUETYPE_FONT, new File("/Users/ali/Main/Documents/Source/Amusement-Park/src/Font/Sectar.otf")).deriveFont(Font.BOLD, 44);
+            Font font = Font.createFont(Font.TRUETYPE_FONT, new File("/Users/ali/Main/Documents/Source/Amusement-Park/src/Font/PinyonScript-Regular.ttf")).deriveFont(Font.BOLD, 44);
             g.setFont(font);
         } catch (IOException | FontFormatException e) {
             e.printStackTrace();
         }
         g.setColor(Color.red);
-        String text = "Amusement Park";
+        String text = "Amusement Park is Finish" + "\n" + "The first player is: " + User.winPlayer;
         int x = 460; // X coordinate
         int y = 100; // Y coordinate
         g.drawString(text, x, y);

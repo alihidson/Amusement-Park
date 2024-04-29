@@ -128,6 +128,50 @@ public class ScoreBoardPanel extends JPanel {
         blackSpecialCoin2.setOpaque(false);
         add(blackSpecialCoin2);
 
+
+        if(User.sw1 == 1) {
+            JPanel rectangle1 = new JPanel() {
+                @Override
+                protected void paintComponent(Graphics g) {
+                    super.paintComponent(g);
+                    g.setColor(Color.green);
+                    g.fillRect(0, 0, getWidth(), getHeight());
+                    g.setColor(Color.BLUE);
+                    Font font = new Font("Arial", Font.PLAIN, 16);
+                    g.setFont(font);
+                    FontMetrics metrics = g.getFontMetrics(font);
+                    int x = 15;
+                    int y = ((getHeight() - metrics.getHeight()) / 2) + metrics.getAscent();
+                    g.drawString("Turn: " + User.turn, x, y);
+                }
+            };
+            rectangle1.setBounds(25, 380, 130, 40);
+            add(rectangle1);
+        }
+
+
+        if(User.sw2 == 1) {
+            JPanel rectangle2 = new JPanel() {
+                @Override
+                protected void paintComponent(Graphics g) {
+                    super.paintComponent(g);
+                    g.setColor(new Color(255, 0, 145));
+                    g.fillRect(0, 0, getWidth(), getHeight());
+                    g.setColor(Color.white);
+                    Font font = new Font("Arial", Font.PLAIN, 16);
+                    g.setFont(font);
+                    FontMetrics metrics = g.getFontMetrics(font);
+                    int x = 15;
+                    int y = ((getHeight() - metrics.getHeight()) / 2) + metrics.getAscent();
+                    g.drawString("Turn: " + User.turn, x, y);
+                }
+            };
+            rectangle2.setBounds(25, 380, 130, 40);
+            add(rectangle2);
+        }
+
+
+
     }
 
     @Override
@@ -136,25 +180,31 @@ public class ScoreBoardPanel extends JPanel {
         // Draw background image
         g.drawImage(scoreboardBackgroundImage, 0, 0, getWidth(), getHeight(), this);
         // Draw text
-        g.setColor(new Color(0,255,247));
+
         Font font = new Font("Arial", Font.PLAIN, 22);
         g.setFont(font);
 
-        g.drawString(User.Name1 + " :", 20, 20);
-        g.drawString(User.Name2 + " :", 20, 206);
+        g.setColor(Color.green);
+        g.drawString(User.Name1, 20, 20);
+        g.setColor(new Color(255, 47, 162, 255));
+        g.drawString(User.Name2, 20, 206);
 
+        g.setColor(new Color(0,255,247));
         g.drawString("Score: " + User.Score1, 20, 50);
         g.drawString("Score: " + User.Score2, 20, 236);
 
 
-        if(User.sw1 == 1) {
-            g.setColor(Color.green);
-            g.drawString("Turn: " + User.turn, 20, 405);
-        }
-        else if(User.sw2 == 1) {
-            g.setColor(new Color(255,0,145));
-            g.drawString("Turn: " + User.turn, 20, 405);
-        }
+//        if(User.sw1 == 1) {
+//            g.setColor(Color.green);
+//            g.drawString("Turn: " + User.turn, 20, 405);
+//        }
+//        else if(User.sw2 == 1) {
+//            g.setColor(new Color(255,0,145));
+//            g.drawString("Turn: " + User.turn, 20, 405);
+//        }
+
+
+
 
 
         g.setColor(new Color(179, 0, 18));

@@ -48,6 +48,8 @@ public class User {
 
 
 
+    public static String cardReserve1_1, cardReserve2_1, cardReserve3_1;
+    public static String cardReserve1_2, cardReserve2_2, cardReserve3_2;
 
 
     public static int numberUserGetRedCoin = 0;

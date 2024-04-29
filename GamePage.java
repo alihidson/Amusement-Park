@@ -75,44 +75,43 @@ public class GamePage extends JFrame {
         layeredPane.add(scoreBoard, Integer.valueOf(2)); // Add scoreboard panel to be on top
 
 
-        JPanel rectangle1 = new JPanel() {
-            @Override
-            protected void paintComponent(Graphics g) {
-                super.paintComponent(g);
-                g.setColor(Color.green);
-                g.fillRect(0, 0, getWidth(), getHeight());
-                g.setColor(Color.BLUE);
-                Font font = new Font("Arial", Font.PLAIN, 14);
-                g.setFont(font);
-                FontMetrics metrics = g.getFontMetrics(font);
-                int x = (getWidth() - metrics.stringWidth(User.Name1)) / 2;
-                int y = ((getHeight() - metrics.getHeight()) / 2) + metrics.getAscent();
-                g.drawString(User.Name1, x, y);
-            }
-        };
-        rectangle1.setBounds(25, 25, 100, 50);
-        layeredPane.add(rectangle1, Integer.valueOf(3));
+            JPanel rectangle1 = new JPanel() {
+                @Override
+                protected void paintComponent(Graphics g) {
+                    super.paintComponent(g);
+                    g.setColor(Color.green);
+                    g.fillRect(0, 0, getWidth(), getHeight());
+                    g.setColor(Color.BLUE);
+                    Font font = new Font("Arial", Font.PLAIN, 16);
+                    g.setFont(font);
+                    FontMetrics metrics = g.getFontMetrics(font);
+                    int x = (getWidth() - metrics.stringWidth(User.Name1)) / 2;
+                    int y = ((getHeight() - metrics.getHeight()) / 2) + metrics.getAscent();
+                    g.drawString(User.Name1, x, y);
+                }
+            };
+            rectangle1.setBounds(25, 25, 100, 50);
+            layeredPane.add(rectangle1, Integer.valueOf(3));
 
 
-        JPanel rectangle2 = new JPanel() {
-            @Override
-            protected void paintComponent(Graphics g) {
-                super.paintComponent(g);
-                g.setColor(new Color(255,0,145));
-                g.fillRect(0, 0, getWidth(), getHeight());
-                g.setColor(Color.white);
-                Font font = new Font("Arial", Font.PLAIN, 14);
-                g.setFont(font);
-                FontMetrics metrics = g.getFontMetrics(font);
-                int x = (getWidth() - metrics.stringWidth(User.Name2)) / 2;
-                int y = ((getHeight() - metrics.getHeight()) / 2) + metrics.getAscent();
-                g.drawString(User.Name2, x, y);
-            }
-        };
-        rectangle2.setBounds(25, 85, 100, 50);
-        layeredPane.add(rectangle2, Integer.valueOf(3));
 
-
+            JPanel rectangle2 = new JPanel() {
+                @Override
+                protected void paintComponent(Graphics g) {
+                    super.paintComponent(g);
+                    g.setColor(new Color(255, 0, 145));
+                    g.fillRect(0, 0, getWidth(), getHeight());
+                    g.setColor(Color.white);
+                    Font font = new Font("Arial", Font.PLAIN, 16);
+                    g.setFont(font);
+                    FontMetrics metrics = g.getFontMetrics(font);
+                    int x = (getWidth() - metrics.stringWidth(User.Name2)) / 2;
+                    int y = ((getHeight() - metrics.getHeight()) / 2) + metrics.getAscent();
+                    g.drawString(User.Name2, x, y);
+                }
+            };
+            rectangle2.setBounds(25, 85, 100, 50);
+            layeredPane.add(rectangle2, Integer.valueOf(3));
 
 
 
@@ -120,22 +119,21 @@ public class GamePage extends JFrame {
             @Override
             protected void paintComponent(Graphics g) {
                 super.paintComponent(g);
-                g.setColor(Color.green);
+                g.setColor(new Color(103, 23, 201));
                 g.fillRect(0, 0, getWidth(), getHeight());
-                g.setColor(Color.BLUE);
-                Font font = new Font("Arial", Font.PLAIN, 14);
+                g.setColor(new Color(66, 255, 195));
+                Font font = new Font("Arial", Font.PLAIN, 22);
                 g.setFont(font);
                 FontMetrics metrics = g.getFontMetrics(font);
-                int x = (getWidth() - metrics.stringWidth(User.Name1 + " Store")) / 2;
+                int x = (getWidth() - metrics.stringWidth("Store")) / 2;
                 int y = ((getHeight() - metrics.getHeight()) / 2) + metrics.getAscent();
-                g.drawString(User.Name1 + " Store", x, y);
+                g.drawString("Store", x, y);
             }
         };
-        rectangle3.setBounds(1090, 480, 100, 50);
+        rectangle3.setBounds(1010, 500, 150, 100);
 
-        if(User.sw1 == 1) {
-            rectangle3.addMouseListener(new MouseAdapter() {
-
+//        if(User.sw2 == 1) {
+        rectangle3.addMouseListener(new MouseAdapter() {
                 @Override
                 public void mouseClicked(MouseEvent e) {
                     super.mouseClicked(e);
@@ -153,49 +151,8 @@ public class GamePage extends JFrame {
             User.numberUserGetBlackCoin = 0;
 
 
-        }
+        //}
         layeredPane.add(rectangle3, Integer.valueOf(3));
-
-
-
-        JPanel rectangle4 = new JPanel() {
-            @Override
-            protected void paintComponent(Graphics g) {
-                super.paintComponent(g);
-                g.setColor(new Color(255,0,145));
-                g.fillRect(0, 0, getWidth(), getHeight());
-                g.setColor(Color.white);
-                Font font = new Font("Arial", Font.PLAIN, 14);
-                g.setFont(font);
-                FontMetrics metrics = g.getFontMetrics(font);
-                int x = (getWidth() - metrics.stringWidth(User.Name2 + " Store")) / 2;
-                int y = ((getHeight() - metrics.getHeight()) / 2) + metrics.getAscent();
-                g.drawString(User.Name2 + " Store", x, y);
-            }
-        };
-        rectangle4.setBounds(1090, 550, 100, 50);
-
-        if(User.sw2 == 1) {
-            rectangle4.addMouseListener(new MouseAdapter() {
-                @Override
-                public void mouseClicked(MouseEvent e) {
-                    super.mouseClicked(e);
-                    dispose();
-                    Store store = new Store();
-                    store.setVisible(true);
-                }
-            });
-
-            Coin.countGetCoin = 3;
-            User.numberUserGetRedCoin = 0;
-            User.numberUserGetGreenCoin = 0;
-            User.numberUserGetBlueCoin = 0;
-            User.numberUserGetWhiteCoin = 0;
-            User.numberUserGetBlackCoin = 0;
-
-
-        }
-        layeredPane.add(rectangle4, Integer.valueOf(3));
 
 
 
@@ -251,14 +208,6 @@ public class GamePage extends JFrame {
 
 
 
-
-
-
-
-
-
-
-
         if(User.cardPanel11_1 > 0 || User.cardPanel11_2 > 0) {
             CardPanelOne cardPanel11 = new CardPanelOne(1);
             cardPanel11.setBounds(50, 180, 100, 150);
@@ -303,10 +252,6 @@ public class GamePage extends JFrame {
             layeredPane.add(createRectangle1(User.cardPanel15_1,415 , 180 + 130), Integer.valueOf(5));
             layeredPane.add(createRectangle2(User.cardPanel15_2,415 + 25, 180 + 130), Integer.valueOf(5));
         }
-
-
-
-
 
 
 
@@ -358,10 +303,6 @@ public class GamePage extends JFrame {
 
 
 
-
-
-
-
         if(User.cardPanel31_1 > 0 || User.cardPanel31_2 > 0) {
             CardPanelThree cardPanel31 = new CardPanelThree(1);
             cardPanel31.setBounds(50, 500, 100, 150);
@@ -406,9 +347,6 @@ public class GamePage extends JFrame {
             layeredPane.add(createRectangle1(User.cardPanel35_1,415 , 500 + 130), Integer.valueOf(5));
             layeredPane.add(createRectangle2(User.cardPanel35_2,415 + 25, 500 + 130), Integer.valueOf(5));
         }
-
-
-
 
 
 
