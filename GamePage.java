@@ -150,6 +150,9 @@ public class GamePage extends JFrame {
             User.numberUserGetWhiteCoin = 0;
             User.numberUserGetBlackCoin = 0;
 
+            Card.swBuy = 1;
+            Card.canReserve = 1;
+
 
         //}
         layeredPane.add(rectangle3, Integer.valueOf(3));

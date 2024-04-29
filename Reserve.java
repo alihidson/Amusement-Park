@@ -6,7 +6,7 @@ import java.awt.event.MouseEvent;
 public class Reserve extends JFrame {
     public Image backgroundImage;;
 
-    public final int x = 500, y = 300;
+    public final int x = 280, y = 105;
 
 
 
@@ -42,11 +42,11 @@ public class Reserve extends JFrame {
         }
         if(User.cardReserve2_1 != null){
 
-            drawCard(User.cardReserve2_1, layeredPane, x + 100, y);
+            drawCard(User.cardReserve2_1, layeredPane, x + 90, y);
         }
         if(User.cardReserve3_1 != null){
 
-            drawCard(User.cardReserve3_1, layeredPane, x + 200, y);
+            drawCard(User.cardReserve3_1, layeredPane, x + 180, y);
         }
 
 
@@ -54,15 +54,15 @@ public class Reserve extends JFrame {
 
         if(User.cardReserve1_2 != null){
 
-            drawCard(User.cardReserve1_2, layeredPane, x, y + 200);
+            drawCard(User.cardReserve1_2, layeredPane, x, y + 400);
         }
         if(User.cardReserve2_2 != null){
 
-            drawCard(User.cardReserve2_2, layeredPane, x + 100, y + 200);
+            drawCard(User.cardReserve2_2, layeredPane, x + 90, y + 400);
         }
         if(User.cardReserve3_2 != null){
 
-            drawCard(User.cardReserve3_2, layeredPane, x + 200, y + 200);
+            drawCard(User.cardReserve3_2, layeredPane, x + 180, y + 400);
         }
 
 
@@ -83,7 +83,7 @@ public class Reserve extends JFrame {
                 g.drawString(User.Name1, x, y);
             }
         };
-        rectangle1.setBounds(250, 50, 100, 50);
+        rectangle1.setBounds(360, 50, 100, 50);
         layeredPane.add(rectangle1, Integer.valueOf(3));
 
 
@@ -102,7 +102,7 @@ public class Reserve extends JFrame {
                 g.drawString(User.Name2, x, y);
             }
         };
-        rectangle2.setBounds(250, 450, 100, 50);
+        rectangle2.setBounds(360, 450, 100, 50);
         layeredPane.add(rectangle2, Integer.valueOf(3));
 
 

@@ -14,7 +14,8 @@ public class Card extends JPanel {
     public static int clickCount21 = 3, clickCount22 = 3, clickCount23 = 3, clickCount24 = 3, clickCount25 = 3;
     public static int clickCount31 = 3, clickCount32 = 3, clickCount33 = 3, clickCount34 = 3, clickCount35 = 3;
     private final String text;
-    public int sw = 1; // switch for when user can give a card then dispose store page
+    public static int swBuy = 1; // switch for when user can give a card then dispose store page
+    public static int canReserve = 1;
 
 
     public Card(String icon1Path, String icon2Path, String icon3Path, String icon4Path, String icon5Path, String text) {
@@ -56,7 +57,7 @@ public class Card extends JPanel {
             public void mouseClicked(MouseEvent e) {
                 JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(Card.this);
 
-                if (frame.getTitle().equals("Store")) {
+                if (frame.getTitle().equals("Store") || frame.getTitle().equals("Reserve")) {
                     if (card11) {
                         if (clickCount11 > 0) {
 
@@ -157,7 +158,7 @@ public class Card extends JPanel {
         super.paintComponent(g);
         JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(Card.this);
 
-        if (frame.getTitle().equals("Store")) {
+        if (frame.getTitle().equals("Store") || frame.getTitle().equals("Reserve")) {
 
             if ((card11 && clickCount11 <= 0) || (card12 && clickCount12 <= 0) || (card13 && clickCount13 <= 0) || (card14 && clickCount14 <= 0) || (card15 && clickCount15 <= 0)
                     || (card21 && clickCount21 <= 0) || (card22 && clickCount22 <= 0) || (card23 && clickCount23 <= 0) || (card24 && clickCount24 <= 0) || (card25 && clickCount25 <= 0)
@@ -248,7 +249,7 @@ public class Card extends JPanel {
                         User.numberRedCoin1 -= 1;
 
                     User.numberSpecialGreenCoin1++;
-                    sw = 0;
+                    swBuy = 0;
 
                 }
                 else if(User.sw2 == 1 && card11 && (User.numberGreenCoin2 + User.numberSpecialGreenCoin2) >= 2 && (User.numberRedCoin2 + User.numberSpecialRedCoin2) >= 2) {
@@ -266,7 +267,7 @@ public class Card extends JPanel {
                         User.numberRedCoin2 -= 1;
 
                     User.numberSpecialGreenCoin2++;
-                    sw = 0;
+                    swBuy = 0;
 
                 }
 
@@ -433,7 +434,7 @@ public class Card extends JPanel {
 
 
 
-                //if(sw == 0) {
+                //if(swBuy == 0) {
                     frame.dispose();
                     JFrame gamePage = new GamePage();
                     gamePage.setVisible(true);
@@ -442,14 +443,450 @@ public class Card extends JPanel {
         });
         buttonPanel.add(pickUpButton); // Add "Pick up" button to buttonPanel
 
-        JButton dropButton = new JButton("Reserve");
-        dropButton.addActionListener(new ActionListener() {
+        JButton Reserve = new JButton("Reserve");
+        Reserve.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Action for "Drop" button
+                dialog.dispose(); // Close the dialog when the button is clicked
+                JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(Card.this);
+
+                if(User.sw1 == 1 && User.reserveNumber1 < 4 && canReserve == 1) {
+                    if(card11) {
+                        User.reserveNumber1++;
+                        clickCount11--;
+                        if(User.cardReserve1_1 == null)
+                            User.cardReserve1_1 = "cardPanel11";
+                        else if(User.cardReserve2_1 == null)
+                            User.cardReserve2_1 = "cardPanel11";
+                        else if(User.cardReserve3_1 == null)
+                            User.cardReserve3_1 = "cardPanel11";
+                        canReserve = 0;
+                        if(Coin.numberGoldCoin > 0)
+                            User.numberGoldCoin1++;
+                    }
+
+                    else if(card12) {
+                        User.reserveNumber1++;
+                        clickCount12--;
+                        if(User.cardReserve1_1 == null)
+                            User.cardReserve1_1 = "cardPanel12";
+                        else if(User.cardReserve2_1 == null)
+                            User.cardReserve2_1 = "cardPanel12";
+                        else if(User.cardReserve3_1 == null)
+                            User.cardReserve3_1 = "cardPanel12";
+                        canReserve = 0;
+                        if(Coin.numberGoldCoin > 0)
+                            User.numberGoldCoin1++;
+                    }
+
+                    else if(card13) {
+                        User.reserveNumber1++;
+                        clickCount13--;
+                        if(User.cardReserve1_1 == null)
+                            User.cardReserve1_1 = "cardPanel13";
+                        else if(User.cardReserve2_1 == null)
+                            User.cardReserve2_1 = "cardPanel13";
+                        else if(User.cardReserve3_1 == null)
+                            User.cardReserve3_1 = "cardPanel13";
+                        canReserve = 0;
+                        if(Coin.numberGoldCoin > 0)
+                            User.numberGoldCoin1++;
+                    }
+
+                    else if(card14) {
+                        User.reserveNumber1++;
+                        clickCount14--;
+                        if(User.cardReserve1_1 == null)
+                            User.cardReserve1_1 = "cardPanel14";
+                        else if(User.cardReserve2_1 == null)
+                            User.cardReserve2_1 = "cardPanel14";
+                        else if(User.cardReserve3_1 == null)
+                            User.cardReserve3_1 = "cardPanel14";
+                        canReserve = 0;
+                        if(Coin.numberGoldCoin > 0)
+                            User.numberGoldCoin1++;
+                    }
+
+                    else if(card15) {
+                        User.reserveNumber1++;
+                        clickCount15--;
+                        if(User.cardReserve1_1 == null)
+                            User.cardReserve1_1 = "cardPanel15";
+                        else if(User.cardReserve2_1 == null)
+                            User.cardReserve2_1 = "cardPanel15";
+                        else if(User.cardReserve3_1 == null)
+                            User.cardReserve3_1 = "cardPanel15";
+                        canReserve = 0;
+                        if(Coin.numberGoldCoin > 0)
+                            User.numberGoldCoin1++;
+                    }
+
+                    else if(card21) {
+                        User.reserveNumber1++;
+                        clickCount21--;
+                        if(User.cardReserve1_1 == null)
+                            User.cardReserve1_1 = "cardPanel21";
+                        else if(User.cardReserve2_1 == null)
+                            User.cardReserve2_1 = "cardPanel21";
+                        else if(User.cardReserve3_1 == null)
+                            User.cardReserve3_1 = "cardPanel21";
+                        canReserve = 0;
+                        if(Coin.numberGoldCoin > 0)
+                            User.numberGoldCoin1++;
+                    }
+
+                    else if(card22) {
+                        User.reserveNumber1++;
+                        clickCount22--;
+                        if(User.cardReserve1_1 == null)
+                            User.cardReserve1_1 = "cardPanel22";
+                        else if(User.cardReserve2_1 == null)
+                            User.cardReserve2_1 = "cardPanel22";
+                        else if(User.cardReserve3_1 == null)
+                            User.cardReserve3_1 = "cardPanel22";
+                        canReserve = 0;
+                        if(Coin.numberGoldCoin > 0)
+                            User.numberGoldCoin1++;
+                    }
+
+                    else if(card23) {
+                        User.reserveNumber1++;
+                        clickCount23--;
+                        if(User.cardReserve1_1 == null)
+                            User.cardReserve1_1 = "cardPanel23";
+                        else if(User.cardReserve2_1 == null)
+                            User.cardReserve2_1 = "cardPanel23";
+                        else if(User.cardReserve3_1 == null)
+                            User.cardReserve3_1 = "cardPanel23";
+                        canReserve = 0;
+                        if(Coin.numberGoldCoin > 0)
+                            User.numberGoldCoin1++;
+                    }
+
+                    else if(card24) {
+                        User.reserveNumber1++;
+                        clickCount24--;
+                        if(User.cardReserve1_1 == null)
+                            User.cardReserve1_1 = "cardPanel24";
+                        else if(User.cardReserve2_1 == null)
+                            User.cardReserve2_1 = "cardPanel24";
+                        else if(User.cardReserve3_1 == null)
+                            User.cardReserve3_1 = "cardPanel24";
+                        canReserve = 0;
+                        if(Coin.numberGoldCoin > 0)
+                            User.numberGoldCoin1++;
+                    }
+
+                    else if(card25) {
+                        User.reserveNumber1++;
+                        clickCount25--;
+                        if(User.cardReserve1_1 == null)
+                            User.cardReserve1_1 = "cardPanel25";
+                        else if(User.cardReserve2_1 == null)
+                            User.cardReserve2_1 = "cardPanel25";
+                        else if(User.cardReserve3_1 == null)
+                            User.cardReserve3_1 = "cardPanel25";
+                        canReserve = 0;
+                        if(Coin.numberGoldCoin > 0)
+                            User.numberGoldCoin1++;
+                    }
+
+                    else if(card31) {
+                        User.reserveNumber1++;
+                        clickCount31--;
+                        if(User.cardReserve1_1 == null)
+                            User.cardReserve1_1 = "cardPanel31";
+                        else if(User.cardReserve2_1 == null)
+                            User.cardReserve2_1 = "cardPanel31";
+                        else if(User.cardReserve3_1 == null)
+                            User.cardReserve3_1 = "cardPanel31";
+                        canReserve = 0;
+                        if(Coin.numberGoldCoin > 0)
+                            User.numberGoldCoin1++;
+                    }
+
+                    else if(card32) {
+                        User.reserveNumber1++;
+                        clickCount32--;
+                        if(User.cardReserve1_1 == null)
+                            User.cardReserve1_1 = "cardPanel32";
+                        else if(User.cardReserve2_1 == null)
+                            User.cardReserve2_1 = "cardPanel32";
+                        else if(User.cardReserve3_1 == null)
+                            User.cardReserve3_1 = "cardPanel32";
+                        canReserve = 0;
+                        if(Coin.numberGoldCoin > 0)
+                            User.numberGoldCoin1++;
+                    }
+
+                    else if(card33) {
+                        User.reserveNumber1++;
+                        clickCount33--;
+                        if(User.cardReserve1_1 == null)
+                            User.cardReserve1_1 = "cardPanel33";
+                        else if(User.cardReserve2_1 == null)
+                            User.cardReserve2_1 = "cardPanel33";
+                        else if(User.cardReserve3_1 == null)
+                            User.cardReserve3_1 = "cardPanel33";
+                        canReserve = 0;
+                        if(Coin.numberGoldCoin > 0)
+                            User.numberGoldCoin1++;
+                    }
+
+                    else if(card34) {
+                        User.reserveNumber1++;
+                        clickCount34--;
+                        if(User.cardReserve1_1 == null)
+                            User.cardReserve1_1 = "cardPanel34";
+                        else if(User.cardReserve2_1 == null)
+                            User.cardReserve2_1 = "cardPanel34";
+                        else if(User.cardReserve3_1 == null)
+                            User.cardReserve3_1 = "cardPanel34";
+                        canReserve = 0;
+                        if(Coin.numberGoldCoin > 0)
+                            User.numberGoldCoin1++;
+                    }
+
+                    else if(card35) {
+                        User.reserveNumber1++;
+                        clickCount35--;
+                        if(User.cardReserve1_1 == null)
+                            User.cardReserve1_1 = "cardPanel35";
+                        else if(User.cardReserve2_1 == null)
+                            User.cardReserve2_1 = "cardPanel35";
+                        else if(User.cardReserve3_1 == null)
+                            User.cardReserve3_1 = "cardPanel35";
+                        canReserve = 0;
+                        if(Coin.numberGoldCoin > 0)
+                            User.numberGoldCoin1++;
+                    }
+
+                }
+
+
+
+
+
+                else if(User.sw2 == 1 && User.reserveNumber2 < 4 && canReserve == 1) {
+                    if(card11) {
+                        User.reserveNumber2++;
+                        clickCount11--;
+                        if(User.cardReserve1_2 == null)
+                            User.cardReserve1_2 = "cardPanel11";
+                        else if(User.cardReserve2_2 == null)
+                            User.cardReserve2_2 = "cardPanel11";
+                        else if(User.cardReserve3_2 == null)
+                            User.cardReserve3_2 = "cardPanel11";
+                        canReserve = 0;
+                        if(Coin.numberGoldCoin > 0)
+                            User.numberGoldCoin2++;
+                    }
+
+                    else if(card12) {
+                        User.reserveNumber2++;
+                        clickCount12--;
+                        if(User.cardReserve1_2 == null)
+                            User.cardReserve1_2 = "cardPanel12";
+                        else if(User.cardReserve2_2 == null)
+                            User.cardReserve2_2 = "cardPanel12";
+                        else if(User.cardReserve3_2 == null)
+                            User.cardReserve3_2 = "cardPanel12";
+                        canReserve = 0;
+                        if(Coin.numberGoldCoin > 0)
+                            User.numberGoldCoin2++;
+                    }
+
+                    else if(card13) {
+                        User.reserveNumber2++;
+                        clickCount13--;
+                        if(User.cardReserve1_2 == null)
+                            User.cardReserve1_2 = "cardPanel13";
+                        else if(User.cardReserve2_2 == null)
+                            User.cardReserve2_2 = "cardPanel13";
+                        else if(User.cardReserve3_2 == null)
+                            User.cardReserve3_2 = "cardPanel13";
+                        canReserve = 0;
+                        if(Coin.numberGoldCoin > 0)
+                            User.numberGoldCoin2++;
+                    }
+
+                    else if(card14) {
+                        User.reserveNumber2++;
+                        clickCount14--;
+                        if(User.cardReserve1_2 == null)
+                            User.cardReserve1_2 = "cardPanel14";
+                        else if(User.cardReserve2_2 == null)
+                            User.cardReserve2_2 = "cardPanel14";
+                        else if(User.cardReserve3_2 == null)
+                            User.cardReserve3_2 = "cardPanel14";
+                        canReserve = 0;
+                        if(Coin.numberGoldCoin > 0)
+                            User.numberGoldCoin2++;
+                    }
+
+                    else if(card15) {
+                        User.reserveNumber2++;
+                        clickCount15--;
+                        if(User.cardReserve1_2 == null)
+                            User.cardReserve1_2 = "cardPanel15";
+                        else if(User.cardReserve2_2 == null)
+                            User.cardReserve2_2 = "cardPanel15";
+                        else if(User.cardReserve3_2 == null)
+                            User.cardReserve3_2 = "cardPanel15";
+                        canReserve = 0;
+                        if(Coin.numberGoldCoin > 0)
+                            User.numberGoldCoin2++;
+                    }
+
+                    else if(card21) {
+                        User.reserveNumber2++;
+                        clickCount21--;
+                        if(User.cardReserve1_2 == null)
+                            User.cardReserve1_2 = "cardPanel21";
+                        else if(User.cardReserve2_2 == null)
+                            User.cardReserve2_2 = "cardPanel21";
+                        else if(User.cardReserve3_2 == null)
+                            User.cardReserve3_2 = "cardPanel21";
+                        canReserve = 0;
+                        if(Coin.numberGoldCoin > 0)
+                            User.numberGoldCoin2++;
+                    }
+
+                    else if(card22) {
+                        User.reserveNumber2++;
+                        clickCount22--;
+                        if(User.cardReserve1_2 == null)
+                            User.cardReserve1_2 = "cardPanel22";
+                        else if(User.cardReserve2_2 == null)
+                            User.cardReserve2_2 = "cardPanel22";
+                        else if(User.cardReserve3_2 == null)
+                            User.cardReserve3_2 = "cardPanel22";
+                        canReserve = 0;
+                        if(Coin.numberGoldCoin > 0)
+                            User.numberGoldCoin2++;
+                    }
+
+                    else if(card23) {
+                        User.reserveNumber2++;
+                        clickCount23--;
+                        if(User.cardReserve1_2 == null)
+                            User.cardReserve1_2 = "cardPanel23";
+                        else if(User.cardReserve2_2 == null)
+                            User.cardReserve2_2 = "cardPanel23";
+                        else if(User.cardReserve3_2 == null)
+                            User.cardReserve3_2 = "cardPanel23";
+                        canReserve = 0;
+                        if(Coin.numberGoldCoin > 0)
+                            User.numberGoldCoin2++;
+                    }
+
+                    else if(card24) {
+                        User.reserveNumber2++;
+                        clickCount24--;
+                        if(User.cardReserve1_2 == null)
+                            User.cardReserve1_2 = "cardPanel24";
+                        else if(User.cardReserve2_2 == null)
+                            User.cardReserve2_2 = "cardPanel24";
+                        else if(User.cardReserve3_2 == null)
+                            User.cardReserve3_2 = "cardPanel24";
+                        canReserve = 0;
+                        if(Coin.numberGoldCoin > 0)
+                            User.numberGoldCoin2++;
+                    }
+
+                    else if(card25) {
+                        User.reserveNumber2++;
+                        clickCount25--;
+                        if(User.cardReserve1_2 == null)
+                            User.cardReserve1_2 = "cardPanel25";
+                        else if(User.cardReserve2_2 == null)
+                            User.cardReserve2_2 = "cardPanel25";
+                        else if(User.cardReserve3_2 == null)
+                            User.cardReserve3_2 = "cardPanel25";
+                        canReserve = 0;
+                        if(Coin.numberGoldCoin > 0)
+                            User.numberGoldCoin2++;
+                    }
+
+                    else if(card31) {
+                        User.reserveNumber2++;
+                        clickCount31--;
+                        if(User.cardReserve1_2 == null)
+                            User.cardReserve1_2 = "cardPanel31";
+                        else if(User.cardReserve2_2 == null)
+                            User.cardReserve2_2 = "cardPanel31";
+                        else if(User.cardReserve3_2 == null)
+                            User.cardReserve3_2 = "cardPanel31";
+                        canReserve = 0;
+                        if(Coin.numberGoldCoin > 0)
+                            User.numberGoldCoin2++;
+                    }
+
+                    else if(card32) {
+                        User.reserveNumber2++;
+                        clickCount32--;
+                        if(User.cardReserve1_2 == null)
+                            User.cardReserve1_2 = "cardPanel32";
+                        else if(User.cardReserve2_2 == null)
+                            User.cardReserve2_2 = "cardPanel32";
+                        else if(User.cardReserve3_2 == null)
+                            User.cardReserve3_2 = "cardPanel32";
+                        canReserve = 0;
+                        if(Coin.numberGoldCoin > 0)
+                            User.numberGoldCoin2++;
+                    }
+
+                    else if(card33) {
+                        User.reserveNumber2++;
+                        clickCount33--;
+                        if(User.cardReserve1_2 == null)
+                            User.cardReserve1_2 = "cardPanel33";
+                        else if(User.cardReserve2_2 == null)
+                            User.cardReserve2_2 = "cardPanel33";
+                        else if(User.cardReserve3_2 == null)
+                            User.cardReserve3_2 = "cardPanel33";
+                        canReserve = 0;
+                        if(Coin.numberGoldCoin > 0)
+                            User.numberGoldCoin2++;
+                    }
+
+                    else if(card34) {
+                        User.reserveNumber2++;
+                        clickCount34--;
+                        if(User.cardReserve1_2 == null)
+                            User.cardReserve1_2 = "cardPanel34";
+                        else if(User.cardReserve2_2 == null)
+                            User.cardReserve2_2 = "cardPanel34";
+                        else if(User.cardReserve3_2 == null)
+                            User.cardReserve3_2 = "cardPanel34";
+                        canReserve = 0;
+                        if(Coin.numberGoldCoin > 0)
+                            User.numberGoldCoin2++;
+                    }
+
+                    else if(card35) {
+                        User.reserveNumber2++;
+                        clickCount35--;
+                        if(User.cardReserve1_2 == null)
+                            User.cardReserve1_2 = "cardPanel35";
+                        else if(User.cardReserve2_2 == null)
+                            User.cardReserve2_2 = "cardPanel35";
+                        else if(User.cardReserve3_2 == null)
+                            User.cardReserve3_2 = "cardPanel35";
+                        canReserve = 0;
+                        if(Coin.numberGoldCoin > 0)
+                            User.numberGoldCoin2++;
+                    }
+
+                }
+
+
+
+
+
             }
         });
-        buttonPanel.add(dropButton); // Add "Drop" button to buttonPanel
+        buttonPanel.add(Reserve); // Add "Drop" button to buttonPanel
 
         panel.add(buttonPanel); // Add buttonPanel to the main panel
 
