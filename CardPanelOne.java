@@ -39,7 +39,7 @@ public class CardPanelOne extends JPanel {
                 Card card13 = new Card("/Users/ali/Main/Documents/Source/Amusement-Park/src/image/zoo.png",
                         "/Users/ali/Main/Documents/Source/Amusement-Park/src/image/white-coin.png",
                         "/Users/ali/Main/Documents/Source/Amusement-Park/src/image/blue-coin-2.png",
-                        "/Users/ali/Main/Documents/Source/Amusement-Park/src/image/black-coin-3.png", null, "1");
+                        "/Users/ali/Main/Documents/Source/Amusement-Park/src/image/black-coin-2.png", null, "1");
 
                 numberCard13 = Card.clickCount13;
                 add(card13);
@@ -61,8 +61,8 @@ public class CardPanelOne extends JPanel {
                 Card card15 = new Card("/Users/ali/Main/Documents/Source/Amusement-Park/src/image/firebreather.png",
                         "/Users/ali/Main/Documents/Source/Amusement-Park/src/image/red-coin.png",
                         "/Users/ali/Main/Documents/Source/Amusement-Park/src/image/white-coin-3.png",
-                        "/Users/ali/Main/Documents/Source/Amusement-Park/src/image/green-coin-2.png",
-                        "/Users/ali/Main/Documents/Source/Amusement-Park/src/image/blue-coin-1.png", "1");
+                        "/Users/ali/Main/Documents/Source/Amusement-Park/src/image/green-coin-3.png",
+                        null, "1");
 
                 numberCard15 = Card.clickCount15;
                 add(card15);

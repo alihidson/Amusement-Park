@@ -901,6 +901,7 @@ public class Coin extends JPanel {
 
         dialog.add(panel, BorderLayout.CENTER);
         dialog.setSize(450, 120);
+        dialog.setResizable(false);
         dialog.setLocationRelativeTo(parentFrame);
         dialog.setVisible(true);
     }

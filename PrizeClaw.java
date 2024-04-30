@@ -42,7 +42,7 @@ public class PrizeClaw extends JPanel {
                                     User.prizeClaw1_1 = true;
 
 
-                                    if(User.numberSpecialRedCoin1 == 2) {
+                                    if(User.numberSpecialRedCoin1 >= 2) {
                                     User.numberGoldCoin1--;
                                     Coin.numberGoldCoin++;
                                 }
@@ -64,7 +64,7 @@ public class PrizeClaw extends JPanel {
                                     clickCount1--;
                                     User.prizeClaw1_1 = true;
 
-                                    if(User.numberSpecialGreenCoin1 == 2) {
+                                    if(User.numberSpecialGreenCoin1 >= 2) {
                                         User.numberGoldCoin1--;
                                         Coin.numberGoldCoin++;
                                     }
@@ -86,7 +86,7 @@ public class PrizeClaw extends JPanel {
                                     clickCount1--;
                                     User.prizeClaw1_1 = true;
 
-                                    if(User.numberSpecialBlueCoin1 == 1) {
+                                    if(User.numberSpecialBlueCoin1 >= 1) {
                                         User.numberGoldCoin1--;
                                         Coin.numberGoldCoin++;
                                     }
@@ -107,7 +107,7 @@ public class PrizeClaw extends JPanel {
                                     User.prizeClaw1_2 = true;
 
 
-                                    if(User.numberSpecialRedCoin2 == 2) {
+                                    if(User.numberSpecialRedCoin2 >= 2) {
                                         User.numberGoldCoin2--;
                                         Coin.numberGoldCoin++;
                                     }
@@ -129,7 +129,7 @@ public class PrizeClaw extends JPanel {
                                     clickCount1--;
                                     User.prizeClaw1_2 = true;
 
-                                    if(User.numberSpecialGreenCoin2 == 2) {
+                                    if(User.numberSpecialGreenCoin2 >= 2) {
                                         User.numberGoldCoin2--;
                                         Coin.numberGoldCoin++;
                                     }
@@ -151,7 +151,7 @@ public class PrizeClaw extends JPanel {
                                     clickCount1--;
                                     User.prizeClaw1_2 = true;
 
-                                    if(User.numberSpecialBlueCoin2 == 1) {
+                                    if(User.numberSpecialBlueCoin2 >= 1) {
                                         User.numberGoldCoin2--;
                                         Coin.numberGoldCoin++;
                                     }
@@ -176,7 +176,7 @@ public class PrizeClaw extends JPanel {
                                     User.prizeClaw2_1 = true;
 
 
-                                    if(User.numberSpecialRedCoin1 == 3) {
+                                    if(User.numberSpecialRedCoin1 >= 3) {
                                         User.numberGoldCoin1--;
                                         Coin.numberGoldCoin++;
                                     }
@@ -202,7 +202,7 @@ public class PrizeClaw extends JPanel {
                                     clickCount2--;
                                     User.prizeClaw2_1 = true;
 
-                                    if(User.numberSpecialBlackCoin1 == 2) {
+                                    if(User.numberSpecialBlackCoin1 >= 2) {
                                         User.numberGoldCoin1--;
                                         Coin.numberGoldCoin++;
                                     }
@@ -225,7 +225,7 @@ public class PrizeClaw extends JPanel {
                                     User.prizeClaw2_1 = true;
 
 
-                                    if(User.numberSpecialGreenCoin1 == 2) {
+                                    if(User.numberSpecialGreenCoin1 >= 2) {
                                         User.numberGoldCoin1--;
                                         Coin.numberGoldCoin++;
                                     }
@@ -250,7 +250,7 @@ public class PrizeClaw extends JPanel {
                                     User.prizeClaw2_2 = true;
 
 
-                                    if(User.numberSpecialRedCoin2 == 3) {
+                                    if(User.numberSpecialRedCoin2 >= 3) {
                                         User.numberGoldCoin2--;
                                         Coin.numberGoldCoin++;
                                     }
@@ -276,7 +276,7 @@ public class PrizeClaw extends JPanel {
                                     clickCount2--;
                                     User.prizeClaw2_2 = true;
 
-                                    if(User.numberSpecialBlackCoin2 == 2) {
+                                    if(User.numberSpecialBlackCoin2 >= 2) {
                                         User.numberGoldCoin2--;
                                         Coin.numberGoldCoin++;
                                     }
@@ -299,7 +299,7 @@ public class PrizeClaw extends JPanel {
                                     User.prizeClaw2_2 = true;
 
 
-                                    if(User.numberSpecialGreenCoin2 == 2) {
+                                    if(User.numberSpecialGreenCoin2 >= 2) {
                                         User.numberGoldCoin2--;
                                         Coin.numberGoldCoin++;
                                     }
@@ -328,7 +328,7 @@ public class PrizeClaw extends JPanel {
                                     User.prizeClaw3_1 = true;
 
 
-                                    if(User.numberSpecialBlueCoin1 == 3) {
+                                    if(User.numberSpecialBlueCoin1 >= 3) {
                                         User.numberGoldCoin1--;
                                         Coin.numberGoldCoin++;
                                     }
@@ -354,7 +354,7 @@ public class PrizeClaw extends JPanel {
                                     clickCount3--;
                                     User.prizeClaw3_1 = true;
 
-                                    if(User.numberSpecialWhiteCoin1 == 3) {
+                                    if(User.numberSpecialWhiteCoin1 >= 3) {
                                         User.numberGoldCoin1--;
                                         Coin.numberGoldCoin++;
                                     }
@@ -381,7 +381,7 @@ public class PrizeClaw extends JPanel {
                                     User.prizeClaw3_1 = true;
 
 
-                                    if(User.numberSpecialRedCoin1 == 3) {
+                                    if(User.numberSpecialRedCoin1 >= 3) {
                                         User.numberGoldCoin1--;
                                         Coin.numberGoldCoin++;
                                     }
@@ -410,7 +410,7 @@ public class PrizeClaw extends JPanel {
                                     User.prizeClaw3_2 = true;
 
 
-                                    if(User.numberSpecialBlueCoin2 == 3) {
+                                    if(User.numberSpecialBlueCoin2 >= 3) {
                                         User.numberGoldCoin2--;
                                         Coin.numberGoldCoin++;
                                     }
@@ -436,7 +436,7 @@ public class PrizeClaw extends JPanel {
                                     clickCount3--;
                                     User.prizeClaw3_2 = true;
 
-                                    if(User.numberSpecialWhiteCoin2 == 3) {
+                                    if(User.numberSpecialWhiteCoin2 >= 3) {
                                         User.numberGoldCoin2--;
                                         Coin.numberGoldCoin++;
                                     }
@@ -463,7 +463,7 @@ public class PrizeClaw extends JPanel {
                                     User.prizeClaw3_2 = true;
 
 
-                                    if(User.numberSpecialRedCoin2 == 3) {
+                                    if(User.numberSpecialRedCoin2 >= 3) {
                                         User.numberGoldCoin2--;
                                         Coin.numberGoldCoin++;
                                     }

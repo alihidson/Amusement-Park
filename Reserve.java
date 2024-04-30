@@ -136,10 +136,6 @@ public class Reserve extends JFrame {
         layeredPane.add(rectangleBack, Integer.valueOf(3));
 
 
-
-
-
-
         setContentPane(layeredPane);
     }
 
