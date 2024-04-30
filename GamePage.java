@@ -26,13 +26,15 @@ public class GamePage extends JFrame {
                 User.winPlayer = User.Name1;
             else if(User.Score2 >= 15 && User.Score1 < 15)
                 User.winPlayer = User.Name2;
+
+            dispose();
             JFrame frame = new JFrame();
             frame.setSize(1280, 750);
             frame.setTitle("End Page");
             frame.setResizable(false);
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-            dispose();
+
             EndPage finishPage = new EndPage();
             frame.add(finishPage);
             frame.setVisible(true);
@@ -43,6 +45,8 @@ public class GamePage extends JFrame {
                 User.winPlayer = User.Name1;
             else if(User.numberOfCard1 > User.numberOfCard2)
                 User.winPlayer = User.Name2;
+
+            dispose();
             JFrame frame = new JFrame();
             frame.setSize(1280, 750);
             frame.setTitle("End Page");
