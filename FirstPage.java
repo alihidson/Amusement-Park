@@ -4,7 +4,6 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.File;
 import java.io.IOException;
-//import javax.sound.sampled.*;
 
 public class FirstPage extends JPanel {
 
@@ -50,7 +49,6 @@ public class FirstPage extends JPanel {
         };
         rectangle2.setBounds(600, 205, 100, 50);
 
-//        playMusic("/Users/ali/Main/Documents/Source/Amusement-Park/src/Music/Start-Game.mp3");
 
         rectangle1.addMouseListener(new MouseAdapter() {
             @Override
@@ -101,15 +99,4 @@ public class FirstPage extends JPanel {
         JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(this);
         frame.dispose(); // Close FirstPage
     }
-//    public void playMusic(String filePath) {
-//        try {
-//            File audioFile = new File(filePath);
-//            AudioInputStream audioStream = AudioSystem.getAudioInputStream(audioFile);
-//            Clip clip = AudioSystem.getClip();
-//            clip.open(audioStream);
-//            clip.start();
-//        } catch (LineUnavailableException | UnsupportedAudioFileException | IOException e) {
-//            e.printStackTrace();
-//        }
-//    }
 }
