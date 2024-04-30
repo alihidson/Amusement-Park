@@ -149,6 +149,53 @@ public class Card extends JPanel {
                         }
                     }
                 }
+                else if (frame.getTitle().equals("Reserve")) {
+                    if (card11) {
+                        buyCard();
+                    }
+                    else if(card12) {
+                        buyCard();
+                    }
+                    else if(card13) {
+                        buyCard();
+                    }
+                    else if(card14) {
+                        buyCard();
+                    }
+                    else if(card15) {
+                        buyCard();
+                    }
+                    else if(card21) {
+                        buyCard();
+                    }
+                    else if(card22) {
+                        buyCard();
+                    }
+                    else if(card23) {
+                        buyCard();
+                    }
+                    else if(card24) {
+                        buyCard();
+                    }
+                    else if(card25) {
+                        buyCard();
+                    }
+                    else if(card31) {
+                        buyCard();
+                    }
+                    else if(card32) {
+                        buyCard();
+                    }
+                    else if(card33) {
+                        buyCard();
+                    }
+                    else if(card34) {
+                        buyCard();
+                    }
+                    else if(card35) {
+                        buyCard();
+                    }
+                }
             }
         });
     }
@@ -234,3029 +281,7 @@ public class Card extends JPanel {
                 JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(Card.this);
 
 
-                if(User.sw1 == 1 && card11) {
-                    if(User.numberGreenCoin1 + User.numberSpecialGreenCoin1 + User.numberGoldCoin1 >=2
-                            && User.numberRedCoin1 + User.numberSpecialRedCoin1 + User.numberGoldCoin1 >= 2) {
-
-                        User.cardPanel11_1++;
-                        clickCount11--;
-
-
-                        if(User.numberRedCoin1 >= 2) {
-                            User.numberRedCoin1 -= 2;
-                        }
-                        else if(User.numberRedCoin1 == 1 && User.numberSpecialRedCoin1 >= 1) {
-                            User.numberRedCoin1--;
-                            User.numberSpecialRedCoin1--;
-                        }
-                        else if(User.numberRedCoin1 == 0 && User.numberSpecialRedCoin1 >= 2) {
-                            User.numberSpecialRedCoin1 -= 2;
-                        }
-                        else if(User.numberRedCoin1 == 1 && User.numberSpecialRedCoin1 == 0 && User.numberGoldCoin1 >= 1) {
-                            User.numberRedCoin1--;
-                            User.numberGoldCoin1--;
-                        }
-                        else if(User.numberRedCoin1 == 0 && User.numberSpecialRedCoin1 == 1 && User.numberGoldCoin1 >= 1) {
-                            User.numberSpecialRedCoin1--;
-                            User.numberGoldCoin1--;
-                        }
-                        else if(User.numberRedCoin1 == 0 && User.numberSpecialRedCoin1 == 0 && User.numberGoldCoin1 >= 2) {
-                            User.numberGoldCoin1 -= 2;
-                        }
-
-
-
-
-                        if(User.numberGreenCoin1 >= 2) {
-                            User.numberGreenCoin1 -= 2;
-                        }
-                        else if(User.numberGreenCoin1 == 1 && User.numberSpecialGreenCoin1 >= 1) {
-                            User.numberGreenCoin1--;
-                            User.numberSpecialGreenCoin1--;
-                        }
-                        else if(User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 >= 2) {
-                            User.numberSpecialGreenCoin1 -= 2;
-                        }
-                        else if(User.numberGreenCoin1 == 1 && User.numberSpecialGreenCoin1 == 0 && User.numberGoldCoin1 >= 1) {
-                            User.numberGreenCoin1--;
-                            User.numberGoldCoin1--;
-                        }
-                        else if(User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 == 1 && User.numberGoldCoin1 >= 1) {
-                            User.numberSpecialGreenCoin1--;
-                            User.numberGoldCoin1--;
-                        }
-                        else if(User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 == 0 && User.numberGoldCoin1 >= 2) {
-                            User.numberGoldCoin1 -= 2;
-                        }
-
-                        swCanBuy = 0;
-                        User.numberSpecialGreenCoin1++;
-
-                    }
-                }
-
-                if(User.sw2 == 1 && card11) {
-                    if(User.numberGreenCoin2 + User.numberSpecialGreenCoin2 + User.numberGoldCoin2 >=2
-                            && User.numberRedCoin2 + User.numberSpecialRedCoin2 + User.numberGoldCoin2 >= 2) {
-
-                        User.cardPanel11_2++;
-                        clickCount11--;
-
-
-                        if(User.numberRedCoin2 >= 2) {
-                            User.numberRedCoin2 -= 2;
-                        }
-                        else if(User.numberRedCoin2 == 1 && User.numberSpecialRedCoin2 >= 1) {
-                            User.numberRedCoin2--;
-                            User.numberSpecialRedCoin2--;
-                        }
-                        else if(User.numberRedCoin2 == 0 && User.numberSpecialRedCoin2 >= 2) {
-                            User.numberSpecialRedCoin2 -= 2;
-                        }
-                        else if(User.numberRedCoin2 == 1 && User.numberSpecialRedCoin2 == 0 && User.numberGoldCoin2 >= 1) {
-                            User.numberRedCoin2--;
-                            User.numberGoldCoin2--;
-                        }
-                        else if(User.numberRedCoin2 == 0 && User.numberSpecialRedCoin2 == 1 && User.numberGoldCoin2 >= 1) {
-                            User.numberSpecialRedCoin2--;
-                            User.numberGoldCoin2--;
-                        }
-                        else if(User.numberRedCoin2 == 0 && User.numberSpecialRedCoin2 == 0 && User.numberGoldCoin2 >= 2) {
-                            User.numberGoldCoin2 -= 2;
-                        }
-
-
-
-
-                        if(User.numberGreenCoin2 >= 2) {
-                            User.numberGreenCoin2 -= 2;
-                        }
-                        else if(User.numberGreenCoin2 == 1 && User.numberSpecialGreenCoin2 >= 1) {
-                            User.numberGreenCoin2--;
-                            User.numberSpecialGreenCoin2--;
-                        }
-                        else if(User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 >= 2) {
-                            User.numberSpecialGreenCoin2 -= 2;
-                        }
-                        else if(User.numberGreenCoin2 == 1 && User.numberSpecialGreenCoin2 == 0 && User.numberGoldCoin2 >= 1) {
-                            User.numberGreenCoin2--;
-                            User.numberGoldCoin2--;
-                        }
-                        else if(User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 == 1 && User.numberGoldCoin2 >= 1) {
-                            User.numberSpecialGreenCoin2--;
-                            User.numberGoldCoin2--;
-                        }
-                        else if(User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 == 0 && User.numberGoldCoin2 >= 2) {
-                            User.numberGoldCoin2 -= 2;
-                        }
-
-                        swCanBuy = 0;
-                        User.numberSpecialGreenCoin2++;
-
-                    }
-                }
-
-
-
-                if(User.sw1 == 1 && card12) {
-                    if(User.numberBlackCoin1 + User.numberSpecialBlackCoin1 + User.numberGoldCoin1 >=2
-                            && User.numberRedCoin1 + User.numberSpecialRedCoin1 + User.numberGoldCoin1 >= 2) {
-
-                        User.cardPanel12_1++;
-                        clickCount12--;
-
-
-                        if(User.numberRedCoin1 >= 2) {
-                            User.numberRedCoin1 -= 2;
-                        }
-                        else if(User.numberRedCoin1 == 1 && User.numberSpecialRedCoin1 >= 1) {
-                            User.numberRedCoin1--;
-                            User.numberSpecialRedCoin1--;
-                        }
-                        else if(User.numberRedCoin1 == 0 && User.numberSpecialRedCoin1 >= 2) {
-                            User.numberSpecialRedCoin1 -= 2;
-                        }
-                        else if(User.numberRedCoin1 == 1 && User.numberSpecialRedCoin1 == 0 && User.numberGoldCoin1 >= 1) {
-                            User.numberRedCoin1--;
-                            User.numberGoldCoin1--;
-                        }
-                        else if(User.numberRedCoin1 == 0 && User.numberSpecialRedCoin1 == 1 && User.numberGoldCoin1 >= 1) {
-                            User.numberSpecialRedCoin1--;
-                            User.numberGoldCoin1--;
-                        }
-                        else if(User.numberRedCoin1 == 0 && User.numberSpecialRedCoin1 == 0 && User.numberGoldCoin1 >= 2) {
-                            User.numberGoldCoin1 -= 2;
-                        }
-
-
-
-
-                        if(User.numberBlackCoin1 >= 2) {
-                            User.numberBlackCoin1 -= 2;
-                        }
-                        else if(User.numberBlackCoin1 == 1 && User.numberSpecialBlackCoin1 >= 1) {
-                            User.numberBlackCoin1--;
-                            User.numberSpecialBlackCoin1--;
-                        }
-                        else if(User.numberBlackCoin1 == 0 && User.numberSpecialBlackCoin1 >= 2) {
-                            User.numberSpecialBlackCoin1 -= 2;
-                        }
-                        else if(User.numberBlackCoin1 == 1 && User.numberSpecialBlackCoin1 == 0 && User.numberGoldCoin1 >= 1) {
-                            User.numberBlackCoin1--;
-                            User.numberGoldCoin1--;
-                        }
-                        else if(User.numberBlackCoin1 == 0 && User.numberSpecialBlackCoin1 == 1 && User.numberGoldCoin1 >= 1) {
-                            User.numberSpecialBlackCoin1--;
-                            User.numberGoldCoin1--;
-                        }
-                        else if(User.numberBlackCoin1 == 0 && User.numberSpecialBlackCoin1 == 0 && User.numberGoldCoin1 >= 2) {
-                            User.numberGoldCoin1 -= 2;
-                        }
-
-                        swCanBuy = 0;
-                        User.numberSpecialBlueCoin1++;
-
-                    }
-                }
-
-                if(User.sw2 == 1 && card12) {
-                    if(User.numberBlackCoin2 + User.numberSpecialBlackCoin2 + User.numberGoldCoin2 >=2
-                            && User.numberRedCoin2 + User.numberSpecialRedCoin2 + User.numberGoldCoin2 >= 2) {
-
-                        User.cardPanel12_2++;
-                        clickCount12--;
-
-
-                        if(User.numberRedCoin2 >= 2) {
-                            User.numberRedCoin2 -= 2;
-                        }
-                        else if(User.numberRedCoin2 == 1 && User.numberSpecialRedCoin2 >= 1) {
-                            User.numberRedCoin2--;
-                            User.numberSpecialRedCoin2--;
-                        }
-                        else if(User.numberRedCoin2 == 0 && User.numberSpecialRedCoin2 >= 2) {
-                            User.numberSpecialRedCoin2 -= 2;
-                        }
-                        else if(User.numberRedCoin2 == 1 && User.numberSpecialRedCoin2 == 0 && User.numberGoldCoin2 >= 1) {
-                            User.numberRedCoin2--;
-                            User.numberGoldCoin2--;
-                        }
-                        else if(User.numberRedCoin2 == 0 && User.numberSpecialRedCoin2 == 1 && User.numberGoldCoin2 >= 1) {
-                            User.numberSpecialRedCoin2--;
-                            User.numberGoldCoin2--;
-                        }
-                        else if(User.numberRedCoin2 == 0 && User.numberSpecialRedCoin2 == 0 && User.numberGoldCoin2 >= 2) {
-                            User.numberGoldCoin2 -= 2;
-                        }
-
-
-
-
-                        if(User.numberBlackCoin2 >= 2) {
-                            User.numberBlackCoin2 -= 2;
-                        }
-                        else if(User.numberBlackCoin2 == 1 && User.numberSpecialBlackCoin2 >= 1) {
-                            User.numberBlackCoin2--;
-                            User.numberSpecialBlackCoin2--;
-                        }
-                        else if(User.numberBlackCoin2 == 0 && User.numberSpecialBlackCoin2 >= 2) {
-                            User.numberSpecialBlackCoin2 -= 2;
-                        }
-                        else if(User.numberBlackCoin2 == 1 && User.numberSpecialBlackCoin2 == 0 && User.numberGoldCoin2 >= 1) {
-                            User.numberBlackCoin2--;
-                            User.numberGoldCoin2--;
-                        }
-                        else if(User.numberBlackCoin2 == 0 && User.numberSpecialBlackCoin2 == 1 && User.numberGoldCoin2 >= 1) {
-                            User.numberSpecialBlackCoin2--;
-                            User.numberGoldCoin2--;
-                        }
-                        else if(User.numberBlackCoin2 == 0 && User.numberSpecialBlackCoin2 == 0 && User.numberGoldCoin2 >= 2) {
-                            User.numberGoldCoin2 -= 2;
-                        }
-
-                        swCanBuy = 0;
-                        User.numberSpecialBlueCoin2++;
-
-                    }
-                }
-
-
-
-
-
-                if(User.sw1 == 1 && card13) {
-                    if(User.numberBlackCoin1 + User.numberSpecialBlackCoin1 + User.numberGoldCoin1 >= 2
-                            && User.numberBlueCoin1 + User.numberSpecialBlueCoin1 + User.numberGoldCoin1 >= 2) {
-
-                        User.cardPanel13_1++;
-                        clickCount13--;
-                        User.Score1++;
-
-
-                        if(User.numberBlueCoin1 >= 2) {
-                            User.numberBlueCoin1 -= 2;
-                        }
-                        else if(User.numberBlueCoin1 == 1 && User.numberSpecialBlueCoin1 >= 1) {
-                            User.numberBlueCoin1--;
-                            User.numberSpecialBlueCoin1--;
-                        }
-                        else if(User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 >= 2) {
-                            User.numberSpecialBlueCoin1 -= 2;
-                        }
-                        else if(User.numberBlueCoin1 == 1 && User.numberSpecialBlueCoin1 == 0 && User.numberGoldCoin1 >= 1) {
-                            User.numberBlueCoin1--;
-                            User.numberGoldCoin1--;
-                        }
-                        else if(User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 == 1 && User.numberGoldCoin1 >= 1) {
-                            User.numberSpecialBlueCoin1--;
-                            User.numberGoldCoin1--;
-                        }
-                        else if(User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 == 0 && User.numberGoldCoin1 >= 2) {
-                            User.numberGoldCoin1 -= 2;
-                        }
-
-
-
-
-                        if(User.numberBlackCoin1 >= 2) {
-                            User.numberBlackCoin1 -= 2;
-                        }
-                        else if(User.numberBlackCoin1 == 1 && User.numberSpecialBlackCoin1 >= 1) {
-                            User.numberBlackCoin1--;
-                            User.numberSpecialBlackCoin1--;
-                        }
-                        else if(User.numberBlackCoin1 == 0 && User.numberSpecialBlackCoin1 >= 2) {
-                            User.numberSpecialBlackCoin1 -= 2;
-                        }
-                        else if(User.numberBlackCoin1 == 1 && User.numberSpecialBlackCoin1 == 0 && User.numberGoldCoin1 >= 1) {
-                            User.numberBlackCoin1--;
-                            User.numberGoldCoin1--;
-                        }
-                        else if(User.numberBlackCoin1 == 0 && User.numberSpecialBlackCoin1 == 1 && User.numberGoldCoin1 >= 1) {
-                            User.numberSpecialBlackCoin1--;
-                            User.numberGoldCoin1--;
-                        }
-                        else if(User.numberBlackCoin1 == 0 && User.numberSpecialBlackCoin1 == 0 && User.numberGoldCoin1 >= 2) {
-                            User.numberGoldCoin1 -= 2;
-                        }
-
-                        swCanBuy = 0;
-                        User.numberSpecialWhiteCoin1++;
-
-                    }
-                }
-
-                if(User.sw2 == 1 && card13) {
-                    if(User.numberBlackCoin2 + User.numberSpecialBlackCoin2 + User.numberGoldCoin2 >=2
-                            && User.numberBlueCoin2 + User.numberSpecialBlueCoin2 + User.numberGoldCoin2 >= 2) {
-
-                        User.cardPanel13_2++;
-                        clickCount13--;
-                        User.Score2++;
-
-
-                        if(User.numberBlueCoin2 >= 2) {
-                            User.numberBlueCoin2 -= 2;
-                        }
-                        else if(User.numberBlueCoin2 == 1 && User.numberSpecialBlueCoin2 >= 1) {
-                            User.numberBlueCoin2--;
-                            User.numberSpecialBlueCoin2--;
-                        }
-                        else if(User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 >= 2) {
-                            User.numberSpecialBlueCoin2 -= 2;
-                        }
-                        else if(User.numberBlueCoin2 == 1 && User.numberSpecialBlueCoin2 == 0 && User.numberGoldCoin2 >= 1) {
-                            User.numberBlueCoin2--;
-                            User.numberGoldCoin2--;
-                        }
-                        else if(User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 == 1 && User.numberGoldCoin2 >= 1) {
-                            User.numberSpecialBlueCoin2--;
-                            User.numberGoldCoin2--;
-                        }
-                        else if(User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 == 0 && User.numberGoldCoin2 >= 2) {
-                            User.numberGoldCoin2 -= 2;
-                        }
-
-
-
-
-                        if(User.numberBlackCoin2 >= 2) {
-                            User.numberBlackCoin2 -= 2;
-                        }
-                        else if(User.numberBlackCoin2 == 1 && User.numberSpecialBlackCoin2 >= 1) {
-                            User.numberBlackCoin2--;
-                            User.numberSpecialBlackCoin2--;
-                        }
-                        else if(User.numberBlackCoin2 == 0 && User.numberSpecialBlackCoin2 >= 2) {
-                            User.numberSpecialBlackCoin2 -= 2;
-                        }
-                        else if(User.numberBlackCoin2 == 1 && User.numberSpecialBlackCoin2 == 0 && User.numberGoldCoin2 >= 1) {
-                            User.numberBlackCoin2--;
-                            User.numberGoldCoin2--;
-                        }
-                        else if(User.numberBlackCoin2 == 0 && User.numberSpecialBlackCoin2 == 1 && User.numberGoldCoin2 >= 1) {
-                            User.numberSpecialBlackCoin2--;
-                            User.numberGoldCoin2--;
-                        }
-                        else if(User.numberBlackCoin2 == 0 && User.numberSpecialBlackCoin2 == 0 && User.numberGoldCoin2 >= 2) {
-                            User.numberGoldCoin2 -= 2;
-                        }
-
-                        swCanBuy = 0;
-                        User.numberSpecialWhiteCoin2++;
-
-                    }
-                }
-
-
-
-
-                if(User.sw1 == 1 && card14) {
-                    if(User.numberGreenCoin1 + User.numberSpecialGreenCoin1 + User.numberGoldCoin1 >= 2
-                            && User.numberBlueCoin1 + User.numberSpecialBlueCoin1 + User.numberGoldCoin1 >= 3) {
-
-                        User.cardPanel14_1++;
-                        clickCount14--;
-                        User.Score1++;
-
-                        if(User.numberBlueCoin1 >= 3) {
-                            User.numberBlueCoin1 -= 3;
-                        }
-                        else if(User.numberBlueCoin1 == 2 && User.numberSpecialBlueCoin1 >= 1) {
-                            User.numberBlueCoin1 -= 2;
-                            User.numberSpecialBlueCoin1 -= 1;
-                        }
-                        else if(User.numberBlueCoin1 == 1 && User.numberSpecialBlueCoin1 >= 2) {
-                            User.numberBlueCoin1 -= 1;
-                            User.numberSpecialBlueCoin1 -= 2;
-                        }
-                        else if(User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 >= 3) {
-                            User.numberSpecialBlueCoin1 -= 3;
-                        }
-                        else if(User.numberBlueCoin1 == 2 && User.numberSpecialBlueCoin1 == 0 && User.numberGoldCoin1 >= 1) {
-                            User.numberBlueCoin1 -= 2;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if(User.numberBlueCoin1 == 1 && User.numberSpecialBlueCoin1 == 1 && User.numberGoldCoin1 >= 1) {
-                            User.numberBlueCoin1 -= 1;
-                            User.numberSpecialBlueCoin1 -= 1;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if(User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 == 2 && User.numberGoldCoin1 >= 1) {
-                            User.numberSpecialBlueCoin1 -= 2;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if(User.numberBlueCoin1 == 1 && User.numberSpecialBlueCoin1 == 0 && User.numberGoldCoin1 >= 2) {
-                            User.numberBlueCoin1 -= 1;
-                            User.numberGoldCoin1 -= 2;
-                        }
-                        else if(User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 == 1 && User.numberGoldCoin1 >= 2) {
-                            User.numberSpecialBlueCoin1 -= 1;
-                            User.numberGoldCoin1 -= 2;
-                        }
-                        else if(User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 == 0 && User.numberGoldCoin1 >= 3) {
-                            User.numberGoldCoin1 -= 3;
-                        }
-
-                        if(User.numberGreenCoin1 >= 2) {
-                            User.numberGreenCoin1 -= 2;
-                        }
-                        else if(User.numberGreenCoin1 == 1 && User.numberSpecialGreenCoin1 >= 1) {
-                            User.numberGreenCoin1--;
-                            User.numberSpecialGreenCoin1--;
-                        }
-                        else if(User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 >= 2) {
-                            User.numberSpecialGreenCoin1 -= 2;
-                        }
-                        else if(User.numberGreenCoin1 == 1 && User.numberSpecialGreenCoin1 == 0 && User.numberGoldCoin1 >= 1) {
-                            User.numberGreenCoin1--;
-                            User.numberGoldCoin1--;
-                        }
-                        else if(User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 == 1 && User.numberGoldCoin1 >= 1) {
-                            User.numberSpecialGreenCoin1--;
-                            User.numberGoldCoin1--;
-                        }
-                        else if(User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 == 0 && User.numberGoldCoin1 >= 2) {
-                            User.numberGoldCoin1 -= 2;
-                        }
-
-                        swCanBuy = 0;
-                        User.numberSpecialBlackCoin1++;
-                    }
-                }
-
-
-                if(User.sw2 == 1 && card14) {
-                    if(User.numberGreenCoin2 + User.numberSpecialGreenCoin2 + User.numberGoldCoin2 >= 2
-                            && User.numberBlueCoin2 + User.numberSpecialBlueCoin2 + User.numberGoldCoin2 >= 3) {
-
-                        User.cardPanel14_2++;
-                        clickCount14--;
-                        User.Score2++;
-
-                        if(User.numberBlueCoin2 >= 3) {
-                            User.numberBlueCoin2 -= 3;
-                        }
-                        else if(User.numberBlueCoin2 == 2 && User.numberSpecialBlueCoin2 >= 1) {
-                            User.numberBlueCoin2 -= 2;
-                            User.numberSpecialBlueCoin2 -= 1;
-                        }
-                        else if(User.numberBlueCoin2 == 1 && User.numberSpecialBlueCoin2 >= 2) {
-                            User.numberBlueCoin2 -= 1;
-                            User.numberSpecialBlueCoin2 -= 2;
-                        }
-                        else if(User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 >= 3) {
-                            User.numberSpecialBlueCoin2 -= 3;
-                        }
-                        else if(User.numberBlueCoin2 == 2 && User.numberSpecialBlueCoin2 == 0 && User.numberGoldCoin2 >= 1) {
-                            User.numberBlueCoin2 -= 2;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if(User.numberBlueCoin2 == 1 && User.numberSpecialBlueCoin2 == 1 && User.numberGoldCoin2 >= 1) {
-                            User.numberBlueCoin2 -= 1;
-                            User.numberSpecialBlueCoin2 -= 1;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if(User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 == 2 && User.numberGoldCoin2 >= 1) {
-                            User.numberSpecialBlueCoin2 -= 2;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if(User.numberBlueCoin2 == 1 && User.numberSpecialBlueCoin2 == 0 && User.numberGoldCoin2 >= 2) {
-                            User.numberBlueCoin2 -= 1;
-                            User.numberGoldCoin2 -= 2;
-                        }
-                        else if(User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 == 1 && User.numberGoldCoin2 >= 2) {
-                            User.numberSpecialBlueCoin2 -= 1;
-                            User.numberGoldCoin2 -= 2;
-                        }
-                        else if(User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 == 0 && User.numberGoldCoin2 >= 3) {
-                            User.numberGoldCoin2 -= 3;
-                        }
-
-                        if(User.numberGreenCoin2 >= 2) {
-                            User.numberGreenCoin2 -= 2;
-                        }
-                        else if(User.numberGreenCoin2 == 1 && User.numberSpecialGreenCoin2 >= 1) {
-                            User.numberGreenCoin2--;
-                            User.numberSpecialGreenCoin2--;
-                        }
-                        else if(User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 >= 2) {
-                            User.numberSpecialGreenCoin2 -= 2;
-                        }
-                        else if(User.numberGreenCoin2 == 1 && User.numberSpecialGreenCoin2 == 0 && User.numberGoldCoin2 >= 1) {
-                            User.numberGreenCoin2--;
-                            User.numberGoldCoin2--;
-                        }
-                        else if(User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 == 1 && User.numberGoldCoin2 >= 1) {
-                            User.numberSpecialGreenCoin2--;
-                            User.numberGoldCoin2--;
-                        }
-                        else if(User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 == 0 && User.numberGoldCoin2 >= 2) {
-                            User.numberGoldCoin2 -= 2;
-                        }
-
-                        swCanBuy = 0;
-                        User.numberSpecialBlackCoin2++;
-                    }
-                }
-
-
-
-
-
-
-                if(User.sw1 == 1 && card15) {
-                    if(User.numberWhiteCoin1 + User.numberSpecialWhiteCoin1 + User.numberGoldCoin1 >= 3
-                            && User.numberGreenCoin1 + User.numberSpecialGreenCoin1 + User.numberGoldCoin1 >= 3) {
-
-                        User.cardPanel15_1++;
-                        clickCount15--;
-                        User.Score1++;
-
-                        if(User.numberWhiteCoin1 >= 3) {
-                            User.numberWhiteCoin1 -= 3;
-                        }
-                        else if(User.numberWhiteCoin1 == 2 && User.numberSpecialWhiteCoin1 >= 1) {
-                            User.numberWhiteCoin1 -= 2;
-                            User.numberSpecialWhiteCoin1 -= 1;
-                        }
-                        else if(User.numberWhiteCoin1 == 1 && User.numberSpecialWhiteCoin1 >= 2) {
-                            User.numberWhiteCoin1 -= 1;
-                            User.numberSpecialWhiteCoin1 -= 2;
-                        }
-                        else if(User.numberWhiteCoin1 == 0 && User.numberSpecialWhiteCoin1 >= 3) {
-                            User.numberSpecialWhiteCoin1 -= 3;
-                        }
-                        else if(User.numberWhiteCoin1 == 2 && User.numberSpecialWhiteCoin1 == 0 && User.numberGoldCoin1 >= 1) {
-                            User.numberWhiteCoin1 -= 2;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if(User.numberWhiteCoin1 == 1 && User.numberSpecialWhiteCoin1 == 1 && User.numberGoldCoin1 >= 1) {
-                            User.numberWhiteCoin1 -= 1;
-                            User.numberSpecialWhiteCoin1 -= 1;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if(User.numberWhiteCoin1 == 0 && User.numberSpecialWhiteCoin1 == 2 && User.numberGoldCoin1 >= 1) {
-                            User.numberSpecialWhiteCoin1 -= 2;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if(User.numberWhiteCoin1 == 1 && User.numberSpecialWhiteCoin1 == 0 && User.numberGoldCoin1 >= 2) {
-                            User.numberWhiteCoin1 -= 1;
-                            User.numberGoldCoin1 -= 2;
-                        }
-                        else if(User.numberWhiteCoin1 == 0 && User.numberSpecialWhiteCoin1 == 1 && User.numberGoldCoin1 >= 2) {
-                            User.numberSpecialWhiteCoin1 -= 1;
-                            User.numberGoldCoin1 -= 2;
-                        }
-                        else if(User.numberWhiteCoin1 == 0 && User.numberSpecialWhiteCoin1 == 0 && User.numberGoldCoin1 >= 3) {
-                            User.numberGoldCoin1 -= 3;
-                        }
-
-
-
-
-                        if(User.numberGreenCoin1 >= 3) {
-                            User.numberGreenCoin1 -= 3;
-                        }
-                        else if(User.numberGreenCoin1 == 2 && User.numberSpecialGreenCoin1 >= 1) {
-                            User.numberGreenCoin1 -= 2;
-                            User.numberSpecialGreenCoin1 -= 1;
-                        }
-                        else if(User.numberGreenCoin1 == 1 && User.numberSpecialGreenCoin1 >= 2) {
-                            User.numberGreenCoin1 -= 1;
-                            User.numberSpecialGreenCoin1 -= 2;
-                        }
-                        else if(User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 >= 3) {
-                            User.numberSpecialGreenCoin1 -= 3;
-                        }
-                        else if(User.numberGreenCoin1 == 2 && User.numberSpecialGreenCoin1 == 0 && User.numberGoldCoin1 >= 1) {
-                            User.numberGreenCoin1 -= 2;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if(User.numberGreenCoin1 == 1 && User.numberSpecialGreenCoin1 == 1 && User.numberGoldCoin1 >= 1) {
-                            User.numberGreenCoin1 -= 1;
-                            User.numberSpecialGreenCoin1 -= 1;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if(User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 == 2 && User.numberGoldCoin1 >= 1) {
-                            User.numberSpecialGreenCoin1 -= 2;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if(User.numberGreenCoin1 == 1 && User.numberSpecialGreenCoin1 == 0 && User.numberGoldCoin1 >= 2) {
-                            User.numberGreenCoin1 -= 1;
-                            User.numberGoldCoin1 -= 2;
-                        }
-                        else if(User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 == 1 && User.numberGoldCoin1 >= 2) {
-                            User.numberSpecialGreenCoin1 -= 1;
-                            User.numberGoldCoin1 -= 2;
-                        }
-                        else if(User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 == 0 && User.numberGoldCoin1 >= 3) {
-                            User.numberGoldCoin1 -= 3;
-                        }
-
-                        swCanBuy = 0;
-                        User.numberSpecialRedCoin1++;
-                    }
-                }
-
-
-
-
-                if(User.sw2 == 1 && card15) {
-                    if(User.numberGreenCoin2 + User.numberSpecialGreenCoin2 + User.numberGoldCoin2 >= 3
-                            && User.numberWhiteCoin2 + User.numberSpecialWhiteCoin2 + User.numberGoldCoin2 >= 3) {
-
-                        User.cardPanel15_2++;
-                        clickCount15--;
-                        User.Score2++;
-
-                        if(User.numberWhiteCoin2 >= 3) {
-                            User.numberWhiteCoin2 -= 3;
-                        }
-                        else if(User.numberWhiteCoin2 == 2 && User.numberSpecialWhiteCoin2 >= 1) {
-                            User.numberWhiteCoin2 -= 2;
-                            User.numberSpecialWhiteCoin2 -= 1;
-                        }
-                        else if(User.numberWhiteCoin2 == 1 && User.numberSpecialWhiteCoin2 >= 2) {
-                            User.numberWhiteCoin2 -= 1;
-                            User.numberSpecialWhiteCoin2 -= 2;
-                        }
-                        else if(User.numberWhiteCoin2 == 0 && User.numberSpecialWhiteCoin2 >= 3) {
-                            User.numberSpecialWhiteCoin2 -= 3;
-                        }
-                        else if(User.numberWhiteCoin2 == 2 && User.numberSpecialWhiteCoin2 == 0 && User.numberGoldCoin2 >= 1) {
-                            User.numberWhiteCoin2 -= 2;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if(User.numberWhiteCoin2 == 1 && User.numberSpecialWhiteCoin2 == 1 && User.numberGoldCoin2 >= 1) {
-                            User.numberWhiteCoin2 -= 1;
-                            User.numberSpecialWhiteCoin2 -= 1;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if(User.numberWhiteCoin2 == 0 && User.numberSpecialWhiteCoin2 == 2 && User.numberGoldCoin2 >= 1) {
-                            User.numberSpecialWhiteCoin2 -= 2;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if(User.numberWhiteCoin2 == 1 && User.numberSpecialWhiteCoin2 == 0 && User.numberGoldCoin2 >= 2) {
-                            User.numberWhiteCoin2 -= 1;
-                            User.numberGoldCoin2 -= 2;
-                        }
-                        else if(User.numberWhiteCoin2 == 0 && User.numberSpecialWhiteCoin2 == 1 && User.numberGoldCoin2 >= 2) {
-                            User.numberSpecialWhiteCoin2 -= 1;
-                            User.numberGoldCoin2 -= 2;
-                        }
-                        else if(User.numberWhiteCoin2 == 0 && User.numberSpecialWhiteCoin2 == 0 && User.numberGoldCoin2 >= 3) {
-                            User.numberGoldCoin2 -= 3;
-                        }
-
-                        if(User.numberGreenCoin2 >= 3) {
-                            User.numberGreenCoin2 -= 3;
-                        }
-                        else if(User.numberGreenCoin2 == 2 && User.numberSpecialGreenCoin2 >= 1) {
-                            User.numberGreenCoin2 -= 2;
-                            User.numberSpecialGreenCoin2 -= 1;
-                        }
-                        else if(User.numberGreenCoin2 == 1 && User.numberSpecialGreenCoin2 >= 2) {
-                            User.numberGreenCoin2 -= 1;
-                            User.numberSpecialGreenCoin2 -= 2;
-                        }
-                        else if(User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 >= 3) {
-                            User.numberSpecialGreenCoin2 -= 3;
-                        }
-                        else if(User.numberGreenCoin2 == 2 && User.numberSpecialGreenCoin2 == 0 && User.numberGoldCoin2 >= 1) {
-                            User.numberGreenCoin2 -= 2;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if(User.numberGreenCoin2 == 1 && User.numberSpecialGreenCoin2 == 1 && User.numberGoldCoin2 >= 1) {
-                            User.numberGreenCoin2 -= 1;
-                            User.numberSpecialGreenCoin2 -= 1;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if(User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 == 2 && User.numberGoldCoin2 >= 1) {
-                            User.numberSpecialGreenCoin2 -= 2;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if(User.numberGreenCoin2 == 1 && User.numberSpecialGreenCoin2 == 0 && User.numberGoldCoin2 >= 2) {
-                            User.numberGreenCoin2 -= 1;
-                            User.numberGoldCoin2 -= 2;
-                        }
-                        else if(User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 == 1 && User.numberGoldCoin2 >= 2) {
-                            User.numberSpecialGreenCoin2 -= 1;
-                            User.numberGoldCoin2 -= 2;
-                        }
-                        else if(User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 == 0 && User.numberGoldCoin2 >= 3) {
-                            User.numberGoldCoin2 -= 3;
-                        }
-
-                        swCanBuy = 0;
-                        User.numberSpecialRedCoin2++;
-                    }
-                }
-
-
-
-
-
-
-                if(User.sw1 == 1 && card21) {
-                    if(User.numberBlackCoin1 + User.numberSpecialBlackCoin1 + User.numberGoldCoin1 >= 3
-                            && User.numberGreenCoin1 + User.numberSpecialGreenCoin1 + User.numberGoldCoin1 >= 3) {
-
-                        User.cardPanel21_1++;
-                        clickCount21--;
-                        User.Score1 += 2;
-
-                        if(User.numberBlackCoin1 >= 3) {
-                            User.numberBlackCoin1 -= 3;
-                        }
-                        else if(User.numberBlackCoin1 == 2 && User.numberSpecialBlackCoin1 >= 1) {
-                            User.numberBlackCoin1 -= 2;
-                            User.numberSpecialBlackCoin1 -= 1;
-                        }
-                        else if(User.numberBlackCoin1 == 1 && User.numberSpecialBlackCoin1 >= 2) {
-                            User.numberBlackCoin1 -= 1;
-                            User.numberSpecialBlackCoin1 -= 2;
-                        }
-                        else if(User.numberBlackCoin1 == 0 && User.numberSpecialBlackCoin1 >= 3) {
-                            User.numberSpecialBlackCoin1 -= 3;
-                        }
-                        else if(User.numberBlackCoin1 == 2 && User.numberSpecialBlackCoin1 == 0 && User.numberGoldCoin1 >= 1) {
-                            User.numberBlackCoin1 -= 2;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if(User.numberBlackCoin1 == 1 && User.numberSpecialBlackCoin1 == 1 && User.numberGoldCoin1 >= 1) {
-                            User.numberBlackCoin1 -= 1;
-                            User.numberSpecialBlackCoin1 -= 1;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if(User.numberBlackCoin1 == 0 && User.numberSpecialBlackCoin1 == 2 && User.numberGoldCoin1 >= 1) {
-                            User.numberSpecialBlackCoin1 -= 2;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if(User.numberBlackCoin1 == 1 && User.numberSpecialBlackCoin1 == 0 && User.numberGoldCoin1 >= 2) {
-                            User.numberBlackCoin1 -= 1;
-                            User.numberGoldCoin1 -= 2;
-                        }
-                        else if(User.numberBlackCoin1 == 0 && User.numberSpecialBlackCoin1 == 1 && User.numberGoldCoin1 >= 2) {
-                            User.numberSpecialBlackCoin1 -= 1;
-                            User.numberGoldCoin1 -= 2;
-                        }
-                        else if(User.numberBlackCoin1 == 0 && User.numberSpecialBlackCoin1 == 0 && User.numberGoldCoin1 >= 3) {
-                            User.numberGoldCoin1 -= 3;
-                        }
-
-
-
-
-                        if(User.numberGreenCoin1 >= 3) {
-                            User.numberGreenCoin1 -= 3;
-                        }
-                        else if(User.numberGreenCoin1 == 2 && User.numberSpecialGreenCoin1 >= 1) {
-                            User.numberGreenCoin1 -= 2;
-                            User.numberSpecialGreenCoin1 -= 1;
-                        }
-                        else if(User.numberGreenCoin1 == 1 && User.numberSpecialGreenCoin1 >= 2) {
-                            User.numberGreenCoin1 -= 1;
-                            User.numberSpecialGreenCoin1 -= 2;
-                        }
-                        else if(User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 >= 3) {
-                            User.numberSpecialGreenCoin1 -= 3;
-                        }
-                        else if(User.numberGreenCoin1 == 2 && User.numberSpecialGreenCoin1 == 0 && User.numberGoldCoin1 >= 1) {
-                            User.numberGreenCoin1 -= 2;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if(User.numberGreenCoin1 == 1 && User.numberSpecialGreenCoin1 == 1 && User.numberGoldCoin1 >= 1) {
-                            User.numberGreenCoin1 -= 1;
-                            User.numberSpecialGreenCoin1 -= 1;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if(User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 == 2 && User.numberGoldCoin1 >= 1) {
-                            User.numberSpecialGreenCoin1 -= 2;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if(User.numberGreenCoin1 == 1 && User.numberSpecialGreenCoin1 == 0 && User.numberGoldCoin1 >= 2) {
-                            User.numberGreenCoin1 -= 1;
-                            User.numberGoldCoin1 -= 2;
-                        }
-                        else if(User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 == 1 && User.numberGoldCoin1 >= 2) {
-                            User.numberSpecialGreenCoin1 -= 1;
-                            User.numberGoldCoin1 -= 2;
-                        }
-                        else if(User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 == 0 && User.numberGoldCoin1 >= 3) {
-                            User.numberGoldCoin1 -= 3;
-                        }
-
-                        swCanBuy = 0;
-                        User.numberSpecialBlueCoin1++;
-                    }
-                }
-
-
-
-
-                if(User.sw2 == 1 && card21) {
-                    if(User.numberGreenCoin2 + User.numberSpecialGreenCoin2 + User.numberGoldCoin2 >= 3
-                            && User.numberBlackCoin2 + User.numberSpecialBlackCoin2 + User.numberGoldCoin2 >= 3) {
-
-                        User.cardPanel21_2++;
-                        clickCount21--;
-                        User.Score2 += 2;
-
-                        if(User.numberBlackCoin2 >= 3) {
-                            User.numberBlackCoin2 -= 3;
-                        }
-                        else if(User.numberBlackCoin2 == 2 && User.numberSpecialBlackCoin2 >= 1) {
-                            User.numberBlackCoin2 -= 2;
-                            User.numberSpecialBlackCoin2 -= 1;
-                        }
-                        else if(User.numberBlackCoin2 == 1 && User.numberSpecialBlackCoin2 >= 2) {
-                            User.numberBlackCoin2 -= 1;
-                            User.numberSpecialBlackCoin2 -= 2;
-                        }
-                        else if(User.numberBlackCoin2 == 0 && User.numberSpecialBlackCoin2 >= 3) {
-                            User.numberSpecialBlackCoin2 -= 3;
-                        }
-                        else if(User.numberBlackCoin2 == 2 && User.numberSpecialBlackCoin2 == 0 && User.numberGoldCoin2 >= 1) {
-                            User.numberBlackCoin2 -= 2;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if(User.numberBlackCoin2 == 1 && User.numberSpecialBlackCoin2 == 1 && User.numberGoldCoin2 >= 1) {
-                            User.numberBlackCoin2 -= 1;
-                            User.numberSpecialBlackCoin2 -= 1;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if(User.numberBlackCoin2 == 0 && User.numberSpecialBlackCoin2 == 2 && User.numberGoldCoin2 >= 1) {
-                            User.numberSpecialBlackCoin2 -= 2;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if(User.numberBlackCoin2 == 1 && User.numberSpecialBlackCoin2 == 0 && User.numberGoldCoin2 >= 2) {
-                            User.numberBlackCoin2 -= 1;
-                            User.numberGoldCoin2 -= 2;
-                        }
-                        else if(User.numberBlackCoin2 == 0 && User.numberSpecialBlackCoin2 == 1 && User.numberGoldCoin2 >= 2) {
-                            User.numberSpecialBlackCoin2 -= 1;
-                            User.numberGoldCoin2 -= 2;
-                        }
-                        else if(User.numberBlackCoin2 == 0 && User.numberSpecialBlackCoin2 == 0 && User.numberGoldCoin2 >= 3) {
-                            User.numberGoldCoin2 -= 3;
-                        }
-
-                        if(User.numberGreenCoin2 >= 3) {
-                            User.numberGreenCoin2 -= 3;
-                        }
-                        else if(User.numberGreenCoin2 == 2 && User.numberSpecialGreenCoin2 >= 1) {
-                            User.numberGreenCoin2 -= 2;
-                            User.numberSpecialGreenCoin2 -= 1;
-                        }
-                        else if(User.numberGreenCoin2 == 1 && User.numberSpecialGreenCoin2 >= 2) {
-                            User.numberGreenCoin2 -= 1;
-                            User.numberSpecialGreenCoin2 -= 2;
-                        }
-                        else if(User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 >= 3) {
-                            User.numberSpecialGreenCoin2 -= 3;
-                        }
-                        else if(User.numberGreenCoin2 == 2 && User.numberSpecialGreenCoin2 == 0 && User.numberGoldCoin2 >= 1) {
-                            User.numberGreenCoin2 -= 2;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if(User.numberGreenCoin2 == 1 && User.numberSpecialGreenCoin2 == 1 && User.numberGoldCoin2 >= 1) {
-                            User.numberGreenCoin2 -= 1;
-                            User.numberSpecialGreenCoin2 -= 1;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if(User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 == 2 && User.numberGoldCoin2 >= 1) {
-                            User.numberSpecialGreenCoin2 -= 2;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if(User.numberGreenCoin2 == 1 && User.numberSpecialGreenCoin2 == 0 && User.numberGoldCoin2 >= 2) {
-                            User.numberGreenCoin2 -= 1;
-                            User.numberGoldCoin2 -= 2;
-                        }
-                        else if(User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 == 1 && User.numberGoldCoin2 >= 2) {
-                            User.numberSpecialGreenCoin2 -= 1;
-                            User.numberGoldCoin2 -= 2;
-                        }
-                        else if(User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 == 0 && User.numberGoldCoin2 >= 3) {
-                            User.numberGoldCoin2 -= 3;
-                        }
-
-                        swCanBuy = 0;
-                        User.numberSpecialBlueCoin2++;
-                    }
-                }
-
-
-
-
-
-                if(User.sw1 == 1 && card22) {
-                    if(User.numberRedCoin1 + User.numberSpecialRedCoin1 + User.numberGoldCoin1 >= 2
-                            && User.numberBlueCoin1 + User.numberSpecialBlueCoin1 + User.numberGoldCoin1 >= 4) {
-
-                        User.cardPanel22_1++;
-                        clickCount22--;
-                        User.Score1 += 2;
-
-                        if(User.numberRedCoin1 >= 2) {
-                            User.numberRedCoin1 -= 2;
-                        }
-                        else if(User.numberRedCoin1 == 1 && User.numberSpecialRedCoin1 >= 1) {
-                            User.numberRedCoin1 -= 1;
-                            User.numberSpecialRedCoin1 -= 1;
-                        }
-                        else if(User.numberRedCoin1 == 0 && User.numberSpecialRedCoin1 >= 2) {
-                            User.numberSpecialRedCoin1 -= 2;
-                        }
-                        else if(User.numberRedCoin1 == 1 && User.numberSpecialRedCoin1 == 0 && User.numberGoldCoin1 >= 1) {
-                            User.numberRedCoin1 -= 1;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if(User.numberRedCoin1 == 0 && User.numberSpecialRedCoin1 == 1 && User.numberGoldCoin1 >= 1) {
-                            User.numberSpecialRedCoin1 -= 1;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if(User.numberRedCoin1 == 0 && User.numberSpecialRedCoin1 == 0 && User.numberGoldCoin1 >= 2) {
-                            User.numberGoldCoin1 -= 2;
-                        }
-
-                        if(User.numberBlueCoin1 >= 4) {
-                            User.numberBlueCoin1 -= 4;
-                        }
-                        else if(User.numberBlueCoin1 == 3 && User.numberSpecialBlueCoin1 >= 1) {
-                            User.numberBlueCoin1 -= 3;
-                            User.numberSpecialBlueCoin1 -= 1;
-                        }
-                        else if(User.numberBlueCoin1 == 2 && User.numberSpecialBlueCoin1 >= 2) {
-                            User.numberBlueCoin1 -= 2;
-                            User.numberSpecialBlueCoin1 -= 2;
-                        }
-                        else if(User.numberBlueCoin1 == 1 && User.numberSpecialBlueCoin1 >= 3) {
-                            User.numberBlueCoin1 -= 1;
-                            User.numberSpecialBlueCoin1 -= 3;
-                        }
-                        else if(User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 >= 4) {
-                            User.numberSpecialBlueCoin1 -= 4;
-                        }
-                        else if(User.numberBlueCoin1 == 3 && User.numberSpecialBlueCoin1 == 0 && User.numberGoldCoin1 >= 1) {
-                            User.numberBlueCoin1 -= 3;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if(User.numberBlueCoin1 == 2 && User.numberSpecialBlueCoin1 == 1 && User.numberGoldCoin1 >= 1) {
-                            User.numberBlueCoin1 -= 2;
-                            User.numberSpecialBlueCoin1 -= 1;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if(User.numberBlueCoin1 == 1 && User.numberSpecialBlueCoin1 == 2 && User.numberGoldCoin1 >= 1) {
-                            User.numberBlueCoin1 -= 1;
-                            User.numberSpecialBlueCoin1 -= 2;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if(User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 == 3 && User.numberGoldCoin1 >= 1) {
-                            User.numberSpecialBlueCoin1 -= 3;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if(User.numberBlueCoin1 == 2 && User.numberSpecialBlueCoin1 == 0 && User.numberGoldCoin1 >= 2) {
-                            User.numberBlueCoin1 -= 2;
-                            User.numberGoldCoin1 -= 2;
-                        }
-                        else if(User.numberBlueCoin1 == 1 && User.numberSpecialBlueCoin1 == 1 && User.numberGoldCoin1 >= 2) {
-                            User.numberBlueCoin1 -= 1;
-                            User.numberSpecialBlueCoin1 -= 1;
-                            User.numberGoldCoin1 -= 2;
-                        }
-                        else if(User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 == 2 && User.numberGoldCoin1 >= 2) {
-                            User.numberSpecialBlueCoin1 -= 2;
-                            User.numberGoldCoin1 -= 2;
-                        }
-                        else if(User.numberBlueCoin1 == 1 && User.numberSpecialBlueCoin1 == 0 && User.numberGoldCoin1 >= 3) {
-                            User.numberBlueCoin1 -= 1;
-                            User.numberGoldCoin1 -= 3;
-                        }
-                        else if(User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 == 1 && User.numberGoldCoin1 >= 3) {
-                            User.numberSpecialBlueCoin1 -= 1;
-                            User.numberGoldCoin1 -= 3;
-                        }
-                        else if(User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 == 0 && User.numberGoldCoin1 >= 4) {
-                            User.numberGoldCoin1 -= 4;
-                        }
-
-                        swCanBuy = 0;
-                        User.numberSpecialRedCoin1++;
-                    }
-                }
-
-
-
-
-                if(User.sw2 == 1 && card22) {
-                    if(User.numberBlueCoin2 + User.numberSpecialBlueCoin2 + User.numberGoldCoin2 >= 4
-                            && User.numberRedCoin2 + User.numberSpecialRedCoin2 + User.numberGoldCoin2 >= 2) {
-
-                        User.cardPanel22_2++;
-                        clickCount22--;
-                        User.Score2 += 2;
-
-                        if(User.numberRedCoin2 >= 2) {
-                            User.numberRedCoin2 -= 2;
-                        }
-                        else if(User.numberRedCoin2 == 1 && User.numberSpecialRedCoin2 >= 1) {
-                            User.numberRedCoin2 -= 1;
-                            User.numberSpecialRedCoin2 -= 1;
-                        }
-                        else if(User.numberRedCoin2 == 0 && User.numberSpecialRedCoin2 >= 2) {
-                            User.numberSpecialRedCoin2 -= 2;
-                        }
-                        else if(User.numberRedCoin2 == 1 && User.numberSpecialRedCoin2 == 0 && User.numberGoldCoin2 >= 1) {
-                            User.numberRedCoin2 -= 1;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if(User.numberRedCoin2 == 0 && User.numberSpecialRedCoin2 == 1 && User.numberGoldCoin2 >= 1) {
-                            User.numberSpecialRedCoin2 -= 1;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if(User.numberRedCoin2 == 0 && User.numberSpecialRedCoin2 == 0 && User.numberGoldCoin2 >= 2) {
-                            User.numberGoldCoin2 -= 2;
-                        }
-
-                        if(User.numberBlueCoin2 >= 4) {
-                            User.numberBlueCoin2 -= 4;
-                        }
-                        else if(User.numberBlueCoin2 == 3 && User.numberSpecialBlueCoin2 >= 1) {
-                            User.numberBlueCoin2 -= 3;
-                            User.numberSpecialBlueCoin2 -= 1;
-                        }
-                        else if(User.numberBlueCoin2 == 2 && User.numberSpecialBlueCoin2 >= 2) {
-                            User.numberBlueCoin2 -= 2;
-                            User.numberSpecialBlueCoin2 -= 2;
-                        }
-                        else if(User.numberBlueCoin2 == 1 && User.numberSpecialBlueCoin2 >= 3) {
-                            User.numberBlueCoin2 -= 1;
-                            User.numberSpecialBlueCoin2 -= 3;
-                        }
-                        else if(User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 >= 4) {
-                            User.numberSpecialBlueCoin2 -= 4;
-                        }
-                        else if(User.numberBlueCoin2 == 3 && User.numberSpecialBlueCoin2 == 0 && User.numberGoldCoin2 >= 1) {
-                            User.numberBlueCoin2 -= 3;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if(User.numberBlueCoin2 == 2 && User.numberSpecialBlueCoin2 == 1 && User.numberGoldCoin2 >= 1) {
-                            User.numberBlueCoin2 -= 2;
-                            User.numberSpecialBlueCoin2 -= 1;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if(User.numberBlueCoin2 == 1 && User.numberSpecialBlueCoin2 == 2 && User.numberGoldCoin2 >= 1) {
-                            User.numberBlueCoin2 -= 1;
-                            User.numberSpecialBlueCoin2 -= 2;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if(User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 == 3 && User.numberGoldCoin2 >= 1) {
-                            User.numberSpecialBlueCoin2 -= 3;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if(User.numberBlueCoin2 == 2 && User.numberSpecialBlueCoin2 == 0 && User.numberGoldCoin2 >= 2) {
-                            User.numberBlueCoin2 -= 2;
-                            User.numberGoldCoin2 -= 2;
-                        }
-                        else if(User.numberBlueCoin2 == 1 && User.numberSpecialBlueCoin2 == 1 && User.numberGoldCoin2 >= 2) {
-                            User.numberBlueCoin2 -= 1;
-                            User.numberSpecialBlueCoin2 -= 1;
-                            User.numberGoldCoin2 -= 2;
-                        }
-                        else if(User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 == 2 && User.numberGoldCoin2 >= 2) {
-                            User.numberSpecialBlueCoin2 -= 2;
-                            User.numberGoldCoin2 -= 2;
-                        }
-                        else if(User.numberBlueCoin2 == 1 && User.numberSpecialBlueCoin2 == 0 && User.numberGoldCoin2 >= 3) {
-                            User.numberBlueCoin2 -= 1;
-                            User.numberGoldCoin2 -= 3;
-                        }
-                        else if(User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 == 1 && User.numberGoldCoin2 >= 3) {
-                            User.numberSpecialBlueCoin2 -= 1;
-                            User.numberGoldCoin2 -= 3;
-                        }
-                        else if(User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 == 0 && User.numberGoldCoin2 >= 4) {
-                            User.numberGoldCoin2 -= 4;
-                        }
-
-                        swCanBuy = 0;
-                        User.numberSpecialRedCoin2++;
-                    }
-                }
-
-
-
-
-
-                if(User.sw1 == 1 && card23) {
-                    if(User.numberGreenCoin1 + User.numberSpecialGreenCoin1 + User.numberGoldCoin1 >= 3
-                            && User.numberBlueCoin1 + User.numberSpecialBlueCoin1 + User.numberGoldCoin1 >= 4) {
-
-                        User.cardPanel23_1++;
-                        clickCount23--;
-                        User.Score1 += 3;
-
-                        if(User.numberGreenCoin1 >= 3) {
-                            User.numberGreenCoin1 -= 3;
-                        }
-                        else if(User.numberGreenCoin1 == 2 && User.numberSpecialGreenCoin1 >= 1) {
-                            User.numberGreenCoin1 -= 2;
-                            User.numberSpecialGreenCoin1 -= 1;
-                        }
-                        else if(User.numberGreenCoin1 == 1 && User.numberSpecialGreenCoin1 >= 2) {
-                            User.numberGreenCoin1 -= 1;
-                            User.numberSpecialGreenCoin1 -= 2;
-                        }
-                        else if(User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 >= 3) {
-                            User.numberSpecialGreenCoin1 -= 3;
-                        }
-                        else if(User.numberGreenCoin1 == 2 && User.numberSpecialGreenCoin1 == 0 && User.numberGoldCoin1 >= 1) {
-                            User.numberGreenCoin1 -= 2;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if(User.numberGreenCoin1 == 1 && User.numberSpecialGreenCoin1 == 1 && User.numberGoldCoin1 >= 1) {
-                            User.numberGreenCoin1 -= 1;
-                            User.numberSpecialGreenCoin1 -= 1;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if(User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 == 2 && User.numberGoldCoin1 >= 1) {
-                            User.numberSpecialGreenCoin1 -= 2;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if(User.numberGreenCoin1 == 1 && User.numberSpecialGreenCoin1 == 0 && User.numberGoldCoin1 >= 2) {
-                            User.numberGreenCoin1 -= 1;
-                            User.numberGoldCoin1 -= 2;
-                        }
-                        else if(User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 == 1 && User.numberGoldCoin1 >= 2) {
-                            User.numberSpecialGreenCoin1 -= 1;
-                            User.numberGoldCoin1 -= 2;
-                        }
-                        else if(User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 == 0 && User.numberGoldCoin1 >= 3) {
-                            User.numberGoldCoin1 -= 3;
-                        }
-
-                        if(User.numberBlueCoin1 >= 4) {
-                            User.numberBlueCoin1 -= 4;
-                        }
-                        else if(User.numberBlueCoin1 == 3 && User.numberSpecialBlueCoin1 >= 1) {
-                            User.numberBlueCoin1 -= 3;
-                            User.numberSpecialBlueCoin1 -= 1;
-                        }
-                        else if(User.numberBlueCoin1 == 2 && User.numberSpecialBlueCoin1 >= 2) {
-                            User.numberBlueCoin1 -= 2;
-                            User.numberSpecialBlueCoin1 -= 2;
-                        }
-                        else if(User.numberBlueCoin1 == 1 && User.numberSpecialBlueCoin1 >= 3) {
-                            User.numberBlueCoin1 -= 1;
-                            User.numberSpecialBlueCoin1 -= 3;
-                        }
-                        else if(User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 >= 4) {
-                            User.numberSpecialBlueCoin1 -= 4;
-                        }
-                        else if(User.numberBlueCoin1 == 3 && User.numberSpecialBlueCoin1 == 0 && User.numberGoldCoin1 >= 1) {
-                            User.numberBlueCoin1 -= 3;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if(User.numberBlueCoin1 == 2 && User.numberSpecialBlueCoin1 == 1 && User.numberGoldCoin1 >= 1) {
-                            User.numberBlueCoin1 -= 2;
-                            User.numberSpecialBlueCoin1 -= 1;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if(User.numberBlueCoin1 == 1 && User.numberSpecialBlueCoin1 == 2 && User.numberGoldCoin1 >= 1) {
-                            User.numberBlueCoin1 -= 1;
-                            User.numberSpecialBlueCoin1 -= 2;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if(User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 == 3 && User.numberGoldCoin1 >= 1) {
-                            User.numberSpecialBlueCoin1 -= 3;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if(User.numberBlueCoin1 == 2 && User.numberSpecialBlueCoin1 == 0 && User.numberGoldCoin1 >= 2) {
-                            User.numberBlueCoin1 -= 2;
-                            User.numberGoldCoin1 -= 2;
-                        }
-                        else if(User.numberBlueCoin1 == 1 && User.numberSpecialBlueCoin1 == 1 && User.numberGoldCoin1 >= 2) {
-                            User.numberBlueCoin1 -= 1;
-                            User.numberSpecialBlueCoin1 -= 1;
-                            User.numberGoldCoin1 -= 2;
-                        }
-                        else if(User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 == 2 && User.numberGoldCoin1 >= 2) {
-                            User.numberSpecialBlueCoin1 -= 2;
-                            User.numberGoldCoin1 -= 2;
-                        }
-                        else if(User.numberBlueCoin1 == 1 && User.numberSpecialBlueCoin1 == 0 && User.numberGoldCoin1 >= 3) {
-                            User.numberBlueCoin1 -= 1;
-                            User.numberGoldCoin1 -= 3;
-                        }
-                        else if(User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 == 1 && User.numberGoldCoin1 >= 3) {
-                            User.numberSpecialBlueCoin1 -= 1;
-                            User.numberGoldCoin1 -= 3;
-                        }
-                        else if(User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 == 0 && User.numberGoldCoin1 >= 4) {
-                            User.numberGoldCoin1 -= 4;
-                        }
-
-                        swCanBuy = 0;
-                        User.numberSpecialGreenCoin1++;
-                    }
-                }
-
-
-
-
-                if(User.sw2 == 1 && card23) {
-                    if(User.numberGreenCoin2 + User.numberSpecialGreenCoin2 + User.numberGoldCoin2 >= 3
-                            && User.numberBlueCoin2 + User.numberSpecialBlueCoin2 + User.numberGoldCoin2 >= 4) {
-
-                        User.cardPanel23_2++;
-                        clickCount23--;
-                        User.Score2 += 3;
-
-                        if(User.numberGreenCoin2 >= 3) {
-                            User.numberGreenCoin2 -= 3;
-                        }
-                        else if(User.numberGreenCoin2 == 2 && User.numberSpecialGreenCoin2 >= 1) {
-                            User.numberGreenCoin2 -= 2;
-                            User.numberSpecialGreenCoin2 -= 1;
-                        }
-                        else if(User.numberGreenCoin2 == 1 && User.numberSpecialGreenCoin2 >= 2) {
-                            User.numberGreenCoin2 -= 1;
-                            User.numberSpecialGreenCoin2 -= 2;
-                        }
-                        else if(User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 >= 3) {
-                            User.numberSpecialGreenCoin2 -= 3;
-                        }
-                        else if(User.numberGreenCoin2 == 2 && User.numberSpecialGreenCoin2 == 0 && User.numberGoldCoin2 >= 1) {
-                            User.numberGreenCoin2 -= 2;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if(User.numberGreenCoin2 == 1 && User.numberSpecialGreenCoin2 == 1 && User.numberGoldCoin2 >= 1) {
-                            User.numberGreenCoin2 -= 1;
-                            User.numberSpecialGreenCoin2 -= 1;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if(User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 == 2 && User.numberGoldCoin2 >= 1) {
-                            User.numberSpecialGreenCoin2 -= 2;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if(User.numberGreenCoin2 == 1 && User.numberSpecialGreenCoin2 == 0 && User.numberGoldCoin2 >= 2) {
-                            User.numberGreenCoin2 -= 1;
-                            User.numberGoldCoin2 -= 2;
-                        }
-                        else if(User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 == 1 && User.numberGoldCoin2 >= 2) {
-                            User.numberSpecialGreenCoin2 -= 1;
-                            User.numberGoldCoin2 -= 2;
-                        }
-                        else if(User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 == 0 && User.numberGoldCoin2 >= 3) {
-                            User.numberGoldCoin2 -= 3;
-                        }
-
-                        if(User.numberBlueCoin2 >= 4) {
-                            User.numberBlueCoin2 -= 4;
-                        }
-                        else if(User.numberBlueCoin2 == 3 && User.numberSpecialBlueCoin2 >= 1) {
-                            User.numberBlueCoin2 -= 3;
-                            User.numberSpecialBlueCoin2 -= 1;
-                        }
-                        else if(User.numberBlueCoin2 == 2 && User.numberSpecialBlueCoin2 >= 2) {
-                            User.numberBlueCoin2 -= 2;
-                            User.numberSpecialBlueCoin2 -= 2;
-                        }
-                        else if(User.numberBlueCoin2 == 1 && User.numberSpecialBlueCoin2 >= 3) {
-                            User.numberBlueCoin2 -= 1;
-                            User.numberSpecialBlueCoin2 -= 3;
-                        }
-                        else if(User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 >= 4) {
-                            User.numberSpecialBlueCoin2 -= 4;
-                        }
-                        else if(User.numberBlueCoin2 == 3 && User.numberSpecialBlueCoin2 == 0 && User.numberGoldCoin2 >= 1) {
-                            User.numberBlueCoin2 -= 3;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if(User.numberBlueCoin2 == 2 && User.numberSpecialBlueCoin2 == 1 && User.numberGoldCoin2 >= 1) {
-                            User.numberBlueCoin2 -= 2;
-                            User.numberSpecialBlueCoin2 -= 1;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if(User.numberBlueCoin2 == 1 && User.numberSpecialBlueCoin2 == 2 && User.numberGoldCoin2 >= 1) {
-                            User.numberBlueCoin2 -= 1;
-                            User.numberSpecialBlueCoin2 -= 2;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if(User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 == 3 && User.numberGoldCoin2 >= 1) {
-                            User.numberSpecialBlueCoin2 -= 3;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if(User.numberBlueCoin2 == 2 && User.numberSpecialBlueCoin2 == 0 && User.numberGoldCoin2 >= 2) {
-                            User.numberBlueCoin2 -= 2;
-                            User.numberGoldCoin2 -= 2;
-                        }
-                        else if(User.numberBlueCoin2 == 1 && User.numberSpecialBlueCoin2 == 1 && User.numberGoldCoin2 >= 2) {
-                            User.numberBlueCoin2 -= 1;
-                            User.numberSpecialBlueCoin2 -= 1;
-                            User.numberGoldCoin2 -= 2;
-                        }
-                        else if(User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 == 2 && User.numberGoldCoin2 >= 2) {
-                            User.numberSpecialBlueCoin2 -= 2;
-                            User.numberGoldCoin2 -= 2;
-                        }
-                        else if(User.numberBlueCoin2 == 1 && User.numberSpecialBlueCoin2 == 0 && User.numberGoldCoin2 >= 3) {
-                            User.numberBlueCoin2 -= 1;
-                            User.numberGoldCoin2 -= 3;
-                        }
-                        else if(User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 == 1 && User.numberGoldCoin2 >= 3) {
-                            User.numberSpecialBlueCoin2 -= 1;
-                            User.numberGoldCoin2 -= 3;
-                        }
-                        else if(User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 == 0 && User.numberGoldCoin2 >= 4) {
-                            User.numberGoldCoin2 -= 4;
-                        }
-
-                        swCanBuy = 0;
-                        User.numberSpecialGreenCoin2++;
-                    }
-                }
-
-
-
-
-
-                if(User.sw1 == 1 && card24) {
-                    if(User.numberWhiteCoin1 + User.numberSpecialWhiteCoin1 + User.numberGoldCoin1 >= 3
-                            && User.numberRedCoin1 + User.numberSpecialRedCoin1 + User.numberGoldCoin1 >= 2
-                            && User.numberBlueCoin1 + User.numberSpecialBlueCoin1 + User.numberGoldCoin1 >= 2) {
-
-                        User.cardPanel24_1++;
-                        clickCount24--;
-                        User.Score1 += 3;
-
-                        if(User.numberWhiteCoin1 >= 3) {
-                            User.numberWhiteCoin1 -= 3;
-                        }
-                        else if(User.numberWhiteCoin1 == 2 && User.numberSpecialWhiteCoin1 >= 1) {
-                            User.numberWhiteCoin1 -= 2;
-                            User.numberSpecialWhiteCoin1 -= 1;
-                        }
-                        else if(User.numberWhiteCoin1 == 1 && User.numberSpecialWhiteCoin1 >= 2) {
-                            User.numberWhiteCoin1 -= 1;
-                            User.numberSpecialWhiteCoin1 -= 2;
-                        }
-                        else if(User.numberWhiteCoin1 == 0 && User.numberSpecialWhiteCoin1 >= 3) {
-                            User.numberSpecialWhiteCoin1 -= 3;
-                        }
-                        else if(User.numberWhiteCoin1 == 2 && User.numberSpecialWhiteCoin1 == 0 && User.numberGoldCoin1 >= 1) {
-                            User.numberWhiteCoin1 -= 2;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if(User.numberWhiteCoin1 == 1 && User.numberSpecialWhiteCoin1 == 1 && User.numberGoldCoin1 >= 1) {
-                            User.numberWhiteCoin1 -= 1;
-                            User.numberSpecialWhiteCoin1 -= 1;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if(User.numberWhiteCoin1 == 0 && User.numberSpecialWhiteCoin1 == 2 && User.numberGoldCoin1 >= 1) {
-                            User.numberSpecialWhiteCoin1 -= 2;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if(User.numberWhiteCoin1 == 1 && User.numberSpecialWhiteCoin1 == 0 && User.numberGoldCoin1 >= 2) {
-                            User.numberWhiteCoin1 -= 1;
-                            User.numberGoldCoin1 -= 2;
-                        }
-                        else if(User.numberWhiteCoin1 == 0 && User.numberSpecialWhiteCoin1 == 1 && User.numberGoldCoin1 >= 2) {
-                            User.numberSpecialWhiteCoin1 -= 1;
-                            User.numberGoldCoin1 -= 2;
-                        }
-                        else if(User.numberWhiteCoin1 == 0 && User.numberSpecialWhiteCoin1 == 0 && User.numberGoldCoin1 >= 3) {
-                            User.numberGoldCoin1 -= 3;
-                        }
-
-                        if(User.numberRedCoin1 >= 2) {
-                            User.numberRedCoin1 -= 2;
-                        }
-                        else if(User.numberRedCoin1 == 1 && User.numberSpecialRedCoin1 >= 1) {
-                            User.numberRedCoin1 -= 1;
-                            User.numberSpecialRedCoin1 -= 1;
-                        }
-                        else if(User.numberRedCoin1 == 0 && User.numberSpecialRedCoin1 >= 2) {
-                            User.numberSpecialRedCoin1 -= 2;
-                        }
-                        else if(User.numberRedCoin1 == 1 && User.numberSpecialRedCoin1 == 0 && User.numberGoldCoin1 >= 1) {
-                            User.numberRedCoin1 -= 1;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if(User.numberRedCoin1 == 0 && User.numberSpecialRedCoin1 == 1 && User.numberGoldCoin1 >= 1) {
-                            User.numberSpecialRedCoin1 -= 1;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if(User.numberRedCoin1 == 0 && User.numberSpecialRedCoin1 == 0 && User.numberGoldCoin1 >= 2) {
-                            User.numberGoldCoin1 -= 2;
-                        }
-
-                        if(User.numberBlueCoin1 >= 2) {
-                            User.numberBlueCoin1 -= 2;
-                        }
-                        else if(User.numberBlueCoin1 == 1 && User.numberSpecialBlueCoin1 >= 1) {
-                            User.numberBlueCoin1 -= 1;
-                            User.numberSpecialBlueCoin1 -= 1;
-                        }
-                        else if(User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 >= 2) {
-                            User.numberSpecialBlueCoin1 -= 2;
-                        }
-                        else if(User.numberBlueCoin1 == 1 && User.numberSpecialBlueCoin1 == 0 && User.numberGoldCoin1 >= 1) {
-                            User.numberBlueCoin1 -= 1;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if(User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 == 1 && User.numberGoldCoin1 >= 1) {
-                            User.numberSpecialBlueCoin1 -= 1;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if(User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 == 0 && User.numberGoldCoin1 >= 2) {
-                            User.numberGoldCoin1 -= 2;
-                        }
-
-                        swCanBuy = 0;
-                        User.numberSpecialBlackCoin1++;
-                    }
-                }
-
-
-
-
-                if(User.sw2 == 1 && card24) {
-                    if(User.numberWhiteCoin2 + User.numberSpecialWhiteCoin2 + User.numberGoldCoin2 >= 3
-                            && User.numberRedCoin2 + User.numberSpecialRedCoin2 + User.numberGoldCoin2 >= 2
-                            && User.numberBlueCoin2 + User.numberSpecialBlueCoin2 + User.numberGoldCoin2 >= 2) {
-
-                        User.cardPanel24_2++;
-                        clickCount24--;
-                        User.Score2 += 3;
-
-                        if(User.numberWhiteCoin2 >= 3) {
-                            User.numberWhiteCoin2 -= 3;
-                        }
-                        else if(User.numberWhiteCoin2 == 2 && User.numberSpecialWhiteCoin2 >= 1) {
-                            User.numberWhiteCoin2 -= 2;
-                            User.numberSpecialWhiteCoin2 -= 1;
-                        }
-                        else if(User.numberWhiteCoin2 == 1 && User.numberSpecialWhiteCoin2 >= 2) {
-                            User.numberWhiteCoin2 -= 1;
-                            User.numberSpecialWhiteCoin2 -= 2;
-                        }
-                        else if(User.numberWhiteCoin2 == 0 && User.numberSpecialWhiteCoin2 >= 3) {
-                            User.numberSpecialWhiteCoin2 -= 3;
-                        }
-                        else if(User.numberWhiteCoin2 == 2 && User.numberSpecialWhiteCoin2 == 0 && User.numberGoldCoin2 >= 1) {
-                            User.numberWhiteCoin2 -= 2;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if(User.numberWhiteCoin2 == 1 && User.numberSpecialWhiteCoin2 == 1 && User.numberGoldCoin2 >= 1) {
-                            User.numberWhiteCoin2 -= 1;
-                            User.numberSpecialWhiteCoin2 -= 1;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if(User.numberWhiteCoin2 == 0 && User.numberSpecialWhiteCoin2 == 2 && User.numberGoldCoin2 >= 1) {
-                            User.numberSpecialWhiteCoin2 -= 2;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if(User.numberWhiteCoin2 == 1 && User.numberSpecialWhiteCoin2 == 0 && User.numberGoldCoin2 >= 2) {
-                            User.numberWhiteCoin2 -= 1;
-                            User.numberGoldCoin2 -= 2;
-                        }
-                        else if(User.numberWhiteCoin2 == 0 && User.numberSpecialWhiteCoin2 == 1 && User.numberGoldCoin2 >= 2) {
-                            User.numberSpecialWhiteCoin2 -= 1;
-                            User.numberGoldCoin2 -= 2;
-                        }
-                        else if(User.numberWhiteCoin2 == 0 && User.numberSpecialWhiteCoin2 == 0 && User.numberGoldCoin2 >= 3) {
-                            User.numberGoldCoin2 -= 3;
-                        }
-
-                        if(User.numberRedCoin2 >= 2) {
-                            User.numberRedCoin2 -= 2;
-                        }
-                        else if(User.numberRedCoin2 == 1 && User.numberSpecialRedCoin2 >= 1) {
-                            User.numberRedCoin2 -= 1;
-                            User.numberSpecialRedCoin2 -= 1;
-                        }
-                        else if(User.numberRedCoin2 == 0 && User.numberSpecialRedCoin2 >= 2) {
-                            User.numberSpecialRedCoin2 -= 2;
-                        }
-                        else if(User.numberRedCoin2 == 1 && User.numberSpecialRedCoin2 == 0 && User.numberGoldCoin2 >= 1) {
-                            User.numberRedCoin2 -= 1;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if(User.numberRedCoin2 == 0 && User.numberSpecialRedCoin2 == 1 && User.numberGoldCoin2 >= 1) {
-                            User.numberSpecialRedCoin2 -= 1;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if(User.numberRedCoin2 == 0 && User.numberSpecialRedCoin2 == 0 && User.numberGoldCoin2 >= 2) {
-                            User.numberGoldCoin2 -= 2;
-                        }
-
-                        if(User.numberBlueCoin2 >= 2) {
-                            User.numberBlueCoin2 -= 2;
-                        }
-                        else if(User.numberBlueCoin2 == 1 && User.numberSpecialBlueCoin2 >= 1) {
-                            User.numberBlueCoin2 -= 1;
-                            User.numberSpecialBlueCoin2 -= 1;
-                        }
-                        else if(User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 >= 2) {
-                            User.numberSpecialBlueCoin2 -= 2;
-                        }
-                        else if(User.numberBlueCoin2 == 1 && User.numberSpecialBlueCoin2 == 0 && User.numberGoldCoin2 >= 1) {
-                            User.numberBlueCoin2 -= 1;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if(User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 == 1 && User.numberGoldCoin2 >= 1) {
-                            User.numberSpecialBlueCoin2 -= 1;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if(User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 == 0 && User.numberGoldCoin2 >= 2) {
-                            User.numberGoldCoin2 -= 2;
-                        }
-
-                        swCanBuy = 0;
-                        User.numberSpecialBlackCoin2++;
-                    }
-                }
-
-
-
-
-
-                if(User.sw1 == 1 && card25) {
-                    if(User.numberRedCoin1 + User.numberSpecialRedCoin1 + User.numberGoldCoin1 >= 4
-                            && User.numberGreenCoin1 + User.numberSpecialGreenCoin1 + User.numberGoldCoin1 >= 4) {
-
-                        User.cardPanel25_1++;
-                        clickCount25--;
-                        User.Score1 += 4;
-
-                        if(User.numberRedCoin1 >= 4) {
-                            User.numberRedCoin1 -= 4;
-                        }
-                        else if(User.numberRedCoin1 == 3 && User.numberSpecialRedCoin1 >= 1) {
-                            User.numberRedCoin1 -= 3;
-                            User.numberSpecialRedCoin1 -= 1;
-                        }
-                        else if(User.numberRedCoin1 == 2 && User.numberSpecialRedCoin1 >= 2) {
-                            User.numberRedCoin1 -= 2;
-                            User.numberSpecialRedCoin1 -= 2;
-                        }
-                        else if(User.numberRedCoin1 == 1 && User.numberSpecialRedCoin1 >= 3) {
-                            User.numberRedCoin1 -= 1;
-                            User.numberSpecialRedCoin1 -= 3;
-                        }
-                        else if(User.numberRedCoin1 == 0 && User.numberSpecialRedCoin1 >= 4) {
-                            User.numberSpecialRedCoin1 -= 4;
-                        }
-                        else if(User.numberRedCoin1 == 3 && User.numberSpecialRedCoin1 == 0 && User.numberGoldCoin1 >= 1) {
-                            User.numberRedCoin1 -= 3;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if(User.numberRedCoin1 == 2 && User.numberSpecialRedCoin1 == 1 && User.numberGoldCoin1 >= 1) {
-                            User.numberRedCoin1 -= 2;
-                            User.numberSpecialRedCoin1 -= 1;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if(User.numberRedCoin1 == 1 && User.numberSpecialRedCoin1 == 2 && User.numberGoldCoin1 >= 1) {
-                            User.numberRedCoin1 -= 1;
-                            User.numberSpecialRedCoin1 -= 2;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if(User.numberRedCoin1 == 0 && User.numberSpecialRedCoin1 == 3 && User.numberGoldCoin1 >= 1) {
-                            User.numberSpecialRedCoin1 -= 3;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if(User.numberRedCoin1 == 2 && User.numberSpecialRedCoin1 == 0 && User.numberGoldCoin1 >= 2) {
-                            User.numberRedCoin1 -= 2;
-                            User.numberGoldCoin1 -= 2;
-                        }
-                        else if(User.numberRedCoin1 == 1 && User.numberSpecialRedCoin1 == 1 && User.numberGoldCoin1 >= 2) {
-                            User.numberRedCoin1 -= 1;
-                            User.numberSpecialRedCoin1 -= 1;
-                            User.numberGoldCoin1 -= 2;
-                        }
-                        else if(User.numberRedCoin1 == 0 && User.numberSpecialRedCoin1 == 2 && User.numberGoldCoin1 >= 2) {
-                            User.numberSpecialRedCoin1 -= 2;
-                            User.numberGoldCoin1 -= 2;
-                        }
-                        else if(User.numberRedCoin1 == 1 && User.numberSpecialRedCoin1 == 0 && User.numberGoldCoin1 >= 3) {
-                            User.numberRedCoin1 -= 1;
-                            User.numberGoldCoin1 -= 3;
-                        }
-                        else if(User.numberRedCoin1 == 0 && User.numberSpecialRedCoin1 == 1 && User.numberGoldCoin1 >= 3) {
-                            User.numberSpecialRedCoin1 -= 1;
-                            User.numberGoldCoin1 -= 3;
-                        }
-                        else if(User.numberRedCoin1 == 0 && User.numberSpecialRedCoin1 == 0 && User.numberGoldCoin1 >= 4) {
-                            User.numberGoldCoin1 -= 4;
-                        }
-
-                        if(User.numberGreenCoin1 >= 4) {
-                            User.numberGreenCoin1 -= 4;
-                        }
-                        else if(User.numberGreenCoin1 == 3 && User.numberSpecialGreenCoin1 >= 1) {
-                            User.numberGreenCoin1 -= 3;
-                            User.numberSpecialGreenCoin1 -= 1;
-                        }
-                        else if(User.numberGreenCoin1 == 2 && User.numberSpecialGreenCoin1 >= 2) {
-                            User.numberGreenCoin1 -= 2;
-                            User.numberSpecialGreenCoin1 -= 2;
-                        }
-                        else if(User.numberGreenCoin1 == 1 && User.numberSpecialGreenCoin1 >= 3) {
-                            User.numberGreenCoin1 -= 1;
-                            User.numberSpecialGreenCoin1 -= 3;
-                        }
-                        else if(User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 >= 4) {
-                            User.numberSpecialGreenCoin1 -= 4;
-                        }
-                        else if(User.numberGreenCoin1 == 3 && User.numberSpecialGreenCoin1 == 0 && User.numberGoldCoin1 >= 1) {
-                            User.numberGreenCoin1 -= 3;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if(User.numberGreenCoin1 == 2 && User.numberSpecialGreenCoin1 == 1 && User.numberGoldCoin1 >= 1) {
-                            User.numberGreenCoin1 -= 2;
-                            User.numberSpecialGreenCoin1 -= 1;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if(User.numberGreenCoin1 == 1 && User.numberSpecialGreenCoin1 == 2 && User.numberGoldCoin1 >= 1) {
-                            User.numberGreenCoin1 -= 1;
-                            User.numberSpecialGreenCoin1 -= 2;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if(User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 == 3 && User.numberGoldCoin1 >= 1) {
-                            User.numberSpecialGreenCoin1 -= 3;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if(User.numberGreenCoin1 == 2 && User.numberSpecialGreenCoin1 == 0 && User.numberGoldCoin1 >= 2) {
-                            User.numberGreenCoin1 -= 2;
-                            User.numberGoldCoin1 -= 2;
-                        }
-                        else if(User.numberGreenCoin1 == 1 && User.numberSpecialGreenCoin1 == 1 && User.numberGoldCoin1 >= 2) {
-                            User.numberGreenCoin1 -= 1;
-                            User.numberSpecialGreenCoin1 -= 1;
-                            User.numberGoldCoin1 -= 2;
-                        }
-                        else if(User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 == 2 && User.numberGoldCoin1 >= 2) {
-                            User.numberSpecialGreenCoin1 -= 2;
-                            User.numberGoldCoin1 -= 2;
-                        }
-                        else if(User.numberGreenCoin1 == 1 && User.numberSpecialGreenCoin1 == 0 && User.numberGoldCoin1 >= 3) {
-                            User.numberGreenCoin1 -= 1;
-                            User.numberGoldCoin1 -= 3;
-                        }
-                        else if(User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 == 1 && User.numberGoldCoin1 >= 3) {
-                            User.numberSpecialGreenCoin1 -= 1;
-                            User.numberGoldCoin1 -= 3;
-                        }
-                        else if(User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 == 0 && User.numberGoldCoin1 >= 4) {
-                            User.numberGoldCoin1 -= 4;
-                        }
-
-                        swCanBuy = 0;
-                        User.numberSpecialWhiteCoin1++;
-                    }
-                }
-
-
-
-
-                if(User.sw2 == 1 && card25) {
-                    if(User.numberGreenCoin2 + User.numberSpecialGreenCoin2 + User.numberGoldCoin2 >= 4
-                            && User.numberRedCoin2 + User.numberSpecialRedCoin2 + User.numberGoldCoin2 >= 4) {
-
-                        User.cardPanel25_2++;
-                        clickCount25--;
-                        User.Score2 += 4;
-
-                        if(User.numberRedCoin2 >= 4) {
-                            User.numberRedCoin2 -= 4;
-                        }
-                        else if(User.numberRedCoin2 == 3 && User.numberSpecialRedCoin2 >= 1) {
-                            User.numberRedCoin2 -= 3;
-                            User.numberSpecialRedCoin2 -= 1;
-                        }
-                        else if(User.numberRedCoin2 == 2 && User.numberSpecialRedCoin2 >= 2) {
-                            User.numberRedCoin2 -= 2;
-                            User.numberSpecialRedCoin2 -= 2;
-                        }
-                        else if(User.numberRedCoin2 == 1 && User.numberSpecialRedCoin2 >= 3) {
-                            User.numberRedCoin2 -= 1;
-                            User.numberSpecialRedCoin2 -= 3;
-                        }
-                        else if(User.numberRedCoin2 == 0 && User.numberSpecialRedCoin2 >= 4) {
-                            User.numberSpecialRedCoin2 -= 4;
-                        }
-                        else if(User.numberRedCoin2 == 3 && User.numberSpecialRedCoin2 == 0 && User.numberGoldCoin2 >= 1) {
-                            User.numberRedCoin2 -= 3;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if(User.numberRedCoin2 == 2 && User.numberSpecialRedCoin2 == 1 && User.numberGoldCoin2 >= 1) {
-                            User.numberRedCoin2 -= 2;
-                            User.numberSpecialRedCoin2 -= 1;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if(User.numberRedCoin2 == 1 && User.numberSpecialRedCoin2 == 2 && User.numberGoldCoin2 >= 1) {
-                            User.numberRedCoin2 -= 1;
-                            User.numberSpecialRedCoin2 -= 2;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if(User.numberRedCoin2 == 0 && User.numberSpecialRedCoin2 == 3 && User.numberGoldCoin2 >= 1) {
-                            User.numberSpecialRedCoin2 -= 3;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if(User.numberRedCoin2 == 2 && User.numberSpecialRedCoin2 == 0 && User.numberGoldCoin2 >= 2) {
-                            User.numberRedCoin2 -= 2;
-                            User.numberGoldCoin2 -= 2;
-                        }
-                        else if(User.numberRedCoin2 == 1 && User.numberSpecialRedCoin2 == 1 && User.numberGoldCoin2 >= 2) {
-                            User.numberRedCoin2 -= 1;
-                            User.numberSpecialRedCoin2 -= 1;
-                            User.numberGoldCoin2 -= 2;
-                        }
-                        else if(User.numberRedCoin2 == 0 && User.numberSpecialRedCoin2 == 2 && User.numberGoldCoin2 >= 2) {
-                            User.numberSpecialRedCoin2 -= 2;
-                            User.numberGoldCoin2 -= 2;
-                        }
-                        else if(User.numberRedCoin2 == 1 && User.numberSpecialRedCoin2 == 0 && User.numberGoldCoin2 >= 3) {
-                            User.numberRedCoin2 -= 1;
-                            User.numberGoldCoin2 -= 3;
-                        }
-                        else if(User.numberRedCoin2 == 0 && User.numberSpecialRedCoin2 == 1 && User.numberGoldCoin2 >= 3) {
-                            User.numberSpecialRedCoin2 -= 1;
-                            User.numberGoldCoin2 -= 3;
-                        }
-                        else if(User.numberRedCoin2 == 0 && User.numberSpecialRedCoin2 == 0 && User.numberGoldCoin2 >= 4) {
-                            User.numberGoldCoin2 -= 4;
-                        }
-
-                        if(User.numberGreenCoin2 >= 4) {
-                            User.numberGreenCoin2 -= 4;
-                        }
-                        else if(User.numberGreenCoin2 == 3 && User.numberSpecialGreenCoin2 >= 1) {
-                            User.numberGreenCoin2 -= 3;
-                            User.numberSpecialGreenCoin2 -= 1;
-                        }
-                        else if(User.numberGreenCoin2 == 2 && User.numberSpecialGreenCoin2 >= 2) {
-                            User.numberGreenCoin2 -= 2;
-                            User.numberSpecialGreenCoin2 -= 2;
-                        }
-                        else if(User.numberGreenCoin2 == 1 && User.numberSpecialGreenCoin2 >= 3) {
-                            User.numberGreenCoin2 -= 1;
-                            User.numberSpecialGreenCoin2 -= 3;
-                        }
-                        else if(User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 >= 4) {
-                            User.numberSpecialGreenCoin2 -= 4;
-                        }
-                        else if(User.numberGreenCoin2 == 3 && User.numberSpecialGreenCoin2 == 0 && User.numberGoldCoin2 >= 1) {
-                            User.numberGreenCoin2 -= 3;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if(User.numberGreenCoin2 == 2 && User.numberSpecialGreenCoin2 == 1 && User.numberGoldCoin2 >= 1) {
-                            User.numberGreenCoin2 -= 2;
-                            User.numberSpecialGreenCoin2 -= 1;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if(User.numberGreenCoin2 == 1 && User.numberSpecialGreenCoin2 == 2 && User.numberGoldCoin2 >= 1) {
-                            User.numberGreenCoin2 -= 1;
-                            User.numberSpecialGreenCoin2 -= 2;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if(User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 == 3 && User.numberGoldCoin2 >= 1) {
-                            User.numberSpecialGreenCoin2 -= 3;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if(User.numberGreenCoin2 == 2 && User.numberSpecialGreenCoin2 == 0 && User.numberGoldCoin2 >= 2) {
-                            User.numberGreenCoin2 -= 2;
-                            User.numberGoldCoin2 -= 2;
-                        }
-                        else if(User.numberGreenCoin2 == 1 && User.numberSpecialGreenCoin2 == 1 && User.numberGoldCoin2 >= 2) {
-                            User.numberGreenCoin2 -= 1;
-                            User.numberSpecialGreenCoin2 -= 1;
-                            User.numberGoldCoin2 -= 2;
-                        }
-                        else if(User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 == 2 && User.numberGoldCoin2 >= 2) {
-                            User.numberSpecialGreenCoin2 -= 2;
-                            User.numberGoldCoin2 -= 2;
-                        }
-                        else if(User.numberGreenCoin2 == 1 && User.numberSpecialGreenCoin2 == 0 && User.numberGoldCoin2 >= 3) {
-                            User.numberGreenCoin2 -= 1;
-                            User.numberGoldCoin2 -= 3;
-                        }
-                        else if(User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 == 1 && User.numberGoldCoin2 >= 3) {
-                            User.numberSpecialGreenCoin2 -= 1;
-                            User.numberGoldCoin2 -= 3;
-                        }
-                        else if(User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 == 0 && User.numberGoldCoin2 >= 4) {
-                            User.numberGoldCoin2 -= 4;
-                        }
-
-                        swCanBuy = 0;
-                        User.numberSpecialWhiteCoin2++;
-                    }
-                }
-
-
-
-
-
-                if (User.sw1 == 1 && card31) {
-                    if (User.numberBlueCoin1 + User.numberSpecialBlueCoin1 + User.numberGoldCoin1 >= 3
-                            && User.numberGreenCoin1 + User.numberSpecialGreenCoin1 + User.numberGoldCoin1 >= 4) {
-
-                        User.cardPanel31_1++;
-                        clickCount31--;
-                        User.Score1 += 3;
-
-                        if (User.numberBlueCoin1 >= 3) {
-                            User.numberBlueCoin1 -= 3;
-                        }
-                        else if (User.numberBlueCoin1 == 2 && User.numberSpecialBlueCoin1 >= 1) {
-                            User.numberBlueCoin1 -= 2;
-                            User.numberSpecialBlueCoin1 -= 1;
-                        }
-                        else if (User.numberBlueCoin1 == 1 && User.numberSpecialBlueCoin1 >= 2) {
-                            User.numberBlueCoin1 -= 1;
-                            User.numberSpecialBlueCoin1 -= 2;
-                        }
-                        else if (User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 >= 3) {
-                            User.numberSpecialBlueCoin1 -= 3;
-                        }
-                        else if (User.numberBlueCoin1 == 2 && User.numberSpecialBlueCoin1 == 0 && User.numberGoldCoin1 >= 1) {
-                            User.numberBlueCoin1 -= 2;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if (User.numberBlueCoin1 == 1 && User.numberSpecialBlueCoin1 == 1 && User.numberGoldCoin1 >= 1) {
-                            User.numberBlueCoin1 -= 1;
-                            User.numberSpecialBlueCoin1 -= 1;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if (User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 == 2 && User.numberGoldCoin1 >= 1) {
-                            User.numberSpecialBlueCoin1 -= 2;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if (User.numberBlueCoin1 == 1 && User.numberSpecialBlueCoin1 == 0 && User.numberGoldCoin1 >= 2) {
-                            User.numberBlueCoin1 -= 1;
-                            User.numberGoldCoin1 -= 2;
-                        }
-                        else if (User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 == 1 && User.numberGoldCoin1 >= 2) {
-                            User.numberSpecialBlueCoin1 -= 1;
-                            User.numberGoldCoin1 -= 2;
-                        }
-                        else if (User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 == 0 && User.numberGoldCoin1 >= 3) {
-                            User.numberGoldCoin1 -= 3;
-                        }
-
-                        if (User.numberGreenCoin1 >= 4) {
-                            User.numberGreenCoin1 -= 4;
-                        }
-                        else if (User.numberGreenCoin1 == 3 && User.numberSpecialGreenCoin1 >= 1) {
-                            User.numberGreenCoin1 -= 3;
-                            User.numberSpecialGreenCoin1 -= 1;
-                        }
-                        else if (User.numberGreenCoin1 == 2 && User.numberSpecialGreenCoin1 >= 2) {
-                            User.numberGreenCoin1 -= 2;
-                            User.numberSpecialGreenCoin1 -= 2;
-                        }
-                        else if (User.numberGreenCoin1 == 1 && User.numberSpecialGreenCoin1 >= 3) {
-                            User.numberGreenCoin1 -= 1;
-                            User.numberSpecialGreenCoin1 -= 3;
-                        }
-                        else if (User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 >= 4) {
-                            User.numberSpecialGreenCoin1 -= 4;
-                        }
-                        else if (User.numberGreenCoin1 == 3 && User.numberSpecialGreenCoin1 == 0 && User.numberGoldCoin1 >= 1) {
-                            User.numberGreenCoin1 -= 3;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if (User.numberGreenCoin1 == 2 && User.numberSpecialGreenCoin1 == 1 && User.numberGoldCoin1 >= 1) {
-                            User.numberGreenCoin1 -= 2;
-                            User.numberSpecialGreenCoin1 -= 1;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if (User.numberGreenCoin1 == 1 && User.numberSpecialGreenCoin1 == 2 && User.numberGoldCoin1 >= 1) {
-                            User.numberGreenCoin1 -= 1;
-                            User.numberSpecialGreenCoin1 -= 2;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if (User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 == 3 && User.numberGoldCoin1 >= 1) {
-                            User.numberSpecialGreenCoin1 -= 3;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if (User.numberGreenCoin1 == 2 && User.numberSpecialGreenCoin1 == 0 && User.numberGoldCoin1 >= 2) {
-                            User.numberGreenCoin1 -= 2;
-                            User.numberGoldCoin1 -= 2;
-                        }
-                        else if (User.numberGreenCoin1 == 1 && User.numberSpecialGreenCoin1 == 1 && User.numberGoldCoin1 >= 2) {
-                            User.numberGreenCoin1 -= 1;
-                            User.numberSpecialGreenCoin1 -= 1;
-                            User.numberGoldCoin1 -= 2;
-                        }
-                        else if (User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 == 2 && User.numberGoldCoin1 >= 2) {
-                            User.numberSpecialGreenCoin1 -= 2;
-                            User.numberGoldCoin1 -= 2;
-                        }
-                        else if (User.numberGreenCoin1 == 1 && User.numberSpecialGreenCoin1 == 0 && User.numberGoldCoin1 >= 3) {
-                            User.numberGreenCoin1 -= 1;
-                            User.numberGoldCoin1 -= 3;
-                        }
-                        else if (User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 == 1 && User.numberGoldCoin1 >= 3) {
-                            User.numberSpecialGreenCoin1 -= 1;
-                            User.numberGoldCoin1 -= 3;
-                        }
-                        else if (User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 == 0 && User.numberGoldCoin1 >= 4) {
-                            User.numberGoldCoin1 -= 4;
-                        }
-
-                        swCanBuy = 0;
-                        User.numberSpecialBlackCoin1++;
-                    }
-                }
-
-
-
-
-                if (User.sw2 == 1 && card31) {
-                    if (User.numberBlueCoin2 + User.numberSpecialBlueCoin2 + User.numberGoldCoin2 >= 3
-                            && User.numberGreenCoin2 + User.numberSpecialGreenCoin2 + User.numberGoldCoin2 >= 4) {
-
-                        User.cardPanel31_2++;
-                        clickCount31--;
-                        User.Score2 += 3;
-
-                        if (User.numberBlueCoin2 >= 3) {
-                            User.numberBlueCoin2 -= 3;
-                        }
-                        else if (User.numberBlueCoin2 == 2 && User.numberSpecialBlueCoin2 >= 1) {
-                            User.numberBlueCoin2 -= 2;
-                            User.numberSpecialBlueCoin2 -= 1;
-                        }
-                        else if (User.numberBlueCoin2 == 1 && User.numberSpecialBlueCoin2 >= 2) {
-                            User.numberBlueCoin2 -= 1;
-                            User.numberSpecialBlueCoin2 -= 2;
-                        }
-                        else if (User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 >= 3) {
-                            User.numberSpecialBlueCoin2 -= 3;
-                        }
-                        else if (User.numberBlueCoin2 == 2 && User.numberSpecialBlueCoin2 == 0 && User.numberGoldCoin2 >= 1) {
-                            User.numberBlueCoin2 -= 2;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if (User.numberBlueCoin2 == 1 && User.numberSpecialBlueCoin2 == 1 && User.numberGoldCoin2 >= 1) {
-                            User.numberBlueCoin2 -= 1;
-                            User.numberSpecialBlueCoin2 -= 1;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if (User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 == 2 && User.numberGoldCoin2 >= 1) {
-                            User.numberSpecialBlueCoin2 -= 2;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if (User.numberBlueCoin2 == 1 && User.numberSpecialBlueCoin2 == 0 && User.numberGoldCoin2 >= 2) {
-                            User.numberBlueCoin2 -= 1;
-                            User.numberGoldCoin2 -= 2;
-                        }
-                        else if (User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 == 1 && User.numberGoldCoin2 >= 2) {
-                            User.numberSpecialBlueCoin2 -= 1;
-                            User.numberGoldCoin2 -= 2;
-                        }
-                        else if (User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 == 0 && User.numberGoldCoin2 >= 3) {
-                            User.numberGoldCoin2 -= 3;
-                        }
-
-                        if (User.numberGreenCoin2 >= 4) {
-                            User.numberGreenCoin2 -= 4;
-                        }
-                        else if (User.numberGreenCoin2 == 3 && User.numberSpecialGreenCoin2 >= 1) {
-                            User.numberGreenCoin2 -= 3;
-                            User.numberSpecialGreenCoin2 -= 1;
-                        }
-                        else if (User.numberGreenCoin2 == 2 && User.numberSpecialGreenCoin2 >= 2) {
-                            User.numberGreenCoin2 -= 2;
-                            User.numberSpecialGreenCoin2 -= 2;
-                        }
-                        else if (User.numberGreenCoin2 == 1 && User.numberSpecialGreenCoin2 >= 3) {
-                            User.numberGreenCoin2 -= 1;
-                            User.numberSpecialGreenCoin2 -= 3;
-                        }
-                        else if (User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 >= 4) {
-                            User.numberSpecialGreenCoin2 -= 4;
-                        }
-                        else if (User.numberGreenCoin2 == 3 && User.numberSpecialGreenCoin2 == 0 && User.numberGoldCoin2 >= 1) {
-                            User.numberGreenCoin2 -= 3;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if (User.numberGreenCoin2 == 2 && User.numberSpecialGreenCoin2 == 1 && User.numberGoldCoin2 >= 1) {
-                            User.numberGreenCoin2 -= 2;
-                            User.numberSpecialGreenCoin2 -= 1;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if (User.numberGreenCoin2 == 1 && User.numberSpecialGreenCoin2 == 2 && User.numberGoldCoin2 >= 1) {
-                            User.numberGreenCoin2 -= 1;
-                            User.numberSpecialGreenCoin2 -= 2;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if (User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 == 3 && User.numberGoldCoin2 >= 1) {
-                            User.numberSpecialGreenCoin2 -= 3;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if (User.numberGreenCoin2 == 2 && User.numberSpecialGreenCoin2 == 0 && User.numberGoldCoin2 >= 2) {
-                            User.numberGreenCoin2 -= 2;
-                            User.numberGoldCoin2 -= 2;
-                        }
-                        else if (User.numberGreenCoin2 == 1 && User.numberSpecialGreenCoin2 == 1 && User.numberGoldCoin2 >= 2) {
-                            User.numberGreenCoin2 -= 1;
-                            User.numberSpecialGreenCoin2 -= 1;
-                            User.numberGoldCoin2 -= 2;
-                        }
-                        else if (User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 == 2 && User.numberGoldCoin2 >= 2) {
-                            User.numberSpecialGreenCoin2 -= 2;
-                            User.numberGoldCoin2 -= 2;
-                        }
-                        else if (User.numberGreenCoin2 == 1 && User.numberSpecialGreenCoin2 == 0 && User.numberGoldCoin2 >= 3) {
-                            User.numberGreenCoin2 -= 1;
-                            User.numberGoldCoin2 -= 3;
-                        }
-                        else if (User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 == 1 && User.numberGoldCoin2 >= 3) {
-                            User.numberSpecialGreenCoin2 -= 1;
-                            User.numberGoldCoin2 -= 3;
-                        }
-                        else if (User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 == 0 && User.numberGoldCoin2 >= 4) {
-                            User.numberGoldCoin2 -= 4;
-                        }
-
-                        swCanBuy = 0;
-                        User.numberSpecialBlackCoin2++;
-                    }
-                }
-
-
-
-
-
-                if (User.sw1 == 1 && card32) {
-                    if (User.numberRedCoin1 + User.numberSpecialRedCoin1 + User.numberGoldCoin1 >= 3
-                            && User.numberBlueCoin1 + User.numberSpecialBlueCoin1 + User.numberGoldCoin1 >= 4) {
-
-                        User.cardPanel32_1++;
-                        clickCount32--;
-                        User.Score1 += 3;
-
-                        if (User.numberRedCoin1 >= 3) {
-                            User.numberRedCoin1 -= 3;
-                        }
-                        else if (User.numberRedCoin1 == 2 && User.numberSpecialRedCoin1 >= 1) {
-                            User.numberRedCoin1 -= 2;
-                            User.numberSpecialRedCoin1 -= 1;
-                        }
-                        else if (User.numberRedCoin1 == 1 && User.numberSpecialRedCoin1 >= 2) {
-                            User.numberRedCoin1 -= 1;
-                            User.numberSpecialRedCoin1 -= 2;
-                        }
-                        else if (User.numberRedCoin1 == 0 && User.numberSpecialRedCoin1 >= 3) {
-                            User.numberSpecialRedCoin1 -= 3;
-                        }
-                        else if (User.numberRedCoin1 == 2 && User.numberSpecialRedCoin1 == 0 && User.numberGoldCoin1 >= 1) {
-                            User.numberRedCoin1 -= 2;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if (User.numberRedCoin1 == 1 && User.numberSpecialRedCoin1 == 1 && User.numberGoldCoin1 >= 1) {
-                            User.numberRedCoin1 -= 1;
-                            User.numberSpecialRedCoin1 -= 1;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if (User.numberRedCoin1 == 0 && User.numberSpecialRedCoin1 == 2 && User.numberGoldCoin1 >= 1) {
-                            User.numberSpecialRedCoin1 -= 2;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if (User.numberRedCoin1 == 1 && User.numberSpecialRedCoin1 == 0 && User.numberGoldCoin1 >= 2) {
-                            User.numberRedCoin1 -= 1;
-                            User.numberGoldCoin1 -= 2;
-                        }
-                        else if (User.numberRedCoin1 == 0 && User.numberSpecialRedCoin1 == 1 && User.numberGoldCoin1 >= 2) {
-                            User.numberSpecialRedCoin1 -= 1;
-                            User.numberGoldCoin1 -= 2;
-                        }
-                        else if (User.numberRedCoin1 == 0 && User.numberSpecialRedCoin1 == 0 && User.numberGoldCoin1 >= 3) {
-                            User.numberGoldCoin1 -= 3;
-                        }
-
-                        if (User.numberBlueCoin1 >= 4) {
-                            User.numberBlueCoin1 -= 4;
-                        }
-                        else if (User.numberBlueCoin1 == 3 && User.numberSpecialBlueCoin1 >= 1) {
-                            User.numberBlueCoin1 -= 3;
-                            User.numberSpecialBlueCoin1 -= 1;
-                        }
-                        else if (User.numberBlueCoin1 == 2 && User.numberSpecialBlueCoin1 >= 2) {
-                            User.numberBlueCoin1 -= 2;
-                            User.numberSpecialBlueCoin1 -= 2;
-                        }
-                        else if (User.numberBlueCoin1 == 1 && User.numberSpecialBlueCoin1 >= 3) {
-                            User.numberBlueCoin1 -= 1;
-                            User.numberSpecialBlueCoin1 -= 3;
-                        }
-                        else if (User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 >= 4) {
-                            User.numberSpecialBlueCoin1 -= 4;
-                        }
-                        else if (User.numberBlueCoin1 == 3 && User.numberSpecialBlueCoin1 == 0 && User.numberGoldCoin1 >= 1) {
-                            User.numberBlueCoin1 -= 3;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if (User.numberBlueCoin1 == 2 && User.numberSpecialBlueCoin1 == 1 && User.numberGoldCoin1 >= 1) {
-                            User.numberBlueCoin1 -= 2;
-                            User.numberSpecialBlueCoin1 -= 1;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if (User.numberBlueCoin1 == 1 && User.numberSpecialBlueCoin1 == 2 && User.numberGoldCoin1 >= 1) {
-                            User.numberBlueCoin1 -= 1;
-                            User.numberSpecialBlueCoin1 -= 2;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if (User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 == 3 && User.numberGoldCoin1 >= 1) {
-                            User.numberSpecialBlueCoin1 -= 3;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if (User.numberBlueCoin1 == 2 && User.numberSpecialBlueCoin1 == 0 && User.numberGoldCoin1 >= 2) {
-                            User.numberBlueCoin1 -= 2;
-                            User.numberGoldCoin1 -= 2;
-                        }
-                        else if (User.numberBlueCoin1 == 1 && User.numberSpecialBlueCoin1 == 1 && User.numberGoldCoin1 >= 2) {
-                            User.numberBlueCoin1 -= 1;
-                            User.numberSpecialBlueCoin1 -= 1;
-                            User.numberGoldCoin1 -= 2;
-                        }
-                        else if (User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 == 2 && User.numberGoldCoin1 >= 2) {
-                            User.numberSpecialBlueCoin1 -= 2;
-                            User.numberGoldCoin1 -= 2;
-                        }
-                        else if (User.numberBlueCoin1 == 1 && User.numberSpecialBlueCoin1 == 0 && User.numberGoldCoin1 >= 3) {
-                            User.numberBlueCoin1 -= 1;
-                            User.numberGoldCoin1 -= 3;
-                        }
-                        else if (User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 == 1 && User.numberGoldCoin1 >= 3) {
-                            User.numberSpecialBlueCoin1 -= 1;
-                            User.numberGoldCoin1 -= 3;
-                        }
-                        else if (User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 == 0 && User.numberGoldCoin1 >= 4) {
-                            User.numberGoldCoin1 -= 4;
-                        }
-
-                        swCanBuy = 0;
-                        User.numberSpecialGreenCoin1++;
-                    }
-                }
-
-
-
-
-                if (User.sw2 == 1 && card32) {
-                    if (User.numberRedCoin2 + User.numberSpecialRedCoin2 + User.numberGoldCoin2 >= 3
-                            && User.numberBlueCoin2 + User.numberSpecialBlueCoin2 + User.numberGoldCoin2 >= 4) {
-
-                        User.cardPanel32_2++;
-                        clickCount32--;
-                        User.Score2 += 3;
-
-                        if (User.numberRedCoin2 >= 3) {
-                            User.numberRedCoin2 -= 3;
-                        }
-                        else if (User.numberRedCoin2 == 2 && User.numberSpecialRedCoin2 >= 1) {
-                            User.numberRedCoin2 -= 2;
-                            User.numberSpecialRedCoin2 -= 1;
-                        }
-                        else if (User.numberRedCoin2 == 1 && User.numberSpecialRedCoin2 >= 2) {
-                            User.numberRedCoin2 -= 1;
-                            User.numberSpecialRedCoin2 -= 2;
-                        }
-                        else if (User.numberRedCoin2 == 0 && User.numberSpecialRedCoin2 >= 3) {
-                            User.numberSpecialRedCoin2 -= 3;
-                        }
-                        else if (User.numberRedCoin2 == 2 && User.numberSpecialRedCoin2 == 0 && User.numberGoldCoin2 >= 1) {
-                            User.numberRedCoin2 -= 2;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if (User.numberRedCoin2 == 1 && User.numberSpecialRedCoin2 == 1 && User.numberGoldCoin2 >= 1) {
-                            User.numberRedCoin2 -= 1;
-                            User.numberSpecialRedCoin2 -= 1;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if (User.numberRedCoin2 == 0 && User.numberSpecialRedCoin2 == 2 && User.numberGoldCoin2 >= 1) {
-                            User.numberSpecialRedCoin2 -= 2;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if (User.numberRedCoin2 == 1 && User.numberSpecialRedCoin2 == 0 && User.numberGoldCoin2 >= 2) {
-                            User.numberRedCoin2 -= 1;
-                            User.numberGoldCoin2 -= 2;
-                        }
-                        else if (User.numberRedCoin2 == 0 && User.numberSpecialRedCoin2 == 1 && User.numberGoldCoin2 >= 2) {
-                            User.numberSpecialRedCoin2 -= 1;
-                            User.numberGoldCoin2 -= 2;
-                        }
-                        else if (User.numberRedCoin2 == 0 && User.numberSpecialRedCoin2 == 0 && User.numberGoldCoin2 >= 3) {
-                            User.numberGoldCoin2 -= 3;
-                        }
-
-                        if (User.numberBlueCoin2 >= 4) {
-                            User.numberBlueCoin2 -= 4;
-                        }
-                        else if (User.numberBlueCoin2 == 3 && User.numberSpecialBlueCoin2 >= 1) {
-                            User.numberBlueCoin2 -= 3;
-                            User.numberSpecialBlueCoin2 -= 1;
-                        }
-                        else if (User.numberBlueCoin2 == 2 && User.numberSpecialBlueCoin2 >= 2) {
-                            User.numberBlueCoin2 -= 2;
-                            User.numberSpecialBlueCoin2 -= 2;
-                        }
-                        else if (User.numberBlueCoin2 == 1 && User.numberSpecialBlueCoin2 >= 3) {
-                            User.numberBlueCoin2 -= 1;
-                            User.numberSpecialBlueCoin2 -= 3;
-                        }
-                        else if (User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 >= 4) {
-                            User.numberSpecialBlueCoin2 -= 4;
-                        }
-                        else if (User.numberBlueCoin2 == 3 && User.numberSpecialBlueCoin2 == 0 && User.numberGoldCoin2 >= 1) {
-                            User.numberBlueCoin2 -= 3;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if (User.numberBlueCoin2 == 2 && User.numberSpecialBlueCoin2 == 1 && User.numberGoldCoin2 >= 1) {
-                            User.numberBlueCoin2 -= 2;
-                            User.numberSpecialBlueCoin2 -= 1;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if (User.numberBlueCoin2 == 1 && User.numberSpecialBlueCoin2 == 2 && User.numberGoldCoin2 >= 1) {
-                            User.numberBlueCoin2 -= 1;
-                            User.numberSpecialBlueCoin2 -= 2;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if (User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 == 3 && User.numberGoldCoin2 >= 1) {
-                            User.numberSpecialBlueCoin2 -= 3;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if (User.numberBlueCoin2 == 2 && User.numberSpecialBlueCoin2 == 0 && User.numberGoldCoin2 >= 2) {
-                            User.numberBlueCoin2 -= 2;
-                            User.numberGoldCoin2 -= 2;
-                        }
-                        else if (User.numberBlueCoin2 == 1 && User.numberSpecialBlueCoin2 == 1 && User.numberGoldCoin2 >= 2) {
-                            User.numberBlueCoin2 -= 1;
-                            User.numberSpecialBlueCoin2 -= 1;
-                            User.numberGoldCoin2 -= 2;
-                        }
-                        else if (User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 == 2 && User.numberGoldCoin2 >= 2) {
-                            User.numberSpecialBlueCoin2 -= 2;
-                            User.numberGoldCoin2 -= 2;
-                        }
-                        else if (User.numberBlueCoin2 == 1 && User.numberSpecialBlueCoin2 == 0 && User.numberGoldCoin2 >= 3) {
-                            User.numberBlueCoin2 -= 1;
-                            User.numberGoldCoin2 -= 3;
-                        }
-                        else if (User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 == 1 && User.numberGoldCoin2 >= 3) {
-                            User.numberSpecialBlueCoin2 -= 1;
-                            User.numberGoldCoin2 -= 3;
-                        }
-                        else if (User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 == 0 && User.numberGoldCoin2 >= 4) {
-                            User.numberGoldCoin2 -= 4;
-                        }
-
-                        swCanBuy = 0;
-                        User.numberSpecialGreenCoin2++;
-                    }
-                }
-
-
-
-
-
-                if (User.sw1 == 1 && card33) {
-                    if (User.numberGreenCoin1 + User.numberSpecialGreenCoin1 + User.numberGoldCoin1 >= 3
-                            && User.numberBlackCoin1 + User.numberSpecialBlackCoin1 + User.numberGoldCoin1 >= 3
-                            && User.numberRedCoin1 + User.numberSpecialRedCoin1 + User.numberGoldCoin1 >= 2) {
-
-                        User.cardPanel33_1++;
-                        clickCount33--;
-                        User.Score1 += 4;
-
-                        if (User.numberGreenCoin1 >= 3) {
-                            User.numberGreenCoin1 -= 3;
-                        }
-                        else if (User.numberGreenCoin1 == 2 && User.numberSpecialGreenCoin1 >= 1) {
-                            User.numberGreenCoin1 -= 2;
-                            User.numberSpecialGreenCoin1 -= 1;
-                        }
-                        else if (User.numberGreenCoin1 == 1 && User.numberSpecialGreenCoin1 >= 2) {
-                            User.numberGreenCoin1 -= 1;
-                            User.numberSpecialGreenCoin1 -= 2;
-                        }
-                        else if (User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 >= 3) {
-                            User.numberSpecialGreenCoin1 -= 3;
-                        }
-                        else if (User.numberGreenCoin1 == 2 && User.numberSpecialGreenCoin1 == 0 && User.numberGoldCoin1 >= 1) {
-                            User.numberGreenCoin1 -= 2;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if (User.numberGreenCoin1 == 1 && User.numberSpecialGreenCoin1 == 1 && User.numberGoldCoin1 >= 1) {
-                            User.numberGreenCoin1 -= 1;
-                            User.numberSpecialGreenCoin1 -= 1;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if (User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 == 2 && User.numberGoldCoin1 >= 1) {
-                            User.numberSpecialGreenCoin1 -= 2;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if (User.numberGreenCoin1 == 1 && User.numberSpecialGreenCoin1 == 0 && User.numberGoldCoin1 >= 2) {
-                            User.numberGreenCoin1 -= 1;
-                            User.numberGoldCoin1 -= 2;
-                        }
-                        else if (User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 == 1 && User.numberGoldCoin1 >= 2) {
-                            User.numberSpecialGreenCoin1 -= 1;
-                            User.numberGoldCoin1 -= 2;
-                        }
-                        else if (User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 == 0 && User.numberGoldCoin1 >= 3) {
-                            User.numberGoldCoin1 -= 3;
-                        }
-
-                        if (User.numberBlackCoin1 >= 3) {
-                            User.numberBlackCoin1 -= 3;
-                        }
-                        else if (User.numberBlackCoin1 == 2 && User.numberSpecialBlackCoin1 >= 1) {
-                            User.numberBlackCoin1 -= 2;
-                            User.numberSpecialBlackCoin1 -= 1;
-                        }
-                        else if (User.numberBlackCoin1 == 1 && User.numberSpecialBlackCoin1 >= 2) {
-                            User.numberBlackCoin1 -= 1;
-                            User.numberSpecialBlackCoin1 -= 2;
-                        }
-                        else if (User.numberBlackCoin1 == 0 && User.numberSpecialBlackCoin1 >= 3) {
-                            User.numberSpecialBlackCoin1 -= 3;
-                        }
-                        else if (User.numberBlackCoin1 == 2 && User.numberSpecialBlackCoin1 == 0 && User.numberGoldCoin1 >= 1) {
-                            User.numberBlackCoin1 -= 2;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if (User.numberBlackCoin1 == 1 && User.numberSpecialBlackCoin1 == 1 && User.numberGoldCoin1 >= 1) {
-                            User.numberBlackCoin1 -= 1;
-                            User.numberSpecialBlackCoin1 -= 1;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if (User.numberBlackCoin1 == 0 && User.numberSpecialBlackCoin1 == 2 && User.numberGoldCoin1 >= 1) {
-                            User.numberSpecialBlackCoin1 -= 2;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if (User.numberBlackCoin1 == 1 && User.numberSpecialBlackCoin1 == 0 && User.numberGoldCoin1 >= 2) {
-                            User.numberBlackCoin1 -= 1;
-                            User.numberGoldCoin1 -= 2;
-                        }
-                        else if (User.numberBlackCoin1 == 0 && User.numberSpecialBlackCoin1 == 1 && User.numberGoldCoin1 >= 2) {
-                            User.numberSpecialBlackCoin1 -= 1;
-                            User.numberGoldCoin1 -= 2;
-                        }
-                        else if (User.numberBlackCoin1 == 0 && User.numberSpecialBlackCoin1 == 0 && User.numberGoldCoin1 >= 3) {
-                            User.numberGoldCoin1 -= 3;
-                        }
-
-                        if (User.numberRedCoin1 >= 2) {
-                            User.numberRedCoin1 -= 2;
-                        }
-                        else if (User.numberRedCoin1 == 1 && User.numberSpecialRedCoin1 >= 1) {
-                            User.numberRedCoin1 -= 1;
-                            User.numberSpecialRedCoin1 -= 1;
-                        }
-                        else if (User.numberRedCoin1 == 0 && User.numberSpecialRedCoin1 >= 2) {
-                            User.numberSpecialRedCoin1 -= 2;
-                        }
-                        else if (User.numberRedCoin1 == 1 && User.numberSpecialRedCoin1 == 0 && User.numberGoldCoin1 >= 1) {
-                            User.numberRedCoin1 -= 1;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if (User.numberRedCoin1 == 0 && User.numberSpecialRedCoin1 == 1 && User.numberGoldCoin1 >= 1) {
-                            User.numberSpecialRedCoin1 -= 1;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if (User.numberRedCoin1 == 0 && User.numberSpecialRedCoin1 == 0 && User.numberGoldCoin1 >= 2) {
-                            User.numberGoldCoin1 -= 2;
-                        }
-
-                        swCanBuy = 0;
-                        User.numberSpecialWhiteCoin1++;
-                    }
-                }
-
-
-
-
-                if (User.sw2 == 1 && card33) {
-                    if (User.numberGreenCoin2 + User.numberSpecialGreenCoin2 + User.numberGoldCoin2 >= 3
-                            && User.numberBlackCoin2 + User.numberSpecialBlackCoin2 + User.numberGoldCoin2 >= 3
-                            && User.numberRedCoin2 + User.numberSpecialRedCoin2 + User.numberGoldCoin2 >= 2) {
-
-                        User.cardPanel33_2++;
-                        clickCount33--;
-                        User.Score2 += 4;
-
-                        if (User.numberGreenCoin2 >= 3) {
-                            User.numberGreenCoin2 -= 3;
-                        }
-                        else if (User.numberGreenCoin2 == 2 && User.numberSpecialGreenCoin2 >= 1) {
-                            User.numberGreenCoin2 -= 2;
-                            User.numberSpecialGreenCoin2 -= 1;
-                        }
-                        else if (User.numberGreenCoin2 == 1 && User.numberSpecialGreenCoin2 >= 2) {
-                            User.numberGreenCoin2 -= 1;
-                            User.numberSpecialGreenCoin2 -= 2;
-                        }
-                        else if (User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 >= 3) {
-                            User.numberSpecialGreenCoin2 -= 3;
-                        }
-                        else if (User.numberGreenCoin2 == 2 && User.numberSpecialGreenCoin2 == 0 && User.numberGoldCoin2 >= 1) {
-                            User.numberGreenCoin2 -= 2;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if (User.numberGreenCoin2 == 1 && User.numberSpecialGreenCoin2 == 1 && User.numberGoldCoin2 >= 1) {
-                            User.numberGreenCoin2 -= 1;
-                            User.numberSpecialGreenCoin2 -= 1;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if (User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 == 2 && User.numberGoldCoin2 >= 1) {
-                            User.numberSpecialGreenCoin2 -= 2;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if (User.numberGreenCoin2 == 1 && User.numberSpecialGreenCoin2 == 0 && User.numberGoldCoin2 >= 2) {
-                            User.numberGreenCoin2 -= 1;
-                            User.numberGoldCoin2 -= 2;
-                        }
-                        else if (User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 == 1 && User.numberGoldCoin2 >= 2) {
-                            User.numberSpecialGreenCoin2 -= 1;
-                            User.numberGoldCoin2 -= 2;
-                        }
-                        else if (User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 == 0 && User.numberGoldCoin2 >= 3) {
-                            User.numberGoldCoin2 -= 3;
-                        }
-
-                        if (User.numberBlackCoin2 >= 3) {
-                            User.numberBlackCoin2 -= 3;
-                        }
-                        else if (User.numberBlackCoin2 == 2 && User.numberSpecialBlackCoin2 >= 1) {
-                            User.numberBlackCoin2 -= 2;
-                            User.numberSpecialBlackCoin2 -= 1;
-                        }
-                        else if (User.numberBlackCoin2 == 1 && User.numberSpecialBlackCoin2 >= 2) {
-                            User.numberBlackCoin2 -= 1;
-                            User.numberSpecialBlackCoin2 -= 2;
-                        }
-                        else if (User.numberBlackCoin2 == 0 && User.numberSpecialBlackCoin2 >= 3) {
-                            User.numberSpecialBlackCoin2 -= 3;
-                        }
-                        else if (User.numberBlackCoin2 == 2 && User.numberSpecialBlackCoin2 == 0 && User.numberGoldCoin2 >= 1) {
-                            User.numberBlackCoin2 -= 2;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if (User.numberBlackCoin2 == 1 && User.numberSpecialBlackCoin2 == 1 && User.numberGoldCoin2 >= 1) {
-                            User.numberBlackCoin2 -= 1;
-                            User.numberSpecialBlackCoin2 -= 1;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if (User.numberBlackCoin2 == 0 && User.numberSpecialBlackCoin2 == 2 && User.numberGoldCoin2 >= 1) {
-                            User.numberSpecialBlackCoin2 -= 2;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if (User.numberBlackCoin2 == 1 && User.numberSpecialBlackCoin2 == 0 && User.numberGoldCoin2 >= 2) {
-                            User.numberBlackCoin2 -= 1;
-                            User.numberGoldCoin2 -= 2;
-                        }
-                        else if (User.numberBlackCoin2 == 0 && User.numberSpecialBlackCoin2 == 1 && User.numberGoldCoin2 >= 2) {
-                            User.numberSpecialBlackCoin2 -= 1;
-                            User.numberGoldCoin2 -= 2;
-                        }
-                        else if (User.numberBlackCoin2 == 0 && User.numberSpecialBlackCoin2 == 0 && User.numberGoldCoin2 >= 3) {
-                            User.numberGoldCoin2 -= 3;
-                        }
-
-                        if (User.numberRedCoin2 >= 2) {
-                            User.numberRedCoin2 -= 2;
-                        }
-                        else if (User.numberRedCoin2 == 1 && User.numberSpecialRedCoin2 >= 1) {
-                            User.numberRedCoin2 -= 1;
-                            User.numberSpecialRedCoin2 -= 1;
-                        }
-                        else if (User.numberRedCoin2 == 0 && User.numberSpecialRedCoin2 >= 2) {
-                            User.numberSpecialRedCoin2 -= 2;
-                        }
-                        else if (User.numberRedCoin2 == 1 && User.numberSpecialRedCoin2 == 0 && User.numberGoldCoin2 >= 1) {
-                            User.numberRedCoin2 -= 1;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if (User.numberRedCoin2 == 0 && User.numberSpecialRedCoin2 == 1 && User.numberGoldCoin2 >= 1) {
-                            User.numberSpecialRedCoin2 -= 1;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if (User.numberRedCoin2 == 0 && User.numberSpecialRedCoin2 == 0 && User.numberGoldCoin2 >= 2) {
-                            User.numberGoldCoin2 -= 2;
-                        }
-
-                        swCanBuy = 0;
-                        User.numberSpecialWhiteCoin2++;
-                    }
-                }
-
-
-
-
-
-                if (User.sw1 == 1 && card34) {
-                    if (User.numberWhiteCoin1 + User.numberSpecialWhiteCoin1 + User.numberGoldCoin1 >= 3
-                            && User.numberBlueCoin1 + User.numberSpecialBlueCoin1 + User.numberGoldCoin1 >= 3
-                            && User.numberGreenCoin1 + User.numberSpecialGreenCoin1 + User.numberGoldCoin1 >= 2) {
-
-                        User.cardPanel34_1++;
-                        clickCount34--;
-                        User.Score1 += 4;
-
-                        if (User.numberWhiteCoin1 >= 3) {
-                            User.numberWhiteCoin1 -= 3;
-                        }
-                        else if (User.numberWhiteCoin1 == 2 && User.numberSpecialWhiteCoin1 >= 1) {
-                            User.numberWhiteCoin1 -= 2;
-                            User.numberSpecialWhiteCoin1 -= 1;
-                        }
-                        else if (User.numberWhiteCoin1 == 1 && User.numberSpecialWhiteCoin1 >= 2) {
-                            User.numberWhiteCoin1 -= 1;
-                            User.numberSpecialWhiteCoin1 -= 2;
-                        }
-                        else if (User.numberWhiteCoin1 == 0 && User.numberSpecialWhiteCoin1 >= 3) {
-                            User.numberSpecialWhiteCoin1 -= 3;
-                        }
-                        else if (User.numberWhiteCoin1 == 2 && User.numberSpecialWhiteCoin1 == 0 && User.numberGoldCoin1 >= 1) {
-                            User.numberWhiteCoin1 -= 2;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if (User.numberWhiteCoin1 == 1 && User.numberSpecialWhiteCoin1 == 1 && User.numberGoldCoin1 >= 1) {
-                            User.numberWhiteCoin1 -= 1;
-                            User.numberSpecialWhiteCoin1 -= 1;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if (User.numberWhiteCoin1 == 0 && User.numberSpecialWhiteCoin1 == 2 && User.numberGoldCoin1 >= 1) {
-                            User.numberSpecialWhiteCoin1 -= 2;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if (User.numberWhiteCoin1 == 1 && User.numberSpecialWhiteCoin1 == 0 && User.numberGoldCoin1 >= 2) {
-                            User.numberWhiteCoin1 -= 1;
-                            User.numberGoldCoin1 -= 2;
-                        }
-                        else if (User.numberWhiteCoin1 == 0 && User.numberSpecialWhiteCoin1 == 1 && User.numberGoldCoin1 >= 2) {
-                            User.numberSpecialWhiteCoin1 -= 1;
-                            User.numberGoldCoin1 -= 2;
-                        }
-                        else if (User.numberWhiteCoin1 == 0 && User.numberSpecialWhiteCoin1 == 0 && User.numberGoldCoin1 >= 3) {
-                            User.numberGoldCoin1 -= 3;
-                        }
-
-                        if (User.numberBlueCoin1 >= 3) {
-                            User.numberBlueCoin1 -= 3;
-                        }
-                        else if (User.numberBlueCoin1 == 2 && User.numberSpecialBlueCoin1 >= 1) {
-                            User.numberBlueCoin1 -= 2;
-                            User.numberSpecialBlueCoin1 -= 1;
-                        }
-                        else if (User.numberBlueCoin1 == 1 && User.numberSpecialBlueCoin1 >= 2) {
-                            User.numberBlueCoin1 -= 1;
-                            User.numberSpecialBlueCoin1 -= 2;
-                        }
-                        else if (User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 >= 3) {
-                            User.numberSpecialBlueCoin1 -= 3;
-                        }
-                        else if (User.numberBlueCoin1 == 2 && User.numberSpecialBlueCoin1 == 0 && User.numberGoldCoin1 >= 1) {
-                            User.numberBlueCoin1 -= 2;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if (User.numberBlueCoin1 == 1 && User.numberSpecialBlueCoin1 == 1 && User.numberGoldCoin1 >= 1) {
-                            User.numberBlueCoin1 -= 1;
-                            User.numberSpecialBlueCoin1 -= 1;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if (User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 == 2 && User.numberGoldCoin1 >= 1) {
-                            User.numberSpecialBlueCoin1 -= 2;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if (User.numberBlueCoin1 == 1 && User.numberSpecialBlueCoin1 == 0 && User.numberGoldCoin1 >= 2) {
-                            User.numberBlueCoin1 -= 1;
-                            User.numberGoldCoin1 -= 2;
-                        }
-                        else if (User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 == 1 && User.numberGoldCoin1 >= 2) {
-                            User.numberSpecialBlueCoin1 -= 1;
-                            User.numberGoldCoin1 -= 2;
-                        }
-                        else if (User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 == 0 && User.numberGoldCoin1 >= 3) {
-                            User.numberGoldCoin1 -= 3;
-                        }
-
-                        if (User.numberGreenCoin1 >= 2) {
-                            User.numberGreenCoin1 -= 2;
-                        }
-                        else if (User.numberGreenCoin1 == 1 && User.numberSpecialGreenCoin1 >= 1) {
-                            User.numberGreenCoin1 -= 1;
-                            User.numberSpecialGreenCoin1 -= 1;
-                        }
-                        else if (User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 >= 2) {
-                            User.numberSpecialGreenCoin1 -= 2;
-                        }
-                        else if (User.numberGreenCoin1 == 1 && User.numberSpecialGreenCoin1 == 0 && User.numberGoldCoin1 >= 1) {
-                            User.numberGreenCoin1 -= 1;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if (User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 == 1 && User.numberGoldCoin1 >= 1) {
-                            User.numberSpecialGreenCoin1 -= 1;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if (User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 == 0 && User.numberGoldCoin1 >= 2) {
-                            User.numberGoldCoin1 -= 2;
-                        }
-
-                        swCanBuy = 0;
-                        User.numberSpecialBlueCoin1++;
-                    }
-                }
-
-
-
-
-                if (User.sw2 == 1 && card34) {
-                    if (User.numberWhiteCoin2 + User.numberSpecialWhiteCoin2 + User.numberGoldCoin2 >= 3
-                            && User.numberBlueCoin2 + User.numberSpecialBlueCoin2 + User.numberGoldCoin2 >= 3
-                            && User.numberGreenCoin2 + User.numberSpecialGreenCoin2 + User.numberGoldCoin2 >= 2) {
-
-                        User.cardPanel34_2++;
-                        clickCount34--;
-                        User.Score2 += 4;
-
-                        if (User.numberWhiteCoin2 >= 3) {
-                            User.numberWhiteCoin2 -= 3;
-                        }
-                        else if (User.numberWhiteCoin2 == 2 && User.numberSpecialWhiteCoin2 >= 1) {
-                            User.numberWhiteCoin2 -= 2;
-                            User.numberSpecialWhiteCoin2 -= 1;
-                        }
-                        else if (User.numberWhiteCoin2 == 1 && User.numberSpecialWhiteCoin2 >= 2) {
-                            User.numberWhiteCoin2 -= 1;
-                            User.numberSpecialWhiteCoin2 -= 2;
-                        }
-                        else if (User.numberWhiteCoin2 == 0 && User.numberSpecialWhiteCoin2 >= 3) {
-                            User.numberSpecialWhiteCoin2 -= 3;
-                        }
-                        else if (User.numberWhiteCoin2 == 2 && User.numberSpecialWhiteCoin2 == 0 && User.numberGoldCoin2 >= 1) {
-                            User.numberWhiteCoin2 -= 2;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if (User.numberWhiteCoin2 == 1 && User.numberSpecialWhiteCoin2 == 1 && User.numberGoldCoin2 >= 1) {
-                            User.numberWhiteCoin2 -= 1;
-                            User.numberSpecialWhiteCoin2 -= 1;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if (User.numberWhiteCoin2 == 0 && User.numberSpecialWhiteCoin2 == 2 && User.numberGoldCoin2 >= 1) {
-                            User.numberSpecialWhiteCoin2 -= 2;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if (User.numberWhiteCoin2 == 1 && User.numberSpecialWhiteCoin2 == 0 && User.numberGoldCoin2 >= 2) {
-                            User.numberWhiteCoin2 -= 1;
-                            User.numberGoldCoin2 -= 2;
-                        }
-                        else if (User.numberWhiteCoin2 == 0 && User.numberSpecialWhiteCoin2 == 1 && User.numberGoldCoin2 >= 2) {
-                            User.numberSpecialWhiteCoin2 -= 1;
-                            User.numberGoldCoin2 -= 2;
-                        }
-                        else if (User.numberWhiteCoin2 == 0 && User.numberSpecialWhiteCoin2 == 0 && User.numberGoldCoin2 >= 3) {
-                            User.numberGoldCoin2 -= 3;
-                        }
-
-                        if (User.numberBlueCoin2 >= 3) {
-                            User.numberBlueCoin2 -= 3;
-                        }
-                        else if (User.numberBlueCoin2 == 2 && User.numberSpecialBlueCoin2 >= 1) {
-                            User.numberBlueCoin2 -= 2;
-                            User.numberSpecialBlueCoin2 -= 1;
-                        }
-                        else if (User.numberBlueCoin2 == 1 && User.numberSpecialBlueCoin2 >= 2) {
-                            User.numberBlueCoin2 -= 1;
-                            User.numberSpecialBlueCoin2 -= 2;
-                        }
-                        else if (User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 >= 3) {
-                            User.numberSpecialBlueCoin2 -= 3;
-                        }
-                        else if (User.numberBlueCoin2 == 2 && User.numberSpecialBlueCoin2 == 0 && User.numberGoldCoin2 >= 1) {
-                            User.numberBlueCoin2 -= 2;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if (User.numberBlueCoin2 == 1 && User.numberSpecialBlueCoin2 == 1 && User.numberGoldCoin2 >= 1) {
-                            User.numberBlueCoin2 -= 1;
-                            User.numberSpecialBlueCoin2 -= 1;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if (User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 == 2 && User.numberGoldCoin2 >= 1) {
-                            User.numberSpecialBlueCoin2 -= 2;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if (User.numberBlueCoin2 == 1 && User.numberSpecialBlueCoin2 == 0 && User.numberGoldCoin2 >= 2) {
-                            User.numberBlueCoin2 -= 1;
-                            User.numberGoldCoin2 -= 2;
-                        }
-                        else if (User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 == 1 && User.numberGoldCoin2 >= 2) {
-                            User.numberSpecialBlueCoin2 -= 1;
-                            User.numberGoldCoin2 -= 2;
-                        }
-                        else if (User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 == 0 && User.numberGoldCoin2 >= 3) {
-                            User.numberGoldCoin2 -= 3;
-                        }
-
-                        if (User.numberGreenCoin2 >= 2) {
-                            User.numberGreenCoin2 -= 2;
-                        }
-                        else if (User.numberGreenCoin2 == 1 && User.numberSpecialGreenCoin2 >= 1) {
-                            User.numberGreenCoin2 -= 1;
-                            User.numberSpecialGreenCoin2 -= 1;
-                        }
-                        else if (User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 >= 2) {
-                            User.numberSpecialGreenCoin2 -= 2;
-                        }
-                        else if (User.numberGreenCoin2 == 1 && User.numberSpecialGreenCoin2 == 0 && User.numberGoldCoin2 >= 1) {
-                            User.numberGreenCoin2 -= 1;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if (User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 == 1 && User.numberGoldCoin2 >= 1) {
-                            User.numberSpecialGreenCoin2 -= 1;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if (User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 == 0 && User.numberGoldCoin2 >= 2) {
-                            User.numberGoldCoin2 -= 2;
-                        }
-
-                        swCanBuy = 0;
-                        User.numberSpecialBlueCoin2++;
-                    }
-                }
-
-
-
-
-
-                if (User.sw1 == 1 && card35) {
-                    if (User.numberBlueCoin1 + User.numberSpecialBlueCoin1 + User.numberGoldCoin1 >= 3
-                            && User.numberRedCoin1 + User.numberSpecialRedCoin1 + User.numberGoldCoin1 >= 3
-                            && User.numberGreenCoin1 + User.numberSpecialGreenCoin1 + User.numberGoldCoin1 >= 3) {
-
-                        User.cardPanel35_1++;
-                        clickCount35--;
-                        User.Score1 += 5;
-
-                        if (User.numberBlueCoin1 >= 3) {
-                            User.numberBlueCoin1 -= 3;
-                        }
-                        else if (User.numberBlueCoin1 == 2 && User.numberSpecialBlueCoin1 >= 1) {
-                            User.numberBlueCoin1 -= 2;
-                            User.numberSpecialBlueCoin1 -= 1;
-                        }
-                        else if (User.numberBlueCoin1 == 1 && User.numberSpecialBlueCoin1 >= 2) {
-                            User.numberBlueCoin1 -= 1;
-                            User.numberSpecialBlueCoin1 -= 2;
-                        }
-                        else if (User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 >= 3) {
-                            User.numberSpecialBlueCoin1 -= 3;
-                        }
-                        else if (User.numberBlueCoin1 == 2 && User.numberSpecialBlueCoin1 == 0 && User.numberGoldCoin1 >= 1) {
-                            User.numberBlueCoin1 -= 2;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if (User.numberBlueCoin1 == 1 && User.numberSpecialBlueCoin1 == 1 && User.numberGoldCoin1 >= 1) {
-                            User.numberBlueCoin1 -= 1;
-                            User.numberSpecialBlueCoin1 -= 1;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if (User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 == 2 && User.numberGoldCoin1 >= 1) {
-                            User.numberSpecialBlueCoin1 -= 2;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if (User.numberBlueCoin1 == 1 && User.numberSpecialBlueCoin1 == 0 && User.numberGoldCoin1 >= 2) {
-                            User.numberBlueCoin1 -= 1;
-                            User.numberGoldCoin1 -= 2;
-                        }
-                        else if (User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 == 1 && User.numberGoldCoin1 >= 2) {
-                            User.numberSpecialBlueCoin1 -= 1;
-                            User.numberGoldCoin1 -= 2;
-                        }
-                        else if (User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 == 0 && User.numberGoldCoin1 >= 3) {
-                            User.numberGoldCoin1 -= 3;
-                        }
-
-                        if (User.numberRedCoin1 >= 3) {
-                            User.numberRedCoin1 -= 3;
-                        }
-                        else if (User.numberRedCoin1 == 2 && User.numberSpecialRedCoin1 >= 1) {
-                            User.numberRedCoin1 -= 2;
-                            User.numberSpecialRedCoin1 -= 1;
-                        }
-                        else if (User.numberRedCoin1 == 1 && User.numberSpecialRedCoin1 >= 2) {
-                            User.numberRedCoin1 -= 1;
-                            User.numberSpecialRedCoin1 -= 2;
-                        }
-                        else if (User.numberRedCoin1 == 0 && User.numberSpecialRedCoin1 >= 3) {
-                            User.numberSpecialRedCoin1 -= 3;
-                        }
-                        else if (User.numberRedCoin1 == 2 && User.numberSpecialRedCoin1 == 0 && User.numberGoldCoin1 >= 1) {
-                            User.numberRedCoin1 -= 2;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if (User.numberRedCoin1 == 1 && User.numberSpecialRedCoin1 == 1 && User.numberGoldCoin1 >= 1) {
-                            User.numberRedCoin1 -= 1;
-                            User.numberSpecialRedCoin1 -= 1;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if (User.numberRedCoin1 == 0 && User.numberSpecialRedCoin1 == 2 && User.numberGoldCoin1 >= 1) {
-                            User.numberSpecialRedCoin1 -= 2;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if (User.numberRedCoin1 == 1 && User.numberSpecialRedCoin1 == 0 && User.numberGoldCoin1 >= 2) {
-                            User.numberRedCoin1 -= 1;
-                            User.numberGoldCoin1 -= 2;
-                        }
-                        else if (User.numberRedCoin1 == 0 && User.numberSpecialRedCoin1 == 1 && User.numberGoldCoin1 >= 2) {
-                            User.numberSpecialRedCoin1 -= 1;
-                            User.numberGoldCoin1 -= 2;
-                        }
-                        else if (User.numberRedCoin1 == 0 && User.numberSpecialRedCoin1 == 0 && User.numberGoldCoin1 >= 3) {
-                            User.numberGoldCoin1 -= 3;
-                        }
-
-                        if (User.numberGreenCoin1 >= 3) {
-                            User.numberGreenCoin1 -= 3;
-                        }
-                        else if (User.numberGreenCoin1 == 2 && User.numberSpecialGreenCoin1 >= 1) {
-                            User.numberGreenCoin1 -= 2;
-                            User.numberSpecialGreenCoin1 -= 1;
-                        }
-                        else if (User.numberGreenCoin1 == 1 && User.numberSpecialGreenCoin1 >= 2) {
-                            User.numberGreenCoin1 -= 1;
-                            User.numberSpecialGreenCoin1 -= 2;
-                        }
-                        else if (User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 >= 3) {
-                            User.numberSpecialGreenCoin1 -= 3;
-                        }
-                        else if (User.numberGreenCoin1 == 2 && User.numberSpecialGreenCoin1 == 0 && User.numberGoldCoin1 >= 1) {
-                            User.numberGreenCoin1 -= 2;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if (User.numberGreenCoin1 == 1 && User.numberSpecialGreenCoin1 == 1 && User.numberGoldCoin1 >= 1) {
-                            User.numberGreenCoin1 -= 1;
-                            User.numberSpecialGreenCoin1 -= 1;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if (User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 == 2 && User.numberGoldCoin1 >= 1) {
-                            User.numberSpecialGreenCoin1 -= 2;
-                            User.numberGoldCoin1 -= 1;
-                        }
-                        else if (User.numberGreenCoin1 == 1 && User.numberSpecialGreenCoin1 == 0 && User.numberGoldCoin1 >= 2) {
-                            User.numberGreenCoin1 -= 1;
-                            User.numberGoldCoin1 -= 2;
-                        }
-                        else if (User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 == 1 && User.numberGoldCoin1 >= 2) {
-                            User.numberSpecialGreenCoin1 -= 1;
-                            User.numberGoldCoin1 -= 2;
-                        }
-                        else if (User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 == 0 && User.numberGoldCoin1 >= 3) {
-                            User.numberGoldCoin1 -= 3;
-                        }
-
-                        swCanBuy = 0;
-                        User.numberSpecialRedCoin1++;
-                    }
-                }
-
-                if (User.sw2 == 1 && card35) {
-                    if (User.numberBlueCoin2 + User.numberSpecialBlueCoin2 + User.numberGoldCoin2 >= 3
-                            && User.numberRedCoin2 + User.numberSpecialRedCoin2 + User.numberGoldCoin2 >= 3
-                            && User.numberGreenCoin2 + User.numberSpecialGreenCoin2 + User.numberGoldCoin2 >= 3) {
-
-                        User.cardPanel35_2++;
-                        clickCount35--;
-                        User.Score2 += 5;
-
-                        if (User.numberBlueCoin2 >= 3) {
-                            User.numberBlueCoin2 -= 3;
-                        }
-                        else if (User.numberBlueCoin2 == 2 && User.numberSpecialBlueCoin2 >= 1) {
-                            User.numberBlueCoin2 -= 2;
-                            User.numberSpecialBlueCoin2 -= 1;
-                        }
-                        else if (User.numberBlueCoin2 == 1 && User.numberSpecialBlueCoin2 >= 2) {
-                            User.numberBlueCoin2 -= 1;
-                            User.numberSpecialBlueCoin2 -= 2;
-                        }
-                        else if (User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 >= 3) {
-                            User.numberSpecialBlueCoin2 -= 3;
-                        }
-                        else if (User.numberBlueCoin2 == 2 && User.numberSpecialBlueCoin2 == 0 && User.numberGoldCoin2 >= 1) {
-                            User.numberBlueCoin2 -= 2;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if (User.numberBlueCoin2 == 1 && User.numberSpecialBlueCoin2 == 1 && User.numberGoldCoin2 >= 1) {
-                            User.numberBlueCoin2 -= 1;
-                            User.numberSpecialBlueCoin2 -= 1;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if (User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 == 2 && User.numberGoldCoin2 >= 1) {
-                            User.numberSpecialBlueCoin2 -= 2;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if (User.numberBlueCoin2 == 1 && User.numberSpecialBlueCoin2 == 0 && User.numberGoldCoin2 >= 2) {
-                            User.numberBlueCoin2 -= 1;
-                            User.numberGoldCoin2 -= 2;
-                        }
-                        else if (User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 == 1 && User.numberGoldCoin2 >= 2) {
-                            User.numberSpecialBlueCoin2 -= 1;
-                            User.numberGoldCoin2 -= 2;
-                        }
-                        else if (User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 == 0 && User.numberGoldCoin2 >= 3) {
-                            User.numberGoldCoin2 -= 3;
-                        }
-
-                        if (User.numberRedCoin2 >= 3) {
-                            User.numberRedCoin2 -= 3;
-                        }
-                        else if (User.numberRedCoin2 == 2 && User.numberSpecialRedCoin2 >= 1) {
-                            User.numberRedCoin2 -= 2;
-                            User.numberSpecialRedCoin2 -= 1;
-                        }
-                        else if (User.numberRedCoin2 == 1 && User.numberSpecialRedCoin2 >= 2) {
-                            User.numberRedCoin2 -= 1;
-                            User.numberSpecialRedCoin2 -= 2;
-                        }
-                        else if (User.numberRedCoin2 == 0 && User.numberSpecialRedCoin2 >= 3) {
-                            User.numberSpecialRedCoin2 -= 3;
-                        }
-                        else if (User.numberRedCoin2 == 2 && User.numberSpecialRedCoin2 == 0 && User.numberGoldCoin2 >= 1) {
-                            User.numberRedCoin2 -= 2;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if (User.numberRedCoin2 == 1 && User.numberSpecialRedCoin2 == 1 && User.numberGoldCoin2 >= 1) {
-                            User.numberRedCoin2 -= 1;
-                            User.numberSpecialRedCoin2 -= 1;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if (User.numberRedCoin2 == 0 && User.numberSpecialRedCoin2 == 2 && User.numberGoldCoin2 >= 1) {
-                            User.numberSpecialRedCoin2 -= 2;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if (User.numberRedCoin2 == 1 && User.numberSpecialRedCoin2 == 0 && User.numberGoldCoin2 >= 2) {
-                            User.numberRedCoin2 -= 1;
-                            User.numberGoldCoin2 -= 2;
-                        }
-                        else if (User.numberRedCoin2 == 0 && User.numberSpecialRedCoin2 == 1 && User.numberGoldCoin2 >= 2) {
-                            User.numberSpecialRedCoin2 -= 1;
-                            User.numberGoldCoin2 -= 2;
-                        }
-                        else if (User.numberRedCoin2 == 0 && User.numberSpecialRedCoin2 == 0 && User.numberGoldCoin2 >= 3) {
-                            User.numberGoldCoin2 -= 3;
-                        }
-
-                        if (User.numberGreenCoin2 >= 3) {
-                            User.numberGreenCoin2 -= 3;
-                        }
-                        else if (User.numberGreenCoin2 == 2 && User.numberSpecialGreenCoin2 >= 1) {
-                            User.numberGreenCoin2 -= 2;
-                            User.numberSpecialGreenCoin2 -= 1;
-                        }
-                        else if (User.numberGreenCoin2 == 1 && User.numberSpecialGreenCoin2 >= 2) {
-                            User.numberGreenCoin2 -= 1;
-                            User.numberSpecialGreenCoin2 -= 2;
-                        }
-                        else if (User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 >= 3) {
-                            User.numberSpecialGreenCoin2 -= 3;
-                        }
-                        else if (User.numberGreenCoin2 == 2 && User.numberSpecialGreenCoin2 == 0 && User.numberGoldCoin2 >= 1) {
-                            User.numberGreenCoin2 -= 2;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if (User.numberGreenCoin2 == 1 && User.numberSpecialGreenCoin2 == 1 && User.numberGoldCoin2 >= 1) {
-                            User.numberGreenCoin2 -= 1;
-                            User.numberSpecialGreenCoin2 -= 1;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if (User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 == 2 && User.numberGoldCoin2 >= 1) {
-                            User.numberSpecialGreenCoin2 -= 2;
-                            User.numberGoldCoin2 -= 1;
-                        }
-                        else if (User.numberGreenCoin2 == 1 && User.numberSpecialGreenCoin2 == 0 && User.numberGoldCoin2 >= 2) {
-                            User.numberGreenCoin2 -= 1;
-                            User.numberGoldCoin2 -= 2;
-                        }
-                        else if (User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 == 1 && User.numberGoldCoin2 >= 2) {
-                            User.numberSpecialGreenCoin2 -= 1;
-                            User.numberGoldCoin2 -= 2;
-                        }
-                        else if (User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 == 0 && User.numberGoldCoin2 >= 3) {
-                            User.numberGoldCoin2 -= 3;
-                        }
-
-                        swCanBuy = 0;
-                        User.numberSpecialRedCoin2++;
-                    }
-                }
+                buyCard();
 
 
 
@@ -3723,5 +748,3033 @@ public class Card extends JPanel {
         dialog.setResizable(false);
         dialog.setResizable(false);
         dialog.setVisible(true); // Show the dialog
+    }
+
+    public void buyCard() {
+
+        if(User.sw1 == 1 && card11) {
+            if(User.numberGreenCoin1 + User.numberSpecialGreenCoin1 + User.numberGoldCoin1 >=2
+                    && User.numberRedCoin1 + User.numberSpecialRedCoin1 + User.numberGoldCoin1 >= 2) {
+
+                User.cardPanel11_1++;
+                clickCount11--;
+
+
+                if(User.numberRedCoin1 >= 2) {
+                    User.numberRedCoin1 -= 2;
+                }
+                else if(User.numberRedCoin1 == 1 && User.numberSpecialRedCoin1 >= 1) {
+                    User.numberRedCoin1--;
+                    User.numberSpecialRedCoin1--;
+                }
+                else if(User.numberRedCoin1 == 0 && User.numberSpecialRedCoin1 >= 2) {
+                    User.numberSpecialRedCoin1 -= 2;
+                }
+                else if(User.numberRedCoin1 == 1 && User.numberSpecialRedCoin1 == 0 && User.numberGoldCoin1 >= 1) {
+                    User.numberRedCoin1--;
+                    User.numberGoldCoin1--;
+                }
+                else if(User.numberRedCoin1 == 0 && User.numberSpecialRedCoin1 == 1 && User.numberGoldCoin1 >= 1) {
+                    User.numberSpecialRedCoin1--;
+                    User.numberGoldCoin1--;
+                }
+                else if(User.numberRedCoin1 == 0 && User.numberSpecialRedCoin1 == 0 && User.numberGoldCoin1 >= 2) {
+                    User.numberGoldCoin1 -= 2;
+                }
+
+
+
+
+                if(User.numberGreenCoin1 >= 2) {
+                    User.numberGreenCoin1 -= 2;
+                }
+                else if(User.numberGreenCoin1 == 1 && User.numberSpecialGreenCoin1 >= 1) {
+                    User.numberGreenCoin1--;
+                    User.numberSpecialGreenCoin1--;
+                }
+                else if(User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 >= 2) {
+                    User.numberSpecialGreenCoin1 -= 2;
+                }
+                else if(User.numberGreenCoin1 == 1 && User.numberSpecialGreenCoin1 == 0 && User.numberGoldCoin1 >= 1) {
+                    User.numberGreenCoin1--;
+                    User.numberGoldCoin1--;
+                }
+                else if(User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 == 1 && User.numberGoldCoin1 >= 1) {
+                    User.numberSpecialGreenCoin1--;
+                    User.numberGoldCoin1--;
+                }
+                else if(User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 == 0 && User.numberGoldCoin1 >= 2) {
+                    User.numberGoldCoin1 -= 2;
+                }
+
+                swCanBuy = 0;
+                User.numberSpecialGreenCoin1++;
+
+            }
+        }
+
+        if(User.sw2 == 1 && card11) {
+            if(User.numberGreenCoin2 + User.numberSpecialGreenCoin2 + User.numberGoldCoin2 >=2
+                    && User.numberRedCoin2 + User.numberSpecialRedCoin2 + User.numberGoldCoin2 >= 2) {
+
+                User.cardPanel11_2++;
+                clickCount11--;
+
+
+                if(User.numberRedCoin2 >= 2) {
+                    User.numberRedCoin2 -= 2;
+                }
+                else if(User.numberRedCoin2 == 1 && User.numberSpecialRedCoin2 >= 1) {
+                    User.numberRedCoin2--;
+                    User.numberSpecialRedCoin2--;
+                }
+                else if(User.numberRedCoin2 == 0 && User.numberSpecialRedCoin2 >= 2) {
+                    User.numberSpecialRedCoin2 -= 2;
+                }
+                else if(User.numberRedCoin2 == 1 && User.numberSpecialRedCoin2 == 0 && User.numberGoldCoin2 >= 1) {
+                    User.numberRedCoin2--;
+                    User.numberGoldCoin2--;
+                }
+                else if(User.numberRedCoin2 == 0 && User.numberSpecialRedCoin2 == 1 && User.numberGoldCoin2 >= 1) {
+                    User.numberSpecialRedCoin2--;
+                    User.numberGoldCoin2--;
+                }
+                else if(User.numberRedCoin2 == 0 && User.numberSpecialRedCoin2 == 0 && User.numberGoldCoin2 >= 2) {
+                    User.numberGoldCoin2 -= 2;
+                }
+
+
+
+
+                if(User.numberGreenCoin2 >= 2) {
+                    User.numberGreenCoin2 -= 2;
+                }
+                else if(User.numberGreenCoin2 == 1 && User.numberSpecialGreenCoin2 >= 1) {
+                    User.numberGreenCoin2--;
+                    User.numberSpecialGreenCoin2--;
+                }
+                else if(User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 >= 2) {
+                    User.numberSpecialGreenCoin2 -= 2;
+                }
+                else if(User.numberGreenCoin2 == 1 && User.numberSpecialGreenCoin2 == 0 && User.numberGoldCoin2 >= 1) {
+                    User.numberGreenCoin2--;
+                    User.numberGoldCoin2--;
+                }
+                else if(User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 == 1 && User.numberGoldCoin2 >= 1) {
+                    User.numberSpecialGreenCoin2--;
+                    User.numberGoldCoin2--;
+                }
+                else if(User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 == 0 && User.numberGoldCoin2 >= 2) {
+                    User.numberGoldCoin2 -= 2;
+                }
+
+                swCanBuy = 0;
+                User.numberSpecialGreenCoin2++;
+
+            }
+        }
+
+
+
+        if(User.sw1 == 1 && card12) {
+            if(User.numberBlackCoin1 + User.numberSpecialBlackCoin1 + User.numberGoldCoin1 >=2
+                    && User.numberRedCoin1 + User.numberSpecialRedCoin1 + User.numberGoldCoin1 >= 2) {
+
+                User.cardPanel12_1++;
+                clickCount12--;
+
+
+                if(User.numberRedCoin1 >= 2) {
+                    User.numberRedCoin1 -= 2;
+                }
+                else if(User.numberRedCoin1 == 1 && User.numberSpecialRedCoin1 >= 1) {
+                    User.numberRedCoin1--;
+                    User.numberSpecialRedCoin1--;
+                }
+                else if(User.numberRedCoin1 == 0 && User.numberSpecialRedCoin1 >= 2) {
+                    User.numberSpecialRedCoin1 -= 2;
+                }
+                else if(User.numberRedCoin1 == 1 && User.numberSpecialRedCoin1 == 0 && User.numberGoldCoin1 >= 1) {
+                    User.numberRedCoin1--;
+                    User.numberGoldCoin1--;
+                }
+                else if(User.numberRedCoin1 == 0 && User.numberSpecialRedCoin1 == 1 && User.numberGoldCoin1 >= 1) {
+                    User.numberSpecialRedCoin1--;
+                    User.numberGoldCoin1--;
+                }
+                else if(User.numberRedCoin1 == 0 && User.numberSpecialRedCoin1 == 0 && User.numberGoldCoin1 >= 2) {
+                    User.numberGoldCoin1 -= 2;
+                }
+
+
+
+
+                if(User.numberBlackCoin1 >= 2) {
+                    User.numberBlackCoin1 -= 2;
+                }
+                else if(User.numberBlackCoin1 == 1 && User.numberSpecialBlackCoin1 >= 1) {
+                    User.numberBlackCoin1--;
+                    User.numberSpecialBlackCoin1--;
+                }
+                else if(User.numberBlackCoin1 == 0 && User.numberSpecialBlackCoin1 >= 2) {
+                    User.numberSpecialBlackCoin1 -= 2;
+                }
+                else if(User.numberBlackCoin1 == 1 && User.numberSpecialBlackCoin1 == 0 && User.numberGoldCoin1 >= 1) {
+                    User.numberBlackCoin1--;
+                    User.numberGoldCoin1--;
+                }
+                else if(User.numberBlackCoin1 == 0 && User.numberSpecialBlackCoin1 == 1 && User.numberGoldCoin1 >= 1) {
+                    User.numberSpecialBlackCoin1--;
+                    User.numberGoldCoin1--;
+                }
+                else if(User.numberBlackCoin1 == 0 && User.numberSpecialBlackCoin1 == 0 && User.numberGoldCoin1 >= 2) {
+                    User.numberGoldCoin1 -= 2;
+                }
+
+                swCanBuy = 0;
+                User.numberSpecialBlueCoin1++;
+
+            }
+        }
+
+        if(User.sw2 == 1 && card12) {
+            if(User.numberBlackCoin2 + User.numberSpecialBlackCoin2 + User.numberGoldCoin2 >=2
+                    && User.numberRedCoin2 + User.numberSpecialRedCoin2 + User.numberGoldCoin2 >= 2) {
+
+                User.cardPanel12_2++;
+                clickCount12--;
+
+
+                if(User.numberRedCoin2 >= 2) {
+                    User.numberRedCoin2 -= 2;
+                }
+                else if(User.numberRedCoin2 == 1 && User.numberSpecialRedCoin2 >= 1) {
+                    User.numberRedCoin2--;
+                    User.numberSpecialRedCoin2--;
+                }
+                else if(User.numberRedCoin2 == 0 && User.numberSpecialRedCoin2 >= 2) {
+                    User.numberSpecialRedCoin2 -= 2;
+                }
+                else if(User.numberRedCoin2 == 1 && User.numberSpecialRedCoin2 == 0 && User.numberGoldCoin2 >= 1) {
+                    User.numberRedCoin2--;
+                    User.numberGoldCoin2--;
+                }
+                else if(User.numberRedCoin2 == 0 && User.numberSpecialRedCoin2 == 1 && User.numberGoldCoin2 >= 1) {
+                    User.numberSpecialRedCoin2--;
+                    User.numberGoldCoin2--;
+                }
+                else if(User.numberRedCoin2 == 0 && User.numberSpecialRedCoin2 == 0 && User.numberGoldCoin2 >= 2) {
+                    User.numberGoldCoin2 -= 2;
+                }
+
+
+
+
+                if(User.numberBlackCoin2 >= 2) {
+                    User.numberBlackCoin2 -= 2;
+                }
+                else if(User.numberBlackCoin2 == 1 && User.numberSpecialBlackCoin2 >= 1) {
+                    User.numberBlackCoin2--;
+                    User.numberSpecialBlackCoin2--;
+                }
+                else if(User.numberBlackCoin2 == 0 && User.numberSpecialBlackCoin2 >= 2) {
+                    User.numberSpecialBlackCoin2 -= 2;
+                }
+                else if(User.numberBlackCoin2 == 1 && User.numberSpecialBlackCoin2 == 0 && User.numberGoldCoin2 >= 1) {
+                    User.numberBlackCoin2--;
+                    User.numberGoldCoin2--;
+                }
+                else if(User.numberBlackCoin2 == 0 && User.numberSpecialBlackCoin2 == 1 && User.numberGoldCoin2 >= 1) {
+                    User.numberSpecialBlackCoin2--;
+                    User.numberGoldCoin2--;
+                }
+                else if(User.numberBlackCoin2 == 0 && User.numberSpecialBlackCoin2 == 0 && User.numberGoldCoin2 >= 2) {
+                    User.numberGoldCoin2 -= 2;
+                }
+
+                swCanBuy = 0;
+                User.numberSpecialBlueCoin2++;
+
+            }
+        }
+
+
+
+
+
+        if(User.sw1 == 1 && card13) {
+            if(User.numberBlackCoin1 + User.numberSpecialBlackCoin1 + User.numberGoldCoin1 >= 2
+                    && User.numberBlueCoin1 + User.numberSpecialBlueCoin1 + User.numberGoldCoin1 >= 2) {
+
+                User.cardPanel13_1++;
+                clickCount13--;
+                User.Score1++;
+
+
+                if(User.numberBlueCoin1 >= 2) {
+                    User.numberBlueCoin1 -= 2;
+                }
+                else if(User.numberBlueCoin1 == 1 && User.numberSpecialBlueCoin1 >= 1) {
+                    User.numberBlueCoin1--;
+                    User.numberSpecialBlueCoin1--;
+                }
+                else if(User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 >= 2) {
+                    User.numberSpecialBlueCoin1 -= 2;
+                }
+                else if(User.numberBlueCoin1 == 1 && User.numberSpecialBlueCoin1 == 0 && User.numberGoldCoin1 >= 1) {
+                    User.numberBlueCoin1--;
+                    User.numberGoldCoin1--;
+                }
+                else if(User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 == 1 && User.numberGoldCoin1 >= 1) {
+                    User.numberSpecialBlueCoin1--;
+                    User.numberGoldCoin1--;
+                }
+                else if(User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 == 0 && User.numberGoldCoin1 >= 2) {
+                    User.numberGoldCoin1 -= 2;
+                }
+
+
+
+
+                if(User.numberBlackCoin1 >= 2) {
+                    User.numberBlackCoin1 -= 2;
+                }
+                else if(User.numberBlackCoin1 == 1 && User.numberSpecialBlackCoin1 >= 1) {
+                    User.numberBlackCoin1--;
+                    User.numberSpecialBlackCoin1--;
+                }
+                else if(User.numberBlackCoin1 == 0 && User.numberSpecialBlackCoin1 >= 2) {
+                    User.numberSpecialBlackCoin1 -= 2;
+                }
+                else if(User.numberBlackCoin1 == 1 && User.numberSpecialBlackCoin1 == 0 && User.numberGoldCoin1 >= 1) {
+                    User.numberBlackCoin1--;
+                    User.numberGoldCoin1--;
+                }
+                else if(User.numberBlackCoin1 == 0 && User.numberSpecialBlackCoin1 == 1 && User.numberGoldCoin1 >= 1) {
+                    User.numberSpecialBlackCoin1--;
+                    User.numberGoldCoin1--;
+                }
+                else if(User.numberBlackCoin1 == 0 && User.numberSpecialBlackCoin1 == 0 && User.numberGoldCoin1 >= 2) {
+                    User.numberGoldCoin1 -= 2;
+                }
+
+                swCanBuy = 0;
+                User.numberSpecialWhiteCoin1++;
+
+            }
+        }
+
+        if(User.sw2 == 1 && card13) {
+            if(User.numberBlackCoin2 + User.numberSpecialBlackCoin2 + User.numberGoldCoin2 >=2
+                    && User.numberBlueCoin2 + User.numberSpecialBlueCoin2 + User.numberGoldCoin2 >= 2) {
+
+                User.cardPanel13_2++;
+                clickCount13--;
+                User.Score2++;
+
+
+                if(User.numberBlueCoin2 >= 2) {
+                    User.numberBlueCoin2 -= 2;
+                }
+                else if(User.numberBlueCoin2 == 1 && User.numberSpecialBlueCoin2 >= 1) {
+                    User.numberBlueCoin2--;
+                    User.numberSpecialBlueCoin2--;
+                }
+                else if(User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 >= 2) {
+                    User.numberSpecialBlueCoin2 -= 2;
+                }
+                else if(User.numberBlueCoin2 == 1 && User.numberSpecialBlueCoin2 == 0 && User.numberGoldCoin2 >= 1) {
+                    User.numberBlueCoin2--;
+                    User.numberGoldCoin2--;
+                }
+                else if(User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 == 1 && User.numberGoldCoin2 >= 1) {
+                    User.numberSpecialBlueCoin2--;
+                    User.numberGoldCoin2--;
+                }
+                else if(User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 == 0 && User.numberGoldCoin2 >= 2) {
+                    User.numberGoldCoin2 -= 2;
+                }
+
+
+
+
+                if(User.numberBlackCoin2 >= 2) {
+                    User.numberBlackCoin2 -= 2;
+                }
+                else if(User.numberBlackCoin2 == 1 && User.numberSpecialBlackCoin2 >= 1) {
+                    User.numberBlackCoin2--;
+                    User.numberSpecialBlackCoin2--;
+                }
+                else if(User.numberBlackCoin2 == 0 && User.numberSpecialBlackCoin2 >= 2) {
+                    User.numberSpecialBlackCoin2 -= 2;
+                }
+                else if(User.numberBlackCoin2 == 1 && User.numberSpecialBlackCoin2 == 0 && User.numberGoldCoin2 >= 1) {
+                    User.numberBlackCoin2--;
+                    User.numberGoldCoin2--;
+                }
+                else if(User.numberBlackCoin2 == 0 && User.numberSpecialBlackCoin2 == 1 && User.numberGoldCoin2 >= 1) {
+                    User.numberSpecialBlackCoin2--;
+                    User.numberGoldCoin2--;
+                }
+                else if(User.numberBlackCoin2 == 0 && User.numberSpecialBlackCoin2 == 0 && User.numberGoldCoin2 >= 2) {
+                    User.numberGoldCoin2 -= 2;
+                }
+
+                swCanBuy = 0;
+                User.numberSpecialWhiteCoin2++;
+
+            }
+        }
+
+
+
+
+        if(User.sw1 == 1 && card14) {
+            if(User.numberGreenCoin1 + User.numberSpecialGreenCoin1 + User.numberGoldCoin1 >= 2
+                    && User.numberBlueCoin1 + User.numberSpecialBlueCoin1 + User.numberGoldCoin1 >= 3) {
+
+                User.cardPanel14_1++;
+                clickCount14--;
+                User.Score1++;
+
+                if(User.numberBlueCoin1 >= 3) {
+                    User.numberBlueCoin1 -= 3;
+                }
+                else if(User.numberBlueCoin1 == 2 && User.numberSpecialBlueCoin1 >= 1) {
+                    User.numberBlueCoin1 -= 2;
+                    User.numberSpecialBlueCoin1 -= 1;
+                }
+                else if(User.numberBlueCoin1 == 1 && User.numberSpecialBlueCoin1 >= 2) {
+                    User.numberBlueCoin1 -= 1;
+                    User.numberSpecialBlueCoin1 -= 2;
+                }
+                else if(User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 >= 3) {
+                    User.numberSpecialBlueCoin1 -= 3;
+                }
+                else if(User.numberBlueCoin1 == 2 && User.numberSpecialBlueCoin1 == 0 && User.numberGoldCoin1 >= 1) {
+                    User.numberBlueCoin1 -= 2;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if(User.numberBlueCoin1 == 1 && User.numberSpecialBlueCoin1 == 1 && User.numberGoldCoin1 >= 1) {
+                    User.numberBlueCoin1 -= 1;
+                    User.numberSpecialBlueCoin1 -= 1;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if(User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 == 2 && User.numberGoldCoin1 >= 1) {
+                    User.numberSpecialBlueCoin1 -= 2;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if(User.numberBlueCoin1 == 1 && User.numberSpecialBlueCoin1 == 0 && User.numberGoldCoin1 >= 2) {
+                    User.numberBlueCoin1 -= 1;
+                    User.numberGoldCoin1 -= 2;
+                }
+                else if(User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 == 1 && User.numberGoldCoin1 >= 2) {
+                    User.numberSpecialBlueCoin1 -= 1;
+                    User.numberGoldCoin1 -= 2;
+                }
+                else if(User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 == 0 && User.numberGoldCoin1 >= 3) {
+                    User.numberGoldCoin1 -= 3;
+                }
+
+                if(User.numberGreenCoin1 >= 2) {
+                    User.numberGreenCoin1 -= 2;
+                }
+                else if(User.numberGreenCoin1 == 1 && User.numberSpecialGreenCoin1 >= 1) {
+                    User.numberGreenCoin1--;
+                    User.numberSpecialGreenCoin1--;
+                }
+                else if(User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 >= 2) {
+                    User.numberSpecialGreenCoin1 -= 2;
+                }
+                else if(User.numberGreenCoin1 == 1 && User.numberSpecialGreenCoin1 == 0 && User.numberGoldCoin1 >= 1) {
+                    User.numberGreenCoin1--;
+                    User.numberGoldCoin1--;
+                }
+                else if(User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 == 1 && User.numberGoldCoin1 >= 1) {
+                    User.numberSpecialGreenCoin1--;
+                    User.numberGoldCoin1--;
+                }
+                else if(User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 == 0 && User.numberGoldCoin1 >= 2) {
+                    User.numberGoldCoin1 -= 2;
+                }
+
+                swCanBuy = 0;
+                User.numberSpecialBlackCoin1++;
+            }
+        }
+
+
+        if(User.sw2 == 1 && card14) {
+            if(User.numberGreenCoin2 + User.numberSpecialGreenCoin2 + User.numberGoldCoin2 >= 2
+                    && User.numberBlueCoin2 + User.numberSpecialBlueCoin2 + User.numberGoldCoin2 >= 3) {
+
+                User.cardPanel14_2++;
+                clickCount14--;
+                User.Score2++;
+
+                if(User.numberBlueCoin2 >= 3) {
+                    User.numberBlueCoin2 -= 3;
+                }
+                else if(User.numberBlueCoin2 == 2 && User.numberSpecialBlueCoin2 >= 1) {
+                    User.numberBlueCoin2 -= 2;
+                    User.numberSpecialBlueCoin2 -= 1;
+                }
+                else if(User.numberBlueCoin2 == 1 && User.numberSpecialBlueCoin2 >= 2) {
+                    User.numberBlueCoin2 -= 1;
+                    User.numberSpecialBlueCoin2 -= 2;
+                }
+                else if(User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 >= 3) {
+                    User.numberSpecialBlueCoin2 -= 3;
+                }
+                else if(User.numberBlueCoin2 == 2 && User.numberSpecialBlueCoin2 == 0 && User.numberGoldCoin2 >= 1) {
+                    User.numberBlueCoin2 -= 2;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if(User.numberBlueCoin2 == 1 && User.numberSpecialBlueCoin2 == 1 && User.numberGoldCoin2 >= 1) {
+                    User.numberBlueCoin2 -= 1;
+                    User.numberSpecialBlueCoin2 -= 1;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if(User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 == 2 && User.numberGoldCoin2 >= 1) {
+                    User.numberSpecialBlueCoin2 -= 2;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if(User.numberBlueCoin2 == 1 && User.numberSpecialBlueCoin2 == 0 && User.numberGoldCoin2 >= 2) {
+                    User.numberBlueCoin2 -= 1;
+                    User.numberGoldCoin2 -= 2;
+                }
+                else if(User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 == 1 && User.numberGoldCoin2 >= 2) {
+                    User.numberSpecialBlueCoin2 -= 1;
+                    User.numberGoldCoin2 -= 2;
+                }
+                else if(User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 == 0 && User.numberGoldCoin2 >= 3) {
+                    User.numberGoldCoin2 -= 3;
+                }
+
+                if(User.numberGreenCoin2 >= 2) {
+                    User.numberGreenCoin2 -= 2;
+                }
+                else if(User.numberGreenCoin2 == 1 && User.numberSpecialGreenCoin2 >= 1) {
+                    User.numberGreenCoin2--;
+                    User.numberSpecialGreenCoin2--;
+                }
+                else if(User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 >= 2) {
+                    User.numberSpecialGreenCoin2 -= 2;
+                }
+                else if(User.numberGreenCoin2 == 1 && User.numberSpecialGreenCoin2 == 0 && User.numberGoldCoin2 >= 1) {
+                    User.numberGreenCoin2--;
+                    User.numberGoldCoin2--;
+                }
+                else if(User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 == 1 && User.numberGoldCoin2 >= 1) {
+                    User.numberSpecialGreenCoin2--;
+                    User.numberGoldCoin2--;
+                }
+                else if(User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 == 0 && User.numberGoldCoin2 >= 2) {
+                    User.numberGoldCoin2 -= 2;
+                }
+
+                swCanBuy = 0;
+                User.numberSpecialBlackCoin2++;
+            }
+        }
+
+
+
+
+
+
+        if(User.sw1 == 1 && card15) {
+            if(User.numberWhiteCoin1 + User.numberSpecialWhiteCoin1 + User.numberGoldCoin1 >= 3
+                    && User.numberGreenCoin1 + User.numberSpecialGreenCoin1 + User.numberGoldCoin1 >= 3) {
+
+                User.cardPanel15_1++;
+                clickCount15--;
+                User.Score1++;
+
+                if(User.numberWhiteCoin1 >= 3) {
+                    User.numberWhiteCoin1 -= 3;
+                }
+                else if(User.numberWhiteCoin1 == 2 && User.numberSpecialWhiteCoin1 >= 1) {
+                    User.numberWhiteCoin1 -= 2;
+                    User.numberSpecialWhiteCoin1 -= 1;
+                }
+                else if(User.numberWhiteCoin1 == 1 && User.numberSpecialWhiteCoin1 >= 2) {
+                    User.numberWhiteCoin1 -= 1;
+                    User.numberSpecialWhiteCoin1 -= 2;
+                }
+                else if(User.numberWhiteCoin1 == 0 && User.numberSpecialWhiteCoin1 >= 3) {
+                    User.numberSpecialWhiteCoin1 -= 3;
+                }
+                else if(User.numberWhiteCoin1 == 2 && User.numberSpecialWhiteCoin1 == 0 && User.numberGoldCoin1 >= 1) {
+                    User.numberWhiteCoin1 -= 2;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if(User.numberWhiteCoin1 == 1 && User.numberSpecialWhiteCoin1 == 1 && User.numberGoldCoin1 >= 1) {
+                    User.numberWhiteCoin1 -= 1;
+                    User.numberSpecialWhiteCoin1 -= 1;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if(User.numberWhiteCoin1 == 0 && User.numberSpecialWhiteCoin1 == 2 && User.numberGoldCoin1 >= 1) {
+                    User.numberSpecialWhiteCoin1 -= 2;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if(User.numberWhiteCoin1 == 1 && User.numberSpecialWhiteCoin1 == 0 && User.numberGoldCoin1 >= 2) {
+                    User.numberWhiteCoin1 -= 1;
+                    User.numberGoldCoin1 -= 2;
+                }
+                else if(User.numberWhiteCoin1 == 0 && User.numberSpecialWhiteCoin1 == 1 && User.numberGoldCoin1 >= 2) {
+                    User.numberSpecialWhiteCoin1 -= 1;
+                    User.numberGoldCoin1 -= 2;
+                }
+                else if(User.numberWhiteCoin1 == 0 && User.numberSpecialWhiteCoin1 == 0 && User.numberGoldCoin1 >= 3) {
+                    User.numberGoldCoin1 -= 3;
+                }
+
+
+
+
+                if(User.numberGreenCoin1 >= 3) {
+                    User.numberGreenCoin1 -= 3;
+                }
+                else if(User.numberGreenCoin1 == 2 && User.numberSpecialGreenCoin1 >= 1) {
+                    User.numberGreenCoin1 -= 2;
+                    User.numberSpecialGreenCoin1 -= 1;
+                }
+                else if(User.numberGreenCoin1 == 1 && User.numberSpecialGreenCoin1 >= 2) {
+                    User.numberGreenCoin1 -= 1;
+                    User.numberSpecialGreenCoin1 -= 2;
+                }
+                else if(User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 >= 3) {
+                    User.numberSpecialGreenCoin1 -= 3;
+                }
+                else if(User.numberGreenCoin1 == 2 && User.numberSpecialGreenCoin1 == 0 && User.numberGoldCoin1 >= 1) {
+                    User.numberGreenCoin1 -= 2;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if(User.numberGreenCoin1 == 1 && User.numberSpecialGreenCoin1 == 1 && User.numberGoldCoin1 >= 1) {
+                    User.numberGreenCoin1 -= 1;
+                    User.numberSpecialGreenCoin1 -= 1;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if(User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 == 2 && User.numberGoldCoin1 >= 1) {
+                    User.numberSpecialGreenCoin1 -= 2;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if(User.numberGreenCoin1 == 1 && User.numberSpecialGreenCoin1 == 0 && User.numberGoldCoin1 >= 2) {
+                    User.numberGreenCoin1 -= 1;
+                    User.numberGoldCoin1 -= 2;
+                }
+                else if(User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 == 1 && User.numberGoldCoin1 >= 2) {
+                    User.numberSpecialGreenCoin1 -= 1;
+                    User.numberGoldCoin1 -= 2;
+                }
+                else if(User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 == 0 && User.numberGoldCoin1 >= 3) {
+                    User.numberGoldCoin1 -= 3;
+                }
+
+                swCanBuy = 0;
+                User.numberSpecialRedCoin1++;
+            }
+        }
+
+
+
+
+        if(User.sw2 == 1 && card15) {
+            if(User.numberGreenCoin2 + User.numberSpecialGreenCoin2 + User.numberGoldCoin2 >= 3
+                    && User.numberWhiteCoin2 + User.numberSpecialWhiteCoin2 + User.numberGoldCoin2 >= 3) {
+
+                User.cardPanel15_2++;
+                clickCount15--;
+                User.Score2++;
+
+                if(User.numberWhiteCoin2 >= 3) {
+                    User.numberWhiteCoin2 -= 3;
+                }
+                else if(User.numberWhiteCoin2 == 2 && User.numberSpecialWhiteCoin2 >= 1) {
+                    User.numberWhiteCoin2 -= 2;
+                    User.numberSpecialWhiteCoin2 -= 1;
+                }
+                else if(User.numberWhiteCoin2 == 1 && User.numberSpecialWhiteCoin2 >= 2) {
+                    User.numberWhiteCoin2 -= 1;
+                    User.numberSpecialWhiteCoin2 -= 2;
+                }
+                else if(User.numberWhiteCoin2 == 0 && User.numberSpecialWhiteCoin2 >= 3) {
+                    User.numberSpecialWhiteCoin2 -= 3;
+                }
+                else if(User.numberWhiteCoin2 == 2 && User.numberSpecialWhiteCoin2 == 0 && User.numberGoldCoin2 >= 1) {
+                    User.numberWhiteCoin2 -= 2;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if(User.numberWhiteCoin2 == 1 && User.numberSpecialWhiteCoin2 == 1 && User.numberGoldCoin2 >= 1) {
+                    User.numberWhiteCoin2 -= 1;
+                    User.numberSpecialWhiteCoin2 -= 1;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if(User.numberWhiteCoin2 == 0 && User.numberSpecialWhiteCoin2 == 2 && User.numberGoldCoin2 >= 1) {
+                    User.numberSpecialWhiteCoin2 -= 2;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if(User.numberWhiteCoin2 == 1 && User.numberSpecialWhiteCoin2 == 0 && User.numberGoldCoin2 >= 2) {
+                    User.numberWhiteCoin2 -= 1;
+                    User.numberGoldCoin2 -= 2;
+                }
+                else if(User.numberWhiteCoin2 == 0 && User.numberSpecialWhiteCoin2 == 1 && User.numberGoldCoin2 >= 2) {
+                    User.numberSpecialWhiteCoin2 -= 1;
+                    User.numberGoldCoin2 -= 2;
+                }
+                else if(User.numberWhiteCoin2 == 0 && User.numberSpecialWhiteCoin2 == 0 && User.numberGoldCoin2 >= 3) {
+                    User.numberGoldCoin2 -= 3;
+                }
+
+                if(User.numberGreenCoin2 >= 3) {
+                    User.numberGreenCoin2 -= 3;
+                }
+                else if(User.numberGreenCoin2 == 2 && User.numberSpecialGreenCoin2 >= 1) {
+                    User.numberGreenCoin2 -= 2;
+                    User.numberSpecialGreenCoin2 -= 1;
+                }
+                else if(User.numberGreenCoin2 == 1 && User.numberSpecialGreenCoin2 >= 2) {
+                    User.numberGreenCoin2 -= 1;
+                    User.numberSpecialGreenCoin2 -= 2;
+                }
+                else if(User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 >= 3) {
+                    User.numberSpecialGreenCoin2 -= 3;
+                }
+                else if(User.numberGreenCoin2 == 2 && User.numberSpecialGreenCoin2 == 0 && User.numberGoldCoin2 >= 1) {
+                    User.numberGreenCoin2 -= 2;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if(User.numberGreenCoin2 == 1 && User.numberSpecialGreenCoin2 == 1 && User.numberGoldCoin2 >= 1) {
+                    User.numberGreenCoin2 -= 1;
+                    User.numberSpecialGreenCoin2 -= 1;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if(User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 == 2 && User.numberGoldCoin2 >= 1) {
+                    User.numberSpecialGreenCoin2 -= 2;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if(User.numberGreenCoin2 == 1 && User.numberSpecialGreenCoin2 == 0 && User.numberGoldCoin2 >= 2) {
+                    User.numberGreenCoin2 -= 1;
+                    User.numberGoldCoin2 -= 2;
+                }
+                else if(User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 == 1 && User.numberGoldCoin2 >= 2) {
+                    User.numberSpecialGreenCoin2 -= 1;
+                    User.numberGoldCoin2 -= 2;
+                }
+                else if(User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 == 0 && User.numberGoldCoin2 >= 3) {
+                    User.numberGoldCoin2 -= 3;
+                }
+
+                swCanBuy = 0;
+                User.numberSpecialRedCoin2++;
+            }
+        }
+
+
+
+
+
+
+        if(User.sw1 == 1 && card21) {
+            if(User.numberBlackCoin1 + User.numberSpecialBlackCoin1 + User.numberGoldCoin1 >= 3
+                    && User.numberGreenCoin1 + User.numberSpecialGreenCoin1 + User.numberGoldCoin1 >= 3) {
+
+                User.cardPanel21_1++;
+                clickCount21--;
+                User.Score1 += 2;
+
+                if(User.numberBlackCoin1 >= 3) {
+                    User.numberBlackCoin1 -= 3;
+                }
+                else if(User.numberBlackCoin1 == 2 && User.numberSpecialBlackCoin1 >= 1) {
+                    User.numberBlackCoin1 -= 2;
+                    User.numberSpecialBlackCoin1 -= 1;
+                }
+                else if(User.numberBlackCoin1 == 1 && User.numberSpecialBlackCoin1 >= 2) {
+                    User.numberBlackCoin1 -= 1;
+                    User.numberSpecialBlackCoin1 -= 2;
+                }
+                else if(User.numberBlackCoin1 == 0 && User.numberSpecialBlackCoin1 >= 3) {
+                    User.numberSpecialBlackCoin1 -= 3;
+                }
+                else if(User.numberBlackCoin1 == 2 && User.numberSpecialBlackCoin1 == 0 && User.numberGoldCoin1 >= 1) {
+                    User.numberBlackCoin1 -= 2;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if(User.numberBlackCoin1 == 1 && User.numberSpecialBlackCoin1 == 1 && User.numberGoldCoin1 >= 1) {
+                    User.numberBlackCoin1 -= 1;
+                    User.numberSpecialBlackCoin1 -= 1;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if(User.numberBlackCoin1 == 0 && User.numberSpecialBlackCoin1 == 2 && User.numberGoldCoin1 >= 1) {
+                    User.numberSpecialBlackCoin1 -= 2;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if(User.numberBlackCoin1 == 1 && User.numberSpecialBlackCoin1 == 0 && User.numberGoldCoin1 >= 2) {
+                    User.numberBlackCoin1 -= 1;
+                    User.numberGoldCoin1 -= 2;
+                }
+                else if(User.numberBlackCoin1 == 0 && User.numberSpecialBlackCoin1 == 1 && User.numberGoldCoin1 >= 2) {
+                    User.numberSpecialBlackCoin1 -= 1;
+                    User.numberGoldCoin1 -= 2;
+                }
+                else if(User.numberBlackCoin1 == 0 && User.numberSpecialBlackCoin1 == 0 && User.numberGoldCoin1 >= 3) {
+                    User.numberGoldCoin1 -= 3;
+                }
+
+
+
+
+                if(User.numberGreenCoin1 >= 3) {
+                    User.numberGreenCoin1 -= 3;
+                }
+                else if(User.numberGreenCoin1 == 2 && User.numberSpecialGreenCoin1 >= 1) {
+                    User.numberGreenCoin1 -= 2;
+                    User.numberSpecialGreenCoin1 -= 1;
+                }
+                else if(User.numberGreenCoin1 == 1 && User.numberSpecialGreenCoin1 >= 2) {
+                    User.numberGreenCoin1 -= 1;
+                    User.numberSpecialGreenCoin1 -= 2;
+                }
+                else if(User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 >= 3) {
+                    User.numberSpecialGreenCoin1 -= 3;
+                }
+                else if(User.numberGreenCoin1 == 2 && User.numberSpecialGreenCoin1 == 0 && User.numberGoldCoin1 >= 1) {
+                    User.numberGreenCoin1 -= 2;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if(User.numberGreenCoin1 == 1 && User.numberSpecialGreenCoin1 == 1 && User.numberGoldCoin1 >= 1) {
+                    User.numberGreenCoin1 -= 1;
+                    User.numberSpecialGreenCoin1 -= 1;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if(User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 == 2 && User.numberGoldCoin1 >= 1) {
+                    User.numberSpecialGreenCoin1 -= 2;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if(User.numberGreenCoin1 == 1 && User.numberSpecialGreenCoin1 == 0 && User.numberGoldCoin1 >= 2) {
+                    User.numberGreenCoin1 -= 1;
+                    User.numberGoldCoin1 -= 2;
+                }
+                else if(User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 == 1 && User.numberGoldCoin1 >= 2) {
+                    User.numberSpecialGreenCoin1 -= 1;
+                    User.numberGoldCoin1 -= 2;
+                }
+                else if(User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 == 0 && User.numberGoldCoin1 >= 3) {
+                    User.numberGoldCoin1 -= 3;
+                }
+
+                swCanBuy = 0;
+                User.numberSpecialBlueCoin1++;
+            }
+        }
+
+
+
+
+        if(User.sw2 == 1 && card21) {
+            if(User.numberGreenCoin2 + User.numberSpecialGreenCoin2 + User.numberGoldCoin2 >= 3
+                    && User.numberBlackCoin2 + User.numberSpecialBlackCoin2 + User.numberGoldCoin2 >= 3) {
+
+                User.cardPanel21_2++;
+                clickCount21--;
+                User.Score2 += 2;
+
+                if(User.numberBlackCoin2 >= 3) {
+                    User.numberBlackCoin2 -= 3;
+                }
+                else if(User.numberBlackCoin2 == 2 && User.numberSpecialBlackCoin2 >= 1) {
+                    User.numberBlackCoin2 -= 2;
+                    User.numberSpecialBlackCoin2 -= 1;
+                }
+                else if(User.numberBlackCoin2 == 1 && User.numberSpecialBlackCoin2 >= 2) {
+                    User.numberBlackCoin2 -= 1;
+                    User.numberSpecialBlackCoin2 -= 2;
+                }
+                else if(User.numberBlackCoin2 == 0 && User.numberSpecialBlackCoin2 >= 3) {
+                    User.numberSpecialBlackCoin2 -= 3;
+                }
+                else if(User.numberBlackCoin2 == 2 && User.numberSpecialBlackCoin2 == 0 && User.numberGoldCoin2 >= 1) {
+                    User.numberBlackCoin2 -= 2;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if(User.numberBlackCoin2 == 1 && User.numberSpecialBlackCoin2 == 1 && User.numberGoldCoin2 >= 1) {
+                    User.numberBlackCoin2 -= 1;
+                    User.numberSpecialBlackCoin2 -= 1;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if(User.numberBlackCoin2 == 0 && User.numberSpecialBlackCoin2 == 2 && User.numberGoldCoin2 >= 1) {
+                    User.numberSpecialBlackCoin2 -= 2;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if(User.numberBlackCoin2 == 1 && User.numberSpecialBlackCoin2 == 0 && User.numberGoldCoin2 >= 2) {
+                    User.numberBlackCoin2 -= 1;
+                    User.numberGoldCoin2 -= 2;
+                }
+                else if(User.numberBlackCoin2 == 0 && User.numberSpecialBlackCoin2 == 1 && User.numberGoldCoin2 >= 2) {
+                    User.numberSpecialBlackCoin2 -= 1;
+                    User.numberGoldCoin2 -= 2;
+                }
+                else if(User.numberBlackCoin2 == 0 && User.numberSpecialBlackCoin2 == 0 && User.numberGoldCoin2 >= 3) {
+                    User.numberGoldCoin2 -= 3;
+                }
+
+                if(User.numberGreenCoin2 >= 3) {
+                    User.numberGreenCoin2 -= 3;
+                }
+                else if(User.numberGreenCoin2 == 2 && User.numberSpecialGreenCoin2 >= 1) {
+                    User.numberGreenCoin2 -= 2;
+                    User.numberSpecialGreenCoin2 -= 1;
+                }
+                else if(User.numberGreenCoin2 == 1 && User.numberSpecialGreenCoin2 >= 2) {
+                    User.numberGreenCoin2 -= 1;
+                    User.numberSpecialGreenCoin2 -= 2;
+                }
+                else if(User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 >= 3) {
+                    User.numberSpecialGreenCoin2 -= 3;
+                }
+                else if(User.numberGreenCoin2 == 2 && User.numberSpecialGreenCoin2 == 0 && User.numberGoldCoin2 >= 1) {
+                    User.numberGreenCoin2 -= 2;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if(User.numberGreenCoin2 == 1 && User.numberSpecialGreenCoin2 == 1 && User.numberGoldCoin2 >= 1) {
+                    User.numberGreenCoin2 -= 1;
+                    User.numberSpecialGreenCoin2 -= 1;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if(User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 == 2 && User.numberGoldCoin2 >= 1) {
+                    User.numberSpecialGreenCoin2 -= 2;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if(User.numberGreenCoin2 == 1 && User.numberSpecialGreenCoin2 == 0 && User.numberGoldCoin2 >= 2) {
+                    User.numberGreenCoin2 -= 1;
+                    User.numberGoldCoin2 -= 2;
+                }
+                else if(User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 == 1 && User.numberGoldCoin2 >= 2) {
+                    User.numberSpecialGreenCoin2 -= 1;
+                    User.numberGoldCoin2 -= 2;
+                }
+                else if(User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 == 0 && User.numberGoldCoin2 >= 3) {
+                    User.numberGoldCoin2 -= 3;
+                }
+
+                swCanBuy = 0;
+                User.numberSpecialBlueCoin2++;
+            }
+        }
+
+
+
+
+
+        if(User.sw1 == 1 && card22) {
+            if(User.numberRedCoin1 + User.numberSpecialRedCoin1 + User.numberGoldCoin1 >= 2
+                    && User.numberBlueCoin1 + User.numberSpecialBlueCoin1 + User.numberGoldCoin1 >= 4) {
+
+                User.cardPanel22_1++;
+                clickCount22--;
+                User.Score1 += 2;
+
+                if(User.numberRedCoin1 >= 2) {
+                    User.numberRedCoin1 -= 2;
+                }
+                else if(User.numberRedCoin1 == 1 && User.numberSpecialRedCoin1 >= 1) {
+                    User.numberRedCoin1 -= 1;
+                    User.numberSpecialRedCoin1 -= 1;
+                }
+                else if(User.numberRedCoin1 == 0 && User.numberSpecialRedCoin1 >= 2) {
+                    User.numberSpecialRedCoin1 -= 2;
+                }
+                else if(User.numberRedCoin1 == 1 && User.numberSpecialRedCoin1 == 0 && User.numberGoldCoin1 >= 1) {
+                    User.numberRedCoin1 -= 1;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if(User.numberRedCoin1 == 0 && User.numberSpecialRedCoin1 == 1 && User.numberGoldCoin1 >= 1) {
+                    User.numberSpecialRedCoin1 -= 1;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if(User.numberRedCoin1 == 0 && User.numberSpecialRedCoin1 == 0 && User.numberGoldCoin1 >= 2) {
+                    User.numberGoldCoin1 -= 2;
+                }
+
+                if(User.numberBlueCoin1 >= 4) {
+                    User.numberBlueCoin1 -= 4;
+                }
+                else if(User.numberBlueCoin1 == 3 && User.numberSpecialBlueCoin1 >= 1) {
+                    User.numberBlueCoin1 -= 3;
+                    User.numberSpecialBlueCoin1 -= 1;
+                }
+                else if(User.numberBlueCoin1 == 2 && User.numberSpecialBlueCoin1 >= 2) {
+                    User.numberBlueCoin1 -= 2;
+                    User.numberSpecialBlueCoin1 -= 2;
+                }
+                else if(User.numberBlueCoin1 == 1 && User.numberSpecialBlueCoin1 >= 3) {
+                    User.numberBlueCoin1 -= 1;
+                    User.numberSpecialBlueCoin1 -= 3;
+                }
+                else if(User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 >= 4) {
+                    User.numberSpecialBlueCoin1 -= 4;
+                }
+                else if(User.numberBlueCoin1 == 3 && User.numberSpecialBlueCoin1 == 0 && User.numberGoldCoin1 >= 1) {
+                    User.numberBlueCoin1 -= 3;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if(User.numberBlueCoin1 == 2 && User.numberSpecialBlueCoin1 == 1 && User.numberGoldCoin1 >= 1) {
+                    User.numberBlueCoin1 -= 2;
+                    User.numberSpecialBlueCoin1 -= 1;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if(User.numberBlueCoin1 == 1 && User.numberSpecialBlueCoin1 == 2 && User.numberGoldCoin1 >= 1) {
+                    User.numberBlueCoin1 -= 1;
+                    User.numberSpecialBlueCoin1 -= 2;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if(User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 == 3 && User.numberGoldCoin1 >= 1) {
+                    User.numberSpecialBlueCoin1 -= 3;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if(User.numberBlueCoin1 == 2 && User.numberSpecialBlueCoin1 == 0 && User.numberGoldCoin1 >= 2) {
+                    User.numberBlueCoin1 -= 2;
+                    User.numberGoldCoin1 -= 2;
+                }
+                else if(User.numberBlueCoin1 == 1 && User.numberSpecialBlueCoin1 == 1 && User.numberGoldCoin1 >= 2) {
+                    User.numberBlueCoin1 -= 1;
+                    User.numberSpecialBlueCoin1 -= 1;
+                    User.numberGoldCoin1 -= 2;
+                }
+                else if(User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 == 2 && User.numberGoldCoin1 >= 2) {
+                    User.numberSpecialBlueCoin1 -= 2;
+                    User.numberGoldCoin1 -= 2;
+                }
+                else if(User.numberBlueCoin1 == 1 && User.numberSpecialBlueCoin1 == 0 && User.numberGoldCoin1 >= 3) {
+                    User.numberBlueCoin1 -= 1;
+                    User.numberGoldCoin1 -= 3;
+                }
+                else if(User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 == 1 && User.numberGoldCoin1 >= 3) {
+                    User.numberSpecialBlueCoin1 -= 1;
+                    User.numberGoldCoin1 -= 3;
+                }
+                else if(User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 == 0 && User.numberGoldCoin1 >= 4) {
+                    User.numberGoldCoin1 -= 4;
+                }
+
+                swCanBuy = 0;
+                User.numberSpecialRedCoin1++;
+            }
+        }
+
+
+
+
+        if(User.sw2 == 1 && card22) {
+            if(User.numberBlueCoin2 + User.numberSpecialBlueCoin2 + User.numberGoldCoin2 >= 4
+                    && User.numberRedCoin2 + User.numberSpecialRedCoin2 + User.numberGoldCoin2 >= 2) {
+
+                User.cardPanel22_2++;
+                clickCount22--;
+                User.Score2 += 2;
+
+                if(User.numberRedCoin2 >= 2) {
+                    User.numberRedCoin2 -= 2;
+                }
+                else if(User.numberRedCoin2 == 1 && User.numberSpecialRedCoin2 >= 1) {
+                    User.numberRedCoin2 -= 1;
+                    User.numberSpecialRedCoin2 -= 1;
+                }
+                else if(User.numberRedCoin2 == 0 && User.numberSpecialRedCoin2 >= 2) {
+                    User.numberSpecialRedCoin2 -= 2;
+                }
+                else if(User.numberRedCoin2 == 1 && User.numberSpecialRedCoin2 == 0 && User.numberGoldCoin2 >= 1) {
+                    User.numberRedCoin2 -= 1;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if(User.numberRedCoin2 == 0 && User.numberSpecialRedCoin2 == 1 && User.numberGoldCoin2 >= 1) {
+                    User.numberSpecialRedCoin2 -= 1;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if(User.numberRedCoin2 == 0 && User.numberSpecialRedCoin2 == 0 && User.numberGoldCoin2 >= 2) {
+                    User.numberGoldCoin2 -= 2;
+                }
+
+                if(User.numberBlueCoin2 >= 4) {
+                    User.numberBlueCoin2 -= 4;
+                }
+                else if(User.numberBlueCoin2 == 3 && User.numberSpecialBlueCoin2 >= 1) {
+                    User.numberBlueCoin2 -= 3;
+                    User.numberSpecialBlueCoin2 -= 1;
+                }
+                else if(User.numberBlueCoin2 == 2 && User.numberSpecialBlueCoin2 >= 2) {
+                    User.numberBlueCoin2 -= 2;
+                    User.numberSpecialBlueCoin2 -= 2;
+                }
+                else if(User.numberBlueCoin2 == 1 && User.numberSpecialBlueCoin2 >= 3) {
+                    User.numberBlueCoin2 -= 1;
+                    User.numberSpecialBlueCoin2 -= 3;
+                }
+                else if(User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 >= 4) {
+                    User.numberSpecialBlueCoin2 -= 4;
+                }
+                else if(User.numberBlueCoin2 == 3 && User.numberSpecialBlueCoin2 == 0 && User.numberGoldCoin2 >= 1) {
+                    User.numberBlueCoin2 -= 3;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if(User.numberBlueCoin2 == 2 && User.numberSpecialBlueCoin2 == 1 && User.numberGoldCoin2 >= 1) {
+                    User.numberBlueCoin2 -= 2;
+                    User.numberSpecialBlueCoin2 -= 1;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if(User.numberBlueCoin2 == 1 && User.numberSpecialBlueCoin2 == 2 && User.numberGoldCoin2 >= 1) {
+                    User.numberBlueCoin2 -= 1;
+                    User.numberSpecialBlueCoin2 -= 2;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if(User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 == 3 && User.numberGoldCoin2 >= 1) {
+                    User.numberSpecialBlueCoin2 -= 3;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if(User.numberBlueCoin2 == 2 && User.numberSpecialBlueCoin2 == 0 && User.numberGoldCoin2 >= 2) {
+                    User.numberBlueCoin2 -= 2;
+                    User.numberGoldCoin2 -= 2;
+                }
+                else if(User.numberBlueCoin2 == 1 && User.numberSpecialBlueCoin2 == 1 && User.numberGoldCoin2 >= 2) {
+                    User.numberBlueCoin2 -= 1;
+                    User.numberSpecialBlueCoin2 -= 1;
+                    User.numberGoldCoin2 -= 2;
+                }
+                else if(User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 == 2 && User.numberGoldCoin2 >= 2) {
+                    User.numberSpecialBlueCoin2 -= 2;
+                    User.numberGoldCoin2 -= 2;
+                }
+                else if(User.numberBlueCoin2 == 1 && User.numberSpecialBlueCoin2 == 0 && User.numberGoldCoin2 >= 3) {
+                    User.numberBlueCoin2 -= 1;
+                    User.numberGoldCoin2 -= 3;
+                }
+                else if(User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 == 1 && User.numberGoldCoin2 >= 3) {
+                    User.numberSpecialBlueCoin2 -= 1;
+                    User.numberGoldCoin2 -= 3;
+                }
+                else if(User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 == 0 && User.numberGoldCoin2 >= 4) {
+                    User.numberGoldCoin2 -= 4;
+                }
+
+                swCanBuy = 0;
+                User.numberSpecialRedCoin2++;
+            }
+        }
+
+
+
+
+
+        if(User.sw1 == 1 && card23) {
+            if(User.numberGreenCoin1 + User.numberSpecialGreenCoin1 + User.numberGoldCoin1 >= 3
+                    && User.numberBlueCoin1 + User.numberSpecialBlueCoin1 + User.numberGoldCoin1 >= 4) {
+
+                User.cardPanel23_1++;
+                clickCount23--;
+                User.Score1 += 3;
+
+                if(User.numberGreenCoin1 >= 3) {
+                    User.numberGreenCoin1 -= 3;
+                }
+                else if(User.numberGreenCoin1 == 2 && User.numberSpecialGreenCoin1 >= 1) {
+                    User.numberGreenCoin1 -= 2;
+                    User.numberSpecialGreenCoin1 -= 1;
+                }
+                else if(User.numberGreenCoin1 == 1 && User.numberSpecialGreenCoin1 >= 2) {
+                    User.numberGreenCoin1 -= 1;
+                    User.numberSpecialGreenCoin1 -= 2;
+                }
+                else if(User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 >= 3) {
+                    User.numberSpecialGreenCoin1 -= 3;
+                }
+                else if(User.numberGreenCoin1 == 2 && User.numberSpecialGreenCoin1 == 0 && User.numberGoldCoin1 >= 1) {
+                    User.numberGreenCoin1 -= 2;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if(User.numberGreenCoin1 == 1 && User.numberSpecialGreenCoin1 == 1 && User.numberGoldCoin1 >= 1) {
+                    User.numberGreenCoin1 -= 1;
+                    User.numberSpecialGreenCoin1 -= 1;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if(User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 == 2 && User.numberGoldCoin1 >= 1) {
+                    User.numberSpecialGreenCoin1 -= 2;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if(User.numberGreenCoin1 == 1 && User.numberSpecialGreenCoin1 == 0 && User.numberGoldCoin1 >= 2) {
+                    User.numberGreenCoin1 -= 1;
+                    User.numberGoldCoin1 -= 2;
+                }
+                else if(User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 == 1 && User.numberGoldCoin1 >= 2) {
+                    User.numberSpecialGreenCoin1 -= 1;
+                    User.numberGoldCoin1 -= 2;
+                }
+                else if(User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 == 0 && User.numberGoldCoin1 >= 3) {
+                    User.numberGoldCoin1 -= 3;
+                }
+
+                if(User.numberBlueCoin1 >= 4) {
+                    User.numberBlueCoin1 -= 4;
+                }
+                else if(User.numberBlueCoin1 == 3 && User.numberSpecialBlueCoin1 >= 1) {
+                    User.numberBlueCoin1 -= 3;
+                    User.numberSpecialBlueCoin1 -= 1;
+                }
+                else if(User.numberBlueCoin1 == 2 && User.numberSpecialBlueCoin1 >= 2) {
+                    User.numberBlueCoin1 -= 2;
+                    User.numberSpecialBlueCoin1 -= 2;
+                }
+                else if(User.numberBlueCoin1 == 1 && User.numberSpecialBlueCoin1 >= 3) {
+                    User.numberBlueCoin1 -= 1;
+                    User.numberSpecialBlueCoin1 -= 3;
+                }
+                else if(User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 >= 4) {
+                    User.numberSpecialBlueCoin1 -= 4;
+                }
+                else if(User.numberBlueCoin1 == 3 && User.numberSpecialBlueCoin1 == 0 && User.numberGoldCoin1 >= 1) {
+                    User.numberBlueCoin1 -= 3;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if(User.numberBlueCoin1 == 2 && User.numberSpecialBlueCoin1 == 1 && User.numberGoldCoin1 >= 1) {
+                    User.numberBlueCoin1 -= 2;
+                    User.numberSpecialBlueCoin1 -= 1;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if(User.numberBlueCoin1 == 1 && User.numberSpecialBlueCoin1 == 2 && User.numberGoldCoin1 >= 1) {
+                    User.numberBlueCoin1 -= 1;
+                    User.numberSpecialBlueCoin1 -= 2;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if(User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 == 3 && User.numberGoldCoin1 >= 1) {
+                    User.numberSpecialBlueCoin1 -= 3;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if(User.numberBlueCoin1 == 2 && User.numberSpecialBlueCoin1 == 0 && User.numberGoldCoin1 >= 2) {
+                    User.numberBlueCoin1 -= 2;
+                    User.numberGoldCoin1 -= 2;
+                }
+                else if(User.numberBlueCoin1 == 1 && User.numberSpecialBlueCoin1 == 1 && User.numberGoldCoin1 >= 2) {
+                    User.numberBlueCoin1 -= 1;
+                    User.numberSpecialBlueCoin1 -= 1;
+                    User.numberGoldCoin1 -= 2;
+                }
+                else if(User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 == 2 && User.numberGoldCoin1 >= 2) {
+                    User.numberSpecialBlueCoin1 -= 2;
+                    User.numberGoldCoin1 -= 2;
+                }
+                else if(User.numberBlueCoin1 == 1 && User.numberSpecialBlueCoin1 == 0 && User.numberGoldCoin1 >= 3) {
+                    User.numberBlueCoin1 -= 1;
+                    User.numberGoldCoin1 -= 3;
+                }
+                else if(User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 == 1 && User.numberGoldCoin1 >= 3) {
+                    User.numberSpecialBlueCoin1 -= 1;
+                    User.numberGoldCoin1 -= 3;
+                }
+                else if(User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 == 0 && User.numberGoldCoin1 >= 4) {
+                    User.numberGoldCoin1 -= 4;
+                }
+
+                swCanBuy = 0;
+                User.numberSpecialGreenCoin1++;
+            }
+        }
+
+
+
+
+        if(User.sw2 == 1 && card23) {
+            if(User.numberGreenCoin2 + User.numberSpecialGreenCoin2 + User.numberGoldCoin2 >= 3
+                    && User.numberBlueCoin2 + User.numberSpecialBlueCoin2 + User.numberGoldCoin2 >= 4) {
+
+                User.cardPanel23_2++;
+                clickCount23--;
+                User.Score2 += 3;
+
+                if(User.numberGreenCoin2 >= 3) {
+                    User.numberGreenCoin2 -= 3;
+                }
+                else if(User.numberGreenCoin2 == 2 && User.numberSpecialGreenCoin2 >= 1) {
+                    User.numberGreenCoin2 -= 2;
+                    User.numberSpecialGreenCoin2 -= 1;
+                }
+                else if(User.numberGreenCoin2 == 1 && User.numberSpecialGreenCoin2 >= 2) {
+                    User.numberGreenCoin2 -= 1;
+                    User.numberSpecialGreenCoin2 -= 2;
+                }
+                else if(User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 >= 3) {
+                    User.numberSpecialGreenCoin2 -= 3;
+                }
+                else if(User.numberGreenCoin2 == 2 && User.numberSpecialGreenCoin2 == 0 && User.numberGoldCoin2 >= 1) {
+                    User.numberGreenCoin2 -= 2;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if(User.numberGreenCoin2 == 1 && User.numberSpecialGreenCoin2 == 1 && User.numberGoldCoin2 >= 1) {
+                    User.numberGreenCoin2 -= 1;
+                    User.numberSpecialGreenCoin2 -= 1;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if(User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 == 2 && User.numberGoldCoin2 >= 1) {
+                    User.numberSpecialGreenCoin2 -= 2;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if(User.numberGreenCoin2 == 1 && User.numberSpecialGreenCoin2 == 0 && User.numberGoldCoin2 >= 2) {
+                    User.numberGreenCoin2 -= 1;
+                    User.numberGoldCoin2 -= 2;
+                }
+                else if(User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 == 1 && User.numberGoldCoin2 >= 2) {
+                    User.numberSpecialGreenCoin2 -= 1;
+                    User.numberGoldCoin2 -= 2;
+                }
+                else if(User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 == 0 && User.numberGoldCoin2 >= 3) {
+                    User.numberGoldCoin2 -= 3;
+                }
+
+                if(User.numberBlueCoin2 >= 4) {
+                    User.numberBlueCoin2 -= 4;
+                }
+                else if(User.numberBlueCoin2 == 3 && User.numberSpecialBlueCoin2 >= 1) {
+                    User.numberBlueCoin2 -= 3;
+                    User.numberSpecialBlueCoin2 -= 1;
+                }
+                else if(User.numberBlueCoin2 == 2 && User.numberSpecialBlueCoin2 >= 2) {
+                    User.numberBlueCoin2 -= 2;
+                    User.numberSpecialBlueCoin2 -= 2;
+                }
+                else if(User.numberBlueCoin2 == 1 && User.numberSpecialBlueCoin2 >= 3) {
+                    User.numberBlueCoin2 -= 1;
+                    User.numberSpecialBlueCoin2 -= 3;
+                }
+                else if(User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 >= 4) {
+                    User.numberSpecialBlueCoin2 -= 4;
+                }
+                else if(User.numberBlueCoin2 == 3 && User.numberSpecialBlueCoin2 == 0 && User.numberGoldCoin2 >= 1) {
+                    User.numberBlueCoin2 -= 3;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if(User.numberBlueCoin2 == 2 && User.numberSpecialBlueCoin2 == 1 && User.numberGoldCoin2 >= 1) {
+                    User.numberBlueCoin2 -= 2;
+                    User.numberSpecialBlueCoin2 -= 1;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if(User.numberBlueCoin2 == 1 && User.numberSpecialBlueCoin2 == 2 && User.numberGoldCoin2 >= 1) {
+                    User.numberBlueCoin2 -= 1;
+                    User.numberSpecialBlueCoin2 -= 2;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if(User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 == 3 && User.numberGoldCoin2 >= 1) {
+                    User.numberSpecialBlueCoin2 -= 3;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if(User.numberBlueCoin2 == 2 && User.numberSpecialBlueCoin2 == 0 && User.numberGoldCoin2 >= 2) {
+                    User.numberBlueCoin2 -= 2;
+                    User.numberGoldCoin2 -= 2;
+                }
+                else if(User.numberBlueCoin2 == 1 && User.numberSpecialBlueCoin2 == 1 && User.numberGoldCoin2 >= 2) {
+                    User.numberBlueCoin2 -= 1;
+                    User.numberSpecialBlueCoin2 -= 1;
+                    User.numberGoldCoin2 -= 2;
+                }
+                else if(User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 == 2 && User.numberGoldCoin2 >= 2) {
+                    User.numberSpecialBlueCoin2 -= 2;
+                    User.numberGoldCoin2 -= 2;
+                }
+                else if(User.numberBlueCoin2 == 1 && User.numberSpecialBlueCoin2 == 0 && User.numberGoldCoin2 >= 3) {
+                    User.numberBlueCoin2 -= 1;
+                    User.numberGoldCoin2 -= 3;
+                }
+                else if(User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 == 1 && User.numberGoldCoin2 >= 3) {
+                    User.numberSpecialBlueCoin2 -= 1;
+                    User.numberGoldCoin2 -= 3;
+                }
+                else if(User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 == 0 && User.numberGoldCoin2 >= 4) {
+                    User.numberGoldCoin2 -= 4;
+                }
+
+                swCanBuy = 0;
+                User.numberSpecialGreenCoin2++;
+            }
+        }
+
+
+
+
+
+        if(User.sw1 == 1 && card24) {
+            if(User.numberWhiteCoin1 + User.numberSpecialWhiteCoin1 + User.numberGoldCoin1 >= 3
+                    && User.numberRedCoin1 + User.numberSpecialRedCoin1 + User.numberGoldCoin1 >= 2
+                    && User.numberBlueCoin1 + User.numberSpecialBlueCoin1 + User.numberGoldCoin1 >= 2) {
+
+                User.cardPanel24_1++;
+                clickCount24--;
+                User.Score1 += 3;
+
+                if(User.numberWhiteCoin1 >= 3) {
+                    User.numberWhiteCoin1 -= 3;
+                }
+                else if(User.numberWhiteCoin1 == 2 && User.numberSpecialWhiteCoin1 >= 1) {
+                    User.numberWhiteCoin1 -= 2;
+                    User.numberSpecialWhiteCoin1 -= 1;
+                }
+                else if(User.numberWhiteCoin1 == 1 && User.numberSpecialWhiteCoin1 >= 2) {
+                    User.numberWhiteCoin1 -= 1;
+                    User.numberSpecialWhiteCoin1 -= 2;
+                }
+                else if(User.numberWhiteCoin1 == 0 && User.numberSpecialWhiteCoin1 >= 3) {
+                    User.numberSpecialWhiteCoin1 -= 3;
+                }
+                else if(User.numberWhiteCoin1 == 2 && User.numberSpecialWhiteCoin1 == 0 && User.numberGoldCoin1 >= 1) {
+                    User.numberWhiteCoin1 -= 2;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if(User.numberWhiteCoin1 == 1 && User.numberSpecialWhiteCoin1 == 1 && User.numberGoldCoin1 >= 1) {
+                    User.numberWhiteCoin1 -= 1;
+                    User.numberSpecialWhiteCoin1 -= 1;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if(User.numberWhiteCoin1 == 0 && User.numberSpecialWhiteCoin1 == 2 && User.numberGoldCoin1 >= 1) {
+                    User.numberSpecialWhiteCoin1 -= 2;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if(User.numberWhiteCoin1 == 1 && User.numberSpecialWhiteCoin1 == 0 && User.numberGoldCoin1 >= 2) {
+                    User.numberWhiteCoin1 -= 1;
+                    User.numberGoldCoin1 -= 2;
+                }
+                else if(User.numberWhiteCoin1 == 0 && User.numberSpecialWhiteCoin1 == 1 && User.numberGoldCoin1 >= 2) {
+                    User.numberSpecialWhiteCoin1 -= 1;
+                    User.numberGoldCoin1 -= 2;
+                }
+                else if(User.numberWhiteCoin1 == 0 && User.numberSpecialWhiteCoin1 == 0 && User.numberGoldCoin1 >= 3) {
+                    User.numberGoldCoin1 -= 3;
+                }
+
+                if(User.numberRedCoin1 >= 2) {
+                    User.numberRedCoin1 -= 2;
+                }
+                else if(User.numberRedCoin1 == 1 && User.numberSpecialRedCoin1 >= 1) {
+                    User.numberRedCoin1 -= 1;
+                    User.numberSpecialRedCoin1 -= 1;
+                }
+                else if(User.numberRedCoin1 == 0 && User.numberSpecialRedCoin1 >= 2) {
+                    User.numberSpecialRedCoin1 -= 2;
+                }
+                else if(User.numberRedCoin1 == 1 && User.numberSpecialRedCoin1 == 0 && User.numberGoldCoin1 >= 1) {
+                    User.numberRedCoin1 -= 1;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if(User.numberRedCoin1 == 0 && User.numberSpecialRedCoin1 == 1 && User.numberGoldCoin1 >= 1) {
+                    User.numberSpecialRedCoin1 -= 1;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if(User.numberRedCoin1 == 0 && User.numberSpecialRedCoin1 == 0 && User.numberGoldCoin1 >= 2) {
+                    User.numberGoldCoin1 -= 2;
+                }
+
+                if(User.numberBlueCoin1 >= 2) {
+                    User.numberBlueCoin1 -= 2;
+                }
+                else if(User.numberBlueCoin1 == 1 && User.numberSpecialBlueCoin1 >= 1) {
+                    User.numberBlueCoin1 -= 1;
+                    User.numberSpecialBlueCoin1 -= 1;
+                }
+                else if(User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 >= 2) {
+                    User.numberSpecialBlueCoin1 -= 2;
+                }
+                else if(User.numberBlueCoin1 == 1 && User.numberSpecialBlueCoin1 == 0 && User.numberGoldCoin1 >= 1) {
+                    User.numberBlueCoin1 -= 1;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if(User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 == 1 && User.numberGoldCoin1 >= 1) {
+                    User.numberSpecialBlueCoin1 -= 1;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if(User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 == 0 && User.numberGoldCoin1 >= 2) {
+                    User.numberGoldCoin1 -= 2;
+                }
+
+                swCanBuy = 0;
+                User.numberSpecialBlackCoin1++;
+            }
+        }
+
+
+
+
+        if(User.sw2 == 1 && card24) {
+            if(User.numberWhiteCoin2 + User.numberSpecialWhiteCoin2 + User.numberGoldCoin2 >= 3
+                    && User.numberRedCoin2 + User.numberSpecialRedCoin2 + User.numberGoldCoin2 >= 2
+                    && User.numberBlueCoin2 + User.numberSpecialBlueCoin2 + User.numberGoldCoin2 >= 2) {
+
+                User.cardPanel24_2++;
+                clickCount24--;
+                User.Score2 += 3;
+
+                if(User.numberWhiteCoin2 >= 3) {
+                    User.numberWhiteCoin2 -= 3;
+                }
+                else if(User.numberWhiteCoin2 == 2 && User.numberSpecialWhiteCoin2 >= 1) {
+                    User.numberWhiteCoin2 -= 2;
+                    User.numberSpecialWhiteCoin2 -= 1;
+                }
+                else if(User.numberWhiteCoin2 == 1 && User.numberSpecialWhiteCoin2 >= 2) {
+                    User.numberWhiteCoin2 -= 1;
+                    User.numberSpecialWhiteCoin2 -= 2;
+                }
+                else if(User.numberWhiteCoin2 == 0 && User.numberSpecialWhiteCoin2 >= 3) {
+                    User.numberSpecialWhiteCoin2 -= 3;
+                }
+                else if(User.numberWhiteCoin2 == 2 && User.numberSpecialWhiteCoin2 == 0 && User.numberGoldCoin2 >= 1) {
+                    User.numberWhiteCoin2 -= 2;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if(User.numberWhiteCoin2 == 1 && User.numberSpecialWhiteCoin2 == 1 && User.numberGoldCoin2 >= 1) {
+                    User.numberWhiteCoin2 -= 1;
+                    User.numberSpecialWhiteCoin2 -= 1;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if(User.numberWhiteCoin2 == 0 && User.numberSpecialWhiteCoin2 == 2 && User.numberGoldCoin2 >= 1) {
+                    User.numberSpecialWhiteCoin2 -= 2;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if(User.numberWhiteCoin2 == 1 && User.numberSpecialWhiteCoin2 == 0 && User.numberGoldCoin2 >= 2) {
+                    User.numberWhiteCoin2 -= 1;
+                    User.numberGoldCoin2 -= 2;
+                }
+                else if(User.numberWhiteCoin2 == 0 && User.numberSpecialWhiteCoin2 == 1 && User.numberGoldCoin2 >= 2) {
+                    User.numberSpecialWhiteCoin2 -= 1;
+                    User.numberGoldCoin2 -= 2;
+                }
+                else if(User.numberWhiteCoin2 == 0 && User.numberSpecialWhiteCoin2 == 0 && User.numberGoldCoin2 >= 3) {
+                    User.numberGoldCoin2 -= 3;
+                }
+
+                if(User.numberRedCoin2 >= 2) {
+                    User.numberRedCoin2 -= 2;
+                }
+                else if(User.numberRedCoin2 == 1 && User.numberSpecialRedCoin2 >= 1) {
+                    User.numberRedCoin2 -= 1;
+                    User.numberSpecialRedCoin2 -= 1;
+                }
+                else if(User.numberRedCoin2 == 0 && User.numberSpecialRedCoin2 >= 2) {
+                    User.numberSpecialRedCoin2 -= 2;
+                }
+                else if(User.numberRedCoin2 == 1 && User.numberSpecialRedCoin2 == 0 && User.numberGoldCoin2 >= 1) {
+                    User.numberRedCoin2 -= 1;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if(User.numberRedCoin2 == 0 && User.numberSpecialRedCoin2 == 1 && User.numberGoldCoin2 >= 1) {
+                    User.numberSpecialRedCoin2 -= 1;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if(User.numberRedCoin2 == 0 && User.numberSpecialRedCoin2 == 0 && User.numberGoldCoin2 >= 2) {
+                    User.numberGoldCoin2 -= 2;
+                }
+
+                if(User.numberBlueCoin2 >= 2) {
+                    User.numberBlueCoin2 -= 2;
+                }
+                else if(User.numberBlueCoin2 == 1 && User.numberSpecialBlueCoin2 >= 1) {
+                    User.numberBlueCoin2 -= 1;
+                    User.numberSpecialBlueCoin2 -= 1;
+                }
+                else if(User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 >= 2) {
+                    User.numberSpecialBlueCoin2 -= 2;
+                }
+                else if(User.numberBlueCoin2 == 1 && User.numberSpecialBlueCoin2 == 0 && User.numberGoldCoin2 >= 1) {
+                    User.numberBlueCoin2 -= 1;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if(User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 == 1 && User.numberGoldCoin2 >= 1) {
+                    User.numberSpecialBlueCoin2 -= 1;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if(User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 == 0 && User.numberGoldCoin2 >= 2) {
+                    User.numberGoldCoin2 -= 2;
+                }
+
+                swCanBuy = 0;
+                User.numberSpecialBlackCoin2++;
+            }
+        }
+
+
+
+
+
+        if(User.sw1 == 1 && card25) {
+            if(User.numberRedCoin1 + User.numberSpecialRedCoin1 + User.numberGoldCoin1 >= 4
+                    && User.numberGreenCoin1 + User.numberSpecialGreenCoin1 + User.numberGoldCoin1 >= 4) {
+
+                User.cardPanel25_1++;
+                clickCount25--;
+                User.Score1 += 4;
+
+                if(User.numberRedCoin1 >= 4) {
+                    User.numberRedCoin1 -= 4;
+                }
+                else if(User.numberRedCoin1 == 3 && User.numberSpecialRedCoin1 >= 1) {
+                    User.numberRedCoin1 -= 3;
+                    User.numberSpecialRedCoin1 -= 1;
+                }
+                else if(User.numberRedCoin1 == 2 && User.numberSpecialRedCoin1 >= 2) {
+                    User.numberRedCoin1 -= 2;
+                    User.numberSpecialRedCoin1 -= 2;
+                }
+                else if(User.numberRedCoin1 == 1 && User.numberSpecialRedCoin1 >= 3) {
+                    User.numberRedCoin1 -= 1;
+                    User.numberSpecialRedCoin1 -= 3;
+                }
+                else if(User.numberRedCoin1 == 0 && User.numberSpecialRedCoin1 >= 4) {
+                    User.numberSpecialRedCoin1 -= 4;
+                }
+                else if(User.numberRedCoin1 == 3 && User.numberSpecialRedCoin1 == 0 && User.numberGoldCoin1 >= 1) {
+                    User.numberRedCoin1 -= 3;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if(User.numberRedCoin1 == 2 && User.numberSpecialRedCoin1 == 1 && User.numberGoldCoin1 >= 1) {
+                    User.numberRedCoin1 -= 2;
+                    User.numberSpecialRedCoin1 -= 1;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if(User.numberRedCoin1 == 1 && User.numberSpecialRedCoin1 == 2 && User.numberGoldCoin1 >= 1) {
+                    User.numberRedCoin1 -= 1;
+                    User.numberSpecialRedCoin1 -= 2;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if(User.numberRedCoin1 == 0 && User.numberSpecialRedCoin1 == 3 && User.numberGoldCoin1 >= 1) {
+                    User.numberSpecialRedCoin1 -= 3;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if(User.numberRedCoin1 == 2 && User.numberSpecialRedCoin1 == 0 && User.numberGoldCoin1 >= 2) {
+                    User.numberRedCoin1 -= 2;
+                    User.numberGoldCoin1 -= 2;
+                }
+                else if(User.numberRedCoin1 == 1 && User.numberSpecialRedCoin1 == 1 && User.numberGoldCoin1 >= 2) {
+                    User.numberRedCoin1 -= 1;
+                    User.numberSpecialRedCoin1 -= 1;
+                    User.numberGoldCoin1 -= 2;
+                }
+                else if(User.numberRedCoin1 == 0 && User.numberSpecialRedCoin1 == 2 && User.numberGoldCoin1 >= 2) {
+                    User.numberSpecialRedCoin1 -= 2;
+                    User.numberGoldCoin1 -= 2;
+                }
+                else if(User.numberRedCoin1 == 1 && User.numberSpecialRedCoin1 == 0 && User.numberGoldCoin1 >= 3) {
+                    User.numberRedCoin1 -= 1;
+                    User.numberGoldCoin1 -= 3;
+                }
+                else if(User.numberRedCoin1 == 0 && User.numberSpecialRedCoin1 == 1 && User.numberGoldCoin1 >= 3) {
+                    User.numberSpecialRedCoin1 -= 1;
+                    User.numberGoldCoin1 -= 3;
+                }
+                else if(User.numberRedCoin1 == 0 && User.numberSpecialRedCoin1 == 0 && User.numberGoldCoin1 >= 4) {
+                    User.numberGoldCoin1 -= 4;
+                }
+
+                if(User.numberGreenCoin1 >= 4) {
+                    User.numberGreenCoin1 -= 4;
+                }
+                else if(User.numberGreenCoin1 == 3 && User.numberSpecialGreenCoin1 >= 1) {
+                    User.numberGreenCoin1 -= 3;
+                    User.numberSpecialGreenCoin1 -= 1;
+                }
+                else if(User.numberGreenCoin1 == 2 && User.numberSpecialGreenCoin1 >= 2) {
+                    User.numberGreenCoin1 -= 2;
+                    User.numberSpecialGreenCoin1 -= 2;
+                }
+                else if(User.numberGreenCoin1 == 1 && User.numberSpecialGreenCoin1 >= 3) {
+                    User.numberGreenCoin1 -= 1;
+                    User.numberSpecialGreenCoin1 -= 3;
+                }
+                else if(User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 >= 4) {
+                    User.numberSpecialGreenCoin1 -= 4;
+                }
+                else if(User.numberGreenCoin1 == 3 && User.numberSpecialGreenCoin1 == 0 && User.numberGoldCoin1 >= 1) {
+                    User.numberGreenCoin1 -= 3;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if(User.numberGreenCoin1 == 2 && User.numberSpecialGreenCoin1 == 1 && User.numberGoldCoin1 >= 1) {
+                    User.numberGreenCoin1 -= 2;
+                    User.numberSpecialGreenCoin1 -= 1;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if(User.numberGreenCoin1 == 1 && User.numberSpecialGreenCoin1 == 2 && User.numberGoldCoin1 >= 1) {
+                    User.numberGreenCoin1 -= 1;
+                    User.numberSpecialGreenCoin1 -= 2;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if(User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 == 3 && User.numberGoldCoin1 >= 1) {
+                    User.numberSpecialGreenCoin1 -= 3;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if(User.numberGreenCoin1 == 2 && User.numberSpecialGreenCoin1 == 0 && User.numberGoldCoin1 >= 2) {
+                    User.numberGreenCoin1 -= 2;
+                    User.numberGoldCoin1 -= 2;
+                }
+                else if(User.numberGreenCoin1 == 1 && User.numberSpecialGreenCoin1 == 1 && User.numberGoldCoin1 >= 2) {
+                    User.numberGreenCoin1 -= 1;
+                    User.numberSpecialGreenCoin1 -= 1;
+                    User.numberGoldCoin1 -= 2;
+                }
+                else if(User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 == 2 && User.numberGoldCoin1 >= 2) {
+                    User.numberSpecialGreenCoin1 -= 2;
+                    User.numberGoldCoin1 -= 2;
+                }
+                else if(User.numberGreenCoin1 == 1 && User.numberSpecialGreenCoin1 == 0 && User.numberGoldCoin1 >= 3) {
+                    User.numberGreenCoin1 -= 1;
+                    User.numberGoldCoin1 -= 3;
+                }
+                else if(User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 == 1 && User.numberGoldCoin1 >= 3) {
+                    User.numberSpecialGreenCoin1 -= 1;
+                    User.numberGoldCoin1 -= 3;
+                }
+                else if(User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 == 0 && User.numberGoldCoin1 >= 4) {
+                    User.numberGoldCoin1 -= 4;
+                }
+
+                swCanBuy = 0;
+                User.numberSpecialWhiteCoin1++;
+            }
+        }
+
+
+
+
+        if(User.sw2 == 1 && card25) {
+            if(User.numberGreenCoin2 + User.numberSpecialGreenCoin2 + User.numberGoldCoin2 >= 4
+                    && User.numberRedCoin2 + User.numberSpecialRedCoin2 + User.numberGoldCoin2 >= 4) {
+
+                User.cardPanel25_2++;
+                clickCount25--;
+                User.Score2 += 4;
+
+                if(User.numberRedCoin2 >= 4) {
+                    User.numberRedCoin2 -= 4;
+                }
+                else if(User.numberRedCoin2 == 3 && User.numberSpecialRedCoin2 >= 1) {
+                    User.numberRedCoin2 -= 3;
+                    User.numberSpecialRedCoin2 -= 1;
+                }
+                else if(User.numberRedCoin2 == 2 && User.numberSpecialRedCoin2 >= 2) {
+                    User.numberRedCoin2 -= 2;
+                    User.numberSpecialRedCoin2 -= 2;
+                }
+                else if(User.numberRedCoin2 == 1 && User.numberSpecialRedCoin2 >= 3) {
+                    User.numberRedCoin2 -= 1;
+                    User.numberSpecialRedCoin2 -= 3;
+                }
+                else if(User.numberRedCoin2 == 0 && User.numberSpecialRedCoin2 >= 4) {
+                    User.numberSpecialRedCoin2 -= 4;
+                }
+                else if(User.numberRedCoin2 == 3 && User.numberSpecialRedCoin2 == 0 && User.numberGoldCoin2 >= 1) {
+                    User.numberRedCoin2 -= 3;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if(User.numberRedCoin2 == 2 && User.numberSpecialRedCoin2 == 1 && User.numberGoldCoin2 >= 1) {
+                    User.numberRedCoin2 -= 2;
+                    User.numberSpecialRedCoin2 -= 1;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if(User.numberRedCoin2 == 1 && User.numberSpecialRedCoin2 == 2 && User.numberGoldCoin2 >= 1) {
+                    User.numberRedCoin2 -= 1;
+                    User.numberSpecialRedCoin2 -= 2;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if(User.numberRedCoin2 == 0 && User.numberSpecialRedCoin2 == 3 && User.numberGoldCoin2 >= 1) {
+                    User.numberSpecialRedCoin2 -= 3;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if(User.numberRedCoin2 == 2 && User.numberSpecialRedCoin2 == 0 && User.numberGoldCoin2 >= 2) {
+                    User.numberRedCoin2 -= 2;
+                    User.numberGoldCoin2 -= 2;
+                }
+                else if(User.numberRedCoin2 == 1 && User.numberSpecialRedCoin2 == 1 && User.numberGoldCoin2 >= 2) {
+                    User.numberRedCoin2 -= 1;
+                    User.numberSpecialRedCoin2 -= 1;
+                    User.numberGoldCoin2 -= 2;
+                }
+                else if(User.numberRedCoin2 == 0 && User.numberSpecialRedCoin2 == 2 && User.numberGoldCoin2 >= 2) {
+                    User.numberSpecialRedCoin2 -= 2;
+                    User.numberGoldCoin2 -= 2;
+                }
+                else if(User.numberRedCoin2 == 1 && User.numberSpecialRedCoin2 == 0 && User.numberGoldCoin2 >= 3) {
+                    User.numberRedCoin2 -= 1;
+                    User.numberGoldCoin2 -= 3;
+                }
+                else if(User.numberRedCoin2 == 0 && User.numberSpecialRedCoin2 == 1 && User.numberGoldCoin2 >= 3) {
+                    User.numberSpecialRedCoin2 -= 1;
+                    User.numberGoldCoin2 -= 3;
+                }
+                else if(User.numberRedCoin2 == 0 && User.numberSpecialRedCoin2 == 0 && User.numberGoldCoin2 >= 4) {
+                    User.numberGoldCoin2 -= 4;
+                }
+
+                if(User.numberGreenCoin2 >= 4) {
+                    User.numberGreenCoin2 -= 4;
+                }
+                else if(User.numberGreenCoin2 == 3 && User.numberSpecialGreenCoin2 >= 1) {
+                    User.numberGreenCoin2 -= 3;
+                    User.numberSpecialGreenCoin2 -= 1;
+                }
+                else if(User.numberGreenCoin2 == 2 && User.numberSpecialGreenCoin2 >= 2) {
+                    User.numberGreenCoin2 -= 2;
+                    User.numberSpecialGreenCoin2 -= 2;
+                }
+                else if(User.numberGreenCoin2 == 1 && User.numberSpecialGreenCoin2 >= 3) {
+                    User.numberGreenCoin2 -= 1;
+                    User.numberSpecialGreenCoin2 -= 3;
+                }
+                else if(User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 >= 4) {
+                    User.numberSpecialGreenCoin2 -= 4;
+                }
+                else if(User.numberGreenCoin2 == 3 && User.numberSpecialGreenCoin2 == 0 && User.numberGoldCoin2 >= 1) {
+                    User.numberGreenCoin2 -= 3;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if(User.numberGreenCoin2 == 2 && User.numberSpecialGreenCoin2 == 1 && User.numberGoldCoin2 >= 1) {
+                    User.numberGreenCoin2 -= 2;
+                    User.numberSpecialGreenCoin2 -= 1;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if(User.numberGreenCoin2 == 1 && User.numberSpecialGreenCoin2 == 2 && User.numberGoldCoin2 >= 1) {
+                    User.numberGreenCoin2 -= 1;
+                    User.numberSpecialGreenCoin2 -= 2;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if(User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 == 3 && User.numberGoldCoin2 >= 1) {
+                    User.numberSpecialGreenCoin2 -= 3;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if(User.numberGreenCoin2 == 2 && User.numberSpecialGreenCoin2 == 0 && User.numberGoldCoin2 >= 2) {
+                    User.numberGreenCoin2 -= 2;
+                    User.numberGoldCoin2 -= 2;
+                }
+                else if(User.numberGreenCoin2 == 1 && User.numberSpecialGreenCoin2 == 1 && User.numberGoldCoin2 >= 2) {
+                    User.numberGreenCoin2 -= 1;
+                    User.numberSpecialGreenCoin2 -= 1;
+                    User.numberGoldCoin2 -= 2;
+                }
+                else if(User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 == 2 && User.numberGoldCoin2 >= 2) {
+                    User.numberSpecialGreenCoin2 -= 2;
+                    User.numberGoldCoin2 -= 2;
+                }
+                else if(User.numberGreenCoin2 == 1 && User.numberSpecialGreenCoin2 == 0 && User.numberGoldCoin2 >= 3) {
+                    User.numberGreenCoin2 -= 1;
+                    User.numberGoldCoin2 -= 3;
+                }
+                else if(User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 == 1 && User.numberGoldCoin2 >= 3) {
+                    User.numberSpecialGreenCoin2 -= 1;
+                    User.numberGoldCoin2 -= 3;
+                }
+                else if(User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 == 0 && User.numberGoldCoin2 >= 4) {
+                    User.numberGoldCoin2 -= 4;
+                }
+
+                swCanBuy = 0;
+                User.numberSpecialWhiteCoin2++;
+            }
+        }
+
+
+
+
+
+        if (User.sw1 == 1 && card31) {
+            if (User.numberBlueCoin1 + User.numberSpecialBlueCoin1 + User.numberGoldCoin1 >= 3
+                    && User.numberGreenCoin1 + User.numberSpecialGreenCoin1 + User.numberGoldCoin1 >= 4) {
+
+                User.cardPanel31_1++;
+                clickCount31--;
+                User.Score1 += 3;
+
+                if (User.numberBlueCoin1 >= 3) {
+                    User.numberBlueCoin1 -= 3;
+                }
+                else if (User.numberBlueCoin1 == 2 && User.numberSpecialBlueCoin1 >= 1) {
+                    User.numberBlueCoin1 -= 2;
+                    User.numberSpecialBlueCoin1 -= 1;
+                }
+                else if (User.numberBlueCoin1 == 1 && User.numberSpecialBlueCoin1 >= 2) {
+                    User.numberBlueCoin1 -= 1;
+                    User.numberSpecialBlueCoin1 -= 2;
+                }
+                else if (User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 >= 3) {
+                    User.numberSpecialBlueCoin1 -= 3;
+                }
+                else if (User.numberBlueCoin1 == 2 && User.numberSpecialBlueCoin1 == 0 && User.numberGoldCoin1 >= 1) {
+                    User.numberBlueCoin1 -= 2;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if (User.numberBlueCoin1 == 1 && User.numberSpecialBlueCoin1 == 1 && User.numberGoldCoin1 >= 1) {
+                    User.numberBlueCoin1 -= 1;
+                    User.numberSpecialBlueCoin1 -= 1;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if (User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 == 2 && User.numberGoldCoin1 >= 1) {
+                    User.numberSpecialBlueCoin1 -= 2;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if (User.numberBlueCoin1 == 1 && User.numberSpecialBlueCoin1 == 0 && User.numberGoldCoin1 >= 2) {
+                    User.numberBlueCoin1 -= 1;
+                    User.numberGoldCoin1 -= 2;
+                }
+                else if (User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 == 1 && User.numberGoldCoin1 >= 2) {
+                    User.numberSpecialBlueCoin1 -= 1;
+                    User.numberGoldCoin1 -= 2;
+                }
+                else if (User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 == 0 && User.numberGoldCoin1 >= 3) {
+                    User.numberGoldCoin1 -= 3;
+                }
+
+                if (User.numberGreenCoin1 >= 4) {
+                    User.numberGreenCoin1 -= 4;
+                }
+                else if (User.numberGreenCoin1 == 3 && User.numberSpecialGreenCoin1 >= 1) {
+                    User.numberGreenCoin1 -= 3;
+                    User.numberSpecialGreenCoin1 -= 1;
+                }
+                else if (User.numberGreenCoin1 == 2 && User.numberSpecialGreenCoin1 >= 2) {
+                    User.numberGreenCoin1 -= 2;
+                    User.numberSpecialGreenCoin1 -= 2;
+                }
+                else if (User.numberGreenCoin1 == 1 && User.numberSpecialGreenCoin1 >= 3) {
+                    User.numberGreenCoin1 -= 1;
+                    User.numberSpecialGreenCoin1 -= 3;
+                }
+                else if (User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 >= 4) {
+                    User.numberSpecialGreenCoin1 -= 4;
+                }
+                else if (User.numberGreenCoin1 == 3 && User.numberSpecialGreenCoin1 == 0 && User.numberGoldCoin1 >= 1) {
+                    User.numberGreenCoin1 -= 3;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if (User.numberGreenCoin1 == 2 && User.numberSpecialGreenCoin1 == 1 && User.numberGoldCoin1 >= 1) {
+                    User.numberGreenCoin1 -= 2;
+                    User.numberSpecialGreenCoin1 -= 1;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if (User.numberGreenCoin1 == 1 && User.numberSpecialGreenCoin1 == 2 && User.numberGoldCoin1 >= 1) {
+                    User.numberGreenCoin1 -= 1;
+                    User.numberSpecialGreenCoin1 -= 2;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if (User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 == 3 && User.numberGoldCoin1 >= 1) {
+                    User.numberSpecialGreenCoin1 -= 3;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if (User.numberGreenCoin1 == 2 && User.numberSpecialGreenCoin1 == 0 && User.numberGoldCoin1 >= 2) {
+                    User.numberGreenCoin1 -= 2;
+                    User.numberGoldCoin1 -= 2;
+                }
+                else if (User.numberGreenCoin1 == 1 && User.numberSpecialGreenCoin1 == 1 && User.numberGoldCoin1 >= 2) {
+                    User.numberGreenCoin1 -= 1;
+                    User.numberSpecialGreenCoin1 -= 1;
+                    User.numberGoldCoin1 -= 2;
+                }
+                else if (User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 == 2 && User.numberGoldCoin1 >= 2) {
+                    User.numberSpecialGreenCoin1 -= 2;
+                    User.numberGoldCoin1 -= 2;
+                }
+                else if (User.numberGreenCoin1 == 1 && User.numberSpecialGreenCoin1 == 0 && User.numberGoldCoin1 >= 3) {
+                    User.numberGreenCoin1 -= 1;
+                    User.numberGoldCoin1 -= 3;
+                }
+                else if (User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 == 1 && User.numberGoldCoin1 >= 3) {
+                    User.numberSpecialGreenCoin1 -= 1;
+                    User.numberGoldCoin1 -= 3;
+                }
+                else if (User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 == 0 && User.numberGoldCoin1 >= 4) {
+                    User.numberGoldCoin1 -= 4;
+                }
+
+                swCanBuy = 0;
+                User.numberSpecialBlackCoin1++;
+            }
+        }
+
+
+
+
+        if (User.sw2 == 1 && card31) {
+            if (User.numberBlueCoin2 + User.numberSpecialBlueCoin2 + User.numberGoldCoin2 >= 3
+                    && User.numberGreenCoin2 + User.numberSpecialGreenCoin2 + User.numberGoldCoin2 >= 4) {
+
+                User.cardPanel31_2++;
+                clickCount31--;
+                User.Score2 += 3;
+
+                if (User.numberBlueCoin2 >= 3) {
+                    User.numberBlueCoin2 -= 3;
+                }
+                else if (User.numberBlueCoin2 == 2 && User.numberSpecialBlueCoin2 >= 1) {
+                    User.numberBlueCoin2 -= 2;
+                    User.numberSpecialBlueCoin2 -= 1;
+                }
+                else if (User.numberBlueCoin2 == 1 && User.numberSpecialBlueCoin2 >= 2) {
+                    User.numberBlueCoin2 -= 1;
+                    User.numberSpecialBlueCoin2 -= 2;
+                }
+                else if (User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 >= 3) {
+                    User.numberSpecialBlueCoin2 -= 3;
+                }
+                else if (User.numberBlueCoin2 == 2 && User.numberSpecialBlueCoin2 == 0 && User.numberGoldCoin2 >= 1) {
+                    User.numberBlueCoin2 -= 2;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if (User.numberBlueCoin2 == 1 && User.numberSpecialBlueCoin2 == 1 && User.numberGoldCoin2 >= 1) {
+                    User.numberBlueCoin2 -= 1;
+                    User.numberSpecialBlueCoin2 -= 1;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if (User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 == 2 && User.numberGoldCoin2 >= 1) {
+                    User.numberSpecialBlueCoin2 -= 2;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if (User.numberBlueCoin2 == 1 && User.numberSpecialBlueCoin2 == 0 && User.numberGoldCoin2 >= 2) {
+                    User.numberBlueCoin2 -= 1;
+                    User.numberGoldCoin2 -= 2;
+                }
+                else if (User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 == 1 && User.numberGoldCoin2 >= 2) {
+                    User.numberSpecialBlueCoin2 -= 1;
+                    User.numberGoldCoin2 -= 2;
+                }
+                else if (User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 == 0 && User.numberGoldCoin2 >= 3) {
+                    User.numberGoldCoin2 -= 3;
+                }
+
+                if (User.numberGreenCoin2 >= 4) {
+                    User.numberGreenCoin2 -= 4;
+                }
+                else if (User.numberGreenCoin2 == 3 && User.numberSpecialGreenCoin2 >= 1) {
+                    User.numberGreenCoin2 -= 3;
+                    User.numberSpecialGreenCoin2 -= 1;
+                }
+                else if (User.numberGreenCoin2 == 2 && User.numberSpecialGreenCoin2 >= 2) {
+                    User.numberGreenCoin2 -= 2;
+                    User.numberSpecialGreenCoin2 -= 2;
+                }
+                else if (User.numberGreenCoin2 == 1 && User.numberSpecialGreenCoin2 >= 3) {
+                    User.numberGreenCoin2 -= 1;
+                    User.numberSpecialGreenCoin2 -= 3;
+                }
+                else if (User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 >= 4) {
+                    User.numberSpecialGreenCoin2 -= 4;
+                }
+                else if (User.numberGreenCoin2 == 3 && User.numberSpecialGreenCoin2 == 0 && User.numberGoldCoin2 >= 1) {
+                    User.numberGreenCoin2 -= 3;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if (User.numberGreenCoin2 == 2 && User.numberSpecialGreenCoin2 == 1 && User.numberGoldCoin2 >= 1) {
+                    User.numberGreenCoin2 -= 2;
+                    User.numberSpecialGreenCoin2 -= 1;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if (User.numberGreenCoin2 == 1 && User.numberSpecialGreenCoin2 == 2 && User.numberGoldCoin2 >= 1) {
+                    User.numberGreenCoin2 -= 1;
+                    User.numberSpecialGreenCoin2 -= 2;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if (User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 == 3 && User.numberGoldCoin2 >= 1) {
+                    User.numberSpecialGreenCoin2 -= 3;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if (User.numberGreenCoin2 == 2 && User.numberSpecialGreenCoin2 == 0 && User.numberGoldCoin2 >= 2) {
+                    User.numberGreenCoin2 -= 2;
+                    User.numberGoldCoin2 -= 2;
+                }
+                else if (User.numberGreenCoin2 == 1 && User.numberSpecialGreenCoin2 == 1 && User.numberGoldCoin2 >= 2) {
+                    User.numberGreenCoin2 -= 1;
+                    User.numberSpecialGreenCoin2 -= 1;
+                    User.numberGoldCoin2 -= 2;
+                }
+                else if (User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 == 2 && User.numberGoldCoin2 >= 2) {
+                    User.numberSpecialGreenCoin2 -= 2;
+                    User.numberGoldCoin2 -= 2;
+                }
+                else if (User.numberGreenCoin2 == 1 && User.numberSpecialGreenCoin2 == 0 && User.numberGoldCoin2 >= 3) {
+                    User.numberGreenCoin2 -= 1;
+                    User.numberGoldCoin2 -= 3;
+                }
+                else if (User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 == 1 && User.numberGoldCoin2 >= 3) {
+                    User.numberSpecialGreenCoin2 -= 1;
+                    User.numberGoldCoin2 -= 3;
+                }
+                else if (User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 == 0 && User.numberGoldCoin2 >= 4) {
+                    User.numberGoldCoin2 -= 4;
+                }
+
+                swCanBuy = 0;
+                User.numberSpecialBlackCoin2++;
+            }
+        }
+
+
+
+
+
+        if (User.sw1 == 1 && card32) {
+            if (User.numberRedCoin1 + User.numberSpecialRedCoin1 + User.numberGoldCoin1 >= 3
+                    && User.numberBlueCoin1 + User.numberSpecialBlueCoin1 + User.numberGoldCoin1 >= 4) {
+
+                User.cardPanel32_1++;
+                clickCount32--;
+                User.Score1 += 3;
+
+                if (User.numberRedCoin1 >= 3) {
+                    User.numberRedCoin1 -= 3;
+                }
+                else if (User.numberRedCoin1 == 2 && User.numberSpecialRedCoin1 >= 1) {
+                    User.numberRedCoin1 -= 2;
+                    User.numberSpecialRedCoin1 -= 1;
+                }
+                else if (User.numberRedCoin1 == 1 && User.numberSpecialRedCoin1 >= 2) {
+                    User.numberRedCoin1 -= 1;
+                    User.numberSpecialRedCoin1 -= 2;
+                }
+                else if (User.numberRedCoin1 == 0 && User.numberSpecialRedCoin1 >= 3) {
+                    User.numberSpecialRedCoin1 -= 3;
+                }
+                else if (User.numberRedCoin1 == 2 && User.numberSpecialRedCoin1 == 0 && User.numberGoldCoin1 >= 1) {
+                    User.numberRedCoin1 -= 2;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if (User.numberRedCoin1 == 1 && User.numberSpecialRedCoin1 == 1 && User.numberGoldCoin1 >= 1) {
+                    User.numberRedCoin1 -= 1;
+                    User.numberSpecialRedCoin1 -= 1;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if (User.numberRedCoin1 == 0 && User.numberSpecialRedCoin1 == 2 && User.numberGoldCoin1 >= 1) {
+                    User.numberSpecialRedCoin1 -= 2;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if (User.numberRedCoin1 == 1 && User.numberSpecialRedCoin1 == 0 && User.numberGoldCoin1 >= 2) {
+                    User.numberRedCoin1 -= 1;
+                    User.numberGoldCoin1 -= 2;
+                }
+                else if (User.numberRedCoin1 == 0 && User.numberSpecialRedCoin1 == 1 && User.numberGoldCoin1 >= 2) {
+                    User.numberSpecialRedCoin1 -= 1;
+                    User.numberGoldCoin1 -= 2;
+                }
+                else if (User.numberRedCoin1 == 0 && User.numberSpecialRedCoin1 == 0 && User.numberGoldCoin1 >= 3) {
+                    User.numberGoldCoin1 -= 3;
+                }
+
+                if (User.numberBlueCoin1 >= 4) {
+                    User.numberBlueCoin1 -= 4;
+                }
+                else if (User.numberBlueCoin1 == 3 && User.numberSpecialBlueCoin1 >= 1) {
+                    User.numberBlueCoin1 -= 3;
+                    User.numberSpecialBlueCoin1 -= 1;
+                }
+                else if (User.numberBlueCoin1 == 2 && User.numberSpecialBlueCoin1 >= 2) {
+                    User.numberBlueCoin1 -= 2;
+                    User.numberSpecialBlueCoin1 -= 2;
+                }
+                else if (User.numberBlueCoin1 == 1 && User.numberSpecialBlueCoin1 >= 3) {
+                    User.numberBlueCoin1 -= 1;
+                    User.numberSpecialBlueCoin1 -= 3;
+                }
+                else if (User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 >= 4) {
+                    User.numberSpecialBlueCoin1 -= 4;
+                }
+                else if (User.numberBlueCoin1 == 3 && User.numberSpecialBlueCoin1 == 0 && User.numberGoldCoin1 >= 1) {
+                    User.numberBlueCoin1 -= 3;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if (User.numberBlueCoin1 == 2 && User.numberSpecialBlueCoin1 == 1 && User.numberGoldCoin1 >= 1) {
+                    User.numberBlueCoin1 -= 2;
+                    User.numberSpecialBlueCoin1 -= 1;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if (User.numberBlueCoin1 == 1 && User.numberSpecialBlueCoin1 == 2 && User.numberGoldCoin1 >= 1) {
+                    User.numberBlueCoin1 -= 1;
+                    User.numberSpecialBlueCoin1 -= 2;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if (User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 == 3 && User.numberGoldCoin1 >= 1) {
+                    User.numberSpecialBlueCoin1 -= 3;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if (User.numberBlueCoin1 == 2 && User.numberSpecialBlueCoin1 == 0 && User.numberGoldCoin1 >= 2) {
+                    User.numberBlueCoin1 -= 2;
+                    User.numberGoldCoin1 -= 2;
+                }
+                else if (User.numberBlueCoin1 == 1 && User.numberSpecialBlueCoin1 == 1 && User.numberGoldCoin1 >= 2) {
+                    User.numberBlueCoin1 -= 1;
+                    User.numberSpecialBlueCoin1 -= 1;
+                    User.numberGoldCoin1 -= 2;
+                }
+                else if (User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 == 2 && User.numberGoldCoin1 >= 2) {
+                    User.numberSpecialBlueCoin1 -= 2;
+                    User.numberGoldCoin1 -= 2;
+                }
+                else if (User.numberBlueCoin1 == 1 && User.numberSpecialBlueCoin1 == 0 && User.numberGoldCoin1 >= 3) {
+                    User.numberBlueCoin1 -= 1;
+                    User.numberGoldCoin1 -= 3;
+                }
+                else if (User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 == 1 && User.numberGoldCoin1 >= 3) {
+                    User.numberSpecialBlueCoin1 -= 1;
+                    User.numberGoldCoin1 -= 3;
+                }
+                else if (User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 == 0 && User.numberGoldCoin1 >= 4) {
+                    User.numberGoldCoin1 -= 4;
+                }
+
+                swCanBuy = 0;
+                User.numberSpecialGreenCoin1++;
+            }
+        }
+
+
+
+
+        if (User.sw2 == 1 && card32) {
+            if (User.numberRedCoin2 + User.numberSpecialRedCoin2 + User.numberGoldCoin2 >= 3
+                    && User.numberBlueCoin2 + User.numberSpecialBlueCoin2 + User.numberGoldCoin2 >= 4) {
+
+                User.cardPanel32_2++;
+                clickCount32--;
+                User.Score2 += 3;
+
+                if (User.numberRedCoin2 >= 3) {
+                    User.numberRedCoin2 -= 3;
+                }
+                else if (User.numberRedCoin2 == 2 && User.numberSpecialRedCoin2 >= 1) {
+                    User.numberRedCoin2 -= 2;
+                    User.numberSpecialRedCoin2 -= 1;
+                }
+                else if (User.numberRedCoin2 == 1 && User.numberSpecialRedCoin2 >= 2) {
+                    User.numberRedCoin2 -= 1;
+                    User.numberSpecialRedCoin2 -= 2;
+                }
+                else if (User.numberRedCoin2 == 0 && User.numberSpecialRedCoin2 >= 3) {
+                    User.numberSpecialRedCoin2 -= 3;
+                }
+                else if (User.numberRedCoin2 == 2 && User.numberSpecialRedCoin2 == 0 && User.numberGoldCoin2 >= 1) {
+                    User.numberRedCoin2 -= 2;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if (User.numberRedCoin2 == 1 && User.numberSpecialRedCoin2 == 1 && User.numberGoldCoin2 >= 1) {
+                    User.numberRedCoin2 -= 1;
+                    User.numberSpecialRedCoin2 -= 1;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if (User.numberRedCoin2 == 0 && User.numberSpecialRedCoin2 == 2 && User.numberGoldCoin2 >= 1) {
+                    User.numberSpecialRedCoin2 -= 2;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if (User.numberRedCoin2 == 1 && User.numberSpecialRedCoin2 == 0 && User.numberGoldCoin2 >= 2) {
+                    User.numberRedCoin2 -= 1;
+                    User.numberGoldCoin2 -= 2;
+                }
+                else if (User.numberRedCoin2 == 0 && User.numberSpecialRedCoin2 == 1 && User.numberGoldCoin2 >= 2) {
+                    User.numberSpecialRedCoin2 -= 1;
+                    User.numberGoldCoin2 -= 2;
+                }
+                else if (User.numberRedCoin2 == 0 && User.numberSpecialRedCoin2 == 0 && User.numberGoldCoin2 >= 3) {
+                    User.numberGoldCoin2 -= 3;
+                }
+
+                if (User.numberBlueCoin2 >= 4) {
+                    User.numberBlueCoin2 -= 4;
+                }
+                else if (User.numberBlueCoin2 == 3 && User.numberSpecialBlueCoin2 >= 1) {
+                    User.numberBlueCoin2 -= 3;
+                    User.numberSpecialBlueCoin2 -= 1;
+                }
+                else if (User.numberBlueCoin2 == 2 && User.numberSpecialBlueCoin2 >= 2) {
+                    User.numberBlueCoin2 -= 2;
+                    User.numberSpecialBlueCoin2 -= 2;
+                }
+                else if (User.numberBlueCoin2 == 1 && User.numberSpecialBlueCoin2 >= 3) {
+                    User.numberBlueCoin2 -= 1;
+                    User.numberSpecialBlueCoin2 -= 3;
+                }
+                else if (User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 >= 4) {
+                    User.numberSpecialBlueCoin2 -= 4;
+                }
+                else if (User.numberBlueCoin2 == 3 && User.numberSpecialBlueCoin2 == 0 && User.numberGoldCoin2 >= 1) {
+                    User.numberBlueCoin2 -= 3;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if (User.numberBlueCoin2 == 2 && User.numberSpecialBlueCoin2 == 1 && User.numberGoldCoin2 >= 1) {
+                    User.numberBlueCoin2 -= 2;
+                    User.numberSpecialBlueCoin2 -= 1;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if (User.numberBlueCoin2 == 1 && User.numberSpecialBlueCoin2 == 2 && User.numberGoldCoin2 >= 1) {
+                    User.numberBlueCoin2 -= 1;
+                    User.numberSpecialBlueCoin2 -= 2;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if (User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 == 3 && User.numberGoldCoin2 >= 1) {
+                    User.numberSpecialBlueCoin2 -= 3;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if (User.numberBlueCoin2 == 2 && User.numberSpecialBlueCoin2 == 0 && User.numberGoldCoin2 >= 2) {
+                    User.numberBlueCoin2 -= 2;
+                    User.numberGoldCoin2 -= 2;
+                }
+                else if (User.numberBlueCoin2 == 1 && User.numberSpecialBlueCoin2 == 1 && User.numberGoldCoin2 >= 2) {
+                    User.numberBlueCoin2 -= 1;
+                    User.numberSpecialBlueCoin2 -= 1;
+                    User.numberGoldCoin2 -= 2;
+                }
+                else if (User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 == 2 && User.numberGoldCoin2 >= 2) {
+                    User.numberSpecialBlueCoin2 -= 2;
+                    User.numberGoldCoin2 -= 2;
+                }
+                else if (User.numberBlueCoin2 == 1 && User.numberSpecialBlueCoin2 == 0 && User.numberGoldCoin2 >= 3) {
+                    User.numberBlueCoin2 -= 1;
+                    User.numberGoldCoin2 -= 3;
+                }
+                else if (User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 == 1 && User.numberGoldCoin2 >= 3) {
+                    User.numberSpecialBlueCoin2 -= 1;
+                    User.numberGoldCoin2 -= 3;
+                }
+                else if (User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 == 0 && User.numberGoldCoin2 >= 4) {
+                    User.numberGoldCoin2 -= 4;
+                }
+
+                swCanBuy = 0;
+                User.numberSpecialGreenCoin2++;
+            }
+        }
+
+
+
+
+
+        if (User.sw1 == 1 && card33) {
+            if (User.numberGreenCoin1 + User.numberSpecialGreenCoin1 + User.numberGoldCoin1 >= 3
+                    && User.numberBlackCoin1 + User.numberSpecialBlackCoin1 + User.numberGoldCoin1 >= 3
+                    && User.numberRedCoin1 + User.numberSpecialRedCoin1 + User.numberGoldCoin1 >= 2) {
+
+                User.cardPanel33_1++;
+                clickCount33--;
+                User.Score1 += 4;
+
+                if (User.numberGreenCoin1 >= 3) {
+                    User.numberGreenCoin1 -= 3;
+                }
+                else if (User.numberGreenCoin1 == 2 && User.numberSpecialGreenCoin1 >= 1) {
+                    User.numberGreenCoin1 -= 2;
+                    User.numberSpecialGreenCoin1 -= 1;
+                }
+                else if (User.numberGreenCoin1 == 1 && User.numberSpecialGreenCoin1 >= 2) {
+                    User.numberGreenCoin1 -= 1;
+                    User.numberSpecialGreenCoin1 -= 2;
+                }
+                else if (User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 >= 3) {
+                    User.numberSpecialGreenCoin1 -= 3;
+                }
+                else if (User.numberGreenCoin1 == 2 && User.numberSpecialGreenCoin1 == 0 && User.numberGoldCoin1 >= 1) {
+                    User.numberGreenCoin1 -= 2;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if (User.numberGreenCoin1 == 1 && User.numberSpecialGreenCoin1 == 1 && User.numberGoldCoin1 >= 1) {
+                    User.numberGreenCoin1 -= 1;
+                    User.numberSpecialGreenCoin1 -= 1;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if (User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 == 2 && User.numberGoldCoin1 >= 1) {
+                    User.numberSpecialGreenCoin1 -= 2;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if (User.numberGreenCoin1 == 1 && User.numberSpecialGreenCoin1 == 0 && User.numberGoldCoin1 >= 2) {
+                    User.numberGreenCoin1 -= 1;
+                    User.numberGoldCoin1 -= 2;
+                }
+                else if (User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 == 1 && User.numberGoldCoin1 >= 2) {
+                    User.numberSpecialGreenCoin1 -= 1;
+                    User.numberGoldCoin1 -= 2;
+                }
+                else if (User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 == 0 && User.numberGoldCoin1 >= 3) {
+                    User.numberGoldCoin1 -= 3;
+                }
+
+                if (User.numberBlackCoin1 >= 3) {
+                    User.numberBlackCoin1 -= 3;
+                }
+                else if (User.numberBlackCoin1 == 2 && User.numberSpecialBlackCoin1 >= 1) {
+                    User.numberBlackCoin1 -= 2;
+                    User.numberSpecialBlackCoin1 -= 1;
+                }
+                else if (User.numberBlackCoin1 == 1 && User.numberSpecialBlackCoin1 >= 2) {
+                    User.numberBlackCoin1 -= 1;
+                    User.numberSpecialBlackCoin1 -= 2;
+                }
+                else if (User.numberBlackCoin1 == 0 && User.numberSpecialBlackCoin1 >= 3) {
+                    User.numberSpecialBlackCoin1 -= 3;
+                }
+                else if (User.numberBlackCoin1 == 2 && User.numberSpecialBlackCoin1 == 0 && User.numberGoldCoin1 >= 1) {
+                    User.numberBlackCoin1 -= 2;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if (User.numberBlackCoin1 == 1 && User.numberSpecialBlackCoin1 == 1 && User.numberGoldCoin1 >= 1) {
+                    User.numberBlackCoin1 -= 1;
+                    User.numberSpecialBlackCoin1 -= 1;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if (User.numberBlackCoin1 == 0 && User.numberSpecialBlackCoin1 == 2 && User.numberGoldCoin1 >= 1) {
+                    User.numberSpecialBlackCoin1 -= 2;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if (User.numberBlackCoin1 == 1 && User.numberSpecialBlackCoin1 == 0 && User.numberGoldCoin1 >= 2) {
+                    User.numberBlackCoin1 -= 1;
+                    User.numberGoldCoin1 -= 2;
+                }
+                else if (User.numberBlackCoin1 == 0 && User.numberSpecialBlackCoin1 == 1 && User.numberGoldCoin1 >= 2) {
+                    User.numberSpecialBlackCoin1 -= 1;
+                    User.numberGoldCoin1 -= 2;
+                }
+                else if (User.numberBlackCoin1 == 0 && User.numberSpecialBlackCoin1 == 0 && User.numberGoldCoin1 >= 3) {
+                    User.numberGoldCoin1 -= 3;
+                }
+
+                if (User.numberRedCoin1 >= 2) {
+                    User.numberRedCoin1 -= 2;
+                }
+                else if (User.numberRedCoin1 == 1 && User.numberSpecialRedCoin1 >= 1) {
+                    User.numberRedCoin1 -= 1;
+                    User.numberSpecialRedCoin1 -= 1;
+                }
+                else if (User.numberRedCoin1 == 0 && User.numberSpecialRedCoin1 >= 2) {
+                    User.numberSpecialRedCoin1 -= 2;
+                }
+                else if (User.numberRedCoin1 == 1 && User.numberSpecialRedCoin1 == 0 && User.numberGoldCoin1 >= 1) {
+                    User.numberRedCoin1 -= 1;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if (User.numberRedCoin1 == 0 && User.numberSpecialRedCoin1 == 1 && User.numberGoldCoin1 >= 1) {
+                    User.numberSpecialRedCoin1 -= 1;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if (User.numberRedCoin1 == 0 && User.numberSpecialRedCoin1 == 0 && User.numberGoldCoin1 >= 2) {
+                    User.numberGoldCoin1 -= 2;
+                }
+
+                swCanBuy = 0;
+                User.numberSpecialWhiteCoin1++;
+            }
+        }
+
+
+
+
+        if (User.sw2 == 1 && card33) {
+            if (User.numberGreenCoin2 + User.numberSpecialGreenCoin2 + User.numberGoldCoin2 >= 3
+                    && User.numberBlackCoin2 + User.numberSpecialBlackCoin2 + User.numberGoldCoin2 >= 3
+                    && User.numberRedCoin2 + User.numberSpecialRedCoin2 + User.numberGoldCoin2 >= 2) {
+
+                User.cardPanel33_2++;
+                clickCount33--;
+                User.Score2 += 4;
+
+                if (User.numberGreenCoin2 >= 3) {
+                    User.numberGreenCoin2 -= 3;
+                }
+                else if (User.numberGreenCoin2 == 2 && User.numberSpecialGreenCoin2 >= 1) {
+                    User.numberGreenCoin2 -= 2;
+                    User.numberSpecialGreenCoin2 -= 1;
+                }
+                else if (User.numberGreenCoin2 == 1 && User.numberSpecialGreenCoin2 >= 2) {
+                    User.numberGreenCoin2 -= 1;
+                    User.numberSpecialGreenCoin2 -= 2;
+                }
+                else if (User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 >= 3) {
+                    User.numberSpecialGreenCoin2 -= 3;
+                }
+                else if (User.numberGreenCoin2 == 2 && User.numberSpecialGreenCoin2 == 0 && User.numberGoldCoin2 >= 1) {
+                    User.numberGreenCoin2 -= 2;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if (User.numberGreenCoin2 == 1 && User.numberSpecialGreenCoin2 == 1 && User.numberGoldCoin2 >= 1) {
+                    User.numberGreenCoin2 -= 1;
+                    User.numberSpecialGreenCoin2 -= 1;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if (User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 == 2 && User.numberGoldCoin2 >= 1) {
+                    User.numberSpecialGreenCoin2 -= 2;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if (User.numberGreenCoin2 == 1 && User.numberSpecialGreenCoin2 == 0 && User.numberGoldCoin2 >= 2) {
+                    User.numberGreenCoin2 -= 1;
+                    User.numberGoldCoin2 -= 2;
+                }
+                else if (User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 == 1 && User.numberGoldCoin2 >= 2) {
+                    User.numberSpecialGreenCoin2 -= 1;
+                    User.numberGoldCoin2 -= 2;
+                }
+                else if (User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 == 0 && User.numberGoldCoin2 >= 3) {
+                    User.numberGoldCoin2 -= 3;
+                }
+
+                if (User.numberBlackCoin2 >= 3) {
+                    User.numberBlackCoin2 -= 3;
+                }
+                else if (User.numberBlackCoin2 == 2 && User.numberSpecialBlackCoin2 >= 1) {
+                    User.numberBlackCoin2 -= 2;
+                    User.numberSpecialBlackCoin2 -= 1;
+                }
+                else if (User.numberBlackCoin2 == 1 && User.numberSpecialBlackCoin2 >= 2) {
+                    User.numberBlackCoin2 -= 1;
+                    User.numberSpecialBlackCoin2 -= 2;
+                }
+                else if (User.numberBlackCoin2 == 0 && User.numberSpecialBlackCoin2 >= 3) {
+                    User.numberSpecialBlackCoin2 -= 3;
+                }
+                else if (User.numberBlackCoin2 == 2 && User.numberSpecialBlackCoin2 == 0 && User.numberGoldCoin2 >= 1) {
+                    User.numberBlackCoin2 -= 2;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if (User.numberBlackCoin2 == 1 && User.numberSpecialBlackCoin2 == 1 && User.numberGoldCoin2 >= 1) {
+                    User.numberBlackCoin2 -= 1;
+                    User.numberSpecialBlackCoin2 -= 1;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if (User.numberBlackCoin2 == 0 && User.numberSpecialBlackCoin2 == 2 && User.numberGoldCoin2 >= 1) {
+                    User.numberSpecialBlackCoin2 -= 2;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if (User.numberBlackCoin2 == 1 && User.numberSpecialBlackCoin2 == 0 && User.numberGoldCoin2 >= 2) {
+                    User.numberBlackCoin2 -= 1;
+                    User.numberGoldCoin2 -= 2;
+                }
+                else if (User.numberBlackCoin2 == 0 && User.numberSpecialBlackCoin2 == 1 && User.numberGoldCoin2 >= 2) {
+                    User.numberSpecialBlackCoin2 -= 1;
+                    User.numberGoldCoin2 -= 2;
+                }
+                else if (User.numberBlackCoin2 == 0 && User.numberSpecialBlackCoin2 == 0 && User.numberGoldCoin2 >= 3) {
+                    User.numberGoldCoin2 -= 3;
+                }
+
+                if (User.numberRedCoin2 >= 2) {
+                    User.numberRedCoin2 -= 2;
+                }
+                else if (User.numberRedCoin2 == 1 && User.numberSpecialRedCoin2 >= 1) {
+                    User.numberRedCoin2 -= 1;
+                    User.numberSpecialRedCoin2 -= 1;
+                }
+                else if (User.numberRedCoin2 == 0 && User.numberSpecialRedCoin2 >= 2) {
+                    User.numberSpecialRedCoin2 -= 2;
+                }
+                else if (User.numberRedCoin2 == 1 && User.numberSpecialRedCoin2 == 0 && User.numberGoldCoin2 >= 1) {
+                    User.numberRedCoin2 -= 1;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if (User.numberRedCoin2 == 0 && User.numberSpecialRedCoin2 == 1 && User.numberGoldCoin2 >= 1) {
+                    User.numberSpecialRedCoin2 -= 1;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if (User.numberRedCoin2 == 0 && User.numberSpecialRedCoin2 == 0 && User.numberGoldCoin2 >= 2) {
+                    User.numberGoldCoin2 -= 2;
+                }
+
+                swCanBuy = 0;
+                User.numberSpecialWhiteCoin2++;
+            }
+        }
+
+
+
+
+
+        if (User.sw1 == 1 && card34) {
+            if (User.numberWhiteCoin1 + User.numberSpecialWhiteCoin1 + User.numberGoldCoin1 >= 3
+                    && User.numberBlueCoin1 + User.numberSpecialBlueCoin1 + User.numberGoldCoin1 >= 3
+                    && User.numberGreenCoin1 + User.numberSpecialGreenCoin1 + User.numberGoldCoin1 >= 2) {
+
+                User.cardPanel34_1++;
+                clickCount34--;
+                User.Score1 += 4;
+
+                if (User.numberWhiteCoin1 >= 3) {
+                    User.numberWhiteCoin1 -= 3;
+                }
+                else if (User.numberWhiteCoin1 == 2 && User.numberSpecialWhiteCoin1 >= 1) {
+                    User.numberWhiteCoin1 -= 2;
+                    User.numberSpecialWhiteCoin1 -= 1;
+                }
+                else if (User.numberWhiteCoin1 == 1 && User.numberSpecialWhiteCoin1 >= 2) {
+                    User.numberWhiteCoin1 -= 1;
+                    User.numberSpecialWhiteCoin1 -= 2;
+                }
+                else if (User.numberWhiteCoin1 == 0 && User.numberSpecialWhiteCoin1 >= 3) {
+                    User.numberSpecialWhiteCoin1 -= 3;
+                }
+                else if (User.numberWhiteCoin1 == 2 && User.numberSpecialWhiteCoin1 == 0 && User.numberGoldCoin1 >= 1) {
+                    User.numberWhiteCoin1 -= 2;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if (User.numberWhiteCoin1 == 1 && User.numberSpecialWhiteCoin1 == 1 && User.numberGoldCoin1 >= 1) {
+                    User.numberWhiteCoin1 -= 1;
+                    User.numberSpecialWhiteCoin1 -= 1;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if (User.numberWhiteCoin1 == 0 && User.numberSpecialWhiteCoin1 == 2 && User.numberGoldCoin1 >= 1) {
+                    User.numberSpecialWhiteCoin1 -= 2;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if (User.numberWhiteCoin1 == 1 && User.numberSpecialWhiteCoin1 == 0 && User.numberGoldCoin1 >= 2) {
+                    User.numberWhiteCoin1 -= 1;
+                    User.numberGoldCoin1 -= 2;
+                }
+                else if (User.numberWhiteCoin1 == 0 && User.numberSpecialWhiteCoin1 == 1 && User.numberGoldCoin1 >= 2) {
+                    User.numberSpecialWhiteCoin1 -= 1;
+                    User.numberGoldCoin1 -= 2;
+                }
+                else if (User.numberWhiteCoin1 == 0 && User.numberSpecialWhiteCoin1 == 0 && User.numberGoldCoin1 >= 3) {
+                    User.numberGoldCoin1 -= 3;
+                }
+
+                if (User.numberBlueCoin1 >= 3) {
+                    User.numberBlueCoin1 -= 3;
+                }
+                else if (User.numberBlueCoin1 == 2 && User.numberSpecialBlueCoin1 >= 1) {
+                    User.numberBlueCoin1 -= 2;
+                    User.numberSpecialBlueCoin1 -= 1;
+                }
+                else if (User.numberBlueCoin1 == 1 && User.numberSpecialBlueCoin1 >= 2) {
+                    User.numberBlueCoin1 -= 1;
+                    User.numberSpecialBlueCoin1 -= 2;
+                }
+                else if (User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 >= 3) {
+                    User.numberSpecialBlueCoin1 -= 3;
+                }
+                else if (User.numberBlueCoin1 == 2 && User.numberSpecialBlueCoin1 == 0 && User.numberGoldCoin1 >= 1) {
+                    User.numberBlueCoin1 -= 2;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if (User.numberBlueCoin1 == 1 && User.numberSpecialBlueCoin1 == 1 && User.numberGoldCoin1 >= 1) {
+                    User.numberBlueCoin1 -= 1;
+                    User.numberSpecialBlueCoin1 -= 1;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if (User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 == 2 && User.numberGoldCoin1 >= 1) {
+                    User.numberSpecialBlueCoin1 -= 2;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if (User.numberBlueCoin1 == 1 && User.numberSpecialBlueCoin1 == 0 && User.numberGoldCoin1 >= 2) {
+                    User.numberBlueCoin1 -= 1;
+                    User.numberGoldCoin1 -= 2;
+                }
+                else if (User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 == 1 && User.numberGoldCoin1 >= 2) {
+                    User.numberSpecialBlueCoin1 -= 1;
+                    User.numberGoldCoin1 -= 2;
+                }
+                else if (User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 == 0 && User.numberGoldCoin1 >= 3) {
+                    User.numberGoldCoin1 -= 3;
+                }
+
+                if (User.numberGreenCoin1 >= 2) {
+                    User.numberGreenCoin1 -= 2;
+                }
+                else if (User.numberGreenCoin1 == 1 && User.numberSpecialGreenCoin1 >= 1) {
+                    User.numberGreenCoin1 -= 1;
+                    User.numberSpecialGreenCoin1 -= 1;
+                }
+                else if (User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 >= 2) {
+                    User.numberSpecialGreenCoin1 -= 2;
+                }
+                else if (User.numberGreenCoin1 == 1 && User.numberSpecialGreenCoin1 == 0 && User.numberGoldCoin1 >= 1) {
+                    User.numberGreenCoin1 -= 1;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if (User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 == 1 && User.numberGoldCoin1 >= 1) {
+                    User.numberSpecialGreenCoin1 -= 1;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if (User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 == 0 && User.numberGoldCoin1 >= 2) {
+                    User.numberGoldCoin1 -= 2;
+                }
+
+                swCanBuy = 0;
+                User.numberSpecialBlueCoin1++;
+            }
+        }
+
+
+
+
+        if (User.sw2 == 1 && card34) {
+            if (User.numberWhiteCoin2 + User.numberSpecialWhiteCoin2 + User.numberGoldCoin2 >= 3
+                    && User.numberBlueCoin2 + User.numberSpecialBlueCoin2 + User.numberGoldCoin2 >= 3
+                    && User.numberGreenCoin2 + User.numberSpecialGreenCoin2 + User.numberGoldCoin2 >= 2) {
+
+                User.cardPanel34_2++;
+                clickCount34--;
+                User.Score2 += 4;
+
+                if (User.numberWhiteCoin2 >= 3) {
+                    User.numberWhiteCoin2 -= 3;
+                }
+                else if (User.numberWhiteCoin2 == 2 && User.numberSpecialWhiteCoin2 >= 1) {
+                    User.numberWhiteCoin2 -= 2;
+                    User.numberSpecialWhiteCoin2 -= 1;
+                }
+                else if (User.numberWhiteCoin2 == 1 && User.numberSpecialWhiteCoin2 >= 2) {
+                    User.numberWhiteCoin2 -= 1;
+                    User.numberSpecialWhiteCoin2 -= 2;
+                }
+                else if (User.numberWhiteCoin2 == 0 && User.numberSpecialWhiteCoin2 >= 3) {
+                    User.numberSpecialWhiteCoin2 -= 3;
+                }
+                else if (User.numberWhiteCoin2 == 2 && User.numberSpecialWhiteCoin2 == 0 && User.numberGoldCoin2 >= 1) {
+                    User.numberWhiteCoin2 -= 2;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if (User.numberWhiteCoin2 == 1 && User.numberSpecialWhiteCoin2 == 1 && User.numberGoldCoin2 >= 1) {
+                    User.numberWhiteCoin2 -= 1;
+                    User.numberSpecialWhiteCoin2 -= 1;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if (User.numberWhiteCoin2 == 0 && User.numberSpecialWhiteCoin2 == 2 && User.numberGoldCoin2 >= 1) {
+                    User.numberSpecialWhiteCoin2 -= 2;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if (User.numberWhiteCoin2 == 1 && User.numberSpecialWhiteCoin2 == 0 && User.numberGoldCoin2 >= 2) {
+                    User.numberWhiteCoin2 -= 1;
+                    User.numberGoldCoin2 -= 2;
+                }
+                else if (User.numberWhiteCoin2 == 0 && User.numberSpecialWhiteCoin2 == 1 && User.numberGoldCoin2 >= 2) {
+                    User.numberSpecialWhiteCoin2 -= 1;
+                    User.numberGoldCoin2 -= 2;
+                }
+                else if (User.numberWhiteCoin2 == 0 && User.numberSpecialWhiteCoin2 == 0 && User.numberGoldCoin2 >= 3) {
+                    User.numberGoldCoin2 -= 3;
+                }
+
+                if (User.numberBlueCoin2 >= 3) {
+                    User.numberBlueCoin2 -= 3;
+                }
+                else if (User.numberBlueCoin2 == 2 && User.numberSpecialBlueCoin2 >= 1) {
+                    User.numberBlueCoin2 -= 2;
+                    User.numberSpecialBlueCoin2 -= 1;
+                }
+                else if (User.numberBlueCoin2 == 1 && User.numberSpecialBlueCoin2 >= 2) {
+                    User.numberBlueCoin2 -= 1;
+                    User.numberSpecialBlueCoin2 -= 2;
+                }
+                else if (User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 >= 3) {
+                    User.numberSpecialBlueCoin2 -= 3;
+                }
+                else if (User.numberBlueCoin2 == 2 && User.numberSpecialBlueCoin2 == 0 && User.numberGoldCoin2 >= 1) {
+                    User.numberBlueCoin2 -= 2;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if (User.numberBlueCoin2 == 1 && User.numberSpecialBlueCoin2 == 1 && User.numberGoldCoin2 >= 1) {
+                    User.numberBlueCoin2 -= 1;
+                    User.numberSpecialBlueCoin2 -= 1;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if (User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 == 2 && User.numberGoldCoin2 >= 1) {
+                    User.numberSpecialBlueCoin2 -= 2;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if (User.numberBlueCoin2 == 1 && User.numberSpecialBlueCoin2 == 0 && User.numberGoldCoin2 >= 2) {
+                    User.numberBlueCoin2 -= 1;
+                    User.numberGoldCoin2 -= 2;
+                }
+                else if (User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 == 1 && User.numberGoldCoin2 >= 2) {
+                    User.numberSpecialBlueCoin2 -= 1;
+                    User.numberGoldCoin2 -= 2;
+                }
+                else if (User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 == 0 && User.numberGoldCoin2 >= 3) {
+                    User.numberGoldCoin2 -= 3;
+                }
+
+                if (User.numberGreenCoin2 >= 2) {
+                    User.numberGreenCoin2 -= 2;
+                }
+                else if (User.numberGreenCoin2 == 1 && User.numberSpecialGreenCoin2 >= 1) {
+                    User.numberGreenCoin2 -= 1;
+                    User.numberSpecialGreenCoin2 -= 1;
+                }
+                else if (User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 >= 2) {
+                    User.numberSpecialGreenCoin2 -= 2;
+                }
+                else if (User.numberGreenCoin2 == 1 && User.numberSpecialGreenCoin2 == 0 && User.numberGoldCoin2 >= 1) {
+                    User.numberGreenCoin2 -= 1;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if (User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 == 1 && User.numberGoldCoin2 >= 1) {
+                    User.numberSpecialGreenCoin2 -= 1;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if (User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 == 0 && User.numberGoldCoin2 >= 2) {
+                    User.numberGoldCoin2 -= 2;
+                }
+
+                swCanBuy = 0;
+                User.numberSpecialBlueCoin2++;
+            }
+        }
+
+
+
+
+
+        if (User.sw1 == 1 && card35) {
+            if (User.numberBlueCoin1 + User.numberSpecialBlueCoin1 + User.numberGoldCoin1 >= 3
+                    && User.numberRedCoin1 + User.numberSpecialRedCoin1 + User.numberGoldCoin1 >= 3
+                    && User.numberGreenCoin1 + User.numberSpecialGreenCoin1 + User.numberGoldCoin1 >= 3) {
+
+                User.cardPanel35_1++;
+                clickCount35--;
+                User.Score1 += 5;
+
+                if (User.numberBlueCoin1 >= 3) {
+                    User.numberBlueCoin1 -= 3;
+                }
+                else if (User.numberBlueCoin1 == 2 && User.numberSpecialBlueCoin1 >= 1) {
+                    User.numberBlueCoin1 -= 2;
+                    User.numberSpecialBlueCoin1 -= 1;
+                }
+                else if (User.numberBlueCoin1 == 1 && User.numberSpecialBlueCoin1 >= 2) {
+                    User.numberBlueCoin1 -= 1;
+                    User.numberSpecialBlueCoin1 -= 2;
+                }
+                else if (User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 >= 3) {
+                    User.numberSpecialBlueCoin1 -= 3;
+                }
+                else if (User.numberBlueCoin1 == 2 && User.numberSpecialBlueCoin1 == 0 && User.numberGoldCoin1 >= 1) {
+                    User.numberBlueCoin1 -= 2;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if (User.numberBlueCoin1 == 1 && User.numberSpecialBlueCoin1 == 1 && User.numberGoldCoin1 >= 1) {
+                    User.numberBlueCoin1 -= 1;
+                    User.numberSpecialBlueCoin1 -= 1;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if (User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 == 2 && User.numberGoldCoin1 >= 1) {
+                    User.numberSpecialBlueCoin1 -= 2;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if (User.numberBlueCoin1 == 1 && User.numberSpecialBlueCoin1 == 0 && User.numberGoldCoin1 >= 2) {
+                    User.numberBlueCoin1 -= 1;
+                    User.numberGoldCoin1 -= 2;
+                }
+                else if (User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 == 1 && User.numberGoldCoin1 >= 2) {
+                    User.numberSpecialBlueCoin1 -= 1;
+                    User.numberGoldCoin1 -= 2;
+                }
+                else if (User.numberBlueCoin1 == 0 && User.numberSpecialBlueCoin1 == 0 && User.numberGoldCoin1 >= 3) {
+                    User.numberGoldCoin1 -= 3;
+                }
+
+                if (User.numberRedCoin1 >= 3) {
+                    User.numberRedCoin1 -= 3;
+                }
+                else if (User.numberRedCoin1 == 2 && User.numberSpecialRedCoin1 >= 1) {
+                    User.numberRedCoin1 -= 2;
+                    User.numberSpecialRedCoin1 -= 1;
+                }
+                else if (User.numberRedCoin1 == 1 && User.numberSpecialRedCoin1 >= 2) {
+                    User.numberRedCoin1 -= 1;
+                    User.numberSpecialRedCoin1 -= 2;
+                }
+                else if (User.numberRedCoin1 == 0 && User.numberSpecialRedCoin1 >= 3) {
+                    User.numberSpecialRedCoin1 -= 3;
+                }
+                else if (User.numberRedCoin1 == 2 && User.numberSpecialRedCoin1 == 0 && User.numberGoldCoin1 >= 1) {
+                    User.numberRedCoin1 -= 2;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if (User.numberRedCoin1 == 1 && User.numberSpecialRedCoin1 == 1 && User.numberGoldCoin1 >= 1) {
+                    User.numberRedCoin1 -= 1;
+                    User.numberSpecialRedCoin1 -= 1;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if (User.numberRedCoin1 == 0 && User.numberSpecialRedCoin1 == 2 && User.numberGoldCoin1 >= 1) {
+                    User.numberSpecialRedCoin1 -= 2;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if (User.numberRedCoin1 == 1 && User.numberSpecialRedCoin1 == 0 && User.numberGoldCoin1 >= 2) {
+                    User.numberRedCoin1 -= 1;
+                    User.numberGoldCoin1 -= 2;
+                }
+                else if (User.numberRedCoin1 == 0 && User.numberSpecialRedCoin1 == 1 && User.numberGoldCoin1 >= 2) {
+                    User.numberSpecialRedCoin1 -= 1;
+                    User.numberGoldCoin1 -= 2;
+                }
+                else if (User.numberRedCoin1 == 0 && User.numberSpecialRedCoin1 == 0 && User.numberGoldCoin1 >= 3) {
+                    User.numberGoldCoin1 -= 3;
+                }
+
+                if (User.numberGreenCoin1 >= 3) {
+                    User.numberGreenCoin1 -= 3;
+                }
+                else if (User.numberGreenCoin1 == 2 && User.numberSpecialGreenCoin1 >= 1) {
+                    User.numberGreenCoin1 -= 2;
+                    User.numberSpecialGreenCoin1 -= 1;
+                }
+                else if (User.numberGreenCoin1 == 1 && User.numberSpecialGreenCoin1 >= 2) {
+                    User.numberGreenCoin1 -= 1;
+                    User.numberSpecialGreenCoin1 -= 2;
+                }
+                else if (User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 >= 3) {
+                    User.numberSpecialGreenCoin1 -= 3;
+                }
+                else if (User.numberGreenCoin1 == 2 && User.numberSpecialGreenCoin1 == 0 && User.numberGoldCoin1 >= 1) {
+                    User.numberGreenCoin1 -= 2;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if (User.numberGreenCoin1 == 1 && User.numberSpecialGreenCoin1 == 1 && User.numberGoldCoin1 >= 1) {
+                    User.numberGreenCoin1 -= 1;
+                    User.numberSpecialGreenCoin1 -= 1;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if (User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 == 2 && User.numberGoldCoin1 >= 1) {
+                    User.numberSpecialGreenCoin1 -= 2;
+                    User.numberGoldCoin1 -= 1;
+                }
+                else if (User.numberGreenCoin1 == 1 && User.numberSpecialGreenCoin1 == 0 && User.numberGoldCoin1 >= 2) {
+                    User.numberGreenCoin1 -= 1;
+                    User.numberGoldCoin1 -= 2;
+                }
+                else if (User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 == 1 && User.numberGoldCoin1 >= 2) {
+                    User.numberSpecialGreenCoin1 -= 1;
+                    User.numberGoldCoin1 -= 2;
+                }
+                else if (User.numberGreenCoin1 == 0 && User.numberSpecialGreenCoin1 == 0 && User.numberGoldCoin1 >= 3) {
+                    User.numberGoldCoin1 -= 3;
+                }
+
+                swCanBuy = 0;
+                User.numberSpecialRedCoin1++;
+            }
+        }
+
+        if (User.sw2 == 1 && card35) {
+            if (User.numberBlueCoin2 + User.numberSpecialBlueCoin2 + User.numberGoldCoin2 >= 3
+                    && User.numberRedCoin2 + User.numberSpecialRedCoin2 + User.numberGoldCoin2 >= 3
+                    && User.numberGreenCoin2 + User.numberSpecialGreenCoin2 + User.numberGoldCoin2 >= 3) {
+
+                User.cardPanel35_2++;
+                clickCount35--;
+                User.Score2 += 5;
+
+                if (User.numberBlueCoin2 >= 3) {
+                    User.numberBlueCoin2 -= 3;
+                }
+                else if (User.numberBlueCoin2 == 2 && User.numberSpecialBlueCoin2 >= 1) {
+                    User.numberBlueCoin2 -= 2;
+                    User.numberSpecialBlueCoin2 -= 1;
+                }
+                else if (User.numberBlueCoin2 == 1 && User.numberSpecialBlueCoin2 >= 2) {
+                    User.numberBlueCoin2 -= 1;
+                    User.numberSpecialBlueCoin2 -= 2;
+                }
+                else if (User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 >= 3) {
+                    User.numberSpecialBlueCoin2 -= 3;
+                }
+                else if (User.numberBlueCoin2 == 2 && User.numberSpecialBlueCoin2 == 0 && User.numberGoldCoin2 >= 1) {
+                    User.numberBlueCoin2 -= 2;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if (User.numberBlueCoin2 == 1 && User.numberSpecialBlueCoin2 == 1 && User.numberGoldCoin2 >= 1) {
+                    User.numberBlueCoin2 -= 1;
+                    User.numberSpecialBlueCoin2 -= 1;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if (User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 == 2 && User.numberGoldCoin2 >= 1) {
+                    User.numberSpecialBlueCoin2 -= 2;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if (User.numberBlueCoin2 == 1 && User.numberSpecialBlueCoin2 == 0 && User.numberGoldCoin2 >= 2) {
+                    User.numberBlueCoin2 -= 1;
+                    User.numberGoldCoin2 -= 2;
+                }
+                else if (User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 == 1 && User.numberGoldCoin2 >= 2) {
+                    User.numberSpecialBlueCoin2 -= 1;
+                    User.numberGoldCoin2 -= 2;
+                }
+                else if (User.numberBlueCoin2 == 0 && User.numberSpecialBlueCoin2 == 0 && User.numberGoldCoin2 >= 3) {
+                    User.numberGoldCoin2 -= 3;
+                }
+
+                if (User.numberRedCoin2 >= 3) {
+                    User.numberRedCoin2 -= 3;
+                }
+                else if (User.numberRedCoin2 == 2 && User.numberSpecialRedCoin2 >= 1) {
+                    User.numberRedCoin2 -= 2;
+                    User.numberSpecialRedCoin2 -= 1;
+                }
+                else if (User.numberRedCoin2 == 1 && User.numberSpecialRedCoin2 >= 2) {
+                    User.numberRedCoin2 -= 1;
+                    User.numberSpecialRedCoin2 -= 2;
+                }
+                else if (User.numberRedCoin2 == 0 && User.numberSpecialRedCoin2 >= 3) {
+                    User.numberSpecialRedCoin2 -= 3;
+                }
+                else if (User.numberRedCoin2 == 2 && User.numberSpecialRedCoin2 == 0 && User.numberGoldCoin2 >= 1) {
+                    User.numberRedCoin2 -= 2;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if (User.numberRedCoin2 == 1 && User.numberSpecialRedCoin2 == 1 && User.numberGoldCoin2 >= 1) {
+                    User.numberRedCoin2 -= 1;
+                    User.numberSpecialRedCoin2 -= 1;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if (User.numberRedCoin2 == 0 && User.numberSpecialRedCoin2 == 2 && User.numberGoldCoin2 >= 1) {
+                    User.numberSpecialRedCoin2 -= 2;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if (User.numberRedCoin2 == 1 && User.numberSpecialRedCoin2 == 0 && User.numberGoldCoin2 >= 2) {
+                    User.numberRedCoin2 -= 1;
+                    User.numberGoldCoin2 -= 2;
+                }
+                else if (User.numberRedCoin2 == 0 && User.numberSpecialRedCoin2 == 1 && User.numberGoldCoin2 >= 2) {
+                    User.numberSpecialRedCoin2 -= 1;
+                    User.numberGoldCoin2 -= 2;
+                }
+                else if (User.numberRedCoin2 == 0 && User.numberSpecialRedCoin2 == 0 && User.numberGoldCoin2 >= 3) {
+                    User.numberGoldCoin2 -= 3;
+                }
+
+                if (User.numberGreenCoin2 >= 3) {
+                    User.numberGreenCoin2 -= 3;
+                }
+                else if (User.numberGreenCoin2 == 2 && User.numberSpecialGreenCoin2 >= 1) {
+                    User.numberGreenCoin2 -= 2;
+                    User.numberSpecialGreenCoin2 -= 1;
+                }
+                else if (User.numberGreenCoin2 == 1 && User.numberSpecialGreenCoin2 >= 2) {
+                    User.numberGreenCoin2 -= 1;
+                    User.numberSpecialGreenCoin2 -= 2;
+                }
+                else if (User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 >= 3) {
+                    User.numberSpecialGreenCoin2 -= 3;
+                }
+                else if (User.numberGreenCoin2 == 2 && User.numberSpecialGreenCoin2 == 0 && User.numberGoldCoin2 >= 1) {
+                    User.numberGreenCoin2 -= 2;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if (User.numberGreenCoin2 == 1 && User.numberSpecialGreenCoin2 == 1 && User.numberGoldCoin2 >= 1) {
+                    User.numberGreenCoin2 -= 1;
+                    User.numberSpecialGreenCoin2 -= 1;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if (User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 == 2 && User.numberGoldCoin2 >= 1) {
+                    User.numberSpecialGreenCoin2 -= 2;
+                    User.numberGoldCoin2 -= 1;
+                }
+                else if (User.numberGreenCoin2 == 1 && User.numberSpecialGreenCoin2 == 0 && User.numberGoldCoin2 >= 2) {
+                    User.numberGreenCoin2 -= 1;
+                    User.numberGoldCoin2 -= 2;
+                }
+                else if (User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 == 1 && User.numberGoldCoin2 >= 2) {
+                    User.numberSpecialGreenCoin2 -= 1;
+                    User.numberGoldCoin2 -= 2;
+                }
+                else if (User.numberGreenCoin2 == 0 && User.numberSpecialGreenCoin2 == 0 && User.numberGoldCoin2 >= 3) {
+                    User.numberGoldCoin2 -= 3;
+                }
+
+                swCanBuy = 0;
+                User.numberSpecialRedCoin2++;
+            }
+        }
+
     }
 }

@@ -21,10 +21,10 @@ public class GamePage extends JFrame {
             User.turn = User.Name1;
         }
 
-        if(User.Score1 == 15 ^ User.Score2 == 15) { // ^ means XOR
-            if(User.Score1 == 15 && User.Score2 < 15)
+        if(User.Score1 >= 15 ^ User.Score2 >= 15) { // ^ means XOR
+            if(User.Score1 >= 15 && User.Score2 < 15)
                 User.winPlayer = User.Name1;
-            else if(User.Score2 == 15 && User.Score1 < 15)
+            else if(User.Score2 >= 15 && User.Score1 < 15)
                 User.winPlayer = User.Name2;
             JFrame frame = new JFrame();
             frame.setSize(1280, 750);
@@ -32,11 +32,13 @@ public class GamePage extends JFrame {
             frame.setResizable(false);
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
+            dispose();
             EndPage finishPage = new EndPage();
             frame.add(finishPage);
             frame.setVisible(true);
+
         }
-        if(User.Score1 == 15 && User.Score2 == 15) {
+        if(User.Score1 >= 15 && User.Score2 >= 15) {
             if(User.numberOfCard1 < User.numberOfCard2)
                 User.winPlayer = User.Name1;
             else if(User.numberOfCard1 > User.numberOfCard2)
@@ -47,6 +49,7 @@ public class GamePage extends JFrame {
             frame.setResizable(false);
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
+            dispose();
             EndPage finishPage = new EndPage();
             frame.add(finishPage);
             frame.setVisible(true);
